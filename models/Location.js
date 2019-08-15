@@ -13,6 +13,7 @@ const locationSchema = new mongoose.Schema({
   address: { type: String, required: true },
   cost: { type: Number, required: true, min: 1, max: 5 },
   actType: { type: [ String ], required: true },
+  dateNum: { type: [ Number ], required: true},
   image: {type: String },
   contactNumber: { type: Number },
   link: { type: String },
