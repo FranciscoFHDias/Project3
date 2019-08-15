@@ -2,4 +2,7 @@
 Dating Experience Website
 
 
-have a good day
+- Daniele Nocito
+- Adesola Oni-Shogbonyo
+- Michael G. Laird
+- Francisco Dias
