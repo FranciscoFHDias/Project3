@@ -25,7 +25,6 @@ const Card = ({ name, address, image, dateNum, rating }) => {
             <StarRatings
               rating={rating}
               starRatedColor="#FFC300"
-              changeRating={rating}
               numberOfStars={5}
               starDimension="15px"
               starSpacing="5px"
