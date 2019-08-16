@@ -2,6 +2,8 @@ import React from 'react'
 import Select from 'react-select'
 import { Link } from 'react-router-dom'
 
+import Footer from '../common/Footer'
+
 const dateNumOptions = [
   { value: '1', label: 'First Date' },
   { value: '2', label: 'Second Date' },
@@ -76,6 +78,7 @@ class Home extends React.Component {
             </h2>
           </div>
         </div>
+        <Footer />
       </section>
     )
   }
