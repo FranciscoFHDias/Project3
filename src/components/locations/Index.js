@@ -42,13 +42,16 @@ class LocationsIndex extends React.Component{
       cost: 0
     }
 
+
     this.handleFilter = this.handleFilter.bind(this)
 
   }
 
   componentDidMount() {
     axios.get('/api/locations')
-      .then( res => this.setState({ locations: res.data, filteredLocations: res.data }))
+      .then(res => {
+        this.setState({ ...this.props.location.state, locations: res.data, filteredLocations: res.data })
+      })
   }
 
   handleFilter(selected, field) {
@@ -64,7 +67,6 @@ class LocationsIndex extends React.Component{
   }
 
   render() {
-    console.log(this.state)
     return(
       <section className="section">
         <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -98,6 +100,7 @@ class LocationsIndex extends React.Component{
                 options={budgetOptions}
                 defaultValue={budgetOptions[0]}
                 onChange={selected => this.handleFilter(selected, 'cost')}
+                value={budgetOptions.find(option => option.value === this.state.cost)}
               />
             </div>
           </div>

@@ -35,9 +35,16 @@ class Home extends React.Component {
 
     this.state = {}
 
+    this.handleFilter = this.handleFilter.bind(this)
+
+  }
+
+  handleFilter(selected, field) {
+    this.setState({ [field]: selected.value })
   }
 
   render() {
+    console.log(this.state)
     return (
       <section className="hero is-fullheight is-black">
         <div className="hero-body">
@@ -50,6 +57,7 @@ class Home extends React.Component {
                   <Select
                     name="dateNum"
                     options={dateNumOptions}
+                    // onChange={selected => this.handleFilter(selected, 'dateNum')}
                   />
                 </div>
               </div>
@@ -59,7 +67,7 @@ class Home extends React.Component {
                   <Select
                     name="actType"
                     options={actTypeOptions}
-                    onChange={this.handleFilter}
+                    // onChange={selected => this.handleFilter(selected, 'actType')}
                   />
                 </div>
               </div>
@@ -67,18 +75,27 @@ class Home extends React.Component {
                 <div className="field">
                   <label className="label">Budget</label>
                   <Select
-                    name="budget"
+                    name="cost"
                     options={budgetOptions}
+                    onChange={selected => this.handleFilter(selected, 'cost')}
                   />
                 </div>
               </div>
             </div>
             <h2 className="subtitle has-text-centered">
-              <Link className="button is-large is-danger is-rounded" to={'/locations'}>Go</Link>
+              <Link
+                className="button is-large is-danger is-rounded"
+                to={{
+                  pathname: '/locations',
+                  state: this.state
+                }}
+              >Go</Link>
             </h2>
             <hr/>
             <h2 className="subtitle has-text-centered">
-              <Link className="button is-large is-danger is-rounded" to={'/locations'}>Show me everything!</Link>
+              <Link
+                className="button is-large is-danger is-rounded"
+                to={'/locations'}>Show me everything!</Link>
             </h2>
           </div>
         </div>
