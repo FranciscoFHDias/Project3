@@ -1,6 +1,6 @@
 import React from  'react'
 
-const Comment = ({ user, createdAt, content }) => {
+const Comment = ({ user, createdAt, content, handleDeleteComment, _id }) => {
   return (
     <article className="media">
       <div className="media-content">
@@ -15,7 +15,7 @@ const Comment = ({ user, createdAt, content }) => {
         </div>
       </div>
       <div className="media-right">
-        <button className="delete"></button>
+        <button className="delete" id={_id} onClick={handleDeleteComment}></button>
       </div>
     </article>
   )

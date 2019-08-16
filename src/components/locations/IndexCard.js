@@ -24,11 +24,10 @@ const Card = ({ name, address, image, dateNum, rating }) => {
           <div className="column">
             <StarRatings
               rating={rating}
-              starRatedColor="#FFC300"
-              numberOfStars={5}
               starDimension="15px"
+              starRatedColor="#FFC300"
               starSpacing="5px"
-              name="rating"
+              numberOfStars={5}
             />
           </div>
         </div>
