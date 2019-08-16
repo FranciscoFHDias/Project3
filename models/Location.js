@@ -9,11 +9,11 @@ const commentSchema = new mongoose.Schema({
 })
 
 const locationSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: true },
-  address: { type: String, required: true },
-  cost: { type: Number, required: true, min: 1, max: 5 },
-  actType: { type: [ String ], required: true },
-  dateNum: { type: [ Number ], required: true, min: 1, max: 5},
+  name: { type: String, required: 'please provide a {PATH}', unique: true },
+  address: { type: String, required: 'please provide a {PATH}' },
+  cost: { type: Number, required: 'please provide a {PATH}', min: 1, max: 5  },
+  actType: { type: [ String ], required: 'please provide a {PATH}' },
+  dateNum: { type: [ Number ], required: 'please provide a {PATH}', min: 1, max: 5},
   image: {type: String },
   contactNumber: { type: Number },
   link: { type: String },

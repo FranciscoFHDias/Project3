@@ -17,6 +17,7 @@ function createRoute(req, res, next) {
     .catch(next)
 }
 
+
 function showRoute(req, res, next) {
   Location.findById(req.params.id)
     .populate({ path: 'user', select: '-email' })

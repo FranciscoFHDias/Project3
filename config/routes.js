@@ -16,8 +16,11 @@ router.route('/locations/:id')
   .put(secureRoute, locationsController.update)
   .delete(secureRoute, locationsController.delete)
 
+
 router.post('/locations/:id/comments', secureRoute, locationsController.commentCreate)
 router.delete('/locations/:id/comments/:commentId', secureRoute, locationsController.commentDelete)
+
+
 
 router.post('/register', authController.register)
 router.post('/login', authController.login)

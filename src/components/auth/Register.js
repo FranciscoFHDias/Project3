@@ -1,13 +1,36 @@
 import React from 'react'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
-
-// import Login from './components/auth/Login'
 
 class Register extends React.Component {
 
   constructor() {
     super()
-    this.state = { }
+    this.state = {
+      formData: {},
+      errors: {}
+    }
+
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleChange(e) {
+    const formData = { ...this.state.formData, [e.target.name]: e.target.value }
+    const errors = { ...this.state.errors, [e.target.name]: '' }
+    this.setState({ formData, errors })
+  }
+
+  handleSubmit(e) {
+    e.preventDefault()
+
+    axios.post('/api/register', this.state.formData)
+      .then(res => {
+        toast.success(res.data.message)
+        this.props.history.push('/login')
+      })
+      .catch(err => this.setState({ errors: err.response.data.errors }))
   }
 
   render() {
@@ -21,9 +44,11 @@ class Register extends React.Component {
                 <input
                   className="input"
                   name="username"
-                  placeholder="eg: loveExp"
+                  placeholder="eg: leela3000"
+                  onChange={this.handleChange}
                 />
               </div>
+              {this.state.errors.username && <small className="help is-danger">{this.state.errors.username}</small>}
             </div>
             <div className="field">
               <label className="label">Email</label>
@@ -32,9 +57,11 @@ class Register extends React.Component {
                   className="input"
                   type="email"
                   name="email"
-                  placeholder="eg: example@example.co.uk"
+                  placeholder="eg: leela3000@planetexpress.co.nny"
+                  onChange={this.handleChange}
                 />
               </div>
+              {this.state.errors.email && <small className="help is-danger">{this.state.errors.email}</small>}
             </div>
             <div className="field">
               <label className="label">Password</label>
@@ -44,8 +71,10 @@ class Register extends React.Component {
                   type="password"
                   name="password"
                   placeholder="eg: ••••••••"
+                  onChange={this.handleChange}
                 />
               </div>
+              {this.state.errors.password && <small className="help is-danger">{this.state.errors.password}</small>}
             </div>
             <div className="field">
               <label className="label">Password Confirmation</label>
@@ -55,14 +84,12 @@ class Register extends React.Component {
                   type="password"
                   name="passwordConfirmation"
                   placeholder="eg: ••••••••"
+                  onChange={this.handleChange}
                 />
               </div>
+              {this.state.errors.passwordConfirmation && <small className="help is-danger">{this.state.errors.passwordConfirmation}</small>}
             </div>
-
-            <div>
-              <Link to="/login" className="navbar-item">Already a user? Log in</Link>
-
-            </div>
+            <Link to="/login" className="navbar-item">A member? Sign i </Link>
             <button className="button">Submit</button>
           </form>
         </div>

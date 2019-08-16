@@ -5,25 +5,28 @@ import { Link } from 'react-router-dom'
 import Footer from '../common/Footer'
 
 const dateNumOptions = [
-  { value: '1', label: 'First Date' },
-  { value: '2', label: 'Second Date' },
-  { value: '3', label: 'Third Date' },
-  { value: '4', label: 'Fourth Date' },
-  { value: '5', label: 'Fifth Date' }
+  { value: 0, label: 'All' },
+  { value: 1, label: 'First Date' },
+  { value: 2, label: 'Second Date' },
+  { value: 3, label: 'Third Date' },
+  { value: 4, label: 'Fourth Date' },
+  { value: 5, label: 'Fifth Date' }
 ]
 
 const actTypeOptions = [
-  { value: 'active', label: 'Active' },
-  { value: 'relaxing', label: 'Relaxing' },
-  { value: 'outdoors', label: 'Outdoors' }
+  { value: '', label: 'All' },
+  { value: 'Active', label: 'Active' },
+  { value: 'Relaxing', label: 'Relaxing' },
+  { value: 'Outdoors', label: 'Outdoors' }
 ]
 
 const budgetOptions = [
-  { value: '1', label: 'Under £10' },
-  { value: '2', label: '£10 - £25' },
-  { value: '3', label: '£25 - £50' },
-  { value: '4', label: '£50 - £100' },
-  { value: '5', label: 'Over £100' }
+  { value: 0, label: 'All' },
+  { value: 1, label: 'Under £10' },
+  { value: 2, label: '£10 - £25' },
+  { value: 3, label: '£25 - £50' },
+  { value: 4, label: '£50 - £100' },
+  { value: 5, label: 'Over £100' }
 ]
 
 class Home extends React.Component {
@@ -32,9 +35,16 @@ class Home extends React.Component {
 
     this.state = {}
 
+    this.handleFilter = this.handleFilter.bind(this)
+
+  }
+
+  handleFilter(selected, field) {
+    this.setState({ [field]: selected.value })
   }
 
   render() {
+    console.log(this.state)
     return (
       <section className="hero is-fullheight is-black">
         <div className="hero-body">
@@ -47,6 +57,7 @@ class Home extends React.Component {
                   <Select
                     name="dateNum"
                     options={dateNumOptions}
+                    onChange={selected => this.handleFilter(selected, 'dateNum')}
                   />
                 </div>
               </div>
@@ -56,6 +67,7 @@ class Home extends React.Component {
                   <Select
                     name="actType"
                     options={actTypeOptions}
+                    onChange={selected => this.handleFilter(selected, 'actType')}
                   />
                 </div>
               </div>
@@ -63,18 +75,27 @@ class Home extends React.Component {
                 <div className="field">
                   <label className="label">Budget</label>
                   <Select
-                    name="budget"
+                    name="cost"
                     options={budgetOptions}
+                    onChange={selected => this.handleFilter(selected, 'cost')}
                   />
                 </div>
               </div>
             </div>
             <h2 className="subtitle has-text-centered">
-              <Link className="button is-large is-danger is-rounded" to={'/locations'}>Go</Link>
+              <Link
+                className="button is-large is-danger is-rounded"
+                to={{
+                  pathname: '/locations',
+                  state: this.state
+                }}
+              >Go</Link>
             </h2>
             <hr/>
             <h2 className="subtitle has-text-centered">
-              <Link className="button is-large is-danger is-rounded" to={'/locations'}>Show me everything!</Link>
+              <Link
+                className="button is-large is-danger is-rounded"
+                to={'/locations'}>Show me everything!</Link>
             </h2>
           </div>
         </div>
