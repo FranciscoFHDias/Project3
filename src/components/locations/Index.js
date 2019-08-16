@@ -78,6 +78,7 @@ class LocationsIndex extends React.Component{
                 options={dateNumOptions}
                 defaultValue={dateNumOptions[0]}
                 onChange={selected => this.handleFilter(selected, 'dateNum')}
+                value={dateNumOptions.find(option => option.value === this.state.dateNum)}
               />
             </div>
           </div>
@@ -89,6 +90,7 @@ class LocationsIndex extends React.Component{
                 options={actTypeOptions}
                 defaultValue={actTypeOptions[0]}
                 onChange={selected => this.handleFilter(selected, 'actType')}
+                value={actTypeOptions.find(option => option.value === this.state.actType)}
               />
             </div>
           </div>

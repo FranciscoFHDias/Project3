@@ -57,7 +57,7 @@ class Home extends React.Component {
                   <Select
                     name="dateNum"
                     options={dateNumOptions}
-                    // onChange={selected => this.handleFilter(selected, 'dateNum')}
+                    onChange={selected => this.handleFilter(selected, 'dateNum')}
                   />
                 </div>
               </div>
@@ -67,7 +67,7 @@ class Home extends React.Component {
                   <Select
                     name="actType"
                     options={actTypeOptions}
-                    // onChange={selected => this.handleFilter(selected, 'actType')}
+                    onChange={selected => this.handleFilter(selected, 'actType')}
                   />
                 </div>
               </div>
