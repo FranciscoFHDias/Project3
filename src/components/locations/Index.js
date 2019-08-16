@@ -67,6 +67,7 @@ class LocationsIndex extends React.Component{
   }
 
   render() {
+
     return(
       <section className="section">
         <nav className="navbar" role="navigation" aria-label="main navigation">

@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import { Link } from 'react-router-dom'
 
 import Auth from '../../lib/Auth'
 
@@ -68,7 +69,7 @@ class Login extends React.Component {
               </div>
               {this.state.error && <small className="help is-danger">{this.state.error}</small>}
             </div>
-
+            <Link to="/register" className="navbar-item">Not a user? Sign Up </Link>
             <button className="button">Submit</button>
           </form>
         </div>

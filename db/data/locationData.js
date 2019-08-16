@@ -1,9 +1,18 @@
 module.exports = [{
+  name: 'Paternoster Chop House',
+  address: '1, Warwick Court, Paternoster Sq., London EC4M 7DX',
+  cost: 3,
+  actType: [ 'Restaurants and Bars', 'Relaxing' ],
+  dateNum: [ 2 ],
+  image: 'https://www.paternosterchophouse.co.uk/wp-content/uploads/sites/23/2018/09/Paternoster_153_7547-1400x933.jpg',
+  contactNumber: +442070299400,
+  link: 'https://www.paternosterchophouse.co.uk/'
+}, {
   name: 'Curzon Sea Container',
   address: '20 Upper Ground, South Bank, London SE1 9PD',
   cost: 2,
   actType: [ 'Restaurant', 'Bar', 'Relaxing' ],
-  dateNum: [2],
+  dateNum: [ 2 ],
   image: 'https://images.squarespace-cdn.com/content/v1/53e9f17be4b08138fefa58f0/1415017266322-X1GP4M2RJ2GGI907B7S1/ke17ZwdGBToddI8pDm48kNVjfR5kDa6jbBkrq_LoDDF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0s1LK8gu64hle203mIYOUnqrhQdrJHPBFTMxk0Qt2eiDyYq7kkv7bWV0Pxuo6B735A/Screening+Room.jpg?format=2500w',
   contactNumber: +443333210104,
   link: 'http://www.curzonseacontainers.com/'
@@ -11,8 +20,8 @@ module.exports = [{
   name: 'Boundary Rooftop',
   address: '2-4 Boundary Street, Shoreditch, London E2 7DD',
   cost: 3,
-  actType: [ 'Restaurant', 'Drinks' ],
-  dateNum: [1],
+  actType: ['Restaurant', 'Drinks'],
+  dateNum: [ 1 ],
   image: 'https://t-ec.bstatic.com/images/hotel/max1024x768/185/185343929.jpg',
   contactNumber: +442077291051,
   link: 'https://boundary.london/rooftop/'
@@ -21,16 +30,16 @@ module.exports = [{
   address: '95 Brick Ln, London E1 6QL',
   cost: 2,
   actType: [ 'Restaurant', 'Drinks', 'Activity' ],
-  dateNum: [1],
+  dateNum: [ 1 ],
   image: 'https://hirespace.imgix.net/spaces/165925/zwz342ivpnp.jpg?h=1080&w=1920&auto=format&fit=crop&q=40',
   contactNumber: +442074269200,
   link: 'https://www.allstarlanes.co.uk/locations/brick-lane/bowling'
-},{
+}, {
   name: 'Secret Cinema',
   address: 'London',
   cost: 3,
   actType: [ 'Food', 'Drinks', 'Activity' ],
-  dateNum: [3],
+  dateNum: [ 3 ] ,
   image: 'https://d1nslcd7m2225b.cloudfront.net/Pictures/480xany/2/9/6/1296296_secretcinemaromeojulietcamilliagreenwell_33285.jpg',
   contactNumber: +442074269200,
   link: 'https://www.secretcinema.org/'
@@ -39,7 +48,7 @@ module.exports = [{
   address: '8 Brown\'s Buildings, London EC3A 8AL',
   cost: 3,
   actType: [ 'Food', 'Drinks', 'Activity' ],
-  dateNum: [2],
+  dateNum: [ 2 ],
   image: 'https://www.fluidnetwork.co.uk/gfx/venues/25413/swingers-swingers-aldgate-001.jpg',
   contactNumber: +442038463222,
   link: 'https://swingersldn.com/home/'
@@ -48,7 +57,7 @@ module.exports = [{
   address: '8 Brown\'s Buildings, London EC3A 8AL',
   cost: 4,
   actType: [ 'Food', 'Drinks', 'Activity' ],
-  dateNum: [1],
+  dateNum: [ 1 ],
   image: 'https://o.hng.io/uploads/2019/08/OXO-Restaurant-33-550x370.jpg',
   contactNumber: +442078033888,
   link: 'https://www.harveynichols.com/restaurant/the-oxo-tower/whats-on/'
@@ -57,16 +66,16 @@ module.exports = [{
   address: '47 Frith St, Soho, London W1D 4HT',
   cost: 3,
   actType: [ 'Food', 'Drinks', 'Activity' ],
-  dateNum: [2],
+  dateNum: [ 2 ],
   image: 'https://88f8efaf42239bdab4eb-69d152e9f01b96481f8d016f75a1f290.ssl.cf3.rackcdn.com/bank/From_stage_to_stage_right_tiersprefcomp.jpg',
   contactNumber: +442074390747,
   link: 'https://www.ronniescotts.co.uk/'
-},{
+}, {
   name: 'Broadway Market',
   address: 'Broadway Market, London, E8 4PH',
   cost: 2,
   actType: [ 'Food', 'Drinks', 'Activity' ],
-  dateNum: [1],
+  dateNum: [ 1 ],
   image: 'https://broadwaymarket.co.uk/wp-content/uploads/2019/02/GettyImages-680780021-5b0d96788e1b6e003e73cf53-1.jpg',
   contactNumber: null,
   link: 'https://broadwaymarket.co.uk/'
@@ -84,7 +93,7 @@ module.exports = [{
   address: '2-4 Hoxton Square, London, N1 6NU',
   cost: 2,
   actType: [ 'Food', 'Drinks', 'Activity' ],
-  dateNum: [2],
+  dateNum: [ 2 ] ,
   image: 'https://media.timeout.com/images/101707745/image.jpg',
   contactNumber: +442076130709,
   link: 'https://www.colourshoxton.co.uk/'
@@ -94,7 +103,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Relaxing', 'Cultural', ' Misc' ],
   dateNum: [ 2 ],
-  image: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Ftfl.gov.uk%2Fcdn%2Fstatic%2Fcms%2Fimages%2Fpromos%2Feal-section_rdax_600x300.jpg&imgrefurl=https%3A%2F%2Ftfl.gov.uk%2Fmodes%2Femirates-air-line%2F&docid=fvuy2Ce-DBTmiM&tbnid=B2_7iW4F2sdJJM%3A&vet=10ahUKEwj6pse-qIbkAhWRShUIHUwGC9EQMwhlKAAwAA..i&w=600&h=300&bih=1052&biw=952&q=emirate%20cable%20car&ved=0ahUKEwj6pse-qIbkAhWRShUIHUwGC9EQMwhlKAAwAA&iact=mrc&uact=8',
+  image: 'https://cdn.londonandpartners.com/asset/emirates-air-line-1fe48a1f15514206b5d7fcb1bf152084.jpg',
   contactNumber: +442032821030,
   link: 'http://emiratesairline.gttix.com/'
 }, {
@@ -151,7 +160,7 @@ module.exports = [{
   image: 'https://images.ctfassets.net/6qprbsfbbvrl/4IEwg0IouVrgyxizoEuPU0/26b880c4f87f0481e2d6a42fc34073a2/Cocktails_SS19.jpg',
   contactNumber: +442076201328,
   link: 'https://www.iguanas.co.uk/'
-},{
+}, {
   name: 'Piano Bar Soho',
   address: '16 Carlisle Street, London, W1D 3BT',
   cost: 3,
@@ -178,16 +187,7 @@ module.exports = [{
   image: 'https://secretldn.com/wp-content/uploads/2019/01/prosecco-house-london-date.jpg',
   contactNumber: +442030341718,
   link: 'https://www.proseccohouse.com/'
-}, {
-  name: 'Paternoster Chop House',
-  address: '1, Warwick Court, Paternoster Sq., London EC4M 7DX',
-  cost: 3,
-  actType: [ 'Restaurants and Bars', 'Relaxing' ],
-  dateNum: [ 2 ],
-  image: 'https://www.paternosterchophouse.co.uk/wp-content/uploads/sites/23/2018/09/Paternoster_153_7547-1400x933.jpg',
-  contactNumber: +442070299400,
-  link: 'https://www.paternosterchophouse.co.uk/'
-}, {
+},{
   name: 'Lion King',
   address: 'Lyceum Theatre, 21 Wellington St, Covent Garden, London WC2E 7RQ',
   cost: 3,
@@ -214,15 +214,6 @@ module.exports = [{
   image: 'https://cdn.londonandpartners.com/asset/09fb98cc65cd024b02f0f7899678a426.jpg',
   contactNumber: +442073238299,
   link: 'https://www.britishmuseum.org/'
-},{
-  name: 'Draughts - Hackney',
-  address: '337 Acton Mews, Haggerston, London E8 4EA',
-  cost: 2,
-  actType: [  'Relaxing' , 'Cultural'],
-  dateNum: [ 2 ],
-  image: 'https://media.timeout.com/images/102903683/630/472/image.jpg',
-  contactNumber: +447930936237,
-  link: 'https://www.draughtslondon.com/'
 }, {
   name: 'Junkyard Golf',
   address: 'Old Truman Brewery, 91 Brick Ln, Spitalfields, London E1 6QL',
@@ -230,6 +221,8 @@ module.exports = [{
   actType: [ 'Active' ],
   dateNum: [ 2, 3 ],
   image: 'https://www.visitmanchester.com/imageresizer/?image=%2Fdmsimgs%2F171212_junkyardgolf_oxford_040_1113184556.jpg&action=ProductDetail',
+  contactNumber: +442072542273,
+
   link: 'https://www.junkyardgolfclub.co.uk/london/'
 }, {
   name: 'Whistle Punks Urban Axe Throwing',
@@ -238,6 +231,7 @@ module.exports = [{
   actType: [ 'Active' ],
   dateNum: [ 1, 2 ],
   image: 'https://batlgrounds.com/wp-content/uploads/2018/05/BATL-London-1-1024x709.jpg',
+  contactNumber: +442072542273,
   link: 'https://www.whistlepunks.com/location/london-vauxhall/'
 }, {
   name: 'Dalston Superstore',
@@ -275,8 +269,7 @@ module.exports = [{
   image: 'https://secretldn.com/wp-content/uploads/2019/02/Otherworld-Dream-Corporation.jpg',
   contactNumber: +442080501550,
   link: 'https://www.other.world/'
-},
-{
+}, {
   name: 'Draughts - Hackney',
   address: '337 Acton Mews, Haggerston, London E8 4EA',
   cost: 2,
@@ -312,4 +305,85 @@ module.exports = [{
   image: 'https://i.ytimg.com/vi/1JD_OR0bNtI/maxresdefault.jpg',
   contactNumber: +442034881678,
   link: 'https://abqlondon.com/abq-london'
+}, {
+  name: 'Sticks and Sushi Greenwich',
+  address: '1 Nelson Rd, Greenwich Peninsula, London SE10 9JB',
+  cost: 3,
+  actType: [ 'Ethnic Restaurant' ],
+  dateNum: [ 2 ],
+  image: 'https://sticks-n-sushi.imgix.net/media/1195/sticksnsushi_greenwich_restaurant-05_1620x1080.jpg?auto=compress&auto=format&dpr=2.625&fit=crop&h=258&w=352',
+  contactNumber: +442031418220,
+  link: 'https://sticksnsushi.com/en'
+}, {
+  name: 'The Blue Anchor',
+  address: '13 Lower Mall, Hammersmith, London W6 9DJ',
+  cost: 2,
+  actType: [ 'Relax', 'Music', 'Drinks' ],
+  dateNum: [ 1 ],
+  image: 'https://s0.geograph.org.uk/geophotos/02/12/94/2129414_765f5b9a.jpg',
+  contactNumber: +442039510580,
+  link: 'https://www.blueanchorlondon.com/'
+}, {
+  name: 'Bar Douro',
+  address: '35B, Arch, 85B Southwark Bridge Rd, London SE1 0NQ',
+  cost: 3,
+  actType: [ 'Restaurant' ],
+  dateNum: [ 2 ],
+  image: 'https://cloudfront.sketchanet.com/u/423766/images/1366/1534343390ha-web.jpg',
+  contactNumber: +442073780524,
+  link: 'https://www.bardouro.co.uk/'
+}, {
+  name: 'Arundel Castle',
+  address: 'Arundel BN18 9AB',
+  cost: 2,
+  actType: [ 'Relaxing', 'Cultural' ],
+  dateNum: [ 3 ],
+  image: 'https://media-cdn.tripadvisor.com/media/photo-s/04/b1/46/d5/arundel-castle-gardens.jpg',
+  contactNumber: +441903882173,
+  link: ''
+}, {
+  name: 'Mixed Bathing Pond',
+  address: 'Hampstead Heath, Hampstead, London NW5 1QR',
+  cost: 1,
+  actType: [  'Relax', 'Nature', 'Bathing'  ],
+  dateNum: [ 2 ],
+  image: 'https://media.timeout.com/images/100683781/630/472/image.jpg',
+  contactNumber: +442074853873,
+  link: 'https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath/swimming/Pages/default.aspx'
+}, {
+  name: 'The Boatman',
+  address: '10 Thames Side, Windsor SL4 1QN',
+  cost: 1,
+  actType: [ 'Relax', 'Music', 'Drinks' ],
+  dateNum: [ 1 ],
+  image: 'http://boatmanwindsor.com/wp-content/uploads/2013/03/the-boatman-terrace-launch-outside-in.270515.v2-2048x1364.jpg',
+  contactNumber: +441753620010,
+  link: 'http://boatmanwindsor.com/'
+}, {
+  name: 'Royal Observatory Greenwich',
+  address: 'Blackheath Ave, Greenwich, London SE10 8XJ',
+  cost: 2,
+  actType: [ 'Culture', 'Science', 'Leisure' ],
+  dateNum: [ 5 ],
+  image: 'https://media.timeout.com/images/19906/630/472/image.jpg',
+  contactNumber: +442088584422,
+  link: 'https://www.rmg.co.uk/royal-observatory'
+}, {
+  name: 'The Tempest Inn',
+  address: 'Kings Road, Brighton BN1 1NB',
+  cost: 2,
+  actType: [ 'Relax', 'Music', 'Drinks' ],
+  dateNum: [ 1 ],
+  image: 'https://images.squarespace-cdn.com/content/v1/57e1527ce6f2e1f209c1ab8e/1549361683292-XGVUUQ53NUWDFYHHHOQ6/ke17ZwdGBToddI8pDm48kNBhxsR5AixTPaSt36FQjZRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIHEpb-MmdDNvFVgjmeoENIlexef176In2EgYPtI8R2-8KMshLAGzx4R3EDFOm1kBS/image1.jpeg',
+  contactNumber: +441273770505,
+  link: 'https://www.tempest.pub/'
+}, {
+  name: 'GOVR VR Cafe',
+  address: '114-115  London Road, Brighton, BN1 4JG',
+  cost: 3,
+  actType: [ 'Leisure', 'Music', 'Drinks' ],
+  dateNum: [ 2 ],
+  image: 'https://images.squarespace-cdn.com/content/v1/594e69a9cd0f68148eb3f656/1557218295098-1BWY73PN8FKCR979X4NA/ke17ZwdGBToddI8pDm48kNItjXz7RcTqS_k3iww1ou97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USX-vnLkszRHUlKjIjwnAbVDj1jZO8k6qHOrQHQZz8p0o49ZdOtO_QXox0_W7i2zEA/VR+hire+stanmer+ballon.jpg',
+  contactNumber: +447587464283,
+  link: 'https://www.govrbrighton.com/'
 }]
