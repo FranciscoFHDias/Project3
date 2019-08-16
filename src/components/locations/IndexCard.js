@@ -1,6 +1,7 @@
 import React from 'react'
+import StarRatings from 'react-star-ratings'
 
-const Card = ({ name, address, image }) => {
+const Card = ({ name, address, image, dateNum, rating }) => {
 
   return(
     <div className="card">
@@ -14,14 +15,28 @@ const Card = ({ name, address, image }) => {
 
       <div className="card-content">
 
-        <div>
-          <p className="title is-4">{name}</p>
-          <br/>
-          <p className="subtitle is-6">Rating</p>
-          <p className="subtitle is-6">Date no.</p>
-          <hr/>
-          <p className="text is-8">{address}</p>
+        <div className="columns is-multiline">
+
+          <div className="column">
+            <p className="title is-5">{name}</p>
+          </div>
+
+          <div className="column">
+            <StarRatings
+              rating={rating}
+              starRatedColor="#FFC300"
+              changeRating={rating}
+              numberOfStars={5}
+              starDimension="15px"
+              starSpacing="5px"
+              name="rating"
+            />
+          </div>
         </div>
+
+        <p className="text is-8">Date Number:  {dateNum}</p>
+        <hr/>
+        <p className="text is-12">{address}</p>
 
       </div>
 
