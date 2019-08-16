@@ -37,7 +37,7 @@ class Home extends React.Component {
       <section className="hero is-fullheight is-black">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title has-text-centered">Date Night</h1>
+            <h1 className="title is-1 has-text-centered">Date Night</h1>
             <div className="level">
               <div className="level-item has-text-centered">
                 <div className="field">
@@ -67,6 +67,10 @@ class Home extends React.Component {
                 </div>
               </div>
             </div>
+            <h2 className="subtitle has-text-centered">
+              <Link className="button is-large is-danger is-rounded" to={'/locations'}>Go</Link>
+            </h2>
+            <hr/>
             <h2 className="subtitle has-text-centered">
               <Link className="button is-large is-danger is-rounded" to={'/locations'}>Show me everything!</Link>
             </h2>
