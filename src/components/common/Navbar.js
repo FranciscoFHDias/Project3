@@ -36,11 +36,11 @@ class Navbar extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item">
-              <i className="fab fa-react"></i> <i className="fas fa-subway"></i>
+              <img src="./img/logo.png" alt="logo"/>
             </Link>
           </div>
+
           <div className="navbar-end">
-            <i className="fab fa-react"></i> <i className="fad fa-heart-square"></i>
             <a
               role="button"
               className={`navbar-burger ${this.state.navbarOpen ? 'is-active' : ''}`}
