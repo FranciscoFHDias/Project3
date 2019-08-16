@@ -11,8 +11,8 @@ module.exports = [{
   name: 'Boundary Rooftop',
   address: '2-4 Boundary Street, Shoreditch, London E2 7DD',
   cost: 3,
-  actType: [ 'Restaurant', 'Drinks' ],
-  dateNum: [1],
+  actType: ['Restaurant', 'Drinks'],
+  dateNum: [ 1 ],
   image: 'https://t-ec.bstatic.com/images/hotel/max1024x768/185/185343929.jpg',
   contactNumber: +442077291051,
   link: 'https://boundary.london/rooftop/'
@@ -21,7 +21,7 @@ module.exports = [{
   address: '95 Brick Ln, London E1 6QL',
   cost: 2,
   actType: [ 'Restaurant', 'Drinks', 'Activity' ],
-  dateNum: [1],
+  dateNum: [ 1 ],
   image: 'https://hirespace.imgix.net/spaces/165925/zwz342ivpnp.jpg?h=1080&w=1920&auto=format&fit=crop&q=40',
   contactNumber: +442074269200,
   link: 'https://www.allstarlanes.co.uk/locations/brick-lane/bowling'
@@ -94,7 +94,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Relaxing', 'Cultural', ' Misc' ],
   dateNum: [ 2 ],
-  image: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Ftfl.gov.uk%2Fcdn%2Fstatic%2Fcms%2Fimages%2Fpromos%2Feal-section_rdax_600x300.jpg&imgrefurl=https%3A%2F%2Ftfl.gov.uk%2Fmodes%2Femirates-air-line%2F&docid=fvuy2Ce-DBTmiM&tbnid=B2_7iW4F2sdJJM%3A&vet=10ahUKEwj6pse-qIbkAhWRShUIHUwGC9EQMwhlKAAwAA..i&w=600&h=300&bih=1052&biw=952&q=emirate%20cable%20car&ved=0ahUKEwj6pse-qIbkAhWRShUIHUwGC9EQMwhlKAAwAA&iact=mrc&uact=8',
+  image: 'https://cdn.londonandpartners.com/asset/emirates-air-line-1fe48a1f15514206b5d7fcb1bf152084.jpg',
   contactNumber: +442032821030,
   link: 'http://emiratesairline.gttix.com/'
 }, {
@@ -214,15 +214,6 @@ module.exports = [{
   image: 'https://cdn.londonandpartners.com/asset/09fb98cc65cd024b02f0f7899678a426.jpg',
   contactNumber: +442073238299,
   link: 'https://www.britishmuseum.org/'
-},{
-  name: 'Draughts - Hackney',
-  address: '337 Acton Mews, Haggerston, London E8 4EA',
-  cost: 2,
-  actType: [ 'Relaxing' , 'Cultural'],
-  dateNum: [ 2 ],
-  image: 'https://media.timeout.com/images/102903683/630/472/image.jpg',
-  contactNumber: +447930936237,
-  link: 'https://www.draughtslondon.com/'
 }, {
   name: 'Junkyard Golf',
   address: 'Old Truman Brewery, 91 Brick Ln, Spitalfields, London E1 6QL',

@@ -1,6 +1,7 @@
 /* global api, describe, it, expect, beforeEach, afterEach */
 const Location = require('../../models/Location')
 const locationData = require('../../db/data/locationData')
+
 describe('GET /locations', () => {
 
   beforeEach(done => {
@@ -70,7 +71,7 @@ describe('GET /locations', () => {
           expect(location.actType).to.be.a('array')
           expect(location.dateNum).to.be.a('array')
           expect(location.image).to.be.a('string')
-          expect(location.contactNumber).to.be.a('number')
+          expect(location.contactNumber).to.be.an('number')
           expect(location.link).to.be.a('string')
         })
         done()
