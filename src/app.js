@@ -1,30 +1,33 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// import { HashRouter, Route, Switch } from 'react-router-dom'
-//
-// import Register from './components/auth/Register'
-// import Navbar from './components/common/Navbar'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
-import 'bulma'
+import Home from './components/pages/Home'
+import Register from './components/auth/Register'
+import Login from './components/auth/Login'
+import Navbar from './components/common/Navbar'
+import LocationsIndex from './components/locations/Index'
 
+import './style.scss'
 
 class App extends React.Component {
 
-
-  constructor() {
-    super()
-    this.state = {}
-
-  }
-
   render() {
     return (
-      <h1>Hey There </h1>
+      <HashRouter>
+        <Navbar />
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/locations" component={LocationsIndex} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </HashRouter>
+
     )
   }
 }
-
 
 ReactDOM.render(
   <App />,
