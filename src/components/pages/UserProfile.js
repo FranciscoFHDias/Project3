@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
-class Register extends React.Component {
+class Profile extends React.Component {
 
   constructor() {
     super()
@@ -38,16 +38,16 @@ class Register extends React.Component {
         <div className="container">
           <form onSubmit={this.handleSubmit}>
             <div className="field">
-              <label className="label">Username</label>
+              <label className="label">Early Morning or Late Riser</label>
               <div className="control">
                 <input
                   className="input"
-                  name="username"
-                  placeholder="eg: leela3000"
+                  name="q1"
+                  placeholder="Yes or No"
                   onChange={this.handleChange}
                 />
               </div>
-              {this.state.errors.username && <small className="help is-danger">{this.state.errors.username}</small>}
+              {this.state.errors.q1 && <small className="help is-danger">{this.state.errors.q1}</small>}
             </div>
             <div className="field">
               <label className="label">Email</label>
@@ -55,19 +55,19 @@ class Register extends React.Component {
                 <input
                   className="input"
                   type="email"
-                  name="email"
+                  name="q2"
                   placeholder="eg: leela3000@planetexpress.co.nny"
                   onChange={this.handleChange}
                 />
               </div>
-              {this.state.errors.email && <small className="help is-danger">{this.state.errors.email}</small>}
+              {this.state.errors.q2 && <small className="help is-danger">{this.state.errors.q2}</small>}
             </div>
             <div className="field">
               <label className="label">Password</label>
               <div className="control">
                 <input
                   className="input"
-                  type="password"
+                  type="q3"
                   name="password"
                   placeholder="eg: ••••••••"
                   onChange={this.handleChange}
@@ -81,7 +81,7 @@ class Register extends React.Component {
                 <input
                   className="input"
                   type="password"
-                  name="passwordConfirmation"
+                  name="q4"
                   placeholder="eg: ••••••••"
                   onChange={this.handleChange}
                 />
@@ -97,4 +97,4 @@ class Register extends React.Component {
   }
 }
 
-export default Register
+export default Profile

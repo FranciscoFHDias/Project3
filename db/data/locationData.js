@@ -1,9 +1,18 @@
 module.exports = [{
+  name: 'Paternoster Chop House',
+  address: '1, Warwick Court, Paternoster Sq., London EC4M 7DX',
+  cost: 3,
+  actType: [ 'Restaurants and Bars', 'Relaxing' ],
+  dateNum: [ 2 ],
+  image: 'https://www.paternosterchophouse.co.uk/wp-content/uploads/sites/23/2018/09/Paternoster_153_7547-1400x933.jpg',
+  contactNumber: +442070299400,
+  link: 'https://www.paternosterchophouse.co.uk/'
+}, {
   name: 'Curzon Sea Container',
   address: '20 Upper Ground, South Bank, London SE1 9PD',
   cost: 2,
   actType: [ 'Restaurant', 'Bar', 'Relaxing' ],
-  dateNum: [2],
+  dateNum: [ 2 ],
   image: 'https://images.squarespace-cdn.com/content/v1/53e9f17be4b08138fefa58f0/1415017266322-X1GP4M2RJ2GGI907B7S1/ke17ZwdGBToddI8pDm48kNVjfR5kDa6jbBkrq_LoDDF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0s1LK8gu64hle203mIYOUnqrhQdrJHPBFTMxk0Qt2eiDyYq7kkv7bWV0Pxuo6B735A/Screening+Room.jpg?format=2500w',
   contactNumber: +443333210104,
   link: 'http://www.curzonseacontainers.com/'
@@ -30,7 +39,7 @@ module.exports = [{
   address: 'London',
   cost: 3,
   actType: [ 'Food', 'Drinks', 'Activity' ],
-  dateNum: [3],
+  dateNum: [ 3 ] ,
   image: 'https://d1nslcd7m2225b.cloudfront.net/Pictures/480xany/2/9/6/1296296_secretcinemaromeojulietcamilliagreenwell_33285.jpg',
   contactNumber: +442074269200,
   link: 'https://www.secretcinema.org/'
@@ -39,7 +48,7 @@ module.exports = [{
   address: '8 Brown\'s Buildings, London EC3A 8AL',
   cost: 3,
   actType: [ 'Food', 'Drinks', 'Activity' ],
-  dateNum: [2],
+  dateNum: [ 2 ],
   image: 'https://www.fluidnetwork.co.uk/gfx/venues/25413/swingers-swingers-aldgate-001.jpg',
   contactNumber: +442038463222,
   link: 'https://swingersldn.com/home/'
@@ -48,7 +57,7 @@ module.exports = [{
   address: '8 Brown\'s Buildings, London EC3A 8AL',
   cost: 4,
   actType: [ 'Food', 'Drinks', 'Activity' ],
-  dateNum: [1],
+  dateNum: [ 1 ],
   image: 'https://o.hng.io/uploads/2019/08/OXO-Restaurant-33-550x370.jpg',
   contactNumber: +442078033888,
   link: 'https://www.harveynichols.com/restaurant/the-oxo-tower/whats-on/'
@@ -57,7 +66,7 @@ module.exports = [{
   address: '47 Frith St, Soho, London W1D 4HT',
   cost: 3,
   actType: [ 'Food', 'Drinks', 'Activity' ],
-  dateNum: [2],
+  dateNum: [ 2 ],
   image: 'https://88f8efaf42239bdab4eb-69d152e9f01b96481f8d016f75a1f290.ssl.cf3.rackcdn.com/bank/From_stage_to_stage_right_tiersprefcomp.jpg',
   contactNumber: +442074390747,
   link: 'https://www.ronniescotts.co.uk/'
@@ -66,7 +75,7 @@ module.exports = [{
   address: 'Broadway Market, London, E8 4PH',
   cost: 2,
   actType: [ 'Food', 'Drinks', 'Activity' ],
-  dateNum: [1],
+  dateNum: [ 1 ],
   image: 'https://broadwaymarket.co.uk/wp-content/uploads/2019/02/GettyImages-680780021-5b0d96788e1b6e003e73cf53-1.jpg',
   contactNumber: null,
   link: 'https://broadwaymarket.co.uk/'
@@ -84,7 +93,7 @@ module.exports = [{
   address: '2-4 Hoxton Square, London, N1 6NU',
   cost: 2,
   actType: [ 'Food', 'Drinks', 'Activity' ],
-  dateNum: [2],
+  dateNum: [ 2 ] ,
   image: 'https://media.timeout.com/images/101707745/image.jpg',
   contactNumber: +442076130709,
   link: 'https://www.colourshoxton.co.uk/'
@@ -178,16 +187,7 @@ module.exports = [{
   image: 'https://secretldn.com/wp-content/uploads/2019/01/prosecco-house-london-date.jpg',
   contactNumber: +442030341718,
   link: 'https://www.proseccohouse.com/'
-}, {
-  name: 'Paternoster Chop House',
-  address: '1, Warwick Court, Paternoster Sq., London EC4M 7DX',
-  cost: 3,
-  actType: [ 'Restaurants and Bars', 'Relaxing' ],
-  dateNum: [ 2 ],
-  image: 'https://www.paternosterchophouse.co.uk/wp-content/uploads/sites/23/2018/09/Paternoster_153_7547-1400x933.jpg',
-  contactNumber: +442070299400,
-  link: 'https://www.paternosterchophouse.co.uk/'
-}, {
+},{
   name: 'Lion King',
   address: 'Lyceum Theatre, 21 Wellington St, Covent Garden, London WC2E 7RQ',
   cost: 3,
@@ -221,6 +221,8 @@ module.exports = [{
   actType: [ 'Active' ],
   dateNum: [ 2, 3 ],
   image: 'https://www.visitmanchester.com/imageresizer/?image=%2Fdmsimgs%2F171212_junkyardgolf_oxford_040_1113184556.jpg&action=ProductDetail',
+  contactNumber: +442072542273,
+
   link: 'https://www.junkyardgolfclub.co.uk/london/'
 }, {
   name: 'Whistle Punks Urban Axe Throwing',
@@ -229,6 +231,7 @@ module.exports = [{
   actType: [ 'Active' ],
   dateNum: [ 1, 2 ],
   image: 'https://batlgrounds.com/wp-content/uploads/2018/05/BATL-London-1-1024x709.jpg',
+  contactNumber: +442072542273,
   link: 'https://www.whistlepunks.com/location/london-vauxhall/'
 }, {
   name: 'Dalston Superstore',

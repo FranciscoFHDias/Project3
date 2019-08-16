@@ -10,10 +10,14 @@ const testData = {
   name: 'Paternoster Chop House',
   address: '1, Warwick Court, Paternoster Sq., London EC4M 7DX',
   cost: 3,
-  actType: [ 'Restaurants and Bars', 'Relaxing' ],
-  dateNum: [ 2 ],
+  actType: [
+    'Restaurants and Bars',
+    'Relaxing'
+  ],
+  dateNum: [
+    2
+  ],
   image: 'https://www.paternosterchophouse.co.uk/wp-content/uploads/sites/23/2018/09/Paternoster_153_7547-1400x933.jpg',
-  contactNumber: +442070299400,
   link: 'https://www.paternosterchophouse.co.uk/'
 }
 
@@ -82,7 +86,6 @@ describe('PUT /locations/:id', () => {
           'actType',
           'dateNum',
           'image',
-          'contactNumber',
           'link'
         ])
         done()
@@ -100,7 +103,6 @@ describe('PUT /locations/:id', () => {
         expect(res.body.actType).to.deep.eq(testData.actType)
         expect(res.body.dateNum).to.deep.eq(testData.dateNum)
         expect(res.body.image).to.eq(testData.image)
-        expect(res.body.contactNumber).to.eq(testData.contactNumber)
         expect(res.body.link).to.eq(testData.link)
         done()
       })

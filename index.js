@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-
+const errorHandler = require('./lib/errorHandler')
 const router = require('./config/routes')
 const { dbURI } = require('./config/environment')
 
@@ -12,6 +12,8 @@ mongoose.connect(dbURI, { useNewUrlParser: true })
 app.use(bodyParser.json())
 
 app.use('/api', router)
+
+app.use(errorHandler)
 
 app.listen(4000, () => console.log('Here we go, date number 4000!!!'))
 
