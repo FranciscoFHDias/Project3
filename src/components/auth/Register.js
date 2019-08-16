@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+// import Login from './components/auth/Login'
 
 class Register extends React.Component {
 
@@ -56,6 +59,10 @@ class Register extends React.Component {
               </div>
             </div>
 
+            <div>
+              <Link to="/login" className="navbar-item">Already a user? Log in</Link>
+
+            </div>
             <button className="button">Submit</button>
           </form>
         </div>

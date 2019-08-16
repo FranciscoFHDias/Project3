@@ -1,23 +1,12 @@
-// module.exports = [{
-//   name: 'Nando\'s',
-//   address: '114-118 Commercial St, Spitalfields, London E1 6NF',
-//   cost: 2,
-//   actType: [ 'Restaurants and Bars', 'Relaxing' ],
-//   dateNum: [ ],
-//   image: 'https://media-cdn.tripadvisor.com/media/photo-s/0f/00/25/b8/nando-s-mile-end.jpg',
-//   contactNumber: +442076507775,
-//   link: 'nandos.co.uk'
-// }]
-
-{
-name: 'Emirates Air Line Cable Car',
-address: 'Unit 1, 2, 3 & 4, Emirates Cable Car Terminal, Edmund Halley Way, Greenwich Peninsula, London SE10 0FR',
-cost: 2,
-actType: [ 'Relaxing', 'Cultural', ' misc' ],
-dateNum: [ 2 ],
-image: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Ftfl.gov.uk%2Fcdn%2Fstatic%2Fcms%2Fimages%2Fpromos%2Feal-section_rdax_600x300.jpg&imgrefurl=https%3A%2F%2Ftfl.gov.uk%2Fmodes%2Femirates-air-line%2F&docid=fvuy2Ce-DBTmiM&tbnid=B2_7iW4F2sdJJM%3A&vet=10ahUKEwj6pse-qIbkAhWRShUIHUwGC9EQMwhlKAAwAA..i&w=600&h=300&bih=1052&biw=952&q=emirate%20cable%20car&ved=0ahUKEwj6pse-qIbkAhWRShUIHUwGC9EQMwhlKAAwAA&iact=mrc&uact=8',
-contactNumber: +442032821030,
-link: 'http://emiratesairline.gttix.com/'
+module.exports = [{
+  name: 'Emirates Air Line Cable Car',
+  address: 'Unit 1, 2, 3 & 4, Emirates Cable Car Terminal, Edmund Halley Way, Greenwich Peninsula, London SE10 0FR',
+  cost: 2,
+  actType: [ 'Relaxing', 'Cultural', ' Misc' ],
+  dateNum: [ 2 ],
+  image: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Ftfl.gov.uk%2Fcdn%2Fstatic%2Fcms%2Fimages%2Fpromos%2Feal-section_rdax_600x300.jpg&imgrefurl=https%3A%2F%2Ftfl.gov.uk%2Fmodes%2Femirates-air-line%2F&docid=fvuy2Ce-DBTmiM&tbnid=B2_7iW4F2sdJJM%3A&vet=10ahUKEwj6pse-qIbkAhWRShUIHUwGC9EQMwhlKAAwAA..i&w=600&h=300&bih=1052&biw=952&q=emirate%20cable%20car&ved=0ahUKEwj6pse-qIbkAhWRShUIHUwGC9EQMwhlKAAwAA&iact=mrc&uact=8',
+  contactNumber: +442032821030,
+  link: 'http://emiratesairline.gttix.com/'
 },{
   name: 'Greenwich Peninsula Golf Driving Range',
   address: 'Peninsula Square, Greenwich, Peninsula, London, SE10 0SQ',
@@ -37,7 +26,7 @@ link: 'http://emiratesairline.gttix.com/'
   contactNumber: +442074918880,
   link: 'https://www.elnlondon.co.uk/'
 },{
-  name: 'Clip' \'n Climb Chelsea',
+  name: 'Clip n Climb Chelsea',
   address: '19 Michael Road, SW6 2ER',
   cost: 3,
   actType: [ 'Active' ],
@@ -61,7 +50,7 @@ link: 'http://emiratesairline.gttix.com/'
   actType: [ 'Active', 'Relaxing' ],
   dateNum: [ 2 ],
   image: 'https://www.royalparks.org.uk/parks/hyde-park/things-to-see-and-do/sports-and-leisure/boating-in-hyde-park/_gallery/Boating-in-Serpentine.jpg/w_560.jpg',
-  contactNumber: ++44 (0)20 7262 1330,
+  contactNumber: +442072621330,
   link: 'www.solarshuttle.co.uk'
 },{
   name: 'Las Iguanas ',
@@ -106,7 +95,7 @@ link: 'http://emiratesairline.gttix.com/'
   actType: [ 'Restaurants and Bars', 'Relaxing' ],
   dateNum: [ 2 ],
   image: 'https://www.paternosterchophouse.co.uk/wp-content/uploads/sites/23/2018/09/Paternoster_153_7547-1400x933.jpg',
-  contactNumber: +42070299400,
+  contactNumber: +442070299400,
   link: 'https://www.paternosterchophouse.co.uk/'
 }, {
   name: 'Lion King',
@@ -124,7 +113,7 @@ link: 'http://emiratesairline.gttix.com/'
   actType: [ 'Music', 'Relaxing' , 'Restaurants and Bars'],
   dateNum: [ 2 ],
   image: 'https://resizer.otstatic.com/v2/photos/large/23838043.jpg',
-  contactNumber: 020 7481 1464,
+  contactNumber: +442074811464,
   link: 'http://www.bravasrestaurant.com/'
 }, {
   name: 'British Musuem',
@@ -133,7 +122,7 @@ link: 'http://emiratesairline.gttix.com/'
   actType: [  'Relaxing' , 'Cultural'],
   dateNum: [ 2 ],
   image: 'https://cdn.londonandpartners.com/asset/09fb98cc65cd024b02f0f7899678a426.jpg',
-  contactNumber: 020 7323 8299,
+  contactNumber: +442073238299,
   link: 'https://www.britishmuseum.org/'
 },{
   name: 'Draughts - Hackney',
@@ -142,6 +131,6 @@ link: 'http://emiratesairline.gttix.com/'
   actType: [  'Relaxing' , 'Cultural'],
   dateNum: [ 2 ],
   image: 'https://media.timeout.com/images/102903683/630/472/image.jpg',
-  contactNumber:  07930 936237,
+  contactNumber: +447930936237,
   link: 'https://www.draughtslondon.com/'
-}
+}]
