@@ -6,20 +6,23 @@ import axios from 'axios'
 import _ from 'lodash'
 
 const dateNumOptions = [
-  { value: '1', label: 'First Date' },
-  { value: '2', label: 'Second Date' },
-  { value: '3', label: 'Third Date' },
-  { value: '4', label: 'Fourth Date' },
-  { value: '5', label: 'Fifth Date' }
+  { value: 0, label: 'All' },
+  { value: 1, label: 'First Date' },
+  { value: 2, label: 'Second Date' },
+  { value: 3, label: 'Third Date' },
+  { value: 4, label: 'Fourth Date' },
+  { value: 5, label: 'Fifth Date' }
 ]
 
 const actTypeOptions = [
-  { value: 'active', label: 'Active' },
-  { value: 'relaxing', label: 'Relaxing' },
-  { value: 'outdoors', label: 'Outdoors' }
+  { value: '', label: 'All' },
+  { value: 'Active', label: 'Active' },
+  { value: 'Relaxing', label: 'Relaxing' },
+  { value: 'Outdoors', label: 'Outdoors' }
 ]
 
 const budgetOptions = [
+  { value: 0, label: 'All' },
   { value: 1, label: 'Under £10' },
   { value: 2, label: '£10 - £25' },
   { value: 3, label: '£25 - £50' },
@@ -34,10 +37,13 @@ class LocationsIndex extends React.Component{
 
     this.state = {
       locations: [],
-      filteredLocations: []
+      actType: '',
+      dateNum: 0,
+      cost: 0
     }
 
-    this.handleSelect = this.handleSelect.bind(this)
+    this.handleFilter = this.handleFilter.bind(this)
+
   }
 
   componentDidMount() {
@@ -45,13 +51,20 @@ class LocationsIndex extends React.Component{
       .then( res => this.setState({ locations: res.data, filteredLocations: res.data }))
   }
 
-  handleSelect(e) {
-    const filter = _.filter(this.state.locations, location => location.cost === e.value)
-    this.setState({ filteredLocations: filter })
-    console.log(this.state.filteredLocations)
+  handleFilter(selected, field) {
+    this.setState({ [field]: selected.value })
+  }
+
+  filterLocations() {
+    return _.filter(this.state.locations, location => {
+      return (this.state.dateNum ? location.dateNum.includes(this.state.dateNum) : true) &&
+        (this.state.actType ? location.actType.includes(this.state.actType) : true) &&
+        (this.state.cost ? location.cost === this.state.cost : true )
+    })
   }
 
   render() {
+    console.log(this.state)
     return(
       <section className="section">
         <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -61,6 +74,8 @@ class LocationsIndex extends React.Component{
               <Select
                 name="dateNum"
                 options={dateNumOptions}
+                defaultValue={dateNumOptions[0]}
+                onChange={selected => this.handleFilter(selected, 'dateNum')}
               />
             </div>
           </div>
@@ -70,6 +85,8 @@ class LocationsIndex extends React.Component{
               <Select
                 name="actType"
                 options={actTypeOptions}
+                defaultValue={actTypeOptions[0]}
+                onChange={selected => this.handleFilter(selected, 'actType')}
               />
             </div>
           </div>
@@ -77,9 +94,10 @@ class LocationsIndex extends React.Component{
             <div className="field">
               <label className="label">Budget</label>
               <Select
-                name="budget"
+                name="cost"
                 options={budgetOptions}
-                onChange={this.handleSelect}
+                defaultValue={budgetOptions[0]}
+                onChange={selected => this.handleFilter(selected, 'cost')}
               />
             </div>
           </div>
@@ -88,7 +106,7 @@ class LocationsIndex extends React.Component{
         <div className="container">
           <div className="columns is-multiline">
             {!this.state.locations && <h2 className="title is-2">Loading...</h2>}
-            {this.state.filteredLocations.map(location =>
+            {this.filterLocations().map(location =>
               <div key={location._id} className="column is-half-tablet is-one-quarter-desktop">
                 <Link to={`/locations/${location._id}`}>
                   <Card name={location.name} image={location.image} address={location.address} dateNum={location.dateNum} rating={location.rating || 5}/>
