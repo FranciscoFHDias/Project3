@@ -34,7 +34,7 @@ module.exports = [{
   image: 'https://hirespace.imgix.net/spaces/165925/zwz342ivpnp.jpg?h=1080&w=1920&auto=format&fit=crop&q=40',
   contactNumber: +442074269200,
   link: 'https://www.allstarlanes.co.uk/locations/brick-lane/bowling'
-},{
+}, {
   name: 'Secret Cinema',
   address: 'London',
   cost: 3,
@@ -70,7 +70,7 @@ module.exports = [{
   image: 'https://88f8efaf42239bdab4eb-69d152e9f01b96481f8d016f75a1f290.ssl.cf3.rackcdn.com/bank/From_stage_to_stage_right_tiersprefcomp.jpg',
   contactNumber: +442074390747,
   link: 'https://www.ronniescotts.co.uk/'
-},{
+}, {
   name: 'Broadway Market',
   address: 'Broadway Market, London, E8 4PH',
   cost: 2,
@@ -160,7 +160,7 @@ module.exports = [{
   image: 'https://images.ctfassets.net/6qprbsfbbvrl/4IEwg0IouVrgyxizoEuPU0/26b880c4f87f0481e2d6a42fc34073a2/Cocktails_SS19.jpg',
   contactNumber: +442076201328,
   link: 'https://www.iguanas.co.uk/'
-},{
+}, {
   name: 'Piano Bar Soho',
   address: '16 Carlisle Street, London, W1D 3BT',
   cost: 3,
@@ -269,8 +269,7 @@ module.exports = [{
   image: 'https://secretldn.com/wp-content/uploads/2019/02/Otherworld-Dream-Corporation.jpg',
   contactNumber: +442080501550,
   link: 'https://www.other.world/'
-},
-{
+}, {
   name: 'Draughts - Hackney',
   address: '337 Acton Mews, Haggerston, London E8 4EA',
   cost: 2,
@@ -306,4 +305,85 @@ module.exports = [{
   image: 'https://i.ytimg.com/vi/1JD_OR0bNtI/maxresdefault.jpg',
   contactNumber: +442034881678,
   link: 'https://abqlondon.com/abq-london'
+}, {
+  name: 'Sticks and Sushi Greenwich',
+  address: '1 Nelson Rd, Greenwich Peninsula, London SE10 9JB',
+  cost: 3,
+  actType: [ 'Ethnic Restaurant' ],
+  dateNum: [ 2 ],
+  image: 'https://sticks-n-sushi.imgix.net/media/1195/sticksnsushi_greenwich_restaurant-05_1620x1080.jpg?auto=compress&auto=format&dpr=2.625&fit=crop&h=258&w=352',
+  contactNumber: +442031418220,
+  link: 'https://sticksnsushi.com/en'
+}, {
+  name: 'The Blue Anchor',
+  address: '13 Lower Mall, Hammersmith, London W6 9DJ',
+  cost: 2,
+  actType: [ 'Relax', 'Music', 'Drinks' ],
+  dateNum: [ 1 ],
+  image: 'https://s0.geograph.org.uk/geophotos/02/12/94/2129414_765f5b9a.jpg',
+  contactNumber: +442039510580,
+  link: 'https://www.blueanchorlondon.com/'
+}, {
+  name: 'Bar Douro',
+  address: '35B, Arch, 85B Southwark Bridge Rd, London SE1 0NQ',
+  cost: 3,
+  actType: [ 'Restaurant' ],
+  dateNum: [ 2 ],
+  image: 'https://cloudfront.sketchanet.com/u/423766/images/1366/1534343390ha-web.jpg',
+  contactNumber: +442073780524,
+  link: 'https://www.bardouro.co.uk/'
+}, {
+  name: 'Arundel Castle',
+  address: 'Arundel BN18 9AB',
+  cost: 2,
+  actType: [ 'Relaxing', 'Cultural' ],
+  dateNum: [ 3 ],
+  image: 'https://media-cdn.tripadvisor.com/media/photo-s/04/b1/46/d5/arundel-castle-gardens.jpg',
+  contactNumber: +441903882173,
+  link: ''
+}, {
+  name: 'Mixed Bathing Pond',
+  address: 'Hampstead Heath, Hampstead, London NW5 1QR',
+  cost: 1,
+  actType: [  'Relax', 'Nature', 'Bathing'  ],
+  dateNum: [ 2 ],
+  image: 'https://media.timeout.com/images/100683781/630/472/image.jpg',
+  contactNumber: +442074853873,
+  link: 'https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath/swimming/Pages/default.aspx'
+}, {
+  name: 'The Boatman',
+  address: '10 Thames Side, Windsor SL4 1QN',
+  cost: 1,
+  actType: [ 'Relax', 'Music', 'Drinks' ],
+  dateNum: [ 1 ],
+  image: 'http://boatmanwindsor.com/wp-content/uploads/2013/03/the-boatman-terrace-launch-outside-in.270515.v2-2048x1364.jpg',
+  contactNumber: +441753620010,
+  link: 'http://boatmanwindsor.com/'
+}, {
+  name: 'Royal Observatory Greenwich',
+  address: 'Blackheath Ave, Greenwich, London SE10 8XJ',
+  cost: 2,
+  actType: [ 'Culture', 'Science', 'Leisure' ],
+  dateNum: [ 5 ],
+  image: 'https://media.timeout.com/images/19906/630/472/image.jpg',
+  contactNumber: +442088584422,
+  link: 'https://www.rmg.co.uk/royal-observatory'
+}, {
+  name: 'The Tempest Inn',
+  address: 'Kings Road, Brighton BN1 1NB',
+  cost: 2,
+  actType: [ 'Relax', 'Music', 'Drinks' ],
+  dateNum: [ 1 ],
+  image: 'https://images.squarespace-cdn.com/content/v1/57e1527ce6f2e1f209c1ab8e/1549361683292-XGVUUQ53NUWDFYHHHOQ6/ke17ZwdGBToddI8pDm48kNBhxsR5AixTPaSt36FQjZRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIHEpb-MmdDNvFVgjmeoENIlexef176In2EgYPtI8R2-8KMshLAGzx4R3EDFOm1kBS/image1.jpeg',
+  contactNumber: +441273770505,
+  link: 'https://www.tempest.pub/'
+}, {
+  name: 'GOVR VR Cafe',
+  address: '114-115  London Road, Brighton, BN1 4JG',
+  cost: 3,
+  actType: [ 'Leisure', 'Music', 'Drinks' ],
+  dateNum: [ 2 ],
+  image: 'https://images.squarespace-cdn.com/content/v1/594e69a9cd0f68148eb3f656/1557218295098-1BWY73PN8FKCR979X4NA/ke17ZwdGBToddI8pDm48kNItjXz7RcTqS_k3iww1ou97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USX-vnLkszRHUlKjIjwnAbVDj1jZO8k6qHOrQHQZz8p0o49ZdOtO_QXox0_W7i2zEA/VR+hire+stanmer+ballon.jpg',
+  contactNumber: +447587464283,
+  link: 'https://www.govrbrighton.com/'
 }]
