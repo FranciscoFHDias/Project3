@@ -128,7 +128,7 @@ module.exports = [{
   name: 'Draughts - Hackney',
   address: '337 Acton Mews, Haggerston, London E8 4EA',
   cost: 2,
-  actType: [  'Relaxing' , 'Cultural'],
+  actType: [ 'Relaxing' , 'Cultural'],
   dateNum: [ 2 ],
   image: 'https://media.timeout.com/images/102903683/630/472/image.jpg',
   contactNumber: +447930936237,
