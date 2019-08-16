@@ -2,7 +2,7 @@
 const Location = require('../../models/Location')
 const locationData = require('../../db/data/locationData')
 
-describe('GET /locations', () => {
+xdescribe('GET /locations', () => {
 
   beforeEach(done => {
     Location.create(locationData)

@@ -19,6 +19,7 @@ class LocationsIndex extends React.Component{
   }
 
   render() {
+
     return(
 
       <section className="section">
