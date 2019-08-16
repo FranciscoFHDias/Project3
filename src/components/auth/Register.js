@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import { Link } from 'react-router-dom'
 
 class Register extends React.Component {
 
@@ -88,7 +89,7 @@ class Register extends React.Component {
               </div>
               {this.state.errors.passwordConfirmation && <small className="help is-danger">{this.state.errors.passwordConfirmation}</small>}
             </div>
-
+            <Link to="/login" className="navbar-item">A member? Sign i </Link>
             <button className="button">Submit</button>
           </form>
         </div>

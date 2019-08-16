@@ -3,6 +3,10 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const errorHandler = require('./lib/errorHandler')
 const router = require('./config/routes')
+mongoose.plugin(require('mongoose-unique-validator'), {
+  message: 'Please choose another {PATH}'
+})
+
 const { dbURI } = require('./config/environment')
 
 const app = express()
