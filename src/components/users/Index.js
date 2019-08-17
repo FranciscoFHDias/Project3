@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Card from '../locations/indexCard'
 import axios from 'axios'
 
@@ -13,7 +14,7 @@ class UsersIndex extends React.Component{
   }
 
   componentDidMount() {
-    axios.get('/api/register')
+    axios.get('/api/profiles')
       .then(res => {
         this.setState({ users: res.data })
       })
@@ -29,9 +30,11 @@ class UsersIndex extends React.Component{
                 key={user._id}
                 className="column is-half-tablet is-one-quarter-desktop"
               >
-                <Card
-                  name={user.username}
-                />
+                <Link to={`/profiles/${user._id}`}>
+                  <Card
+                    name={user.username}
+                  />
+                </Link>
               </div>
             )}
           </div>

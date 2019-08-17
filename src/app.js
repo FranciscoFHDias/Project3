@@ -19,6 +19,7 @@ import Contacts from './components/pages/Contacts'
 import TermsConditions from './components/pages/TermsConditions'
 
 import UsersIndex from './components/users/Index'
+import ShowUser from './components/users/Show'
 
 import './style.scss'
 
@@ -30,6 +31,7 @@ class App extends React.Component {
         <Navbar />
         <Switch>
           <Route path="/login" component={Login} />
+          <Route path="/profiles/:id" component={ShowUser} />
           <Route path="/profiles" component={UsersIndex} />
           <Route path="/register" component={Register} />
           <SecureRoute path="/locations/new" component={New} />
