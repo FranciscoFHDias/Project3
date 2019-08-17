@@ -29,8 +29,8 @@ class App extends React.Component {
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
-          <Route path="/locations/:id" component={ShowLocation} />
           <SecureRoute path="/locations/new" component={New} />
+          <Route path="/locations/:id" component={ShowLocation} />
           <Route path="/locations" component={LocationsIndex} />
           <Route path="/about" component={About} />
           <Route path="/contacts" component={Contacts} />
