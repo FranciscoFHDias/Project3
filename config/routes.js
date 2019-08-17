@@ -20,9 +20,8 @@ router.route('/locations/:id')
 router.post('/locations/:id/comments', secureRoute, locationsController.commentCreate)
 router.delete('/locations/:id/comments/:commentId', secureRoute, locationsController.commentDelete)
 
-
-
 router.post('/register', authController.register)
+router.get('/register', authController.showUsers)
 router.post('/login', authController.login)
 
 module.exports = router

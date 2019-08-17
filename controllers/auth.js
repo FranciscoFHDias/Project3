@@ -8,6 +8,13 @@ function registerRoute(req, res, next) {
     .catch(next)
 }
 
+function userIndexRoute(req, res, next) {
+  User.find(req.query)
+    .select('username')
+    .then(users => res.json(users))
+    .catch(next)
+}
+
 function loginRoute(req, res, next) {
   User.findOne({ email: req.body.email })
     .then(user => {
@@ -22,5 +29,6 @@ function loginRoute(req, res, next) {
 
 module.exports = {
   register: registerRoute,
+  showUsers: userIndexRoute,
   login: loginRoute
 }
