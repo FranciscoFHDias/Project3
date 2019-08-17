@@ -1,4 +1,33 @@
 import React from 'react'
+import Select from 'react-select'
+
+const dateNumOptions = [
+  { value: 1, label: 'First Date' },
+  { value: 2, label: 'Second Date' },
+  { value: 3, label: 'Third Date' },
+  { value: 4, label: 'Fourth Date' },
+  { value: 5, label: 'Fifth Date' }
+]
+
+const actTypeOptions = [
+  { value: 'Active', label: 'Active' },
+  { value: 'Relaxing', label: 'Relaxing' },
+  { value: 'Outdoors', label: 'Outdoors' },
+  { value: 'Restaurants and Bars', label: 'Restaurants and Bars' },
+  { value: 'Music', label: 'Music' },
+  { value: 'Overnight Stay', label: 'Overnight Stay' },
+  { value: 'Nightlife', label: 'Nightlife' },
+  { value: 'Cultural', label: 'Cultural' },
+  { value: 'Misc', label: 'Misc' }
+]
+
+const budgetOptions = [
+  { value: 1, label: 'Under £10' },
+  { value: 2, label: '£10 - £25' },
+  { value: 3, label: '£25 - £50' },
+  { value: 4, label: '£50 - £100' },
+  { value: 5, label: 'Over £100' }
+]
 
 class Edit extends React.Component {
 
@@ -6,9 +35,24 @@ class Edit extends React.Component {
     super()
     this.state = {}
 
+    this.handleChange = this.handleChange.bind(this)
+    this.handleMultiChange = this.handleMultiChange.bind(this)
+
+  }
+
+  handleChange(selectedOption, data) {
+    const formData = { ...this.state.formData, [data.name]: selectedOption.value }
+    this.setState({ formData })
+  }
+
+  handleMultiChange(selectedOptions, data) {
+    const formData = { ...this.state.formData, [data.name]: selectedOptions.map(selectedOption => selectedOption.value)}
+    this.setState({ formData })
   }
 
   render() {
+    const selectedActType = (this.state.formData.actType || []).map(actType => ({ label: actType, value: actType }))
+    const selectedDateNum = (this.state.formData.dateNum || []).map(dateNum => ({ label: dateNum, value: dateNum }))
     return (
       <section className="section">
         <div className="container">
@@ -31,29 +75,31 @@ class Edit extends React.Component {
             </div>
             <div className="field">
               <label className="label">Cost</label>
-              <input
-                className="input"
+              <Select
+                value={this.state.formData.cost || ''}
                 name="cost"
-                type="number"
-                placeholder="eg: 1"
+                options={budgetOptions}
+                onChange={this.handleChange}
               />
             </div>
             <div className="field">
               <label className="label">Activity Type</label>
-              <input
-                className="input"
-                type="string"
+              <Select
+                isMulti
+                value={selectedActType}
                 name="actType"
-                placeholder="Restaurant and Bars"
+                options={actTypeOptions}
+                onChange={this.handleMultiChange}
               />
             </div>
             <div className="field">
               <label className="label">Date Number</label>
-              <input
-                className="input"
-                type="number"
-                name="actType"
-                placeholder="Restaurant and Bars"
+              <Select
+                isMulti
+                value={selectedDateNum}
+                name="dateNum"
+                options={dateNumOptions}
+                onChange={this.handleMultiChange}
               />
             </div>
             <div className="field">

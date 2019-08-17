@@ -1,6 +1,35 @@
 import React from 'react'
 import axios from 'axios'
 import Auth from '../../lib/Auth'
+import Select from 'react-select'
+
+const dateNumOptions = [
+  { value: 1, label: 'First Date' },
+  { value: 2, label: 'Second Date' },
+  { value: 3, label: 'Third Date' },
+  { value: 4, label: 'Fourth Date' },
+  { value: 5, label: 'Fifth Date' }
+]
+
+const actTypeOptions = [
+  { value: 'Active', label: 'Active' },
+  { value: 'Relaxing', label: 'Relaxing' },
+  { value: 'Outdoors', label: 'Outdoors' },
+  { value: 'Restaurants and Bars', label: 'Restaurants and Bars' },
+  { value: 'Music', label: 'Music' },
+  { value: 'Overnight Stay', label: 'Overnight Stay' },
+  { value: 'Nightlife', label: 'Nightlife' },
+  { value: 'Cultural', label: 'Cultural' },
+  { value: 'Misc', label: 'Misc' }
+]
+
+const budgetOptions = [
+  { value: 1, label: 'Under £10' },
+  { value: 2, label: '£10 - £25' },
+  { value: 3, label: '£25 - £50' },
+  { value: 4, label: '£50 - £100' },
+  { value: 5, label: 'Over £100' }
+]
 
 class New extends React.Component {
 
@@ -12,6 +41,8 @@ class New extends React.Component {
     }
 
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+    this.handleMultiChange = this.handleMultiChange.bind(this)
 
   }
 
@@ -22,6 +53,17 @@ class New extends React.Component {
     })
       .then(() => this.props.history.push('/locations'))
       .catch(err => this.setState({ errors: err.response.data.errors }))
+  }
+
+  handleChange(selectedOption, data) {
+    const formData = { ...this.state.formData, [data.name]: selectedOption.value }
+    this.setState({ formData })
+  }
+
+  handleMultiChange(selectedOptions, data) {
+    const options = selectedOptions.map(selectedOption => selectedOption.value)
+    const formData = { ...this.state.formData, [data.name]: options}
+    this.setState({ formData })
   }
 
   render() {
@@ -49,31 +91,30 @@ class New extends React.Component {
             </div>
             <div className="field">
               <label className="label">Cost</label>
-              <input
-                className="input"
+              <Select
                 name="cost"
-                type="number"
-                placeholder="eg: 1"
+                options={budgetOptions}
+                onChange={this.handleChange}
               />
               {this.state.errors.cost && <small className="help is-danger">{this.state.errors.cost}</small>}
             </div>
             <div className="field">
               <label className="label">Activity Type</label>
-              <input
-                className="input"
-                type="string"
+              <Select
+                isMulti
                 name="actType"
-                placeholder="Restaurant and Bars"
+                options={actTypeOptions}
+                onChange={this.handleMultiChange}
               />
               {this.state.errors.actType && <small className="help is-danger">{this.state.errors.actType}</small>}
             </div>
             <div className="field">
               <label className="label">Date Number</label>
-              <input
-                className="input"
-                type="number"
-                name="actType"
-                placeholder="Restaurant and Bars"
+              <Select
+                isMulti
+                name="dateNum"
+                options={dateNumOptions}
+                onChange={this.handleMultiChange}
               />
               {this.state.errors.dateNum && <small className="help is-danger">{this.state.errors.dateNum}</small>}
             </div>
