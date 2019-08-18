@@ -22,7 +22,6 @@ function userShowRoute(req, res, next) {
 
 function usersIndexRoute(req, res, next) {
   User.find(req.query)
-    .select('username')
     .then(users => res.json(users))
     .catch(next)
 }

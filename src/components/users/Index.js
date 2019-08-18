@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Card from '../locations/indexCard'
+import Card from './UserCard'
 import axios from 'axios'
 
 class UsersIndex extends React.Component{
@@ -21,6 +21,7 @@ class UsersIndex extends React.Component{
   }
 
   render() {
+    console.log(this.state)
     return(
       <section className="section">
         <div className="container">
@@ -32,7 +33,11 @@ class UsersIndex extends React.Component{
               >
                 <Link to={`/profiles/${user._id}`}>
                   <Card
-                    name={user.username}
+                    image={user.image}
+                    username={user.username}
+                    age={user.age}
+                    gender={user.gender}
+                    smoker={user.smoker}
                   />
                 </Link>
               </div>
