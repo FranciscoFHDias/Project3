@@ -386,4 +386,104 @@ module.exports = [{
   image: 'https://images.squarespace-cdn.com/content/v1/594e69a9cd0f68148eb3f656/1557218295098-1BWY73PN8FKCR979X4NA/ke17ZwdGBToddI8pDm48kNItjXz7RcTqS_k3iww1ou97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USX-vnLkszRHUlKjIjwnAbVDj1jZO8k6qHOrQHQZz8p0o49ZdOtO_QXox0_W7i2zEA/VR+hire+stanmer+ballon.jpg',
   contactNumber: +447587464283,
   link: 'https://www.govrbrighton.com/'
+},
+{
+  name: 'Ballie Ballerson',
+  address: '97-113 Curtain Rd, Hackney, London EC2A 3BS',
+  cost: 2,
+  actType: [ 'Active' ],
+  dateNum: [ 2 ],
+  image: 'https://d3ppia5ny11y1h.cloudfront.net/wp-content/uploads/2019/02/Ballie-Ballerson-London-adult-ball-pitt-bar-experience-colourful-ball-pit-entrance.jpg',
+  contactNumber: +442039502424,
+  link: 'https://www.ballieballerson.com/'
+},
+{
+  name: 'The Big London Bake',
+  address: 'The Castle, 38 Tooting High St, Tooting, London SW17 0RG',
+  cost: 4,
+  actType: [ 'Active', 'Misc' ],
+  dateNum: [ 3, 4 ],
+  image: 'https://media-cdn.tripadvisor.com/media/photo-s/11/a9/3c/39/before-a-new-bake-off.jpg',
+  contactNumber: +442019502424,
+  link: 'https://www.thebiglondonbake.com/'
+},
+{
+  name: 'London Shuffle Club',
+  address: '4 Ebor St, Hackney, London E1 6AW',
+  cost: 3,
+  actType: [ 'Active', 'Restaurants and Bars' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://thenudge.com/wp-content/uploads/2001/09/london_shuffle_club.jpg',
+  contactNumber: +442036579062,
+  link: 'londonshuffle.com'
+},
+{
+  name: 'The Ghost Bus Tours',
+  address: '8 Northumberland Ave, Westminster, London WC2N 5JR',
+  cost: 3,
+  actType: [ 'Relaxing', 'Misc' ],
+  dateNum: [ 2, 4, 5 ],
+  image: 'https://media-cdn.tripadvisor.com/media/photo-s/14/5b/8f/0b/the-ghost-bus-tours.jpg',
+  contactNumber: +448445678666,
+  link: 'https://www.theghostbustours.com/'
+},
+{
+  name: 'Bounce Old Street',
+  address: '241 Old St, Old Street, London EC1V 9EY',
+  cost: 2,
+  actType: [ 'Restaurants and Bars' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://media.timeout.com/images/103762755/630/472/image.jpg',
+  contactNumber: +442036576525,
+  link: 'http://www.bouncepingpong.com/menus'
+},
+{
+  name: 'Fierce Grace Hot Yoga - City',
+  address: '53-55 East Rd, Hoxton, London N1 6AH',
+  cost: 3,
+  actType: [ 'Relaxing', 'Active', 'Misc' ],
+  dateNum: [ 2, 5 ],
+  image: 'http://www.fiercegrace.com/img/content_blocks/image/original/nmm_150319_fgy_014web-14.jpg',
+  contactNumber: +442073366330,
+  link: 'https://www.fiercegracecity.com/'
+},
+{
+  name: 'Dans Le Noir',
+  address: '30-31 Clerkenwell Green, Farringdon, London EC1R 0DU',
+  cost: 4,
+  actType: [ 'Restaurants and Bars' ],
+  dateNum: [ 3, 4, 5 ],
+  image: 'https://london.danslenoir.com/wp-content/uploads/2017/01/facade.jpg',
+  contactNumber: +442072531100,
+  link: 'https://london.danslenoir.com/en/home/'
+},
+{
+  name: 'The Midnight Apothecary',
+  address: 'Railway Ave, Rotherhithe, London SE16 4LF',
+  cost: 3,
+  actType: [ 'Restaurants and Bars', 'Outdoors', 'Relaxing' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://assets.londonist.com/uploads/2018/06/i875/evening_light.jpg',
+  contactNumber: +447917548475,
+  link: 'https://www.themidnightapothecary.co.uk/'
+},
+{
+  name: 'Coca-Cola London Eye',
+  address: 'Lambeth, London SE1 7PB',
+  cost: 3,
+  actType: [ 'Relaxing', 'Cultural' ],
+  dateNum: [ 4 ],
+  image: 'https://www.londoneye.com/media/55771/london-eye-homepage.jpg?quality=70',
+  contactNumber: +442034881678,
+  link: 'https://www.londoneye.com/'
+},
+{
+  name: 'Warner Bros. Studio Tour London',
+  address: 'Studio Tour Dr, Watford WD25 7LR',
+  cost: 4,
+  actType: [ 'Relaxing', 'Cultural', 'Misc' ],
+  dateNum: [ 4, 5 ],
+  image: 'https://cdn.getyourguide.com/img/tour_img-245971-148.jpg',
+  contactNumber: +443450840900,
+  link: 'https://www.wbstudiotour.co.uk/'
 }]
