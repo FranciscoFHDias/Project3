@@ -386,4 +386,94 @@ module.exports = [{
   image: 'https://images.squarespace-cdn.com/content/v1/594e69a9cd0f68148eb3f656/1557218295098-1BWY73PN8FKCR979X4NA/ke17ZwdGBToddI8pDm48kNItjXz7RcTqS_k3iww1ou97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USX-vnLkszRHUlKjIjwnAbVDj1jZO8k6qHOrQHQZz8p0o49ZdOtO_QXox0_W7i2zEA/VR+hire+stanmer+ballon.jpg',
   contactNumber: +447587464283,
   link: 'https://www.govrbrighton.com/'
+}, {
+  name: 'Kyoto Garden',
+  address: 'Holland Park, Holland Park Ave, Kensington, London W11 4UA',
+  cost: 0,
+  actType: [ 'Relax','Nature' ],
+  dateNum: [ 2 ],
+  image: 'https://secretldn.com/wp-content/uploads/2018/02/22637281_1082893518480502_4132483769749733376_n-2.jpg',
+  contactNumber: +442073613003,
+  link: 'https://www.rbkc.gov.uk/leisure-and-culture/parks/holland-park'
+}, {
+  name: 'Hever Castle',
+  address: 'Hever Rd, Hever, Edenbridge TN8 7NG',
+  cost: 3,
+  actType: [ 'Culture', 'Science' ],
+  dateNum: [ 5 ],
+  image: 'https://media-cdn.tripadvisor.com/media/photo-s/15/98/77/b4/hever-castle.jpg',
+  contactNumber: +441732865224,
+  link: 'https://www.hevercastle.co.uk/'
+}, {
+  name: 'White Cliffs of Dover',
+  address: 'Dover, Kent',
+  cost: 0,
+  actType: [ 'Relax','Nature' ],
+  dateNum: [ 3 ],
+  image: 'https://cdn.thecrazytourist.com/wp-content/uploads/2019/02/ccimage-shutterstock_10809583.jpg',
+  contactNumber: +440000000000,
+  link: 'https://www.nationaltrust.org.uk/the-white-cliffs-of-dover'
+}, {
+  name: 'Whitstable Castle',
+  address: 'Whitstable CT5 2BW',
+  cost: 3,
+  actType: [ 'Relaxing', 'Cultural' ],
+  dateNum: [ 4 ],
+  image: 'http://www.whitstablecastle.co.uk/webbuilder/files/4eda4e71bd9a4f05cfe1288dbca88e6a.jpg',
+  contactNumber: +441227281726,
+  link: 'http://www.whitstablecastle.co.uk/the-castle'
+}, {
+  name: 'Botany Bay',
+  address: 'Botany Bay, Kent',
+  cost: 0,
+  actType: [ 'Relax','Nature' ],
+  dateNum: [ 0 ],
+  image: 'http://www.fraserallenphotography.co.uk/wp-content/uploads/2018/06/Fraser-Allen-2.jpg',
+  contactNumber: +440000000000,
+  link: 'https://www.visitkent.co.uk/attractions/botany-bay-1891/'
+}, {
+  name: 'Scotney Castle',
+  address: 'Lamberhurst, Tunbridge Wells TN3 8JN',
+  cost: 3,
+  actType: [ 'Relaxing', 'Cultural' ],
+  dateNum: [ 4 ],
+  image: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Scotney_Castle_with_white_wisteria.JPG',
+  contactNumber: +441892893820,
+  link: 'https://www.nationaltrust.org.uk/scotney-castle'
+}, {
+  name: 'The Cross Keys',
+  address: '1 Lawrence St, Chelsea, London SW3 5NB',
+  cost: 2,
+  actType: [ 'Leisure', 'Music', 'Drinks' ],
+  dateNum: [ 1 ],
+  image: 'https://media-cdn.tripadvisor.com/media/photo-s/03/32/95/39/the-cross-keys.jpg',
+  contactNumber: +442073510686,
+  link: 'https://www.thecrosskeyschelsea.co.uk/'
+}, {
+  name: 'Jerusalem Tavern',
+  address: '55 Britton Street London EC1M 5UQ',
+  cost: 1,
+  actType: [ 'Leisure', 'Music', 'Drinks' ],
+  dateNum: [ 1 ],
+  image: 'https://media.timeout.com/images/100684375/1372/772/image.jpg',
+  contactNumber: +442074904281,
+  link: 'https://londonist.com/pubs/pubs/pubs/the-jerusalem-tavern'
+}, {
+  name: 'Upside Down House',
+  address: 'Kings Road Arches, 42-43, Brighton BN1 2LN',
+  cost: 2,
+  actType: [ 'Relaxing', 'Cultural' ],
+  dateNum: [ 3 ],
+  image: 'https://1.bp.blogspot.com/-FUB8jbwRAhE/XP-ZZo8veyI/AAAAAAAAzQk/v9JFf4p7uiAGveEHt52ygS9M0kB5rHJ0QCLcBGAs/s1600/61516716_10161665406945244_6015157451018469376_o.jpg',
+  contactNumber: +441375374725,
+  link: 'https://www.upsidedownhouse.co.uk/'
+}, {
+  name: 'The British Museum',
+  address: 'Great Russell St, Bloomsbury, London WC1B 3DG',
+  cost: 0,
+  actType: [ 'Relaxing', 'Cultural' ],
+  dateNum: [ 2 ],
+  image: 'https://secretldn.com/wp-content/uploads/2018/04/British-Museum-22.jpg',
+  contactNumber: +440000000000,
+  link: 'https://www.britishmuseum.org/'
 }]

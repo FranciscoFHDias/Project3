@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Card from './indexCard'
+import Footer from '../common/Footer'
 import Select from 'react-select'
 import axios from 'axios'
 import _ from 'lodash'
@@ -122,6 +123,7 @@ class LocationsIndex extends React.Component{
 
           </div>
         </div>
+        <Footer />
       </section>
 
     )

@@ -18,7 +18,9 @@ import About from './components/pages/About'
 import Contacts from './components/pages/Contacts'
 import TermsConditions from './components/pages/TermsConditions'
 
+import 'bulma'
 import './style.scss'
+
 
 class App extends React.Component {
 
