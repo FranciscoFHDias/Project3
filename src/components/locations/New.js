@@ -39,11 +39,9 @@ class New extends React.Component {
       formData: {},
       errors: {}
     }
-
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.handleMultiChange = this.handleMultiChange.bind(this)
-
   }
 
   handleSubmit(e) {
