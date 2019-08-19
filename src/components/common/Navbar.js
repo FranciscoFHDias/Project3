@@ -8,11 +8,13 @@ class Navbar extends React.Component {
     super()
 
     this.state = {
-      navbarOpen: false
+      navbarOpen: false,
+      dropdownOpen: false
     }
 
     this.logout = this.logout.bind(this)
     this.toggleNavbar = this.toggleNavbar.bind(this)
+    this.toggleDropdown = this.toggleDropdown.bind(this)
   }
 
   logout() {
@@ -23,6 +25,10 @@ class Navbar extends React.Component {
 
   toggleNavbar() {
     this.setState({ navbarOpen: !this.state.navbarOpen })
+  }
+
+  toggleDropdown() {
+    this.setState({ dropdownOpen: !this.state.dropdownOpen})
   }
 
   componentDidUpdate(prevProps) {
@@ -65,10 +71,27 @@ class Navbar extends React.Component {
             <div className="navbar-end">
               {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item">Register</Link>}
               {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Login</Link>}
-              {Auth.isAuthenticated() && <a onClick={this.logout} className="navbar-item">
-                {Auth.getUser() && <img src={`${Auth.getUser().image}`} />}
-                Logout
-              </a>}
+              {Auth.isAuthenticated() && <div className="navbar-item">
+                <div className={`dropdown is-right ${this.state.dropdownOpen ? 'is-active' : ''}`}>
+                  <div className="dropdown-trigger">
+                    <button className="button" aria-haspopup="true" aria-controls="dropdown-menu" onClick={this.toggleDropdown}>
+                      <span className="icon is-small">
+                        <img src={`${Auth.getUser().image}`} aria-hidden="true" />
+                      </span>
+                    </button>
+                  </div>
+                  <div className="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div className="dropdown-content">
+                      <a href="#" className="dropdown-item">
+                      My Profile
+                      </a>
+                      <a className="dropdown-item"  onClick={this.logout}>
+                      Logout
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>}
             </div>
           </div>
         </div>
