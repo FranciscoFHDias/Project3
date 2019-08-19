@@ -93,7 +93,6 @@ class ShowLocation extends React.Component {
 
 
   render() {
-    console.log(this.state.formData)
     if(!this.state.locations) return null
     return(
 
