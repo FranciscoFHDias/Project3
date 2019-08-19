@@ -38,12 +38,12 @@ class App extends React.Component {
 
           <SecureRoute path="/locations/:id/edit" component={EditLocation} />
           <Route path="/login" component={Login} />
+          <Route path="/register/preferences" component={Preferences} />
           <Route path="/register" component={Register} />
           <SecureRoute path="/locations/new" component={New} />
           <SecureRoute path="/locations/:id/edit" component={Edit} />
           <Route path="/profiles/:id" component={ShowUser} />
           <Route path="/profiles" component={UsersIndex} />
-          <Route path="/register/preferences" component={Preferences} />
           <Route path="/locations/map" component={MapLocations} />
           <Route path="/locations/:id" component={ShowLocation} />
           <Route path="/locations" component={LocationsIndex} />

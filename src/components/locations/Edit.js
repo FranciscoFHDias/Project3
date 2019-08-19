@@ -43,7 +43,13 @@ class EditLocation extends React.Component {
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleMultiChange = this.handleMultiChange.bind(this)
+    this.handleChangeNormal = this.handleChangeNormal.bind(this)
 
+  }
+
+  handleChangeNormal(e) {
+    const formData = { ...this.state.formData, [e.target.name]: e.target.value }
+    this.setState({ formData })
   }
 
   handleChange(selectedOption, data) {
@@ -95,7 +101,7 @@ class EditLocation extends React.Component {
                       name="name"
                       placeholder="eg: LoveExp Cafe"
                       value={this.state.formData.name || ''}
-                      onChange={this.handleChange}
+                      onChange={this.handleChangeNormal}
                     />
                     {this.state.errors.name && <small className="help is-danger">{this.state.errors.name}</small>}
                   </div>
@@ -106,14 +112,13 @@ class EditLocation extends React.Component {
                       name="address"
                       placeholder="eg: LoveExp Cafe, love cafe street, se16 6yy"
                       value={this.state.formData.address || ''}
-                      onChange={this.handleChange}
+                      onChange={this.handleChangeNormal}
                     />
                     {this.state.errors.address && <small className="help is-danger">{this.state.errors.address}</small>}
                   </div>
                   <div className="field">
                     <label className="label">Cost</label>
                     <Select
-                      value={this.state.formData.cost || ''}
                       name="cost"
                       options={budgetOptions}
                       onChange={this.handleChange}
@@ -162,7 +167,7 @@ class EditLocation extends React.Component {
                       name="contactNumber"
                       placeholder= "+442076507775"
                       value={this.state.formData.contactNumber || ''}
-                      onChange={this.handleChange}
+                      onChange={this.handleChangeNormal}
                     />
                     {this.state.errors.contactNumber && <small className="help is-danger">{this.state.errors.contactNumber}</small>}
                   </div>
@@ -173,7 +178,7 @@ class EditLocation extends React.Component {
                       type="string"
                       name="link"
                       value={this.state.formData.link || ''}
-                      onChange={this.handleChange}
+                      onChange={this.handleChangeNormal}
                     />
                     {this.state.errors.link && <small className="help is-danger">{this.state.errors.link}</small>}
                   </div>
