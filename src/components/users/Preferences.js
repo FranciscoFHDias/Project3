@@ -1,5 +1,5 @@
 import React from 'react'
-// import axios from 'axios'
+import axios from 'axios'
 // import { Link } from 'react-router-dom'
 import Select from 'react-select'
 import ReactFilestack from 'filestack-react'
@@ -54,6 +54,21 @@ class Preferences extends React.Component {
     this.setState({ formData })
   }
 
+  handleSubmit(e) {
+    e.preventDefault()
+
+    axios.post('/api/register', this.state.formData)
+      .then(res => {
+        toast.success(res.data.message)
+        console.log(this.state)
+        this.props.history.push({
+          pathname: '/register/preferences',
+          state: this.state
+        })
+      })
+      .catch(err => this.setState({ errors: err.response.data.errors }))
+  }
+
   render() {
     console.log(this.state.formData)
     return (
@@ -63,7 +78,7 @@ class Preferences extends React.Component {
             <div className="field">
               <label className="label">Image</label>
               <ReactFilestack
-                apikey=''
+                apikey='AYGiGjrSKpaWKAEudgKALz'
                 buttonText="Upload Photo"
                 buttonClass="button is-primary"
                 className="upload-image"
