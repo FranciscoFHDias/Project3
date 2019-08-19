@@ -82,6 +82,18 @@ function commentDeleteRoute(req, res, next) {
     .catch(next)
 }
 
+function likeRoute(req, res, next) {
+  Location.findById(req.params.id)
+    .then(location => {
+      if(location.likes.includes(req.currentUser._id)) location.likes.pull(req.currentUser._id)
+      else location.likes.addToSet(req.currentUser._id)
+      return location.save()
+    })
+    .then(location => Location.populate(location, 'user comments.user'))
+    .then(location => res.json(location))
+    .catch(next)
+}
+
 module.exports = {
   index: indexRoute,
   create: createRoute,
@@ -89,5 +101,6 @@ module.exports = {
   update: updateRoute,
   delete: deleteRoute,
   commentCreate: commentCreateRoute,
-  commentDelete: commentDeleteRoute
+  commentDelete: commentDeleteRoute,
+  like: likeRoute
 }
