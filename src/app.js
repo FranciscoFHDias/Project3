@@ -19,6 +19,7 @@ import About from './components/pages/About'
 import Contacts from './components/pages/Contacts'
 import TermsConditions from './components/pages/TermsConditions'
 import Edit from './components/locations/Edit'
+import MapLocations from './components/locations/Map'
 
 import Preferences from './components/users/Preferences'
 import UsersIndex from './components/users/Index'
@@ -43,6 +44,7 @@ class App extends React.Component {
           <Route path="/profiles/:id" component={ShowUser} />
           <Route path="/profiles" component={UsersIndex} />
           <Route path="/register/preferences" component={Preferences} />
+          <Route path="/locations/map" component={MapLocations} />
           <Route path="/locations/:id" component={ShowLocation} />
           <Route path="/locations" component={LocationsIndex} />
           <Route path="/about" component={About} />
