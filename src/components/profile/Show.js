@@ -1,6 +1,7 @@
 // import React from 'react'
+// import Auth from '../lib/Auth'
 //
-// const ShowProfile = ({ name, address, image, dateNum, rating }) => {
+// const ShowProfile = ({ name, address, image }) => {
 //
 //   return(
 //     <div className="card">

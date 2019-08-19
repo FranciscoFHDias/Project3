@@ -50,7 +50,7 @@ class App extends React.Component {
           <Route path="/about" component={About} />
           <Route path="/contacts" component={Contacts} />
           <Route path="/termsconditions" component={TermsConditions} />
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </HashRouter>
 
