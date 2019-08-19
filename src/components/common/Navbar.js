@@ -33,7 +33,10 @@ class Navbar extends React.Component {
 
   componentDidUpdate(prevProps) {
     if(prevProps.location.pathname !== this.props.location.pathname) {
-      this.setState({ navbarOpen: false })
+      this.setState({
+        navbarOpen: false,
+        dropdownOpen: false
+      })
     }
   }
 
