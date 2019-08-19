@@ -23,7 +23,8 @@ class ShowLocation extends React.Component {
     this.state = {
       formData: {
         content: '',
-        rating: 5
+        rating: 5,
+        liked: false
       },
       postcode: 'E1 7PT',
       latitude: 0,
@@ -35,12 +36,13 @@ class ShowLocation extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
     this.handleDeleteComment = this.handleDeleteComment.bind(this)
+    this.handleLike = this.handleLike.bind(this)
 
   }
 
   componentDidMount() {
     axios.get(`api/locations/${this.props.match.params.id}`)
-      .then(res => this.setState({ locations: res.data }))
+      .then(res => this.setState({ location: res.data }))
     // const postCode = locations.postCode
     axios.get(`https:/api.postcodes.io/postcodes/${this.state.postcode}`)
       .then(res => this.setState({ longitude: res.data.result.longitude, latitude: res.data.result.latitude})
@@ -62,7 +64,7 @@ class ShowLocation extends React.Component {
     axios.post(`/api/locations/${this.props.match.params.id}/comments`, this.state.formData, {
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
-      .then(res => this.setState({ locations: res.data, formData: { content: '', rating: 5 } }))
+      .then(res => this.setState({ location: res.data, formData: { content: '', rating: 5 } }))
   }
 
   handleDelete(e) {
@@ -81,20 +83,32 @@ class ShowLocation extends React.Component {
     axios.delete(`/api/locations/${this.props.match.params.id}/comments/${e.target.id}`, {
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
-      .then(res => this.setState({ locations: res.data }))
+      .then(res => this.setState({ location: res.data }))
+  }
+
+  handleLike() {
+    axios.post(`/api/locations/${this.props.match.params.id}/like`, null, {
+      headers: { Authorization: `Bearer ${Auth.getToken()}` }
+    })
+      .then(res => this.setState({ location: res.data }))
+  }
+
+  isLiked(likes) {
+    return likes.includes(Auth.getPayload().sub)
   }
 
 
   render() {
 
-    if(!this.state.locations) return null
+    if(!this.state.location) return null
+
 
     return(
 
       <section className="section">
         <div className="container">
 
-          <figure id="showImage" className="image is-3by1" style={{backgroundImage: `url(${this.state.locations.image}`}} />
+          <figure id="showImage" className="image is-3by1" style={{backgroundImage: `url(${this.state.location.image}`}} />
 
 
           <div className="tile is-parent">
@@ -102,12 +116,12 @@ class ShowLocation extends React.Component {
 
               <div className="columns">
                 <div className="column">
-                  <p className="title">{this.state.locations.name}</p>
+                  <p className="title">{this.state.location.name}</p>
                 </div>
 
                 <div className="column">
                   <StarRatings
-                    rating={this.state.locations.averageRating}
+                    rating={this.state.location.averageRating}
                     starRatedColor="#FFC300"
                     numberOfStars={5}
                     starDimension="15px"
@@ -120,12 +134,15 @@ class ShowLocation extends React.Component {
                   {Auth.isAuthenticated() && <div className="buttons">
                     <Link
                       className="button"
-                      to={`/locations/${this.state.locations._id}/edit`}
+                      to={`/locations/${this.state.location._id}/edit`}
                     >Edit</Link>
 
                     <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
 
-                    <LikeButton />
+                    <LikeButton
+                      liked={this.isLiked(this.state.location.likes)}
+                      handleLike={this.handleLike}
+                    />
                   </div>}
                 </div>
 
@@ -134,14 +151,19 @@ class ShowLocation extends React.Component {
               <hr />
 
               <div className="content">
-                <p className="text is-6">{this.state.locations.address}</p>
+
+                <p className="text is-6">{this.state.location.address}</p>
+                <p className="text is-6">{this.state.location.cost}</p>
+
+                <p className="text is-6">{this.state.location.address}</p>
                 <StarRatingComponent
                   name="averageRating"
                   renderStarIcon={() => <span>£</span>}
                   editing={false}
                   starCount={5}
-                  value={this.state.locations.cost}
+                  value={this.state.location.cost}
                 />
+
               </div>
 
             </article>
@@ -168,7 +190,7 @@ class ShowLocation extends React.Component {
           <div className="tile is-parent">
             <article className="tile is-child notification">
 
-              {this.state.locations.comments.map(comment =>
+              {this.state.location.comments.map(comment =>
                 <Comment key={comment._id} {...comment} handleDeleteComment={this.handleDeleteComment} />
               )}
               {Auth.isAuthenticated() && <div className="media-right">
