@@ -2,6 +2,7 @@ import React from 'react'
 // import axios from 'axios'
 // import { Link } from 'react-router-dom'
 import Select from 'react-select'
+import ReactFilestack from 'filestack-react'
 
 const ageOptions = [
   { value: 1, label: '18 - 25' },
@@ -22,18 +23,30 @@ const smokerOptions = [
   { value: 'no', label: 'No' }
 ]
 
+const options = {
+  accept: 'image/*',
+  transformations: {
+    crop: true,
+    circle: true,
+    rotate: true
+  }
+}
+
 class Preferences extends React.Component {
 
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      formData: {},
+      file: null
+    }
 
     this.handleChange = this.handleChange.bind(this)
 
   }
 
   componentDidMount() {
-    this.setState({ ...this.props.formData.state })
+    this.setState({ ...this.props.location.state })
   }
 
   handleChange(selectedOption, data) {
@@ -42,17 +55,21 @@ class Preferences extends React.Component {
   }
 
   render() {
-    console.log(this.state)
+    console.log(this.state.formData)
     return (
       <section className="section">
         <div className="container">
           <form onSubmit={this.handleSubmit}>
             <div className="field">
               <label className="label">Image</label>
-              <input
-                className="input"
-                name="image"
-                placeholder="eg: me.jpg"
+              <ReactFilestack
+                apikey='AYGiGjrSKpaWKAEudgKALz'
+                buttonText="Upload Photo"
+                buttonClass="button is-primary"
+                className="upload-image"
+                options={options}
+                onSuccess={(result) => this.handleUploadImages(result)}
+                preload={true}
               />
             </div>
             <div className="field">
