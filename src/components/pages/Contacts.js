@@ -10,31 +10,69 @@ class Contacts extends React.Component{
   render() {
     return(
       <section className="section">
-        <section className="hero is-fullheight is-black">
+        <section className="hero is-black">
           <div className="hero-body">
             <div className="container">
-              <h1 className="title is-1 has-text-centered">Contacts</h1>
+              <h2 className="title is-2 has-text-centered">Contact Us</h2>
               <div className="level">
-                <div className="level-item has-text-centered">
-                  <h1>First column</h1>
-                </div>
-                <div className="level-item has-text-centered">
-                  <h1>Second column</h1>
-                </div>
-                <div className="level-item has-text-centered">
-                  <h1>third column</h1>
-                </div>
               </div>
-              <h2 className="subtitle has-text-centered">
-              Our Team
-              </h2>
-              <hr/>
-              <h2 className="subtitle has-text-centered">
-              the best of the best
-              </h2>
             </div>
           </div>
         </section>
+        <hr/>
+
+
+        <div className="container">
+          <form>
+            <div className="field">
+              <label className="label">Name (required)</label>
+              <div className="control">
+                <input
+                  className="input"
+                  name="username"
+                  placeholder="eg: Donald"
+                />
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Email (required)</label>
+              <div className="control">
+                <input
+                  className="input"
+                  type="email"
+                  name="email"
+                  placeholder="eg: donaldduck@baldandsexy.com"
+                />
+              </div>
+            </div>
+
+
+
+            <div className="field">
+              <label className="label">Subject</label>
+              <div className="control">
+                <input
+                  className="input"
+                  name="surname"
+                  placeholder="eg: Duck"
+                />
+              </div>
+
+              <div className="field">
+                <label className="label">Message</label>
+                <div className="control">
+                  <textarea className="textarea" placeholder="e.g. Hello world"></textarea>
+                </div>
+              </div>
+              <button className="button">Submit</button>
+            </div>
+          </form>
+        </div>
+
+
+
+
 
 
 
