@@ -17,6 +17,7 @@ import New from './components/locations/New'
 import About from './components/pages/About'
 import Contacts from './components/pages/Contacts'
 import TermsConditions from './components/pages/TermsConditions'
+import Edit from './components/locations/Edit'
 
 import './style.scss'
 
@@ -29,8 +30,9 @@ class App extends React.Component {
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
-          <Route path="/locations/:id" component={ShowLocation} />
           <SecureRoute path="/locations/new" component={New} />
+          <SecureRoute path="/locations/:id/edit" component={Edit} />
+          <Route path="/locations/:id" component={ShowLocation} />
           <Route path="/locations" component={LocationsIndex} />
           <Route path="/about" component={About} />
           <Route path="/contacts" component={Contacts} />

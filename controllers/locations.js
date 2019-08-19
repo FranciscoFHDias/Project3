@@ -2,7 +2,6 @@ const Location = require('../models/Location')
 
 function indexRoute(req, res, next) {
   Location.find(req.query)
-    .select('-comments')
     .then(locations => res.json(locations))
     .catch(next)
 }
