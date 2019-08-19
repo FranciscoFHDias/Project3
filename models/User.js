@@ -4,7 +4,12 @@ const bcrypt = require('bcrypt')
 const userSchema = new mongoose.Schema({
   username: { type: String, unique: true, required: true },
   email: { type: String, unique: true, required: true },
-  password: { type: String, required: true }
+  password: { type: String, required: true },
+  image: {type: String },
+  age: { type: Number },
+  gender: {type: String },
+  smoker: { type: Boolean }
+
 }, {
   toJSON: {
     transform(doc, json) {

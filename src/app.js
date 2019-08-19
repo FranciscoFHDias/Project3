@@ -12,13 +12,17 @@ import Navbar from './components/common/Navbar'
 import SecureRoute from './components/common/SecureRoute'
 
 import LocationsIndex from './components/locations/Index'
+import EditLocation from './components/locations/Edit'
 import ShowLocation from './components/locations/Show'
 import New from './components/locations/New'
 import About from './components/pages/About'
 import Contacts from './components/pages/Contacts'
 import TermsConditions from './components/pages/TermsConditions'
 
-import 'bulma'
+import Preferences from './components/users/Preferences'
+import UsersIndex from './components/users/Index'
+import ShowUser from './components/users/Show'
+
 import './style.scss'
 
 
@@ -29,12 +33,18 @@ class App extends React.Component {
       <HashRouter>
         <Navbar />
         <Switch>
+
+          <SecureRoute path="/locations/:id/edit" component={EditLocation} />
           <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <Route path="/locations/:id" component={ShowLocation} />
+          <Route path="/profiles/:id" component={ShowUser} />
+          <Route path="/profiles" component={UsersIndex} />
+          <Route path="/register/preferences" component={Preferences} />
           <SecureRoute path="/locations/new" component={New} />
+          <Route path="/locations/:id" component={ShowLocation} />
           <Route path="/locations" component={LocationsIndex} />
           <Route path="/about" component={About} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
           <Route path="/contacts" component={Contacts} />
           <Route path="/termsconditions" component={TermsConditions} />
           <Route path="/" component={Home} />
