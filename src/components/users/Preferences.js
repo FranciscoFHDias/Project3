@@ -63,7 +63,7 @@ class Preferences extends React.Component {
             <div className="field">
               <label className="label">Image</label>
               <ReactFilestack
-                apikey='AYGiGjrSKpaWKAEudgKALz'
+                apikey=''
                 buttonText="Upload Photo"
                 buttonClass="button is-primary"
                 className="upload-image"
