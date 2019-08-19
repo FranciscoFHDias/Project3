@@ -17,7 +17,13 @@ const actTypeOptions = [
   { value: '', label: 'All' },
   { value: 'Active', label: 'Active' },
   { value: 'Relaxing', label: 'Relaxing' },
-  { value: 'Outdoors', label: 'Outdoors' }
+  { value: 'Outdoors', label: 'Outdoors' },
+  { value: 'Restaurants and Bars', label: 'Restaurants and Bars' },
+  { value: 'Music', label: 'Music' },
+  { value: 'Overnight Stay', label: 'Overnight Stay' },
+  { value: 'Nightlife', label: 'Nightlife' },
+  { value: 'Cultural', label: 'Cultural' },
+  { value: 'Misc', label: 'Misc' }
 ]
 
 const budgetOptions = [

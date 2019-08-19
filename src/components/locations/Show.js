@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import ReactMapboxGl, { Marker } from 'react-mapbox-gl'
 import Comment from '../common/Comment'
 import Auth from '../../lib/Auth'
+import LikeButton from '../common/LikeButton'
 
 const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoiZnJhbmNpc2NvZmhkaWFzIiwiYSI6ImNqemI5MTFiajA4NzYzbXBoZWd6NGtndTAifQ.oDArT5qLRW4i6FUT3Cut-w'
@@ -31,8 +32,9 @@ class ShowLocation extends React.Component {
     this.handleChangeContent = this.handleChangeContent.bind(this)
     this.handleChangeRating = this.handleChangeRating.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleDeleteComment = this.handleDeleteComment.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
+    this.handleDeleteComment = this.handleDeleteComment.bind(this)
+
   }
 
   componentDidMount() {
@@ -121,6 +123,7 @@ class ShowLocation extends React.Component {
 
                     <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
 
+                    <LikeButton />
                   </div>}
                 </div>
 
@@ -162,6 +165,9 @@ class ShowLocation extends React.Component {
               {this.state.locations.comments.map(comment =>
                 <Comment key={comment._id} {...comment} handleDeleteComment={this.handleDeleteComment} />
               )}
+              {Auth.isAuthenticated() && <div className="media-right">
+
+              </div>}
 
               {Auth.isAuthenticated() && <form onSubmit={this.handleSubmit}>
                 <hr />

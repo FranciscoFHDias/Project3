@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Card from './indexCard'
+import Footer from '../common/Footer'
 import Select from 'react-select'
 import axios from 'axios'
 import _ from 'lodash'
@@ -18,7 +19,13 @@ const actTypeOptions = [
   { value: '', label: 'All' },
   { value: 'Active', label: 'Active' },
   { value: 'Relaxing', label: 'Relaxing' },
-  { value: 'Outdoors', label: 'Outdoors' }
+  { value: 'Outdoors', label: 'Outdoors' },
+  { value: 'Restaurants and Bars', label: 'Restaurants and Bars' },
+  { value: 'Music', label: 'Music' },
+  { value: 'Overnight Stay', label: 'Overnight Stay' },
+  { value: 'Nightlife', label: 'Nightlife' },
+  { value: 'Cultural', label: 'Cultural' },
+  { value: 'Misc', label: 'Misc' }
 ]
 
 const budgetOptions = [
@@ -30,6 +37,13 @@ const budgetOptions = [
   { value: 5, label: 'Over £100' }
 ]
 
+const sortOptions = [
+  { value: 'name|asc', label: 'A - Z' },
+  { value: 'name|desc', label: 'Z - A' },
+  { value: 'cost|asc', label: 'Price: Low - High' },
+  { value: 'cost|desc', label: 'Price: High - Low' }
+]
+
 class LocationsIndex extends React.Component{
 
   constructor() {
@@ -39,12 +53,13 @@ class LocationsIndex extends React.Component{
       locations: [],
       actType: '',
       dateNum: 0,
-      cost: 0
+      cost: 0,
+      sortTerm: 'name|asc'
     }
 
 
     this.handleFilter = this.handleFilter.bind(this)
-
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidMount() {
@@ -67,8 +82,18 @@ class LocationsIndex extends React.Component{
     })
   }
 
+  handleChange(selected) {
+    this.setState({ sortTerm: selected.value })
+    this.applySort(this.state.locations)
+  }
+
+  applySort(locations) {
+    const [field, order] = this.state.sortTerm.split('|')
+    const sortedLocations = _.orderBy(locations, [field], [order])
+    this.setState({locations: sortedLocations})
+  }
+
   render() {
-    console.log(this.state.locations)
     return(
       <section className="section">
         <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -108,6 +133,18 @@ class LocationsIndex extends React.Component{
               />
             </div>
           </div>
+          <div className="navbar-item">
+            <div className="field">
+              <label className="label">Sort By</label>
+              <Select
+                name="sortBy"
+                options={sortOptions}
+                defaultValue={sortOptions[0]}
+                onChange={this.handleChange}
+                value={sortOptions[0]}
+              />
+            </div>
+          </div>
         </nav>
 
         <div className="container">
@@ -123,6 +160,7 @@ class LocationsIndex extends React.Component{
 
           </div>
         </div>
+        <Footer />
       </section>
 
     )

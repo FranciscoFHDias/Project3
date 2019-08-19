@@ -512,4 +512,258 @@ module.exports = [{
   image: 'https://www.bistrotheque.com/files/_mediumImage/bt_home_gallery_1.jpg',
   contactNumber: +442089837900,
   link: 'bistrotheque.com'
+}, {
+  name: 'Kyoto Garden',
+  address: 'Holland Park, Holland Park Ave, Kensington, London W11 4UA',
+  cost: 0,
+  actType: [ 'Relax','Nature' ],
+  dateNum: [ 2 ],
+  image: 'https://secretldn.com/wp-content/uploads/2018/02/22637281_1082893518480502_4132483769749733376_n-2.jpg',
+  contactNumber: +442073613003,
+  link: 'https://www.rbkc.gov.uk/leisure-and-culture/parks/holland-park'
+}, {
+  name: 'Hever Castle',
+  address: 'Hever Rd, Hever, Edenbridge TN8 7NG',
+  cost: 3,
+  actType: [ 'Culture', 'Science' ],
+  dateNum: [ 5 ],
+  image: 'https://media-cdn.tripadvisor.com/media/photo-s/15/98/77/b4/hever-castle.jpg',
+  contactNumber: +441732865224,
+  link: 'https://www.hevercastle.co.uk/'
+}, {
+  name: 'White Cliffs of Dover',
+  address: 'Dover, Kent',
+  cost: 0,
+  actType: [ 'Relax','Nature' ],
+  dateNum: [ 3 ],
+  image: 'https://cdn.thecrazytourist.com/wp-content/uploads/2019/02/ccimage-shutterstock_10809583.jpg',
+  contactNumber: +440000000000,
+  link: 'https://www.nationaltrust.org.uk/the-white-cliffs-of-dover'
+}, {
+  name: 'Whitstable Castle',
+  address: 'Whitstable CT5 2BW',
+  cost: 3,
+  actType: [ 'Relaxing', 'Cultural' ],
+  dateNum: [ 4 ],
+  image: 'http://www.whitstablecastle.co.uk/webbuilder/files/4eda4e71bd9a4f05cfe1288dbca88e6a.jpg',
+  contactNumber: +441227281726,
+  link: 'http://www.whitstablecastle.co.uk/the-castle'
+}, {
+  name: 'Botany Bay',
+  address: 'Botany Bay, Kent',
+  cost: 0,
+  actType: [ 'Relax','Nature' ],
+  dateNum: [ 0 ],
+  image: 'http://www.fraserallenphotography.co.uk/wp-content/uploads/2018/06/Fraser-Allen-2.jpg',
+  contactNumber: +440000000000,
+  link: 'https://www.visitkent.co.uk/attractions/botany-bay-1891/'
+}, {
+  name: 'Scotney Castle',
+  address: 'Lamberhurst, Tunbridge Wells TN3 8JN',
+  cost: 3,
+  actType: [ 'Relaxing', 'Cultural' ],
+  dateNum: [ 4 ],
+  image: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Scotney_Castle_with_white_wisteria.JPG',
+  contactNumber: +441892893820,
+  link: 'https://www.nationaltrust.org.uk/scotney-castle'
+}, {
+  name: 'The Cross Keys',
+  address: '1 Lawrence St, Chelsea, London SW3 5NB',
+  cost: 2,
+  actType: [ 'Leisure', 'Music', 'Drinks' ],
+  dateNum: [ 1 ],
+  image: 'https://media-cdn.tripadvisor.com/media/photo-s/03/32/95/39/the-cross-keys.jpg',
+  contactNumber: +442073510686,
+  link: 'https://www.thecrosskeyschelsea.co.uk/'
+}, {
+  name: 'Jerusalem Tavern',
+  address: '55 Britton Street London EC1M 5UQ',
+  cost: 1,
+  actType: [ 'Leisure', 'Music', 'Drinks' ],
+  dateNum: [ 1 ],
+  image: 'https://media.timeout.com/images/100684375/1372/772/image.jpg',
+  contactNumber: +442074904281,
+  link: 'https://londonist.com/pubs/pubs/pubs/the-jerusalem-tavern'
+}, {
+  name: 'Upside Down House',
+  address: 'Kings Road Arches, 42-43, Brighton BN1 2LN',
+  cost: 2,
+  actType: [ 'Relaxing', 'Cultural' ],
+  dateNum: [ 3 ],
+  image: 'https://1.bp.blogspot.com/-FUB8jbwRAhE/XP-ZZo8veyI/AAAAAAAAzQk/v9JFf4p7uiAGveEHt52ygS9M0kB5rHJ0QCLcBGAs/s1600/61516716_10161665406945244_6015157451018469376_o.jpg',
+  contactNumber: +441375374725,
+  link: 'https://www.upsidedownhouse.co.uk/'
+}, {
+  name: 'The British Museum',
+  address: 'Great Russell St, Bloomsbury, London WC1B 3DG',
+  cost: 0,
+  actType: [ 'Relaxing', 'Cultural' ],
+  dateNum: [ 2 ],
+  image: 'https://secretldn.com/wp-content/uploads/2018/04/British-Museum-22.jpg',
+  contactNumber: +440000000000,
+  link: 'https://www.britishmuseum.org/'
+}, {
+  name: 'London Eye',
+  address: 'Lambeth, London SE1 7PB',
+  cost: 4,
+  actType: [ 'Active', 'Misc', 'Cultural' ],
+  dateNum: [ 4 ],
+  image: 'https://www.daysoutguide.co.uk/media/429139/london-eye-add-3.jpg?anchor=center&mode=crop&width=618&height=350&rnd=131199883790000000',
+  contactNumber: +448712226944,
+  link: 'https://www.londoneye.com/'
+}, {
+  name: 'Tamesis Dock',
+  address: 'Albert Embankment, Lambeth, London SE1 7TP',
+  cost: 3,
+  actType: [ 'Restaurants and Bars' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://www.tdock.co.uk/wp-content/uploads/2019/07/Tamesis_Dock_Fever_Up_FEB_2019_Rob_Jones33.jpg',
+  contactNumber: +442075821066,
+  link: 'https://www.tdock.co.uk/'
+}, {
+  name: 'Spiritland',
+  address: 'Southbank Centre, Belvedere Road, London, SE1 8XX',
+  cost: 3,
+  actType: [ 'Restaurants and Bars'  ],
+  dateNum: [ 1, 2 ],
+  image: 'https://d33hx0a45ryfj1.cloudfront.net/additional/Dynamic/media/5a5acc6964f342ed?w=1600&h=630&crop=1',
+  contactNumber: +442031461980 ,
+  link: 'https://spiritland.com/'
+}, {
+  name: 'Sky Garden',
+  address: '20 Fenchurch St, London EC3M 8AF',
+  cost: 3,
+  actType: [ 'Restaurants and Bars' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://skygarden.london/sites/default/files/DSCF7684.jpg',
+  contactNumber: +442036086975,
+  link: 'https://skygarden.london/'
+}, {
+
+  name: 'Jujus',
+  address: 'Ely s Yard, 15 Hanbury St, London E1 6QR',
+  cost: 3,
+  actType: [ 'Restaurants and Bars' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPYLRBtNUpg8b8bypDDigY0mrawePh6RZmKsmCyZg_avYBY5SQXQ',
+  contactNumber: +442077706043,
+  link: 'https://jujusbarandstage.com/'
+}, {
+  name: 'Kew Gardens',
+  address: 'Richmond TW9 3AB',
+  cost: 2,
+  actType: [ 'Active',  'Cultural' ],
+  dateNum: [ 1,2, 3 ],
+  image: 'https://tr-images.condecdn.net/image/dj140NJ959p/crop/1440/f/the-temperate-house-credit-gareth-gardner-4-1.jpg',
+  contactNumber: +442083325655,
+  link: 'https://www.kew.org/'
+}, {
+  name: 'sketch',
+  address: '9 Conduit St, Mayfair, London W1S 2XG',
+  cost: 3,
+  actType: [ 'Restaurants and Bars'],
+  dateNum: [ 2, 3 ],
+  image: 'https://tr-images.condecdn.net/image/bJYBJlrGjEj/crop/1440/f/sketch-thegallery2018-9a.jpg',
+  contactNumber: +442036086975,
+  link: 'https://www.clipnclimbchelsea.co.uk/'
+}, {
+  name: 'London Shell Co. Aboard the Prince Regent',
+  address: 'The Prince Regent Sheldon Square Central, London W2 6PY',
+  cost: 4,
+  actType: [ 'Restaurants and Bars' ],
+  dateNum: [ 4 ],
+  image: 'http://www.townfish.com/wp-content/uploads/2017/03/rsz_hh_london_shell_co_boat_interiors_002.jpg',
+  contactNumber: +447818666005,
+  link: 'https://londonshellco.com/'
+}, {
+  name: 'HotPod Yoga',
+  address: 'Arch 406, Mentmore Terrace, London, E8 3PH, GB',
+  cost: 3,
+  actType: [ 'Active' ],
+  dateNum: [ 4 ],
+  image: 'https://cdn.hotpodyoga.com/app/uploads/2018/11/21145329/Nurturing-Flow-51-960x540.jpg',
+  contactNumber: +442037712285,
+  link: 'https://hotpodyoga.com/studios/hackney/'
+}, {
+
+  name: 'The Big London Bake',
+  address: 'The Castle, 38 Tooting High St, Tooting, London SW17 0RG',
+  cost: 4,
+  actType: [ 'Active', 'Misc' ],
+  dateNum: [ 3, 4 ],
+  image: 'https://media-cdn.tripadvisor.com/media/photo-s/11/a9/3c/39/before-a-new-bake-off.jpg',
+  contactNumber: +442019502424,
+  link: 'https://www.thebiglondonbake.com/'
+}, {
+  name: 'London Shuffle Club',
+  address: '4 Ebor St, Hackney, London E1 6AW',
+  cost: 3,
+  actType: [ 'Active', 'Restaurants and Bars' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://thenudge.com/wp-content/uploads/2001/09/london_shuffle_club.jpg',
+  contactNumber: +442036579062,
+  link: 'londonshuffle.com'
+}, {
+  name: 'The Ghost Bus Tours',
+  address: '8 Northumberland Ave, Westminster, London WC2N 5JR',
+  cost: 3,
+  actType: [ 'Relaxing', 'Misc' ],
+  dateNum: [ 2, 4, 5 ],
+  image: 'https://media-cdn.tripadvisor.com/media/photo-s/14/5b/8f/0b/the-ghost-bus-tours.jpg',
+  contactNumber: +448445678666,
+  link: 'https://www.theghostbustours.com/'
+}, {
+  name: 'Bounce Old Street',
+  address: '241 Old St, Old Street, London EC1V 9EY',
+  cost: 2,
+  actType: [ 'Restaurants and Bars' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://media.timeout.com/images/103762755/630/472/image.jpg',
+  contactNumber: +442036576525,
+  link: 'http://www.bouncepingpong.com/menus'
+}, {
+  name: 'Fierce Grace Hot Yoga - City',
+  address: '53-55 East Rd, Hoxton, London N1 6AH',
+  cost: 3,
+  actType: [ 'Relaxing', 'Active', 'Misc' ],
+  dateNum: [ 2, 5 ],
+  image: 'http://www.fiercegrace.com/img/content_blocks/image/original/nmm_150319_fgy_014web-14.jpg',
+  contactNumber: +442073366330,
+  link: 'https://www.fiercegracecity.com/'
+}, {
+  name: 'Dans Le Noir',
+  address: '30-31 Clerkenwell Green, Farringdon, London EC1R 0DU',
+  cost: 4,
+  actType: [ 'Restaurants and Bars' ],
+  dateNum: [ 3, 4, 5 ],
+  image: 'https://london.danslenoir.com/wp-content/uploads/2017/01/facade.jpg',
+  contactNumber: +442072531100,
+  link: 'https://london.danslenoir.com/en/home/'
+}, {
+  name: 'The Midnight Apothecary',
+  address: 'Railway Ave, Rotherhithe, London SE16 4LF',
+  cost: 3,
+  actType: [ 'Restaurants and Bars', 'Outdoors', 'Relaxing' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://assets.londonist.com/uploads/2018/06/i875/evening_light.jpg',
+  contactNumber: +447917548475,
+  link: 'https://www.themidnightapothecary.co.uk/'
+}, {
+  name: 'Coca-Cola London Eye',
+  address: 'Lambeth, London SE1 7PB',
+  cost: 3,
+  actType: [ 'Relaxing', 'Cultural' ],
+  dateNum: [ 4 ],
+  image: 'https://www.londoneye.com/media/55771/london-eye-homepage.jpg?quality=70',
+  contactNumber: +442034881678,
+  link: 'https://www.londoneye.com/'
+}, {
+  name: 'Warner Bros. Studio Tour London',
+  address: 'Studio Tour Dr, Watford WD25 7LR',
+  cost: 4,
+  actType: [ 'Relaxing', 'Cultural', 'Misc' ],
+  dateNum: [ 4, 5 ],
+  image: 'https://cdn.getyourguide.com/img/tour_img-245971-148.jpg',
+  contactNumber: +443450840900,
+  link: 'https://www.wbstudiotour.co.uk/'
 }]
