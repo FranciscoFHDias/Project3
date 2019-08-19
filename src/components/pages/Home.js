@@ -50,7 +50,6 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <section className="hero is-fullheight is-black">
         <div className="hero-body">

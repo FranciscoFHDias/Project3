@@ -47,7 +47,7 @@ class App extends React.Component {
           <Route path="/register" component={Register} />
           <Route path="/contacts" component={Contacts} />
           <Route path="/termsconditions" component={TermsConditions} />
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </HashRouter>
 
