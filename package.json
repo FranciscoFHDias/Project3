@@ -9,7 +9,9 @@
     "seed": "node db/seeds.js",
     "serve:backend": "nodemon",
     "serve:frontend": "webpack-dev-server --mode development",
-    "test": "mocha test/**/*_spec.js --require test/helper --recursive --exit"
+    "test": "mocha test/**/*_spec.js --require test/helper --recursive --exit",
+    "start": "yarn build && node index",
+    "build": "webpack -p"
   },
   "dependencies": {
     "@babel/core": "^7.5.5",
