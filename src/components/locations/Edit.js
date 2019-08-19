@@ -56,6 +56,7 @@ class EditLocation extends React.Component {
     const formData = { ...this.state.formData, [data.name]: selectedOptions.map(selectedOption => selectedOption.value)}
     this.setState({ formData })
   }
+  
   componentDidMount() {
     axios.get(`/api/locations/${this.props.match.params.id}`)
       .then(res => this.setState({ formData: res.data }))

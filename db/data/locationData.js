@@ -389,7 +389,7 @@ module.exports = [{
 }, {
   name: 'Kyoto Garden',
   address: 'Holland Park, Holland Park Ave, Kensington, London W11 4UA',
-  cost: 0,
+  cost: 1,
   actType: [ 'Relax','Nature' ],
   dateNum: [ 2 ],
   image: 'https://secretldn.com/wp-content/uploads/2018/02/22637281_1082893518480502_4132483769749733376_n-2.jpg',
@@ -407,7 +407,7 @@ module.exports = [{
 }, {
   name: 'White Cliffs of Dover',
   address: 'Dover, Kent',
-  cost: 0,
+  cost: 1,
   actType: [ 'Relax','Nature' ],
   dateNum: [ 3 ],
   image: 'https://cdn.thecrazytourist.com/wp-content/uploads/2019/02/ccimage-shutterstock_10809583.jpg',
@@ -425,7 +425,7 @@ module.exports = [{
 }, {
   name: 'Botany Bay',
   address: 'Botany Bay, Kent',
-  cost: 0,
+  cost: 1,
   actType: [ 'Relax','Nature' ],
   dateNum: [ 0 ],
   image: 'http://www.fraserallenphotography.co.uk/wp-content/uploads/2018/06/Fraser-Allen-2.jpg',
@@ -470,7 +470,7 @@ module.exports = [{
 }, {
   name: 'The British Museum',
   address: 'Great Russell St, Bloomsbury, London WC1B 3DG',
-  cost: 0,
+  cost: 1,
   actType: [ 'Relaxing', 'Cultural' ],
   dateNum: [ 2 ],
   image: 'https://secretldn.com/wp-content/uploads/2018/04/British-Museum-22.jpg',

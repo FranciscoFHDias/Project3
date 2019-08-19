@@ -1,8 +1,9 @@
 import React from 'react'
 import axios from 'axios'
-// import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import Select from 'react-select'
 import ReactFilestack from 'filestack-react'
+import { fileloaderKey } from '../../../config/environment'
 
 const ageOptions = [
   { value: 1, label: '18 - 25' },
@@ -38,15 +39,17 @@ class Preferences extends React.Component {
     super()
     this.state = {
       formData: {},
-      file: null
+      file: null,
+      user: null
     }
 
     this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
 
   }
 
   componentDidMount() {
-    this.setState({ ...this.props.location.state })
+    this.setState({ user: this.props.location.state })
   }
 
   handleChange(selectedOption, data) {
@@ -57,20 +60,23 @@ class Preferences extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
 
-    axios.post('/api/register', this.state.formData)
+    axios.put(`/api/profiles/${this.state.user._id}`, {...this.state.formData})
       .then(res => {
         toast.success(res.data.message)
         console.log(this.state)
-        this.props.history.push({
-          pathname: '/register/preferences',
-          state: this.state
-        })
+        this.props.history.push('/login')
       })
       .catch(err => this.setState({ errors: err.response.data.errors }))
   }
 
+  handleUploadImages(result) {
+    const formData = {...this.state.formData, image: result.filesUploaded[0].url}
+    this.setState({ formData })
+    toast.success('New Profile Image Updated!', {containerId: 'B'})
+  }
+
   render() {
-    console.log(this.state.formData)
+    console.log(this.state)
     return (
       <section className="section">
         <div className="container">
@@ -78,7 +84,7 @@ class Preferences extends React.Component {
             <div className="field">
               <label className="label">Image</label>
               <ReactFilestack
-                apikey='AYGiGjrSKpaWKAEudgKALz'
+                apikey={fileloaderKey}
                 buttonText="Upload Photo"
                 buttonClass="button is-primary"
                 className="upload-image"
