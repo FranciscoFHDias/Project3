@@ -6,6 +6,7 @@ import ReactMapboxGl, { Marker } from 'react-mapbox-gl'
 import Comment from '../common/Comment'
 import Auth from '../../lib/Auth'
 import LikeButton from '../common/LikeButton'
+import StarRatingComponent from 'react-star-rating-component'
 
 const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoiZnJhbmNpc2NvZmhkaWFzIiwiYSI6ImNqemI5MTFiajA4NzYzbXBoZWd6NGtndTAifQ.oDArT5qLRW4i6FUT3Cut-w'
@@ -100,11 +101,14 @@ class ShowLocation extends React.Component {
   render() {
 
     if(!this.state.location) return null
+
+
     return(
 
       <section className="section">
         <div className="container">
 
+          <figure id="showImage" className="image is-3by1" style={{backgroundImage: `url(${this.state.location.image}`}} />
 
 
           <div className="tile is-parent">
@@ -147,31 +151,40 @@ class ShowLocation extends React.Component {
               <hr />
 
               <div className="content">
+
                 <p className="text is-6">{this.state.location.address}</p>
                 <p className="text is-6">{this.state.location.cost}</p>
+
+                <p className="text is-6">{this.state.location.address}</p>
+                <StarRatingComponent
+                  name="averageRating"
+                  renderStarIcon={() => <span>£</span>}
+                  editing={false}
+                  starCount={5}
+                  value={this.state.location.cost}
+                />
+
               </div>
 
             </article>
           </div>
 
           <div className="tile is-parent">
-            <article className="tile is-child notification">
-              <Map
-                style="mapbox://styles/mapbox/streets-v9"
-                zoom={zoom}
-                center={[this.state.longitude, this.state.latitude]}
-                containerStyle={{
-                  height: '500px',
-                  width: '100%'
-                }}
-              >
-                <Marker
-                  coordinates={[this.state.longitude, this.state.latitude]}
-                  anchor="bottom">
-                  <img width="30px" height="30px" src={mapMarker} />
-                </Marker>
-              </Map>
-            </article>
+            <Map
+              style="mapbox://styles/mapbox/streets-v9"
+              zoom={zoom}
+              center={[this.state.longitude, this.state.latitude]}
+              containerStyle={{
+                height: '500px',
+                width: '100%'
+              }}
+            >
+              <Marker
+                coordinates={[this.state.longitude, this.state.latitude]}
+                anchor="bottom">
+                <img width="30px" height="30px" src={mapMarker} />
+              </Marker>
+            </Map>
           </div>
 
           <div className="tile is-parent">

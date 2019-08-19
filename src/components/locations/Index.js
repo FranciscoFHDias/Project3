@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Card from './indexCard'
+import Card from './IndexCard'
 import Footer from '../common/Footer'
 import Select from 'react-select'
 import axios from 'axios'

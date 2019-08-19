@@ -23,6 +23,6 @@ app.use('/api', router)
 
 app.use(errorHandler)
 
-app.listen(port, () => console.log('Here we go, date number 4000!!!'))
+app.listen(port, () => console.log(`Here we go, date number ${port}!!!`))
 
 module.exports = app
