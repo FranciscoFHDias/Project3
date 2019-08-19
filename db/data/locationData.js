@@ -386,4 +386,95 @@ module.exports = [{
   image: 'https://images.squarespace-cdn.com/content/v1/594e69a9cd0f68148eb3f656/1557218295098-1BWY73PN8FKCR979X4NA/ke17ZwdGBToddI8pDm48kNItjXz7RcTqS_k3iww1ou97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USX-vnLkszRHUlKjIjwnAbVDj1jZO8k6qHOrQHQZz8p0o49ZdOtO_QXox0_W7i2zEA/VR+hire+stanmer+ballon.jpg',
   contactNumber: +447587464283,
   link: 'https://www.govrbrighton.com/'
+},{
+  name: 'London Eye',
+  address: 'Lambeth, London SE1 7PB',
+  cost: 4,
+  actType: [ 'Active', 'Misc', 'Cultural' ],
+  dateNum: [ 4 ],
+  image: 'https://www.daysoutguide.co.uk/media/429139/london-eye-add-3.jpg?anchor=center&mode=crop&width=618&height=350&rnd=131199883790000000',
+  contactNumber: +448712226944,
+  link: 'https://www.londoneye.com/'
+}, {
+  name: 'Tamesis Dock',
+  address: 'Albert Embankment, Lambeth, London SE1 7TP',
+  cost: 3,
+  actType: [ 'Restaurants and Bars' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://www.tdock.co.uk/wp-content/uploads/2019/07/Tamesis_Dock_Fever_Up_FEB_2019_Rob_Jones33.jpg',
+  contactNumber: +442075821066,
+  link: 'https://www.tdock.co.uk/'
+}, {
+  name: 'Spiritland',
+  address: 'Southbank Centre, Belvedere Road, London, SE1 8XX',
+  cost: 3,
+  actType: [ 'Restaurants and Bars'  ],
+  dateNum: [ 1, 2 ],
+  image: 'https://d33hx0a45ryfj1.cloudfront.net/additional/Dynamic/media/5a5acc6964f342ed?w=1600&h=630&crop=1',
+  contactNumber: +442031461980 ,
+  link: 'https://spiritland.com/'
+}, {
+  name: 'Sky Garden',
+  address: '20 Fenchurch St, London EC3M 8AF',
+  cost: 3,
+  actType: [ 'Restaurants and Bars' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://skygarden.london/sites/default/files/DSCF7684.jpg',
+  contactNumber: +442036086975,
+  link: 'https://skygarden.london/'
+}, {
+  name: 'Ballie Ballerson',
+  address: '97-113 Curtain Rd, Hackney, London EC2A 3BS',
+  cost: 2,
+  actType: [ 'Active' ],
+  dateNum: [ 4 ],
+  image: 'https://static.designmynight.com/uploads/2018/11/DSC05633-optimised.png',
+  contactNumber: +442039502424,
+  link: 'https://www.ballieballerson.com/'
+},
+{
+  name: 'Jujus',
+  address: 'Ely s Yard, 15 Hanbury St, London E1 6QR',
+  cost: 3,
+  actType: [ 'Restaurants and Bars' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPYLRBtNUpg8b8bypDDigY0mrawePh6RZmKsmCyZg_avYBY5SQXQ',
+  contactNumber: +442077706043,
+  link: 'https://jujusbarandstage.com/'
+}, {
+  name: 'Kew Gardens',
+  address: 'Richmond TW9 3AB',
+  cost: 2,
+  actType: [ 'Active',  'Cultural' ],
+  dateNum: [ 1,2, 3 ],
+  image: 'https://tr-images.condecdn.net/image/dj140NJ959p/crop/1440/f/the-temperate-house-credit-gareth-gardner-4-1.jpg',
+  contactNumber: +442083325655,
+  link: 'https://www.kew.org/'
+}, {
+  name: 'sketch',
+  address: '9 Conduit St, Mayfair, London W1S 2XG',
+  cost: 3,
+  actType: [ 'Restaurants and Bars'],
+  dateNum: [ 2, 3 ],
+  image: 'https://tr-images.condecdn.net/image/bJYBJlrGjEj/crop/1440/f/sketch-thegallery2018-9a.jpg',
+  contactNumber: +442036086975,
+  link: 'https://www.clipnclimbchelsea.co.uk/'
+}, {
+  name: 'London Shell Co. Aboard the Prince Regent',
+  address: 'The Prince Regent Sheldon Square Central, London W2 6PY',
+  cost: 4,
+  actType: [ 'Restaurants and Bars' ],
+  dateNum: [ 4 ],
+  image: 'http://www.townfish.com/wp-content/uploads/2017/03/rsz_hh_london_shell_co_boat_interiors_002.jpg',
+  contactNumber: +447818666005,
+  link: 'https://londonshellco.com/'
+}, {
+  name: 'HotPod Yoga',
+  address: 'Arch 406, Mentmore Terrace, London, E8 3PH, GB',
+  cost: 3,
+  actType: [ 'Active' ],
+  dateNum: [ 4 ],
+  image: 'https://cdn.hotpodyoga.com/app/uploads/2018/11/21145329/Nurturing-Flow-51-960x540.jpg',
+  contactNumber: +442037712285,
+  link: 'https://hotpodyoga.com/studios/hackney/'
 }]

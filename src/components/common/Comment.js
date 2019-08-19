@@ -1,5 +1,7 @@
 import React from  'react'
 import Auth from '../../lib/Auth'
+import LikeButton from '../common/LikeButton'
+
 
 const Comment = ({ user, createdAt, content, _id, handleDelete }) => {
   return (
@@ -17,7 +19,9 @@ const Comment = ({ user, createdAt, content, _id, handleDelete }) => {
       </div>
       {Auth.isAuthenticated() && <div className="media-right">
         <button className="delete" id={_id} onClick={handleDelete}></button>
+        <LikeButton />
       </div>}
+
     </article>
   )
 }

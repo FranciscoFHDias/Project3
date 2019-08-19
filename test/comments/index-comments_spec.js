@@ -46,14 +46,8 @@ xdescribe('GET /locations', () => {
         res.body.forEach(location => {
           expect(location).to.contains.keys([
             '_id',
-            'name',
-            'address',
-            'cost',
-            'actType',
-            'dateNum',
-            'image',
-            'contactNumber',
-            'link'
+            'content',
+            'rating'
           ])
         })
         done()
@@ -65,13 +59,8 @@ xdescribe('GET /locations', () => {
       .end((err, res) => {
         res.body.forEach(location => {
           expect(location._id).to.be.a('string')
-          expect(location.name).to.be.a('string')
-          expect(location.address).to.be.a('string')
-          expect(location.cost).to.be.a('number')
-          expect(location.actType).to.be.an('array')
-          expect(location.dateNum).to.be.an('array')
-          expect(location.image).to.be.a('string')
-          expect(location.link).to.be.a('string')
+          expect(location.content).to.be.a('string')
+          expect(location.rating).to.be.a('number')
         })
         done()
       })

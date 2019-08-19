@@ -14,7 +14,7 @@ const locationSchema = new mongoose.Schema({
   cost: { type: Number, required: 'please provide a {PATH}', min: 1, max: 5  },
   actType: { type: [ String ], required: 'please provide a {PATH}' },
   dateNum: { type: [ Number ], required: 'please provide a {PATH}', min: 1, max: 5},
-  image: {type: String },
+  image: { type: String },
   contactNumber: { type: Number },
   link: { type: String },
   comments: [ commentSchema ],

@@ -12,6 +12,7 @@ import Navbar from './components/common/Navbar'
 import SecureRoute from './components/common/SecureRoute'
 
 import LocationsIndex from './components/locations/Index'
+import EditLocation from './components/locations/Edit'
 import ShowLocation from './components/locations/Show'
 import New from './components/locations/New'
 import About from './components/pages/About'
@@ -27,12 +28,13 @@ class App extends React.Component {
       <HashRouter>
         <Navbar />
         <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <Route path="/locations/:id" component={ShowLocation} />
+          <SecureRoute path="/locations/:id/edit" component={EditLocation} />
           <SecureRoute path="/locations/new" component={New} />
+          <Route path="/locations/:id" component={ShowLocation} />
           <Route path="/locations" component={LocationsIndex} />
           <Route path="/about" component={About} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
           <Route path="/contacts" component={Contacts} />
           <Route path="/termsconditions" component={TermsConditions} />
           <Route path="/" component={Home} />
