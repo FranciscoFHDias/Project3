@@ -8,6 +8,7 @@ const commentSchema = new mongoose.Schema({
   timestamps: true
 })
 
+
 const locationSchema = new mongoose.Schema({
   name: { type: String, required: 'please provide a {PATH}', unique: true },
   address: { type: String, required: 'please provide a {PATH}' },
@@ -18,6 +19,7 @@ const locationSchema = new mongoose.Schema({
   contactNumber: { type: Number },
   link: { type: String },
   comments: [ commentSchema ],
+  likes: [{ type: mongoose.Schema.ObjectId, ref: 'User' }],
   user: { type: mongoose.Schema.ObjectId, ref: 'User' }
 }, {
   toJSON: { virtuals: true }

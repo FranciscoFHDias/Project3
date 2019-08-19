@@ -73,10 +73,10 @@ class Modal extends React.Component {
                 <p>The lawyer can answer your questions or help you through the process. You will be offered this option when you complete the document.</p>
 
 
-                <p>&nbsp;</p><p><strong>How to modify the template</strong></p>					<p>You fill out a form. The document is created before your eyes as you respond to the questions.</p>
+                <p>&nbsp;</p><p><strong>How to modify the template</strong></p>	<p>You fill out a form. The document is created before your eyes as you respond to the questions.</p>
 
                 <p>
-                    At the end, you receive it in <strong>Word and PDF</strong> formats.											You can <strong>modify</strong> it and <strong>reuse</strong> it.					</p>
+                    At the end, you receive it in <strong>Word and PDF</strong> formats.You can <strong>modify</strong> it and <strong>reuse</strong> it.</p>
               </div>
             </section>
             <footer className="modal-card-foot">

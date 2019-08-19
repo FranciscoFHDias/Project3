@@ -42,6 +42,7 @@ class New extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.handleMultiChange = this.handleMultiChange.bind(this)
+    this.handleChangeNormal = this.handleChangeNormal.bind(this)
   }
 
   handleSubmit(e) {
@@ -53,6 +54,10 @@ class New extends React.Component {
       .catch(err => this.setState({ errors: err.response.data.errors }))
   }
 
+  handleChangeNormal(e) {
+    const formData = { ...this.state.formData, [e.target.name]: e.target.value }
+    this.setState({ formData })
+  }
 
   handleChange(selectedOption, data) {
     const formData = { ...this.state.formData, [data.name]: selectedOption.value }
@@ -66,7 +71,7 @@ class New extends React.Component {
   }
 
   render() {
-    console.log(this.state.formData)
+    console.log(this.formData)
     return (
 
       <section className="hero is-light">
@@ -84,6 +89,7 @@ class New extends React.Component {
                       className="input"
                       name="name"
                       placeholder="eg: LoveExp Cafe"
+                      onChange={this.handleChangeNormal}
                     />
                     {this.state.errors.name && <small className="help is-danger">{this.state.errors.name}</small>}
                   </div>
@@ -93,6 +99,7 @@ class New extends React.Component {
                       className="input"
                       name="address"
                       placeholder="eg: LoveExp Cafe, love cafe street, se16 6yy"
+                      onChange={this.handleChangeNormal}
                     />
                     {this.state.errors.address && <small className="help is-danger">{this.state.errors.address}</small>}
                   </div>
@@ -132,6 +139,7 @@ class New extends React.Component {
                       type="string"
                       name="image"
                       placeholder="https://media-cdn.tripadvisor.com/media/photo-s/0f/00/25/b8/nando-s-mile-end.jpg"
+                      onChange={this.handleChangeNormal}
                     />
                     {this.state.errors.image && <small className="help is-danger">{this.state.errors.image}</small>}
                   </div>
@@ -142,6 +150,7 @@ class New extends React.Component {
                       type="number"
                       name="contactNumber"
                       placeholder= "+442076507775"
+                      onChange={this.handleChangeNormal}
                     />
                     {this.state.errors.contactNumber && <small className="help is-danger">{this.state.errors.contactNumber}</small>}
                   </div>
