@@ -113,7 +113,7 @@ class EditLocation extends React.Component {
                   <div className="field">
                     <label className="label">Cost</label>
                     <Select
-                      value={selectedCost}
+                      value={this.state.formData.cost || ''}
                       name="cost"
                       options={budgetOptions}
                       onChange={this.handleChange}
