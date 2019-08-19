@@ -1,3 +1,7 @@
+.card {
+  height: 100%;
+}
+
 $modal-card-body-background-color: #ff3860;
 
 
@@ -41,8 +45,6 @@ $modal-card-body-background-color: #ff3860;
   transform: rotateY(180deg);
 }
 
-
-
 .vl {
   border-left: 3px solid grey;
   height: 280px;
@@ -59,6 +61,12 @@ $modal-card-body-background-color: #ff3860;
   left: 70%;
   margin-left: -3px;
   top: 0;
+}
+
+#showImage {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @import '~bulma'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Card from './indexCard'
+import Card from './IndexCard'
 import Footer from '../common/Footer'
 import Select from 'react-select'
 import axios from 'axios'
@@ -65,7 +65,8 @@ class LocationsIndex extends React.Component{
   componentDidMount() {
     axios.get('/api/locations')
       .then(res => {
-        this.setState({ ...this.props.location.state, locations: res.data, filteredLocations: res.data })
+        console.log(res.data)
+        this.setState({ ...this.props.location.state, locations: res.data, filteredLocations: res.data})
       })
   }
 
@@ -93,7 +94,6 @@ class LocationsIndex extends React.Component{
   }
 
   render() {
-    console.log(this.state)
     return(
       <section className="section">
         <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -153,7 +153,7 @@ class LocationsIndex extends React.Component{
             {this.filterLocations().map(location =>
               <div key={location._id} className="column is-half-tablet is-one-quarter-desktop">
                 <Link to={`/locations/${location._id}`}>
-                  <Card name={location.name} image={location.image} address={location.address} dateNum={location.dateNum} rating={location.rating || 5}/>
+                  <Card {...location} />
                 </Link>
               </div>
             )}

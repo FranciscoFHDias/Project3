@@ -1,8 +1,8 @@
 import React from 'react'
 import StarRatings from 'react-star-ratings'
 
-const Card = ({ name, address, image, dateNum, rating }) => {
-
+const Card = ({ name, address, image, dateNum, averageRating }) => {
+  console.log(averageRating)
   return(
     <div className="card">
 
@@ -23,7 +23,7 @@ const Card = ({ name, address, image, dateNum, rating }) => {
 
           <div className="column">
             <StarRatings
-              rating={rating}
+              rating={averageRating}
               starDimension="15px"
               starRatedColor="#FFC300"
               starSpacing="5px"

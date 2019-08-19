@@ -387,6 +387,132 @@ module.exports = [{
   contactNumber: +447587464283,
   link: 'https://www.govrbrighton.com/'
 }, {
+  name: 'Brunswick East',
+  address: 'Stamford Works, 3D, Gillett St, London N16 8JH',
+  cost: 2,
+  actType: [ 'Food', 'Brunch', 'Drinks' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/25550413_1600403376693535_1395822623927671013_n.jpg?_nc_cat=102&_nc_oc=AQmHPrhsgSdesxL5mI0t9n4TV_xI3ffOh0uqPhNAQCJbGYICN0gxEaPzgaV3OdOq5nM&_nc_ht=scontent-lht6-1.xx&oh=5302f6c8d2a011e72d2b35ec223857ca&oe=5DCC6B4A',
+  contactNumber: +442076863374,
+  link: 'http://brunswickeast.london/bookings/'
+}, {
+  name: 'The Dolphin',
+  address: '163 -165 Mare St, London E8 3RH',
+  cost: 2,
+  actType: [ 'Leisure', 'Drinks' ],
+  dateNum: [ 1, 2 ],
+  image: 'http://static.designmynight.com/uploads/2013/11/the-dolphin-hackney-1.jpg',
+  contactNumber: +442089853727,
+  link: 'https://www.facebook.com/dolphinhackney/'
+}, {
+  name: 'The Glory',
+  address: '281 Kingsland Rd, Haggerston, London E2 8AS',
+  cost: 2,
+  actType: [ 'Leisure', 'Drinks' ],
+  dateNum: [ 1, 2 ],
+  image: 'http://www.eastlondonlines.co.uk/ell_wp/wp-content/uploads/2015/11/MM-WOTW-the-glory-e1447954419610.jpg',
+  contactNumber: +442076840794,
+  link: 'http://www.theglory.co/'
+}, {
+  name: 'Geffrye Museum of the Home',
+  address: '136 Kingsland Rd, London E2 8EA',
+  cost: 2,
+  actType: [ 'Leisure', 'Drinks' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://cdn.londonandpartners.com/asset/the-geffrye-museum-of-the-home-the-geffrye-museum-of-the-home-d9f49aabfd12c1b968ad0377a41a8d66.jpg',
+  contactNumber: +442077399893,
+  link: 'https://www.geffrye-museum.org.uk/'
+}, {
+  name: 'Dishoom Shoreditch',
+  address: '7 Boundary St, Hackney, London E2 7JE',
+  cost: 2,
+  actType: [ 'Leisure', 'Drinks' ],
+  dateNum: [ 1, 2 ],
+  image: 'http://www.dishoom.com/wp-content/uploads/2014/10/3.5.2.jpg',
+  contactNumber: +442074209324,
+  link: 'http://www.dishoom.com/'
+}, {
+  name: 'Wilton\'s Music Hall',
+  address: 'Graces Alley, London E1 8JB',
+  cost: 2,
+  actType: [ 'Leisure', 'Drinks' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://www.wiltons.org.uk/files/IMG_2458-0-597x597.jpg',
+  contactNumber: +442077022789,
+  link: 'https://www.wiltons.org.uk/'
+}, {
+  name: 'CRATE Brewery & Pizzeria',
+  address: 'Unit 7, Queens Yard, Hackney Wick, London, E9 5EN',
+  cost: 2,
+  actType: [ 'Leisure', 'Drinks', 'Restuarant', 'Activity' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://cdn.sanity.io/images/f4bld5iw/production/04b1ea76d7c71a64afe6ad82b7f40d167482a40c-2572x1655.jpg',
+  contactNumber: +442085333331,
+  link: 'https://cratebrewery.com/'
+}, {
+  name: 'Counter Cafe',
+  address: '7 Roach Road, Hackney Wick, London, E3 2PA',
+  cost: 2,
+  actType: [ 'Leisure', 'Drinks', 'Restuarant' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://scontent-lht6-1.cdninstagram.com/vp/df13ab2320fe698fb406d8af8d6be76a/5DD6399D/t51.2885-15/e15/11849130_347399208779730_760117379_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com',
+  contactNumber: +447834275920,
+  link: 'http://counterproductive.co.uk/cafe/'
+}, {
+  name: 'Queen Elizabeth Olympic Park',
+  address: 'Queen Elizabeth Olympic Park, London, E20',
+  cost: 1,
+  actType: [ 'Leisure', 'Restaurant', 'Drinks', 'Activity' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://static-secure.guim.co.uk/sys-images/Travel/Pix/pictures/2014/4/7/1396887736271/A-cyclist-rides-past-the--009.jpg',
+  contactNumber: +448000722110 ,
+  link: 'https://www.queenelizabetholympicpark.co.uk/'
+}, {
+  name: 'Lee Valley Ice Centre',
+  address: 'Lee Valley Ice Centre, Lea Bridge Road, London, E10 7QL',
+  cost: 2,
+  actType: [ 'Activity' ],
+  dateNum: [ 2, 3 ],
+  image: 'https://www.visitleevalley.org.uk/media/imageresize.ashx?img=/ice_skating/200x133/public%20skating.jpg&width=200',
+  contactNumber: +443000030624,
+  link: 'https://www.visitleevalley.org.uk/go/iceskating/'
+}, {
+  name: 'Lee Valley Riding Centre',
+  address: 'Lee Valley Ice Centre, Lea Bridge Road, London, E10 7QL',
+  cost: 2,
+  actType: [ 'Activity' ],
+  dateNum: [ 2, 3 ],
+  image: 'https://www.visitleevalley.org.uk/media/imageresize.ashx?img=/riding/200x133/have-a-go-group-exp-2021.jpg&width=200',
+  contactNumber: +442085562629,
+  link: 'https://www.visitleevalley.org.uk/en/content/cms/outdoors/lee-valley-riding-centre/'
+}, {
+  name: 'Lee Valley White Water Centre',
+  address: 'Lee Valley Ice Centre, Lea Bridge Road, London, E10 7QL',
+  cost: 2,
+  actType: [ 'Activity' ],
+  dateNum: [ 2, 3 ],
+  image: 'https://www.gowhitewater.co.uk/media/2817/familyrafting_web_exp2023.jpg',
+  contactNumber: +443000030616,
+  link: 'https://www.gowhitewater.co.uk/'
+}, {
+  name: 'The Queen Adelaide',
+  address: '483 Hackney Rd, London E2 9ED',
+  cost: 1,
+  actType: [ 'Leisure', 'Drinks' ],
+  dateNum: [ 1, 2 ],
+  image: 'https://images.squarespace-cdn.com/content/v1/585d837ee6f2e152e741c3aa/1510396211880-HITZ5DVU0S78XR6WUFK5/ke17ZwdGBToddI8pDm48kBUDAxm-FLUF-OJf9moK1kV7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UT_TXfTUFcrrnRvtinoH4JYxq5g0UB9t65pVePltZrd1IKYY7Qu0iTZQJ-GJ4dsqLQ/Photo+03-11-2017%2C+13+01+36.jpg?format=2500w',
+  contactNumber: +442070121100,
+  link: 'thequeenadelaide.com'
+}, {
+  name: 'Bistrotheque',
+  address: '23-27 Wadeson St, London E2 9DR',
+  cost: 3,
+  actType: [ 'Brunch', 'Drinks' ],
+  dateNum: [ 2, 3 ],
+  image: 'https://www.bistrotheque.com/files/_mediumImage/bt_home_gallery_1.jpg',
+  contactNumber: +442089837900,
+  link: 'bistrotheque.com'
+}, {
   name: 'Kyoto Garden',
   address: 'Holland Park, Holland Park Ave, Kensington, London W11 4UA',
   cost: 1,
@@ -639,4 +765,5 @@ module.exports = [{
   dateNum: [ 4, 5 ],
   image: 'https://cdn.getyourguide.com/img/tour_img-245971-148.jpg',
   contactNumber: +443450840900,
-  link: 'https://www.wbstudiotour.co.uk/'}]
+  link: 'https://www.wbstudiotour.co.uk/'
+}]

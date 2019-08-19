@@ -6,13 +6,14 @@ import ReactMapboxGl, { Marker } from 'react-mapbox-gl'
 import Comment from '../common/Comment'
 import Auth from '../../lib/Auth'
 import LikeButton from '../common/LikeButton'
+import StarRatingComponent from 'react-star-rating-component'
 
 const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoiZnJhbmNpc2NvZmhkaWFzIiwiYSI6ImNqemI5MTFiajA4NzYzbXBoZWd6NGtndTAifQ.oDArT5qLRW4i6FUT3Cut-w'
 })
 
-const zoom = [14]
-const mapMarker = 'https://cdn.imgbin.com/22/10/0/imgbin-heart-red-computer-icons-heart-no-background-ZY6sJa4HEmQac7DAZjW35ZhRM.jpg'
+const zoom = [16]
+const mapMarker = '../../img/http___pluspng.com_img-png_heart-png-hd-transparent-background-3d-red-heart-transparent-background-1920.png'
 
 class ShowLocation extends React.Component {
 
@@ -24,9 +25,9 @@ class ShowLocation extends React.Component {
         content: '',
         rating: 5
       },
-      postcode: 'E1 1AE',
-      latitude: null,
-      longitude: null
+      postcode: 'E1 7PT',
+      latitude: 0,
+      longitude: 0
     }
 
     this.handleChangeContent = this.handleChangeContent.bind(this)
@@ -41,31 +42,19 @@ class ShowLocation extends React.Component {
     axios.get(`api/locations/${this.props.match.params.id}`)
       .then(res => this.setState({ locations: res.data }))
     // const postCode = locations.postCode
-
     axios.get(`https:/api.postcodes.io/postcodes/${this.state.postcode}`)
-      .then(res => {
-        this.setState({ latitude: res.data.result.latitude, longitude: res.data.result.longitude})
-      })
+      .then(res => this.setState({ longitude: res.data.result.longitude, latitude: res.data.result.latitude})
+      )
   }
-
-  componentDidUpdate() {
-
-  }
-
-  // handleChangeRating(e){
-  //   return this.setState.formData.rating = e
-  // }
 
   handleChangeContent(e) {
     const formData = { ...this.state.formData, [e.target.name]: e.target.value }
     this.setState({ formData })
-    console.log(formData)
   }
 
   handleChangeRating(e) {
     const formData = { ...this.state.formData, rating: e }
     this.setState({ formData })
-    console.log(formData)
   }
 
   handleSubmit(e) {
@@ -73,15 +62,19 @@ class ShowLocation extends React.Component {
     axios.post(`/api/locations/${this.props.match.params.id}/comments`, this.state.formData, {
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
-      .then(res => this.setState({ locations: res.data }))
+      .then(res => this.setState({ locations: res.data, formData: { content: '', rating: 5 } }))
   }
 
-  handleDelete(){
-    axios.delete(`/api/locations/${this.props.match.params.id}`,{
-      headers: {Authorization: `Bearer ${Auth.getToken()}`}
+  handleDelete(e) {
+    e.preventDefault()
+
+    axios.delete(`/api/locations/${this.props.match.params.id}`, {
+      headers: { Authorization: `Bearer ${Auth.getToken()}`}
     })
-      .then(()=> this.props.history.push('/api/locations'))
+      .then(() => this.props.history.push('/locations/'))
+      .catch(err => this.setState({ errors: err.response.data.errors }))
   }
+
 
   handleDeleteComment(e) {
 
@@ -93,12 +86,15 @@ class ShowLocation extends React.Component {
 
 
   render() {
+
     if(!this.state.locations) return null
+
     return(
 
       <section className="section">
         <div className="container">
 
+          <figure id="showImage" className="image is-3by1" style={{backgroundImage: `url(${this.state.locations.image}`}} />
 
 
           <div className="tile is-parent">
@@ -111,12 +107,12 @@ class ShowLocation extends React.Component {
 
                 <div className="column">
                   <StarRatings
-                    rating={this.state.locations.rating || 5}
+                    rating={this.state.locations.averageRating}
                     starRatedColor="#FFC300"
                     numberOfStars={5}
                     starDimension="15px"
                     starSpacing="5px"
-                    name="rating"
+                    name="averageRating"
                   />
                 </div>
 
@@ -139,30 +135,34 @@ class ShowLocation extends React.Component {
 
               <div className="content">
                 <p className="text is-6">{this.state.locations.address}</p>
-                <p className="text is-6">{this.state.locations.cost}</p>
+                <StarRatingComponent
+                  name="averageRating"
+                  renderStarIcon={() => <span>£</span>}
+                  editing={false}
+                  starCount={5}
+                  value={this.state.locations.cost}
+                />
               </div>
 
             </article>
           </div>
 
           <div className="tile is-parent">
-            <article className="tile is-child notification">
-              <Map
-                style="mapbox://styles/mapbox/streets-v9"
-                zoom={zoom}
-                center={[this.state.longitude, this.state.latitude]}
-                containerStyle={{
-                  height: '500px',
-                  width: '500px'
-                }}
-              >
-                <Marker
-                  coordinates={[this.state.longitude, this.state.latitude]}
-                  anchor="bottom">
-                  <img width="30px" height="30px" src={mapMarker} />
-                </Marker>
-              </Map>
-            </article>
+            <Map
+              style="mapbox://styles/mapbox/streets-v9"
+              zoom={zoom}
+              center={[this.state.longitude, this.state.latitude]}
+              containerStyle={{
+                height: '500px',
+                width: '100%'
+              }}
+            >
+              <Marker
+                coordinates={[this.state.longitude, this.state.latitude]}
+                anchor="bottom">
+                <img width="30px" height="30px" src={mapMarker} />
+              </Marker>
+            </Map>
           </div>
 
           <div className="tile is-parent">
@@ -183,7 +183,7 @@ class ShowLocation extends React.Component {
                     className="textarea"
                     placeholder="Add a comment..."
                     onChange={this.handleChangeContent}
-                    value={this.state.formData.content || ''}
+                    value={this.state.formData.content}
                   />
                 </div>
                 <div className="field">
