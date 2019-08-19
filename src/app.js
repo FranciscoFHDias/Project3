@@ -19,6 +19,10 @@ import About from './components/pages/About'
 import Contacts from './components/pages/Contacts'
 import TermsConditions from './components/pages/TermsConditions'
 
+import Preferences from './components/users/Preferences'
+import UsersIndex from './components/users/Index'
+import ShowUser from './components/users/Show'
+
 import './style.scss'
 
 class App extends React.Component {
@@ -28,7 +32,12 @@ class App extends React.Component {
       <HashRouter>
         <Navbar />
         <Switch>
+
           <SecureRoute path="/locations/:id/edit" component={EditLocation} />
+          <Route path="/login" component={Login} />
+          <Route path="/profiles/:id" component={ShowUser} />
+          <Route path="/profiles" component={UsersIndex} />
+          <Route path="/register/preferences" component={Preferences} />
           <SecureRoute path="/locations/new" component={New} />
           <Route path="/locations/:id" component={ShowLocation} />
           <Route path="/locations" component={LocationsIndex} />

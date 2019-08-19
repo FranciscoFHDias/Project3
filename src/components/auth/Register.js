@@ -28,7 +28,11 @@ class Register extends React.Component {
     axios.post('/api/register', this.state.formData)
       .then(res => {
         toast.success(res.data.message)
-        this.props.history.push('/login')
+        console.log(this.state)
+        this.props.history.push({
+          pathname: '/register/preferences',
+          state: this.state
+        })
       })
       .catch(err => this.setState({ errors: err.response.data.errors }))
   }
