@@ -7,11 +7,15 @@ mongoose.plugin(require('mongoose-unique-validator'), {
   message: 'Please choose another {PATH}'
 })
 
-const { dbURI } = require('./config/environment')
+const { port, dbURI } = require('./config/environment')
 
 const app = express()
 
 mongoose.connect(dbURI, { useNewUrlParser: true })
+
+// look for static files in the `dist folder`
+// static files are files like index.html, images, fonts, styles etc ...
+app.use(express.static(`${__dirname}/dist`))
 
 app.use(bodyParser.json())
 
@@ -19,6 +23,6 @@ app.use('/api', router)
 
 app.use(errorHandler)
 
-app.listen(4000, () => console.log('Here we go, date number 4000!!!'))
+app.listen(port, () => console.log('Here we go, date number 4000!!!'))
 
 module.exports = app

@@ -145,6 +145,7 @@ class New extends React.Component {
                     />
                     {this.state.errors.contactNumber && <small className="help is-danger">{this.state.errors.contactNumber}</small>}
                   </div>
+                  <button className="button">Submit</button>
                 </form>
               </div>
             </div>
