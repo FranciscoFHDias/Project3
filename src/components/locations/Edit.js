@@ -121,6 +121,7 @@ class EditLocation extends React.Component {
                     <Select
                       name="cost"
                       options={budgetOptions}
+                      value={budgetOptions.find(option => option.value === this.state.formData.cost)}
                       onChange={this.handleChange}
                     />
                     {this.state.errors.cost && <small className="help is-danger">{this.state.errors.cost}</small>}
