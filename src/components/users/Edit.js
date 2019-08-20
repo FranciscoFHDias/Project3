@@ -51,6 +51,14 @@ class EditUser extends React.Component {
       .then(res => this.setState({ formData: res.data }))
   }
 
+  booleanTranslate() {
+    if(this.state.formData.smoker === true) {
+      return 'Yes'
+    } else {
+      return 'No'
+    }
+  }
+
   handleChange(selectedOption, data) {
     const formData = { ...this.state.formData, [data.name]: selectedOption.value }
     this.setState({ formData })
@@ -69,7 +77,8 @@ class EditUser extends React.Component {
   }
 
   render() {
-    console.log(this.state.formData.age)
+    console.log(this.state.formData.smoker)
+    const smokerSelectedOption = this.booleanTranslate(this.state.formData.smoker)
     return (
       <section className="hero is-light">
         <div className="hero-body">
@@ -132,6 +141,7 @@ class EditUser extends React.Component {
                       <Select
                         name="age"
                         options={ageOptions}
+                        value={ageOptions.find(option => option.value === this.state.formData.age)}
                         onChange={this.handleChange}
                       />
                     </div>
@@ -140,6 +150,7 @@ class EditUser extends React.Component {
                       <Select
                         name="gender"
                         options={genderOptions}
+                        value={genderOptions.find(option => option.value === this.state.formData.gender)}
                         onChange={this.handleChange}
                       />
                     </div>
@@ -148,6 +159,7 @@ class EditUser extends React.Component {
                       <Select
                         name="smoker"
                         options={smokerOptions}
+                        value={smokerOptions.find(option => option.label === smokerSelectedOption)}
                         onChange={this.handleChange}
                       />
                     </div>
