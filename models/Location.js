@@ -31,4 +31,10 @@ locationSchema.virtual('averageRating')
     return this.comments.reduce((total, comment) => comment.rating + total, 0) / this.comments.length
   })
 
+locationSchema.virtual('postCode')
+  .get(function getPostCode() {
+    if(!this.address) return null
+    return this.address.split(', ').pop()
+  })
+
 module.exports = mongoose.model('Location', locationSchema)
