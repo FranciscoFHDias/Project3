@@ -78,47 +78,61 @@ class Preferences extends React.Component {
   render() {
     console.log(this.state)
     return (
-      <section className="section">
-        <div className="container">
-          <form onSubmit={this.handleSubmit}>
-            <div className="field">
-              <label className="label">Image</label>
-              <ReactFilestack
-                apikey={fileloaderKey}
-                buttonText="Upload Photo"
-                buttonClass="button is-primary"
-                className="upload-image"
-                options={options}
-                onSuccess={(result) => this.handleUploadImages(result)}
-                preload={true}
-              />
+      <section className="hero is-light">
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            <div className="column is-4 is-offset-4">
+
+              <h3 className="title is-2">Tell Us More!</h3>
+
+              <div className="box is-light">
+
+                <form onSubmit={this.handleSubmit}>
+
+                  <div className="field">
+                    <label className="label">Image</label>
+
+                    <ReactFilestack
+                      apikey={fileloaderKey}
+                      buttonText="Upload Photo"
+                      buttonClass="button"
+                      className="upload-image"
+                      options={options}
+                      onSuccess={(result) => this.handleUploadImages(result)}
+                      preload={true}
+                    />
+
+                  </div>
+                  
+                  <div className="field">
+                    <label className="label">Age</label>
+                    <Select
+                      name="age"
+                      options={ageOptions}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className="field">
+                    <label className="label">Gender</label>
+                    <Select
+                      name="gender"
+                      options={genderOptions}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className="field">
+                    <label className="label">Are you a smoker?</label>
+                    <Select
+                      name="smoker"
+                      options={smokerOptions}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <button className="button">Submit</button>
+                </form>
+              </div>
             </div>
-            <div className="field">
-              <label className="label">Age</label>
-              <Select
-                name="age"
-                options={ageOptions}
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="field">
-              <label className="label">Gender</label>
-              <Select
-                name="gender"
-                options={genderOptions}
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="field">
-              <label className="label">Are you a smoker?</label>
-              <Select
-                name="smoker"
-                options={smokerOptions}
-                onChange={this.handleChange}
-              />
-            </div>
-            <button className="button">Submit</button>
-          </form>
+          </div>
         </div>
       </section>
     )

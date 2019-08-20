@@ -61,9 +61,10 @@ class ShowLocation extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    axios.post(`/api/locations/${this.props.match.params.id}/comments`, this.state.formData, {
-      headers: { Authorization: `Bearer ${Auth.getToken()}` }
-    })
+    axios.post(`/api/locations/${this.props.match.params.id}/comments`, this.state.formData,
+      {
+        headers: { Authorization: `Bearer ${Auth.getToken()}` }
+      })
       .then(res => this.setState({ location: res.data, formData: { content: '', rating: 5 } }))
   }
 
@@ -79,12 +80,12 @@ class ShowLocation extends React.Component {
 
 
   handleDeleteComment(e) {
-
     axios.delete(`/api/locations/${this.props.match.params.id}/comments/${e.target.id}`, {
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
       .then(res => this.setState({ location: res.data }))
   }
+
 
   handleLike() {
     axios.post(`/api/locations/${this.props.match.params.id}/like`, null, {
@@ -144,6 +145,7 @@ class ShowLocation extends React.Component {
                       handleLike={this.handleLike}
                     />
                   </div>}
+                  <h1>{this.state.location.username} </h1>
                 </div>
 
               </div>
@@ -152,7 +154,6 @@ class ShowLocation extends React.Component {
 
               <div className="content">
 
-                <p className="text is-6">{this.state.location.address}</p>
                 <p className="text is-6">{this.state.location.cost}</p>
 
                 <p className="text is-6">{this.state.location.address}</p>
@@ -189,9 +190,10 @@ class ShowLocation extends React.Component {
 
           <div className="tile is-parent">
             <article className="tile is-child notification">
-
+              <h1 className="title is-3"> Comments:   </h1>
               {this.state.location.comments.map(comment =>
                 <Comment key={comment._id} {...comment} handleDeleteComment={this.handleDeleteComment} />
+
               )}
               {Auth.isAuthenticated() && <div className="media-right">
 
