@@ -2,6 +2,7 @@ const router = require('express').Router()
 const locationsController = require('../controllers/locations')
 const usersController = require('../controllers/users')
 const authController = require('../controllers/auth')
+const contactController = require('../controllers/contact')
 const secureRoute = require('../lib/secureRoute')
 
 router.get('/', (req, res) => {
@@ -20,8 +21,6 @@ router.route('/locations/:id')
 router.post('/locations/:id/comments', secureRoute, locationsController.commentCreate)
 router.delete('/locations/:id/comments/:commentId', secureRoute, locationsController.commentDelete)
 
-router.post('/locations/:id/like', secureRoute, locationsController.like)
-
 router.get('/profiles', usersController.usersIndex)
 
 router.route('/profiles/:id')
@@ -30,5 +29,7 @@ router.route('/profiles/:id')
 
 router.post('/register', authController.register)
 router.post('/login', authController.login)
+
+router.post('/send', contactController.email)
 
 module.exports = router
