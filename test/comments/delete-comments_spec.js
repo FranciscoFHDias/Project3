@@ -6,7 +6,7 @@ const userData = require('../../db/data/userData')
 const jwt = require('jsonwebtoken')
 const { secret } = require('../../config/environment')
 
-describe('DELETE /locations/:id/comments/:commentId', () => {
+xdescribe('DELETE /locations/:id/comments/:commentId', () => {
 
   let location = null
   let token = null

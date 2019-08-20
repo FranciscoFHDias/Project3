@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import Auth from '../../lib/Auth'
 import Select from 'react-select'
+import ReactFilestack from 'filestack-react'
+import { fileloaderKey } from '../../../config/environment'
 
 const dateNumOptions = [
   { value: 1, label: 'First Date' },
@@ -31,13 +33,28 @@ const budgetOptions = [
   { value: 5, label: 'Over £100' }
 ]
 
+const options = {
+  accept: 'image/*',
+  options: {
+    resize: {
+      width: 100
+    }
+  },
+  transformations: {
+    crop: true,
+    circle: true,
+    rotate: true
+  }
+}
+
 class New extends React.Component {
 
   constructor() {
     super()
     this.state = {
       formData: {},
-      errors: {}
+      errors: {},
+      file: null
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -67,6 +84,11 @@ class New extends React.Component {
   handleMultiChange(selectedOptions, data) {
     const options = selectedOptions.map(selectedOption => selectedOption.value)
     const formData = { ...this.state.formData, [data.name]: options}
+    this.setState({ formData })
+  }
+
+  handleUploadImages(result) {
+    const formData = {...this.state.formData, image: result.filesUploaded[0].url}
     this.setState({ formData })
   }
 
@@ -134,14 +156,16 @@ class New extends React.Component {
                   </div>
                   <div className="field">
                     <label className="label">Image</label>
-                    <input
-                      className="input"
-                      type="string"
-                      name="image"
-                      placeholder="https://media-cdn.tripadvisor.com/media/photo-s/0f/00/25/b8/nando-s-mile-end.jpg"
-                      onChange={this.handleChangeNormal}
+                    <ReactFilestack
+                      mode="transform"
+                      apikey={fileloaderKey}
+                      buttonText="Upload Photo"
+                      buttonClass="button"
+                      className="upload-image"
+                      options={options}
+                      onSuccess={(result) => this.handleUploadImages(result)}
+                      preload={true}
                     />
-                    {this.state.errors.image && <small className="help is-danger">{this.state.errors.image}</small>}
                   </div>
                   <div className="field">
                     <label className="label">Contact Number</label>

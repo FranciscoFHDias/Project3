@@ -4,6 +4,7 @@ import { toast } from 'react-toastify'
 import Select from 'react-select'
 import ReactFilestack from 'filestack-react'
 import { fileloaderKey } from '../../../config/environment'
+import Auth from '../../lib/Auth'
 
 const ageOptions = [
   { value: 1, label: '18 - 25' },
@@ -60,7 +61,9 @@ class Preferences extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
 
-    axios.put(`/api/profiles/${this.state.user._id}`, {...this.state.formData})
+    axios.put(`/api/profiles/${this.state.user._id}`, {...this.state.formData}, {
+      headers: { Authorization: `Bearer ${Auth.getToken()}` }
+    })
       .then(res => {
         toast.success(res.data.message)
         console.log(this.state)
@@ -72,7 +75,6 @@ class Preferences extends React.Component {
   handleUploadImages(result) {
     const formData = {...this.state.formData, image: result.filesUploaded[0].url}
     this.setState({ formData })
-    toast.success('New Profile Image Updated!', {containerId: 'B'})
   }
 
   render() {
@@ -103,7 +105,7 @@ class Preferences extends React.Component {
                     />
 
                   </div>
-                  
+
                   <div className="field">
                     <label className="label">Age</label>
                     <Select

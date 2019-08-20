@@ -4,6 +4,7 @@ import { toast } from 'react-toastify'
 import Select from 'react-select'
 import ReactFilestack from 'filestack-react'
 import { fileloaderKey } from '../../../config/environment'
+import Auth from '../../lib/Auth'
 
 const ageOptions = [
   { value: 1, label: '18 - 25' },
@@ -44,6 +45,7 @@ class EditUser extends React.Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChangeNormal = this.handleChangeNormal.bind(this)
   }
 
   componentDidMount() {
@@ -59,6 +61,11 @@ class EditUser extends React.Component {
     }
   }
 
+  handleChangeNormal(e) {
+    const formData = { ...this.state.formData, [e.target.name]: e.target.value }
+    this.setState({ formData })
+  }
+
   handleChange(selectedOption, data) {
     const formData = { ...this.state.formData, [data.name]: selectedOption.value }
     this.setState({ formData })
@@ -67,11 +74,13 @@ class EditUser extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
 
-    axios.put(`/api/profiles/${this.state.user._id}`, {...this.state.formData})
+    axios.put(`/api/profiles/${this.props.match.params.id}`, {...this.state.formData}, {
+      headers: { Authorization: `Bearer ${Auth.getToken()}` }
+    })
       .then(res => {
         toast.success(res.data.message)
         console.log(this.state)
-        this.props.history.push('/login')
+        this.props.history.push('/profiles/')
       })
       .catch(err => this.setState({ errors: err.response.data.errors }))
   }
@@ -117,7 +126,7 @@ class EditUser extends React.Component {
                           name="username"
                           placeholder="eg: Philip1992"
                           value={this.state.formData.username || ''}
-                          onChange={this.handleChange}
+                          onChange={this.handleChangeNormal}
                         />
                       </div>
                       {this.state.errors.username && <small className="help is-danger">{this.state.errors.username}</small>}
@@ -131,7 +140,7 @@ class EditUser extends React.Component {
                           name="email"
                           placeholder="eg: philip1992@email.co.uk"
                           value={this.state.formData.email || ''}
-                          onChange={this.handleChange}
+                          onChange={this.handleChangeNormal}
                         />
                       </div>
                       {this.state.errors.email && <small className="help is-danger">{this.state.errors.email}</small>}
@@ -163,6 +172,31 @@ class EditUser extends React.Component {
                         onChange={this.handleChange}
                       />
                     </div>
+                    <div className="field">
+                      <label className="label">Please confirm your password</label>
+                      <div className="control">
+                        <input
+                          className="input is-rounded"
+                          name="password"
+                          placeholder="eg: ******"
+                          onChange={this.handleChangeNormal}
+                        />
+                      </div>
+                      {this.state.errors.password && <small className="help is-danger">{this.state.errors.password}</small>}
+                      <div className="field">
+                        <label className="label">Password Confirmation</label>
+                        <div className="control">
+                          <input
+                            className="input is-rounded"
+                            type="password"
+                            name="passwordConfirmation"
+                            placeholder="eg: ••••••••"
+                            onChange={this.handleChangeNormal}
+                          />
+                        </div>
+                      </div>
+                    </div>
+
 
                     <br />
 
