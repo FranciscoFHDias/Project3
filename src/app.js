@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import { HashRouter, Route, Switch } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 
 import Home from './components/pages/Home'
 
@@ -24,6 +25,7 @@ import MapLocations from './components/locations/Map'
 import Preferences from './components/users/Preferences'
 import UsersIndex from './components/users/Index'
 import ShowUser from './components/users/Show'
+import EditUser from './components/users/Edit'
 
 import './style.scss'
 
@@ -34,6 +36,8 @@ class App extends React.Component {
     return (
       <HashRouter>
         <Navbar />
+        <ToastContainer position="bottom-right" hideProgressBar={true} />
+
         <Switch>
 
           <SecureRoute path="/locations/:id/edit" component={EditLocation} />
@@ -42,6 +46,7 @@ class App extends React.Component {
           <Route path="/register" component={Register} />
           <SecureRoute path="/locations/new" component={New} />
           <SecureRoute path="/locations/:id/edit" component={Edit} />
+          <Route path="/profiles/:id/edit" component={EditUser} />
           <Route path="/profiles/:id" component={ShowUser} />
           <Route path="/profiles" component={UsersIndex} />
           <Route path="/locations/map" component={MapLocations} />

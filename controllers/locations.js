@@ -66,6 +66,8 @@ function commentCreateRoute(req, res, next) {
     .catch(next)
 }
 
+
+
 function commentDeleteRoute(req, res, next) {
   Location.findById(req.params.id)
     .then(location => {

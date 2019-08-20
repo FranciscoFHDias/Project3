@@ -6,19 +6,27 @@ const { secret } = require('../../config/environment')
 const testUser = require('../../db/data/userData')
 
 const testData = {
-  name: 'Paternoster Chop House',
-  address: '1, Warwick Court, Paternoster Sq., London EC4M 7DX',
+  name: 'Paternoster',
+  addressLine1: '1, Warwick Court',
+  addressLine2: 'Paternoster Sq.',
+  addressCity: 'London',
+  addressPostCode: 'EC4M 7DX',
   cost: 3,
-  actType: [ 'Restaurants and Bars', 'Relaxing' ],
-  dateNum: [ 2 ],
+  actType: [
+    'Restaurants',
+    'Relaxing'
+  ],
+  dateNum: [
+    2
+  ],
   image: 'https://www.paternosterchophouse.co.uk/wp-content/uploads/sites/23/2018/09/Paternoster_153_7547-1400x933.jpg',
   contactNumber: +442070299400,
   link: 'https://www.paternosterchophouse.co.uk/'
 }
 
-describe('POST /location', () => {
+describe('POST /locations', () => {
 
-  let token = null
+  let token
 
   beforeEach(done => {
     User.create(testUser)
@@ -34,8 +42,10 @@ describe('POST /location', () => {
       .then(() => done())
   })
 
+
   it('should return a 401 response without a token', done => {
-    api.post('/api/locations')
+    api
+      .post('/api/locations')
       .send(testData)
       .end((err, res) => {
         expect(res.status).to.eq(401)
@@ -44,9 +54,11 @@ describe('POST /location', () => {
   })
 
   it('should return a 201 response with a token', done => {
-    api.post('/api/locations')
+    api
+      .post('/api/locations')
       .set('Authorization', `Bearer ${token}`)
       .send(testData)
+    console.log(token)
       .end((err, res) => {
         expect(res.status).to.eq(201)
         done()
@@ -54,7 +66,8 @@ describe('POST /location', () => {
   })
 
   it('should return an object', done => {
-    api.post('/api/locations')
+    api
+      .post('/api/locations')
       .set('Authorization', `Bearer ${token}`)
       .send(testData)
       .end((err, res) => {
@@ -64,16 +77,20 @@ describe('POST /location', () => {
   })
 
   it('should return the correct fields', done => {
-    api.post('/api/locations')
+    api
+      .post('/api/locations')
       .set('Authorization', `Bearer ${token}`)
       .send(testData)
       .end((err, res) => {
         expect(res.body).to.contains.keys([
           '_id',
           'name',
-          'address',
-          'cost',
+          'addressLine1',
+          'addressLine2',
+          'addressCity',
+          'addressPostCode',
           'actType',
+          'cost',
           'dateNum',
           'image',
           'contactNumber',
@@ -84,12 +101,16 @@ describe('POST /location', () => {
   })
 
   it('should return the correct data', done => {
-    api.post('/api/locations')
+    api
+      .post('/api/locations')
       .set('Authorization', `Bearer ${token}`)
       .send(testData)
       .end((err, res) => {
         expect(res.body.name).to.eq(testData.name)
-        expect(res.body.address).to.eq(testData.address)
+        expect(res.body.addressLine1).to.eq(testData.addressLine1)
+        expect(res.body.addressLine2).to.eq(testData.addressLine2)
+        expect(res.body.addressCity).to.eq(testData.addressCity)
+        expect(res.body.addressPostCode).to.eq(testData.addressPostCode)
         expect(res.body.cost).to.eq(testData.cost)
         expect(res.body.actType).to.deep.eq(testData.actType)
         expect(res.body.dateNum).to.deep.eq(testData.dateNum)

@@ -25,7 +25,9 @@ class ShowLocation extends React.Component {
         content: '',
         rating: 5,
         liked: false
-      }
+      },
+
+      likeCount: null
     }
 
     this.handleChangeContent = this.handleChangeContent.bind(this)
@@ -36,6 +38,7 @@ class ShowLocation extends React.Component {
     this.handleLike = this.handleLike.bind(this)
 
   }
+
 
   componentDidMount() {
     axios
@@ -57,9 +60,10 @@ class ShowLocation extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    axios.post(`/api/locations/${this.props.match.params.id}/comments`, this.state.formData, {
-      headers: { Authorization: `Bearer ${Auth.getToken()}` }
-    })
+    axios.post(`/api/locations/${this.props.match.params.id}/comments`, this.state.formData,
+      {
+        headers: { Authorization: `Bearer ${Auth.getToken()}` }
+      })
       .then(res => this.setState({ location: res.data, formData: { content: '', rating: 5 } }))
   }
 
@@ -75,12 +79,12 @@ class ShowLocation extends React.Component {
 
 
   handleDeleteComment(e) {
-
     axios.delete(`/api/locations/${this.props.match.params.id}/comments/${e.target.id}`, {
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
       .then(res => this.setState({ location: res.data }))
   }
+
 
   handleLike() {
     axios.post(`/api/locations/${this.props.match.params.id}/like`, null, {
@@ -90,11 +94,17 @@ class ShowLocation extends React.Component {
   }
 
   isLiked(likes) {
+
     return likes.includes(Auth.getPayload().sub)
   }
 
 
+
+
   render() {
+
+
+    console.log(this.state.location)
 
     if(!this.state.location) return null
     console.log(this.state.location)
@@ -110,7 +120,6 @@ class ShowLocation extends React.Component {
               </figure>
             </article>
           </div>
-
 
           <div className="columns is-multiline">
 
@@ -167,6 +176,8 @@ class ShowLocation extends React.Component {
                         liked={this.isLiked(this.state.location.likes)}
                         handleLike={this.handleLike}
                       />
+                      <p className="subtitle">{this.state.location.likes.length} like </p>
+
                     </div>}
 
                   </div>
@@ -194,18 +205,18 @@ class ShowLocation extends React.Component {
                 </Map>
               </div>
             </div>
-
           </div>
-
-
-
 
 
           <div className="tile is-parent">
             <article className="tile is-child notification">
-
+              <h1 className="title is-3"> Comments:   </h1>
               {this.state.location.comments.map(comment =>
-                <Comment key={comment._id} {...comment} handleDeleteComment={this.handleDeleteComment} />
+                <Comment
+                  key={comment._id}
+                  {...comment}
+                  handleDeleteComment={this.handleDeleteComment} />
+
               )}
               {Auth.isAuthenticated() && <div className="media-right">
 

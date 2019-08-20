@@ -1,7 +1,7 @@
 import React from 'react'
 
 const LikeButton = ({ liked, handleLike }) => {
-  const text = liked ? ' ' : ''
+  const text = liked ? ' ' : ' '
   const label = liked ? 'Unlike 💔' : ' Like 💗'
 
   return (
@@ -9,10 +9,10 @@ const LikeButton = ({ liked, handleLike }) => {
 
       <button
         onClick={handleLike}
-        className= " button is-info">
+        className= " button is-rounded">
         {label}
         <span>
-          <i className="far fa-thumbs-up"></i>
+          👍
         </span>
       </button>
       <p>

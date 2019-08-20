@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Card from './UserCard'
 import axios from 'axios'
+import Auth from '../../lib/Auth'
 
 class UsersIndex extends React.Component{
 
@@ -26,7 +27,7 @@ class UsersIndex extends React.Component{
       <section className="section">
         <div className="container">
           <div className="columns is-multiline">
-            {this.state.users.map(user =>
+            {this.state.users.filter(user => user._id !== Auth.getUser()._id).map(user =>
               <div
                 key={user._id}
                 className="column is-half-tablet is-one-quarter-desktop"

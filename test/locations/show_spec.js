@@ -41,7 +41,10 @@ describe('GET /locations/:id', () => {
         expect(res.body).to.contains.keys([
           '_id',
           'name',
-          'address',
+          'addressLine1',
+          'addressLine2',
+          'addressCity',
+          'addressPostCode',
           'cost',
           'actType',
           'dateNum',
@@ -58,7 +61,10 @@ describe('GET /locations/:id', () => {
       .end((err, res) => {
         expect(res.body._id).to.be.a('string')
         expect(res.body.name).to.be.a('string')
-        expect(res.body.address).to.be.a('string')
+        expect(res.body.addressLine1).to.be.a('string')
+        expect(res.body.addressLine2).to.be.a('string')
+        expect(res.body.addressCity).to.be.a('string')
+        expect(res.body.addressPostCode).to.be.a('string')
         expect(res.body.cost).to.be.a('number')
         expect(res.body.actType).to.be.an('array')
         expect(res.body.dateNum).to.be.an('array')
