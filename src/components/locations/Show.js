@@ -16,7 +16,6 @@ const zoom = [16]
 const mapMarker = '../../img/http___pluspng.com_img-png_heart-png-hd-transparent-background-3d-red-heart-transparent-background-1920.png'
 
 
-var likeCount =  null
 
 class ShowLocation extends React.Component {
 
