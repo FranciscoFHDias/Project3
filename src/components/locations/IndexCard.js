@@ -2,7 +2,6 @@ import React from 'react'
 import StarRatings from 'react-star-ratings'
 
 const Card = ({ name, address, image, dateNum, averageRating }) => {
-  console.log(averageRating)
   return(
     <div className="card">
 

@@ -16,7 +16,6 @@ const zoom = [16]
 const mapMarker = '../../img/http___pluspng.com_img-png_heart-png-hd-transparent-background-3d-red-heart-transparent-background-1920.png'
 
 
-
 class ShowLocation extends React.Component {
 
   constructor() {
@@ -28,8 +27,7 @@ class ShowLocation extends React.Component {
         rating: 5,
         liked: false
       },
-      latitude: 0,
-      longitude: 0,
+
       likeCount: null
     }
 
@@ -48,10 +46,6 @@ class ShowLocation extends React.Component {
       .get(`api/locations/${this.props.match.params.id}`)
       .then(res => {
         this.setState({ location: res.data })
-        axios
-          .get(`https:/api.postcodes.io/postcodes/${res.data.postCode}`)
-          .then(res => this.setState({ longitude: res.data.result.longitude, latitude: res.data.result.latitude})
-          )
       })
   }
 
@@ -114,7 +108,7 @@ class ShowLocation extends React.Component {
     console.log(this.state.location)
 
     if(!this.state.location) return null
-
+    console.log(this.state.location)
     return(
 
       <section className="section">
@@ -166,7 +160,10 @@ class ShowLocation extends React.Component {
                     <p className="text is-6">{this.state.location.link}</p>
                     <br/>
                     <h1 className="title is-6">address:</h1>
-                    <p className="text is-6">{this.state.location.address}</p>
+                    <p className="text is-6">{this.state.location.addressLine1}</p>
+                    <p className="text is-6">{this.state.location.addressLine2}</p>
+                    <p className="text is-6">{this.state.location.addressCity}</p>
+                    <p className="text is-6">{this.state.location.addressPostCode}</p>
                     <br />
                     {Auth.isAuthenticated() && <div className="buttons">
                       <Link
@@ -195,14 +192,14 @@ class ShowLocation extends React.Component {
                 <Map
                   style="mapbox://styles/mapbox/streets-v9"
                   zoom={zoom}
-                  center={[this.state.longitude, this.state.latitude]}
+                  center={[this.state.location.longitude, this.state.location.latitude]}
                   containerStyle={{
-                    height: '500px',
+                    height: '650px',
                     width: '100%'
                   }}
                 >
                   <Marker
-                    coordinates={[this.state.longitude, this.state.latitude]}
+                    coordinates={[this.state.location.longitude, this.state.location.latitude]}
                     anchor="bottom">
                     <img width="30px" height="30px" src={mapMarker} />
                   </Marker>

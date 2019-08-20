@@ -603,7 +603,7 @@ module.exports = [{
   addressLine1: 'Queen Elizabeth Olympic Park, ',
   addressLine2: ' ',
   addressCity: 'London',
-  addressPostCode: 'E20',
+  addressPostCode: 'E20 2ST',
   cost: 1,
   actType: [ 'Leisure', 'Restaurant', 'Drinks', 'Activity' ],
   dateNum: [ 1, 2 ],

@@ -65,7 +65,6 @@ class LocationsIndex extends React.Component{
   componentDidMount() {
     axios.get('/api/locations')
       .then(res => {
-        console.log(res.data)
         this.setState({ ...this.props.location.state, locations: res.data, filteredLocations: res.data})
       })
   }
@@ -94,6 +93,7 @@ class LocationsIndex extends React.Component{
   }
 
   render() {
+    console.log(this.state.locations)
     return(
       <section className="section">
         <nav className="navbar" role="navigation" aria-label="main navigation">

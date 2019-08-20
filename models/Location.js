@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const axios = require('axios')
 
 const commentSchema = new mongoose.Schema({
   content: { type: String, required: true, maxlength: 380 },
@@ -7,14 +8,14 @@ const commentSchema = new mongoose.Schema({
 },{
   timestamps: true
 })
-
-
 const locationSchema = new mongoose.Schema({
   name: { type: String, required: 'please provide a {PATH}', unique: true },
   addressLine1: { type: String, required: 'please provide a {PATH}' },
   addressLine2: { type: String },
   addressCity: { type: String, required: 'please provide a {PATH}' },
   addressPostCode: { type: String, required: 'please provide a {PATH}' },
+  latitude: { type: Number, required: 'please provide a {PATH}' },
+  longitude: { type: Number, required: 'please provide a {PATH}' },
   cost: { type: Number, required: 'please provide a {PATH}', min: 1, max: 5  },
   actType: { type: [ String ], required: 'please provide a {PATH}' },
   dateNum: { type: [ Number ], required: 'please provide a {PATH}', min: 1, max: 5},
@@ -35,10 +36,20 @@ locationSchema.virtual('averageRating')
   })
 
 
-locationSchema.virtual('postCode')
-  .get(function getPostCode() {
-    if(!this.address) return null
-    return this.address.split(', ').pop()
-  })
+
+locationSchema.pre('validate', function getGeolocation(done) {
+  if(!this.isModified('addressPostCode')) return done()
+  axios.post('https://postcodes.io/postcodes?filter=longitude,latitude', { postcodes: [this.addressPostCode] })
+    .then(res => {
+
+      if(!res.data.result[0].result) return done()
+
+      const { latitude, longitude } = res.data.result[0].result
+      this.latitude = latitude
+      this.longitude = longitude
+
+      done()
+    })
+})
 
 module.exports = mongoose.model('Location', locationSchema)
