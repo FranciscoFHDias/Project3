@@ -15,6 +15,9 @@ const Map = ReactMapboxGl({
 const zoom = [16]
 const mapMarker = '../../img/http___pluspng.com_img-png_heart-png-hd-transparent-background-3d-red-heart-transparent-background-1920.png'
 
+
+var likeCount =  null
+
 class ShowLocation extends React.Component {
 
   constructor() {
@@ -27,7 +30,8 @@ class ShowLocation extends React.Component {
         liked: false
       },
       latitude: 0,
-      longitude: 0
+      longitude: 0,
+      likeCount: null
     }
 
     this.handleChangeContent = this.handleChangeContent.bind(this)
@@ -38,6 +42,7 @@ class ShowLocation extends React.Component {
     this.handleLike = this.handleLike.bind(this)
 
   }
+
 
   componentDidMount() {
     axios
@@ -97,11 +102,17 @@ class ShowLocation extends React.Component {
   }
 
   isLiked(likes) {
+
     return likes.includes(Auth.getPayload().sub)
   }
 
 
+
+
   render() {
+
+
+    console.log(this.state.location)
 
     if(!this.state.location) return null
 
@@ -170,6 +181,8 @@ class ShowLocation extends React.Component {
                         liked={this.isLiked(this.state.location.likes)}
                         handleLike={this.handleLike}
                       />
+                      <p className="subtitle">{this.state.location.likes.length} like </p>
+
                     </div>}
 
                   </div>
@@ -204,7 +217,10 @@ class ShowLocation extends React.Component {
             <article className="tile is-child notification">
               <h1 className="title is-3"> Comments:   </h1>
               {this.state.location.comments.map(comment =>
-                <Comment key={comment._id} {...comment} handleDeleteComment={this.handleDeleteComment} />
+                <Comment
+                  key={comment._id}
+                  {...comment}
+                  handleDeleteComment={this.handleDeleteComment} />
 
               )}
               {Auth.isAuthenticated() && <div className="media-right">

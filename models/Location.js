@@ -11,7 +11,10 @@ const commentSchema = new mongoose.Schema({
 
 const locationSchema = new mongoose.Schema({
   name: { type: String, required: 'please provide a {PATH}', unique: true },
-  address: { type: String, required: 'please provide a {PATH}' },
+  addressLine1: { type: String, required: 'please provide a {PATH}' },
+  addressLine2: { type: String },
+  addressCity: { type: String, required: 'please provide a {PATH}' },
+  addressPostCode: { type: String, required: 'please provide a {PATH}' },
   cost: { type: Number, required: 'please provide a {PATH}', min: 1, max: 5  },
   actType: { type: [ String ], required: 'please provide a {PATH}' },
   dateNum: { type: [ Number ], required: 'please provide a {PATH}', min: 1, max: 5},
@@ -30,6 +33,7 @@ locationSchema.virtual('averageRating')
     if(this.comments.length === 0) return 0
     return this.comments.reduce((total, comment) => comment.rating + total, 0) / this.comments.length
   })
+
 
 locationSchema.virtual('postCode')
   .get(function getPostCode() {

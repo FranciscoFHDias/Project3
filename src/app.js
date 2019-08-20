@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import { HashRouter, Route, Switch } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 
 import Home from './components/pages/Home'
 
@@ -35,6 +36,8 @@ class App extends React.Component {
     return (
       <HashRouter>
         <Navbar />
+        <ToastContainer position="bottom-right" hideProgressBar={true} />
+
         <Switch>
 
           <SecureRoute path="/locations/:id/edit" component={EditLocation} />
