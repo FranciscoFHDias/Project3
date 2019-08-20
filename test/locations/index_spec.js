@@ -47,7 +47,10 @@ describe('GET /locations', () => {
           expect(location).to.contains.keys([
             '_id',
             'name',
-            'address',
+            'addressLine1',
+            'addressLine2',
+            'addressCity',
+            'addressPostCode',
             'cost',
             'actType',
             'dateNum',
@@ -66,11 +69,15 @@ describe('GET /locations', () => {
         res.body.forEach(location => {
           expect(location._id).to.be.a('string')
           expect(location.name).to.be.a('string')
-          expect(location.address).to.be.a('string')
+          expect(location.addressLine1).to.be.a('string')
+          expect(location.addressLine2).to.be.a('string')
+          expect(location.addressCity).to.be.a('string')
+          expect(location.addressPostCode).to.be.a('string')
           expect(location.cost).to.be.a('number')
           expect(location.actType).to.be.an('array')
           expect(location.dateNum).to.be.an('array')
           expect(location.image).to.be.a('string')
+          expect(location.contactNumber).to.be.a('number')
           expect(location.link).to.be.a('string')
         })
         done()

@@ -93,15 +93,46 @@ class New extends React.Component {
                     />
                     {this.state.errors.name && <small className="help is-danger">{this.state.errors.name}</small>}
                   </div>
+
                   <div className="field">
-                    <label className="label">Address</label>
+                    <label className="label">Address Line 1</label>
                     <input
                       className="input"
-                      name="address"
+                      name="addressLine1"
                       placeholder="eg: LoveExp Cafe, love cafe street, se16 6yy"
                       onChange={this.handleChangeNormal}
                     />
-                    {this.state.errors.address && <small className="help is-danger">{this.state.errors.address}</small>}
+                    {this.state.errors.addressLine1 && <small className="help is-danger">{this.state.errors.addressLine1}</small>}
+                  </div>
+                  <div className="field">
+                    <label className="label">Address Line 2</label>
+                    <input
+                      className="input"
+                      name="addressLine2"
+                      placeholder="eg: LoveExp Cafe, love cafe street, se16 6yy"
+                      onChange={this.handleChangeNormal}
+                    />
+                    {this.state.errors.addressLine2 && <small className="help is-danger">{this.state.errors.addressLine2}</small>}
+                  </div>
+                  <div className="field">
+                    <label className="label">City</label>
+                    <input
+                      className="input"
+                      name="addressCity"
+                      placeholder="eg: LoveExp Cafe, love cafe street, se16 6yy"
+                      onChange={this.handleChangeNormal}
+                    />
+                    {this.state.errors.addressCity && <small className="help is-danger">{this.state.errors.addressCity}</small>}
+                  </div>
+                  <div className="field">
+                    <label className="label">Post Code</label>
+                    <input
+                      className="input"
+                      name="addressPostCode"
+                      placeholder="eg: LoveExp Cafe, love cafe street, se16 6yy"
+                      onChange={this.handleChangeNormal}
+                    />
+                    {this.state.errors.addressPostCode && <small className="help is-danger">{this.state.errors.addressPostCode}</small>}
                   </div>
                   <div className="field">
                     <label className="label">Cost</label>

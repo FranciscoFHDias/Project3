@@ -1,7 +1,7 @@
 import React from 'react'
 
 const LikeButton = ({ liked, handleLike }) => {
-  const text = liked ? 'You have liked this ' : ' '
+  const text = liked ? ' ' : ' '
   const label = liked ? 'Unlike 💔' : ' Like 💗'
 
   return (

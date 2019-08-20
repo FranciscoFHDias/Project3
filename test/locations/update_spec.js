@@ -8,7 +8,10 @@ const { secret } = require('../../config/environment')
 
 const testData = {
   name: 'Paternoster Chop House',
-  address: '1, Warwick Court, Paternoster Sq., London EC4M 7DX',
+  addressLine1: '1, Warwick Court',
+  addressLine2: 'Paternoster Sq.',
+  addressCity: 'London',
+  addressPostCode: 'EC4M 7DX',
   cost: 3,
   actType: [
     'Restaurants and Bars',
@@ -18,6 +21,7 @@ const testData = {
     2
   ],
   image: 'https://www.paternosterchophouse.co.uk/wp-content/uploads/sites/23/2018/09/Paternoster_153_7547-1400x933.jpg',
+  contactNumber: +442070299400,
   link: 'https://www.paternosterchophouse.co.uk/'
 }
 
@@ -81,11 +85,15 @@ describe('PUT /locations/:id', () => {
         expect(res.body).to.contains.keys([
           '_id',
           'name',
-          'address',
+          'addressLine1',
+          'addressLine2',
+          'addressCity',
+          'addressPostCode',
           'cost',
           'actType',
           'dateNum',
           'image',
+          'contactNumber',
           'link'
         ])
         done()
@@ -98,11 +106,15 @@ describe('PUT /locations/:id', () => {
       .send(testData)
       .end((err, res) => {
         expect(res.body.name).to.eq(testData.name)
-        expect(res.body.address).to.eq(testData.address)
+        expect(res.body.addressLine1).to.eq(testData.addressLine1)
+        expect(res.body.addressLine2).to.eq(testData.addressLine2)
+        expect(res.body.addressCity).to.eq(testData.addressCity)
+        expect(res.body.addressPostCode).to.eq(testData.addressPostCode)
         expect(res.body.cost).to.eq(testData.cost)
         expect(res.body.actType).to.deep.eq(testData.actType)
         expect(res.body.dateNum).to.deep.eq(testData.dateNum)
         expect(res.body.image).to.eq(testData.image)
+        expect(res.body.contactNumber).to.eq(testData.contactNumber)
         expect(res.body.link).to.eq(testData.link)
         done()
       })
