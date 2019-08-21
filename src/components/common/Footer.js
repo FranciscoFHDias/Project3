@@ -5,7 +5,7 @@ import Modal from './Modal'
 const Footer = () => {
   return (
     <footer className="footer">
-      <nav className="navbar is-fixed-bottom">
+      <nav className="navbar">
         <div className="container">
           <div className="navbar-item">
             <Link to="/about">About</Link>
