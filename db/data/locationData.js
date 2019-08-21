@@ -104,7 +104,7 @@ module.exports = [{
   actType: [ 'Food', 'Drinks', 'Activity' ],
   dateNum: [ 1 ],
   image: 'https://broadwaymarket.co.uk/wp-content/uploads/2019/02/GettyImages-680780021-5b0d96788e1b6e003e73cf53-1.jpg',
-  contactNumber: null,
+  contactNumber: +442074390747,
   link: 'https://broadwaymarket.co.uk/'
 }, {
   name: 'Columbia Road Flower Market',
@@ -116,7 +116,7 @@ module.exports = [{
   actType: [ 'Food', 'Drinks', 'Activity' ],
   dateNum: [1],
   image: 'https://media.timeout.com/images/105212298/750/422/image.jpg',
-  contactNumber: null,
+  contactNumber: +442074390747,
   link: 'http://www.columbiaroad.info/'
 }, {
   name: 'Colours Hoxton',

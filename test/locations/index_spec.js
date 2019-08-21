@@ -51,6 +51,8 @@ describe('GET /locations', () => {
             'addressLine2',
             'addressCity',
             'addressPostCode',
+            'latitude',
+            'longitude',
             'cost',
             'actType',
             'dateNum',
@@ -73,6 +75,8 @@ describe('GET /locations', () => {
           expect(location.addressLine2).to.be.a('string')
           expect(location.addressCity).to.be.a('string')
           expect(location.addressPostCode).to.be.a('string')
+          expect(location.longitude).to.be.a('number')
+          expect(location.latitude).to.be.a('number')
           expect(location.cost).to.be.a('number')
           expect(location.actType).to.be.an('array')
           expect(location.dateNum).to.be.an('array')

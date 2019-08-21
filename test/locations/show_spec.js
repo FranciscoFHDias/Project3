@@ -45,6 +45,8 @@ describe('GET /locations/:id', () => {
           'addressLine2',
           'addressCity',
           'addressPostCode',
+          'latitude',
+          'longitude',
           'cost',
           'actType',
           'dateNum',
@@ -65,6 +67,8 @@ describe('GET /locations/:id', () => {
         expect(res.body.addressLine2).to.be.a('string')
         expect(res.body.addressCity).to.be.a('string')
         expect(res.body.addressPostCode).to.be.a('string')
+        expect(res.body.latitude).to.be.a('number')
+        expect(res.body.longitude).to.be.a('number')
         expect(res.body.cost).to.be.a('number')
         expect(res.body.actType).to.be.an('array')
         expect(res.body.dateNum).to.be.an('array')
