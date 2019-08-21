@@ -157,6 +157,17 @@ class New extends React.Component {
                     {this.state.errors.addressPostCode && <small className="help is-danger">{this.state.errors.addressPostCode}</small>}
                   </div>
                   <div className="field">
+                    <label className="label">Description</label>
+                    <textarea
+                      className="textarea"
+                      name="desc"
+                      placeholder="Great Place love it!"
+                      value={this.state.formData.desc || ''}
+                      onChange={this.handleChangeNormal}
+                    />
+                    {this.state.errors.desc && <small className="help is-danger">{this.state.errors.desc}</small>}
+                  </div>
+                  <div className="field">
                     <label className="label">Cost</label>
                     <Select
                       name="cost"
@@ -197,6 +208,7 @@ class New extends React.Component {
                       onSuccess={(result) => this.handleUploadImages(result)}
                       preload={true}
                     />
+                    {this.state.formData.image && <img src={this.state.formData.image} />}
                   </div>
                   <div className="field">
                     <label className="label">Contact Number</label>

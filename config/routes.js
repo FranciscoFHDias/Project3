@@ -20,6 +20,7 @@ router.route('/locations/:id')
 
 router.post('/locations/:id/comments', secureRoute, locationsController.commentCreate)
 router.delete('/locations/:id/comments/:commentId', secureRoute, locationsController.commentDelete)
+router.post('/locations/:id/like', secureRoute, locationsController.like)
 
 router.get('/profiles', usersController.usersIndex)
 

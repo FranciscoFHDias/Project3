@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="column is-two-third">
             <nav className="breadcrumb has-bullet-separator is-fixed-bottom" aria-label="breadcrumbs">
               <ul>
-                <li><Link to="/about">About</Link></li>
+                <span> <li><Link to="/about">About</Link> </li></span>
                 <li><Link to="/contacts">Contact Us</Link></li>
-                <li><div><Modal /></div></li>
+                <span> <li><div><Modal /></div></li></span>
               </ul>
             </nav>
           </div>

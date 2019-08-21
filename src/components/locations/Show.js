@@ -95,19 +95,14 @@ class ShowLocation extends React.Component {
   }
 
   isLiked(likes) {
-
     return likes.includes(Auth.getPayload().sub)
   }
 
 
-
-
   render() {
 
-
-    console.log(this.state.location)
-
     if(!this.state.location) return null
+
     console.log(this.state.location)
     return(
 
@@ -164,6 +159,8 @@ class ShowLocation extends React.Component {
                     <p className="text is-6">{this.state.location.addressLine2}</p>
                     <p className="text is-6">{this.state.location.addressCity}</p>
                     <p className="text is-6">{this.state.location.addressPostCode}</p>
+                    <h2 className="title is-6">Description:</h2>
+                    <p className="text is-6">{this.state.location.desc}</p>
                     <br />
                     {Auth.isAuthenticated() && <div className="buttons">
                       <Link

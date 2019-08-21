@@ -71,6 +71,11 @@ class EditUser extends React.Component {
     this.setState({ formData })
   }
 
+  handleUploadImages(result) {
+    const formData = {...this.state.formData, image: result.filesUploaded[0].url}
+    this.setState({ formData })
+  }
+
   handleSubmit(e) {
     e.preventDefault()
 
@@ -91,125 +96,126 @@ class EditUser extends React.Component {
     return (
       <section className="hero is-light">
         <div className="hero-body">
-          <div className="container">
-            <div className="column">
+          <div className="container has-text-centered">
+            <div className="column is-4 is-offset-4">
 
-
-              <h3 className="title is-1 is-italic" > Edit </h3>
-              <p className="subtitle has-text-black">You`ve changed!</p>
-
-              <div className="box is-light">
-                <figure className="avatar">
-                  <img src={this.state.formData.image} />
-                </figure>
+              <div className="box">
+                <h3 className="title is-1 is-italic" > Edit </h3>
+                <p className="subtitle has-text-black">You`ve changed!</p>
 
 
                 <form onSubmit={this.handleSubmit}>
-                  <div className="column">
-                    <div className="field">
-                      <label className="label">Image</label>
-                      <ReactFilestack
-                        apikey={fileloaderKey}
-                        buttonText="Upload Photo"
-                        buttonClass="button"
-                        className="upload-image"
-                        options={options}
-                        onSuccess={(result) => this.handleUploadImages(result)}
-                        preload={true}
+
+                  <div className="field">
+                    <label className="label">Image</label>
+                    <ReactFilestack
+                      mode="transform"
+                      apikey={fileloaderKey}
+                      buttonText="Upload Photo"
+                      buttonClass="button"
+                      className="upload-image"
+                      options={options}
+                      onSuccess={(result) => this.handleUploadImages(result)}
+                      preload={true}
+                    />
+                    {this.state.formData.image && <img src={this.state.formData.image} />}
+                  </div>
+
+
+
+                  <div className="field">
+                    <label className="label">Username</label>
+                    <div className="control">
+                      <input
+                        className="input is-rounded"
+                        name="username"
+                        placeholder="eg: Philip1992"
+                        value={this.state.formData.username || ''}
+                        onChange={this.handleChangeNormal}
                       />
                     </div>
+                    {this.state.errors.username && <small className="help is-danger">{this.state.errors.username}</small>}
+                  </div>
+                  <div className="field">
+                    <label className="label">Email</label>
+                    <div className="control">
+                      <input
+                        className="input is-rounded"
+                        type="email"
+                        name="email"
+                        placeholder="eg: philip1992@email.co.uk"
+                        value={this.state.formData.email || ''}
+                        onChange={this.handleChangeNormal}
+                      />
+                    </div>
+                    {this.state.errors.email && <small className="help is-danger">{this.state.errors.email}</small>}
+                  </div>
+                  <div className="field">
+                    <label className="label">Age</label>
+                    <Select
+                      name="age"
+                      options={ageOptions}
+                      value={ageOptions.find(option => option.value === this.state.formData.age)}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className="field">
+                    <label className="label">Gender</label>
+                    <Select
+                      name="gender"
+                      options={genderOptions}
+                      value={genderOptions.find(option => option.value === this.state.formData.gender)}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className="field">
+                    <label className="label">Are you a smoker?</label>
+                    <Select
+                      name="smoker"
+                      options={smokerOptions}
+                      value={smokerOptions.find(option => option.label === smokerSelectedOption)}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className="field">
+                    <label className="label">Please confirm your password</label>
+                    <div className="control">
+                      <input
+                        className="input is-rounded"
+                        name="password"
+                        placeholder="eg: ******"
+                        onChange={this.handleChangeNormal}
+                      />
+                    </div>
+                    {this.state.errors.password && <small className="help is-danger">{this.state.errors.password}</small>}
                     <div className="field">
-                      <label className="label">Username</label>
+                      <label className="label">Password Confirmation</label>
                       <div className="control">
                         <input
                           className="input is-rounded"
-                          name="username"
-                          placeholder="eg: Philip1992"
-                          value={this.state.formData.username || ''}
+                          type="password"
+                          name="passwordConfirmation"
+                          placeholder="eg: ••••••••"
                           onChange={this.handleChangeNormal}
                         />
                       </div>
-                      {this.state.errors.username && <small className="help is-danger">{this.state.errors.username}</small>}
-                    </div>
-                    <div className="field">
-                      <label className="label">Email</label>
-                      <div className="control">
-                        <input
-                          className="input is-rounded"
-                          type="email"
-                          name="email"
-                          placeholder="eg: philip1992@email.co.uk"
-                          value={this.state.formData.email || ''}
-                          onChange={this.handleChangeNormal}
-                        />
-                      </div>
-                      {this.state.errors.email && <small className="help is-danger">{this.state.errors.email}</small>}
-                    </div>
-                    <div className="field">
-                      <label className="label">Age</label>
-                      <Select
-                        name="age"
-                        options={ageOptions}
-                        value={ageOptions.find(option => option.value === this.state.formData.age)}
-                        onChange={this.handleChange}
-                      />
-                    </div>
-                    <div className="field">
-                      <label className="label">Gender</label>
-                      <Select
-                        name="gender"
-                        options={genderOptions}
-                        value={genderOptions.find(option => option.value === this.state.formData.gender)}
-                        onChange={this.handleChange}
-                      />
-                    </div>
-                    <div className="field">
-                      <label className="label">Are you a smoker?</label>
-                      <Select
-                        name="smoker"
-                        options={smokerOptions}
-                        value={smokerOptions.find(option => option.label === smokerSelectedOption)}
-                        onChange={this.handleChange}
-                      />
-                    </div>
-                    <div className="field">
-                      <label className="label">Please confirm your password</label>
-                      <div className="control">
-                        <input
-                          className="input is-rounded"
-                          name="password"
-                          placeholder="eg: ******"
-                          onChange={this.handleChangeNormal}
-                        />
-                      </div>
-                      {this.state.errors.password && <small className="help is-danger">{this.state.errors.password}</small>}
-                      <div className="field">
-                        <label className="label">Password Confirmation</label>
-                        <div className="control">
-                          <input
-                            className="input is-rounded"
-                            type="password"
-                            name="passwordConfirmation"
-                            placeholder="eg: ••••••••"
-                            onChange={this.handleChangeNormal}
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <br />
-
-                    <div className="has-text-centered">
-                      <button className="button">Submit</button>
                     </div>
                   </div>
+
+
+                  <br />
+
+                  <div className="has-text-centered">
+                    <button className="button">Submit</button>
+                  </div>
+
 
                 </form>
               </div>
             </div>
           </div>
         </div>
+
 
 
       </section>

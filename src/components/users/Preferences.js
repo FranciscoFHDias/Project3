@@ -103,7 +103,13 @@ class Preferences extends React.Component {
                       onSuccess={(result) => this.handleUploadImages(result)}
                       preload={true}
                     />
+                    {this.state.formData.image &&
+                      <figure className="image is-128x128">
+                        <img className="is-rounded" src={this.state.formData.image} />
+                        <br/>
+                      </figure>
 
+                    }
                   </div>
 
                   <div className="field">

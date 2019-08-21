@@ -27,35 +27,58 @@ class ShowUser extends React.Component {
     }
   }
 
+  ageTranslate(){
+    if(this.state.user.age === 1) {
+      return '18 - 25'
+    } else if (this.state.user.age === 2) {
+      return '25 - 30'
+    } else if (this.state.user.age === 3) {
+      return '30 - 40'
+    } else if (this.state.user.age === 4) {
+      return '50 - 65'
+    } else {
+      return '65+'
+    }
+
+  }
+
+
+
+
   render() {
     console.log(this.state)
     return(
-      <section className="section">
-        <div className="container">
-          <div className="columns">
-            <div className="column is-one-third">
-              <figure className="image is-3by3">
-                <img src={this.state.user.image} alt={this.state.user.username}/>
-              </figure>
-              <div className="content">
-                <h1 className="title">{this.state.user.username}</h1>
-                <br />
+      <section className="hero is-light">
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            <div className="column is-4 is-offset-4">
 
-                {Auth.getUser()._id === this.props.match.params.id && <div className="buttons">
-                  <Link
-                    className="button"
-                    to={`/profiles/${this.state.user._id}/edit`}
-                  >Edit</Link>
+              <div className="box is-warning">
+                <figure className="image is-3by3">
+                  <img src={this.state.user.image} alt={this.state.user.username}/>
+                </figure>
 
-                  <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
-                </div> }
-              </div>
-            </div>
-            <div className="column is-two-thirds">
-              <div className="content">
-                <p>Age: {this.state.user.age}</p>
-                <p>Gender: {this.state.user.gender}</p>
-                <p>Smoker: {this.booleanTranslate(this.state.user.smoker)}</p>
+                <div className="box">
+
+                  <div className="content">
+                    <h1 className="title">{this.state.user.username}</h1>
+
+                    <p>Age: {this.ageTranslate(this.state.user.age)}</p>
+                    <p>Gender: {this.state.user.gender}</p>
+                    <p>Smoker: {this.booleanTranslate(this.state.user.smoker)}</p>
+
+                    <br />
+
+                    {Auth.getUser()._id === this.props.match.params.id && <div className="buttons">
+                      <Link
+                        className="button"
+                        to={`/profiles/${this.state.user._id}/edit`}
+                      >Edit</Link>
+
+                      <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
+                    </div> }
+                  </div>
+                </div>
               </div>
             </div>
           </div>

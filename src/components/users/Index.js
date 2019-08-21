@@ -12,6 +12,8 @@ class UsersIndex extends React.Component{
     this.state = {
       users: []
     }
+    this.ageTranslate = this.ageTranslate.bind(this)
+    this.booleanTranslate = this.booleanTranslate.bind(this)
   }
 
   componentDidMount() {
@@ -20,6 +22,29 @@ class UsersIndex extends React.Component{
         this.setState({ users: res.data })
       })
   }
+
+  ageTranslate(){
+    if(this.state.users.age === 1) {
+      return '18 - 25'
+    } else if (this.state.users.age === 2) {
+      return '25 - 30'
+    } else if (this.state.users.age === 3) {
+      return '30 - 40'
+    } else if (this.state.users.age === 4) {
+      return '50 - 65'
+    } else {
+      return '65+'
+    }
+  }
+
+  booleanTranslate() {
+    if(this.state.users.smoker === true) {
+      return 'Yes'
+    } else {
+      return 'No'
+    }
+  }
+
 
   render() {
     console.log(this.state)
@@ -36,9 +61,9 @@ class UsersIndex extends React.Component{
                   <Card
                     image={user.image}
                     username={user.username}
-                    age={user.age}
+                    age={this.ageTranslate(user.age)}
                     gender={user.gender}
-                    smoker={user.smoker}
+                    smoker={this.booleanTranslate(user.smoker)}
                   />
                 </Link>
               </div>

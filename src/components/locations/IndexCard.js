@@ -1,7 +1,13 @@
 import React from 'react'
 import StarRatings from 'react-star-ratings'
 
+
+
+
+
 const Card = ({ name, addressPostCode, image, dateNum, averageRating }) => {
+
+
   return(
     <div className="card">
 
@@ -31,7 +37,16 @@ const Card = ({ name, addressPostCode, image, dateNum, averageRating }) => {
           </div>
         </div>
 
-        <p className="text is-8">Date Number:  {dateNum}</p>
+        <p className="text is-8">Date Number: </p>
+        {dateNum.map(date =>
+          <span key={location._id} className="text is-8">
+            {date }  {'    '}
+          </span>
+        )}
+
+
+
+
         <hr/>
         <p className="text is-12">{addressPostCode}</p>
 
