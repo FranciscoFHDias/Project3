@@ -1,14 +1,20 @@
 import React from 'react'
 import Footer from '../common/Footer'
 import axios from 'axios'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { toast } from 'react-toastify'
 
 class Contacts extends React.Component{
 
   constructor() {
     super()
     this.state = {
-      formData: {},
+      formData: {
+        name: '',
+        email: '',
+        message: ''
+      },
       errors: {}
     }
 
@@ -16,13 +22,15 @@ class Contacts extends React.Component{
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-
   handleSubmit(e) {
     e.preventDefault()
+    console.log(this.state.formData)
     // TODO: make a POST request to /api/send with the formData
     axios.post('/api/send', this.state.formData)
-    // console.log(this.state.formData)
-      // .then(() => this.props.history.push('/api/send'))
+      .then(() => {
+        toast.success('Thanks for contacting us, your message has been sent')
+        this.setState({ formData: { name: '', email: '', message: '' } })
+      })
       .catch(err => this.setState({ errors: err.response.data.errors }))
   }
 
@@ -46,56 +54,55 @@ class Contacts extends React.Component{
         </section>
         <hr/>
 
-
-
-
-
-        <form id="contact-form" onSubmit={this.handleSubmit}>
-          <div className="field">
-            <label className="label">Name</label>
-            <div className="control">
-              <input className="input" name="name" placeholder="eg: Donald" onChange={this.handleChange}/>
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Email address</label>
-            <div className="control">
-              <input className="input" type="email" name="email" placeholder="eg: donaldduck@baldandsexy.com" onChange={this.handleChange}/>
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Message</label>
-            <div className="control">
-              <textarea className="textarea" name="message" placeholder="e.g. Hello world" onChange={this.handleChange}></textarea>
-            </div>
-          </div>
-          <button className="button is-info">Submit</button>
-        </form>
-
-
-
-
-
-
-
-
         <section className="section">
           <div className="container">
             <div className="columns is-centered">
 
-              <div className="column is-one-third'">
-                <h1>first Column</h1>
+
+
+              <div className="column is-one-quarter">
               </div>
-              <div className="column is-one-third">
-                <h1>second Column</h1>
+
+              <div className="column">
+                <form id="contact-form" onSubmit={this.handleSubmit}>
+                  <div className="field">
+                    <label className="label">Name</label>
+                    <div className="control">
+                      <input className="input" name="name" placeholder="eg: Donald" onChange={this.handleChange}
+                        value={this.state.formData.name}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <label className="label">Email address</label>
+                    <div className="control">
+                      <input className="input" type="email" name="email" placeholder="eg: donaldduck@baldandsexy.com" onChange={this.handleChange}
+                        value={this.state.formData.email}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <label className="label">Message</label>
+                    <div className="control">
+                      <textarea className="textarea" name="message" placeholder="e.g. Hello world" onChange={this.handleChange}
+                        value={this.state.formData.message}
+                      ></textarea>
+                    </div>
+                  </div>
+                  <button className="submit"><FontAwesomeIcon icon={faEnvelope} /></button>
+                </form>
               </div>
-              <div className="column is-one-third">
-                <h1>third Column</h1>
+
+
+              <div className="column is-one-quarter">
               </div>
+
 
             </div>
           </div>
         </section>
+
+
         <Footer />
       </section>
 

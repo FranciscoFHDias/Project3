@@ -96,58 +96,57 @@ class LocationsIndex extends React.Component{
     console.log(this.state.locations)
     return(
       <section className="section">
-        <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
-          <div className="navbar-item">
-            <div className="field">
-              <label className="label">Date No.</label>
-              <Select
-                name="dateNum"
-                options={dateNumOptions}
-                defaultValue={dateNumOptions[0]}
-                onChange={selected => this.handleFilter(selected, 'dateNum')}
-                value={dateNumOptions.find(option => option.value === this.state.dateNum)}
-              />
-            </div>
-          </div>
-          <div className="navbar-item">
-            <div className="field">
-              <label className="label">Activity Type</label>
-              <Select
-                name="actType"
-                options={actTypeOptions}
-                defaultValue={actTypeOptions[0]}
-                onChange={selected => this.handleFilter(selected, 'actType')}
-                value={actTypeOptions.find(option => option.value === this.state.actType)}
-              />
-            </div>
-          </div>
-          <div className="navbar-item">
-            <div className="field">
-              <label className="label">Budget</label>
-              <Select
-                name="cost"
-                options={budgetOptions}
-                defaultValue={budgetOptions[0]}
-                onChange={selected => this.handleFilter(selected, 'cost')}
-                value={budgetOptions.find(option => option.value === this.state.cost)}
-              />
-            </div>
-          </div>
-          <div className="navbar-item">
-            <div className="field">
-              <label className="label">Sort By</label>
-              <Select
-                name="sortBy"
-                options={sortOptions}
-                defaultValue={sortOptions[0]}
-                onChange={this.handleChange}
-                value={sortOptions[0]}
-              />
-            </div>
-          </div>
-        </nav>
-
         <div className="container">
+          <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
+            <div className="navbar-item">
+              <div className="field">
+                <label className="label">Date No.</label>
+                <Select
+                  name="dateNum"
+                  options={dateNumOptions}
+                  defaultValue={dateNumOptions[0]}
+                  onChange={selected => this.handleFilter(selected, 'dateNum')}
+                  value={dateNumOptions.find(option => option.value === this.state.dateNum)}
+                />
+              </div>
+            </div>
+            <div className="navbar-item">
+              <div className="field">
+                <label className="label">Activity Type</label>
+                <Select
+                  name="actType"
+                  options={actTypeOptions}
+                  defaultValue={actTypeOptions[0]}
+                  onChange={selected => this.handleFilter(selected, 'actType')}
+                  value={actTypeOptions.find(option => option.value === this.state.actType)}
+                />
+              </div>
+            </div>
+            <div className="navbar-item">
+              <div className="field">
+                <label className="label">Budget</label>
+                <Select
+                  name="cost"
+                  options={budgetOptions}
+                  defaultValue={budgetOptions[0]}
+                  onChange={selected => this.handleFilter(selected, 'cost')}
+                  value={budgetOptions.find(option => option.value === this.state.cost)}
+                />
+              </div>
+            </div>
+            <div className="navbar-item">
+              <div className="field">
+                <label className="label">Sort By</label>
+                <Select
+                  name="sortBy"
+                  options={sortOptions}
+                  defaultValue={sortOptions[0]}
+                  onChange={this.handleChange}
+                  value={sortOptions[0]}
+                />
+              </div>
+            </div>
+          </nav>
           <div className="columns is-multiline">
             {!this.state.locations && <h2 className="title is-2">Loading...</h2>}
             {this.filterLocations().map(location =>
