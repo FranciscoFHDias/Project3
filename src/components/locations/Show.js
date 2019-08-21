@@ -15,6 +15,7 @@ const Map = ReactMapboxGl({
 const zoom = [16]
 const mapMarker = '../../img/http___pluspng.com_img-png_heart-png-hd-transparent-background-3d-red-heart-transparent-background-1920.png'
 
+
 class ShowLocation extends React.Component {
 
   constructor() {
@@ -152,13 +153,13 @@ class ShowLocation extends React.Component {
                     </div>
                     <hr/>
 
-                    <h1 className="title is-6">tel:</h1>
+                    <h1 className="title is-6">Tel:</h1>
                     <p className="text is-6">{this.state.location.contactNumber}</p>
                     <br/>
-                    <h1 className="title is-6">link:</h1>
+                    <h1 className="title is-6">Link:</h1>
                     <p className="text is-6">{this.state.location.link}</p>
                     <br/>
-                    <h1 className="title is-6">address:</h1>
+                    <h1 className="title is-6">Address:</h1>
                     <p className="text is-6">{this.state.location.addressLine1}</p>
                     <p className="text is-6">{this.state.location.addressLine2}</p>
                     <p className="text is-6">{this.state.location.addressCity}</p>
@@ -168,7 +169,9 @@ class ShowLocation extends React.Component {
                       <Link
                         className="button"
                         to={`/locations/${this.state.location._id}/edit`}
-                      >Edit</Link>
+                      >
+                      😬
+                      </Link>
 
                       <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
 

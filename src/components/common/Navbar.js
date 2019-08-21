@@ -42,7 +42,7 @@ class Navbar extends React.Component {
 
   render(){
     return (
-      <nav className="navbar">
+      <nav className="navbar is-fixed-top is-link">
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item">
@@ -65,13 +65,14 @@ class Navbar extends React.Component {
 
           <div className={`navbar-menu ${this.state.navbarOpen ? 'is-active' : ''}`}>
             <div className="navbar-start">
+
+            </div>
+
+            <div className="navbar-end">
               <Link to="/locations" className="navbar-item">Locations</Link>
               <Link to="/locations/map" className="navbar-item">Map</Link>
               {Auth.isAuthenticated() && <Link to="/profiles" className="navbar-item">Users</Link>}
               {Auth.isAuthenticated() && <Link to="/locations/new" className="navbar-item">Add</Link>}
-            </div>
-
-            <div className="navbar-end">
               {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item">Register</Link>}
               {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Login</Link>}
               {Auth.isAuthenticated() && <div className="navbar-item">
