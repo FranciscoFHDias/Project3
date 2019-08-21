@@ -10,7 +10,7 @@
     "serve:backend": "nodemon",
     "serve:frontend": "webpack-dev-server --mode development",
     "test": "mocha test/**/*_spec.js --require test/helper --recursive --exit",
-    "start": "yarn build && node index",
+    "start": "node index",
     "build": "webpack -p"
   },
   "dependencies": {
