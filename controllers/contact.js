@@ -8,8 +8,8 @@ function emailRoute(req, res, next){
   const content = `name: ${name} \n email: ${email} \n message: ${message} `
 
   const mail = {
-    from: USER,
-    to: 'daframiso.project3@gmail.com',  //Change to email address that you want to receive messages on
+    from: name,
+    to: USER,  //Change to email address that you want to receive messages on
     subject: 'New Message from Contact Form',
     text: content
   }

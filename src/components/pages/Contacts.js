@@ -12,6 +12,7 @@ class Contacts extends React.Component{
       errors: {}
     }
 
+    this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
@@ -20,6 +21,8 @@ class Contacts extends React.Component{
     e.preventDefault()
     // TODO: make a POST request to /api/send with the formData
     axios.post('/api/send', this.state.formData)
+    // console.log(this.state.formData)
+      // .then(() => this.props.history.push('/api/send'))
       .catch(err => this.setState({ errors: err.response.data.errors }))
   }
 
@@ -47,26 +50,26 @@ class Contacts extends React.Component{
 
 
 
-        <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+        <form id="contact-form" onSubmit={this.handleSubmit}>
           <div className="field">
             <label className="label">Name</label>
             <div className="control">
-              <input className="input" name="name" placeholder="eg: Donald"/>
+              <input className="input" name="name" placeholder="eg: Donald" onChange={this.handleChange}/>
             </div>
           </div>
           <div className="field">
             <label className="label">Email address</label>
             <div className="control">
-              <input className="input" type="email" name="email" placeholder="eg: donaldduck@baldandsexy.com"/>
+              <input className="input" type="email" name="email" placeholder="eg: donaldduck@baldandsexy.com" onChange={this.handleChange}/>
             </div>
           </div>
           <div className="field">
             <label className="label">Message</label>
             <div className="control">
-              <textarea className="textarea" placeholder="e.g. Hello world"></textarea>
+              <textarea className="textarea" name="message" placeholder="e.g. Hello world" onChange={this.handleChange}></textarea>
             </div>
           </div>
-          <button className="button">Submit</button>
+          <button className="button is-info">Submit</button>
         </form>
 
 
