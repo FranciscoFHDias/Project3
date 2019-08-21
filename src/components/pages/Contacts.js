@@ -1,7 +1,8 @@
 import React from 'react'
 import Footer from '../common/Footer'
 import axios from 'axios'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 class Contacts extends React.Component{
 
@@ -69,33 +70,10 @@ class Contacts extends React.Component{
               <textarea className="textarea" name="message" placeholder="e.g. Hello world" onChange={this.handleChange}></textarea>
             </div>
           </div>
-          <button className="button is-info">Submit</button>
+          <button className="submit"><FontAwesomeIcon icon={faEnvelope} /></button>
         </form>
 
 
-
-
-
-
-
-
-        <section className="section">
-          <div className="container">
-            <div className="columns is-centered">
-
-              <div className="column is-one-third'">
-                <h1>first Column</h1>
-              </div>
-              <div className="column is-one-third">
-                <h1>second Column</h1>
-              </div>
-              <div className="column is-one-third">
-                <h1>third Column</h1>
-              </div>
-
-            </div>
-          </div>
-        </section>
         <Footer />
       </section>
 
