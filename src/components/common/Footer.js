@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="content">
         <div className="columns is-centered">
           <div className="column is-two-third">
-            <nav className="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+            <nav className="breadcrumb has-bullet-separator is-fixed-bottom" aria-label="breadcrumbs">
               <ul>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/contacts">Contact Us</Link></li>
@@ -16,11 +16,13 @@ const Footer = () => {
               </ul>
             </nav>
           </div>
+
           <div className="column is-one-third">
             <h5 className="has-text-grey-light">
             © DAFRAMISO Corporate
             </h5>
           </div>
+
         </div>
       </div>
     </footer>

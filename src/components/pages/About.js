@@ -40,7 +40,6 @@ class About extends React.Component{
               <li>whether the website conducts sales</li>
               <li>whether the website has further policies</li>
             </ul>
-            <p>It should be noted that this document <strong>only includes the terms and conditions of use</strong>. It will refer to and incorporate into its terms other documents if applicable such as a privacy policy and terms and conditions of sale.</p>
           </h4>
         </div>
 

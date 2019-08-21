@@ -51,7 +51,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <section className="hero is-fullheight is-black">
+      <section className="hero is-fullheight is-link">
         <div className="hero-body">
           <div className="container">
             <h1 className="title is-1 has-text-centered">Date Night</h1>
