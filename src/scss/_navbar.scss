@@ -1,0 +1,19 @@
+.navbar {
+  &.is-transparent {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
+a.navbar-item {
+  color: #91dcff;
+  font-size: 30px;
+  font-family: 'Vibur', cursive;
+  color: #91dcff;
+  text-shadow: 0 0 5px #91dcff, 0 0 10px #91dcff, 0 0 20px #91dcff, 0 0 30px #91dcff, 0 0 40px #91dcff;
+  text-align: center;
+}
+
+button.button {
+  background-color: transparent;
+}

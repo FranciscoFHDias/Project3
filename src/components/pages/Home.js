@@ -51,15 +51,16 @@ class Home extends React.Component {
 
   render() {
     return (
-      <section className="hero is-fullheight is-link">
+      <section className="hero is-fullheight">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title is-1 has-text-centered">Date Night</h1>
+            <h1 className="title has-text-centered has-text-danger"><img width="200" src="./img/Date-a-base-logo-red.png" alt="logo"/><br/>DATE-A-BASE</h1>
             <div className="level">
               <div className="level-item has-text-centered">
                 <div className="field">
                   <label className="label">Date No.</label>
                   <Select
+                    className="filter"
                     name="dateNum"
                     options={dateNumOptions}
                     onChange={selected => this.handleFilter(selected, 'dateNum')}
@@ -70,6 +71,7 @@ class Home extends React.Component {
                 <div className="field">
                   <label className="label">Activity Type</label>
                   <Select
+                    className="filter"
                     name="actType"
                     options={actTypeOptions}
                     onChange={selected => this.handleFilter(selected, 'actType')}
@@ -80,6 +82,7 @@ class Home extends React.Component {
                 <div className="field">
                   <label className="label">Budget</label>
                   <Select
+                    className="filter"
                     name="cost"
                     options={budgetOptions}
                     onChange={selected => this.handleFilter(selected, 'cost')}

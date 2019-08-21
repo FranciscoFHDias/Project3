@@ -1,10 +1,20 @@
+@import "./scss/_colourScheme.scss";
+
+@import "./scss/_fonts.scss";
+
+@import "./scss/_navbar.scss";
+
+@import "./scss/_home.scss";
+
+@import "./scss/_dropdowns.scss";
+
+@import "./scss/_footer.scss";
+
 .card {
   height: 100%;
 }
 
 $modal-card-body-background-color: #ff3860;
-
-$navbar-height: 7.5rem;
 
 $modal-content-width: 640px;
 
