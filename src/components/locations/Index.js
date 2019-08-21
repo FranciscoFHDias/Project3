@@ -96,7 +96,7 @@ class LocationsIndex extends React.Component{
     console.log(this.state.locations)
     return(
       <section className="section">
-        <nav className="navbar" role="navigation" aria-label="main navigation">
+        <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
           <div className="navbar-item">
             <div className="field">
               <label className="label">Date No.</label>
