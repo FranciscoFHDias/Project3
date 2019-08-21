@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+import Auth from '../../lib/Auth'
 
 class ShowUser extends React.Component {
 
@@ -37,6 +39,16 @@ class ShowUser extends React.Component {
               </figure>
               <div className="content">
                 <h1 className="title">{this.state.user.username}</h1>
+                <br />
+
+                {Auth.getUser()._id === this.props.match.params.id && <div className="buttons">
+                  <Link
+                    className="button"
+                    to={`/profiles/${this.state.user._id}/edit`}
+                  >Edit</Link>
+
+                  <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
+                </div> }
               </div>
             </div>
             <div className="column is-two-thirds">

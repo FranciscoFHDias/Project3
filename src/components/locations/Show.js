@@ -15,6 +15,7 @@ const Map = ReactMapboxGl({
 const zoom = [16]
 const mapMarker = '../../img/http___pluspng.com_img-png_heart-png-hd-transparent-background-3d-red-heart-transparent-background-1920.png'
 
+
 class ShowLocation extends React.Component {
 
   constructor() {
@@ -26,9 +27,8 @@ class ShowLocation extends React.Component {
         rating: 5,
         liked: false
       },
-      postcode: 'E1 7PT',
-      latitude: 0,
-      longitude: 0
+
+      likeCount: null
     }
 
     this.handleChangeContent = this.handleChangeContent.bind(this)
@@ -40,13 +40,13 @@ class ShowLocation extends React.Component {
 
   }
 
+
   componentDidMount() {
-    axios.get(`api/locations/${this.props.match.params.id}`)
-      .then(res => this.setState({ location: res.data }))
-    // const postCode = locations.postCode
-    axios.get(`https:/api.postcodes.io/postcodes/${this.state.postcode}`)
-      .then(res => this.setState({ longitude: res.data.result.longitude, latitude: res.data.result.latitude})
-      )
+    axios
+      .get(`api/locations/${this.props.match.params.id}`)
+      .then(res => {
+        this.setState({ location: res.data })
+      })
   }
 
   handleChangeContent(e) {
@@ -61,9 +61,10 @@ class ShowLocation extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    axios.post(`/api/locations/${this.props.match.params.id}/comments`, this.state.formData, {
-      headers: { Authorization: `Bearer ${Auth.getToken()}` }
-    })
+    axios.post(`/api/locations/${this.props.match.params.id}/comments`, this.state.formData,
+      {
+        headers: { Authorization: `Bearer ${Auth.getToken()}` }
+      })
       .then(res => this.setState({ location: res.data, formData: { content: '', rating: 5 } }))
   }
 
@@ -79,12 +80,12 @@ class ShowLocation extends React.Component {
 
 
   handleDeleteComment(e) {
-
     axios.delete(`/api/locations/${this.props.match.params.id}/comments/${e.target.id}`, {
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
       .then(res => this.setState({ location: res.data }))
   }
+
 
   handleLike() {
     axios.post(`/api/locations/${this.props.match.params.id}/like`, null, {
@@ -94,104 +95,131 @@ class ShowLocation extends React.Component {
   }
 
   isLiked(likes) {
+
     return likes.includes(Auth.getPayload().sub)
   }
 
 
+
+
   render() {
 
+
+    console.log(this.state.location)
+
     if(!this.state.location) return null
-
-
+    console.log(this.state.location)
     return(
 
       <section className="section">
         <div className="container">
 
-          <figure id="showImage" className="image is-3by1" style={{backgroundImage: `url(${this.state.location.image}`}} />
-
-
           <div className="tile is-parent">
-            <article className="tile is-child notification">
-
-              <div className="columns">
-                <div className="column">
-                  <p className="title">{this.state.location.name}</p>
-                </div>
-
-                <div className="column">
-                  <StarRatings
-                    rating={this.state.location.averageRating}
-                    starRatedColor="#FFC300"
-                    numberOfStars={5}
-                    starDimension="15px"
-                    starSpacing="5px"
-                    name="averageRating"
-                  />
-                </div>
-
-                <div className="column">
-                  {Auth.isAuthenticated() && <div className="buttons">
-                    <Link
-                      className="button"
-                      to={`/locations/${this.state.location._id}/edit`}
-                    >Edit</Link>
-
-                    <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
-
-                    <LikeButton
-                      liked={this.isLiked(this.state.location.likes)}
-                      handleLike={this.handleLike}
-                    />
-                  </div>}
-                </div>
-
-              </div>
-
-              <hr />
-
-              <div className="content">
-
-                <p className="text is-6">{this.state.location.address}</p>
-                <p className="text is-6">{this.state.location.cost}</p>
-
-                <p className="text is-6">{this.state.location.address}</p>
-                <StarRatingComponent
-                  name="averageRating"
-                  renderStarIcon={() => <span>£</span>}
-                  editing={false}
-                  starCount={5}
-                  value={this.state.location.cost}
-                />
-
-              </div>
-
+            <article className="tile is-child">
+              <h1 className="title is-1">{this.state.location.name}</h1>
+              <figure id="showImage" className="image is-3by1" style={{backgroundImage: `url(${this.state.location.image}`}}>
+              </figure>
             </article>
           </div>
 
-          <div className="tile is-parent">
-            <Map
-              style="mapbox://styles/mapbox/streets-v9"
-              zoom={zoom}
-              center={[this.state.longitude, this.state.latitude]}
-              containerStyle={{
-                height: '500px',
-                width: '100%'
-              }}
-            >
-              <Marker
-                coordinates={[this.state.longitude, this.state.latitude]}
-                anchor="bottom">
-                <img width="30px" height="30px" src={mapMarker} />
-              </Marker>
-            </Map>
+          <div className="columns is-multiline">
+
+            <div className="column">
+              <div className="tile is-parent">
+                <article className="tile is-child notification">
+
+                  <div className="content">
+
+                    <div className="columns is-multiline">
+                      <div className="column">
+                        <StarRatingComponent
+                          name="averageRating"
+                          renderStarIcon={() => <span className="title is-3">£</span>}
+                          editing={false}
+                          starCount={5}
+                          value={this.state.location.cost}
+                        />
+                      </div>
+                      <div className="column">
+                        <StarRatings
+                          rating={this.state.location.averageRating}
+                          starRatedColor="#FFC300"
+                          numberOfStars={5}
+                          starDimension="25px"
+                          starSpacing="2px"
+                          name="averageRating"
+                        />
+                      </div>
+                    </div>
+                    <hr/>
+
+                    <h1 className="title is-6">Tel:</h1>
+                    <p className="text is-6">{this.state.location.contactNumber}</p>
+                    <br/>
+                    <h1 className="title is-6">Link:</h1>
+                    <p className="text is-6">{this.state.location.link}</p>
+                    <br/>
+                    <h1 className="title is-6">Address:</h1>
+                    <p className="text is-6">{this.state.location.addressLine1}</p>
+                    <p className="text is-6">{this.state.location.addressLine2}</p>
+                    <p className="text is-6">{this.state.location.addressCity}</p>
+                    <p className="text is-6">{this.state.location.addressPostCode}</p>
+                    <br />
+                    {Auth.isAuthenticated() && <div className="buttons">
+                      <Link
+                        className="button"
+                        to={`/locations/${this.state.location._id}/edit`}
+                      >
+                      😬
+                      </Link>
+
+                      <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
+
+                      <LikeButton
+                        liked={this.isLiked(this.state.location.likes)}
+                        handleLike={this.handleLike}
+                      />
+                      <p className="subtitle">{this.state.location.likes.length} like </p>
+
+                    </div>}
+
+                  </div>
+
+                </article>
+              </div>
+            </div>
+
+            <div className="column">
+              <div className="tile is-parent">
+                <Map
+                  style="mapbox://styles/mapbox/streets-v9"
+                  zoom={zoom}
+                  center={[this.state.location.longitude, this.state.location.latitude]}
+                  containerStyle={{
+                    height: '650px',
+                    width: '100%'
+                  }}
+                >
+                  <Marker
+                    coordinates={[this.state.location.longitude, this.state.location.latitude]}
+                    anchor="bottom">
+                    <img width="30px" height="30px" src={mapMarker} />
+                  </Marker>
+                </Map>
+              </div>
+            </div>
           </div>
+
 
           <div className="tile is-parent">
             <article className="tile is-child notification">
-
+              <h1 className="title is-3"> Comments:   </h1>
               {this.state.location.comments.map(comment =>
-                <Comment key={comment._id} {...comment} handleDeleteComment={this.handleDeleteComment} />
+                <Comment
+                  key={comment._id}
+                  {...comment}
+                  handleDeleteComment={this.handleDeleteComment} />
+
               )}
               {Auth.isAuthenticated() && <div className="media-right">
 

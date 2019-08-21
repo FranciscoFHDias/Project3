@@ -1,6 +1,9 @@
 module.exports = [{
   name: 'Paternoster Chop House',
-  address: '1, Warwick Court, Paternoster Sq., London EC4M 7DX',
+  addressLine1: '1, Warwick Court',
+  addressLine2: 'Paternoster Sq.',
+  addressCity: 'London',
+  addressPostCode: 'EC4M 7DX',
   cost: 3,
   actType: [ 'Restaurants and Bars', 'Relaxing' ],
   dateNum: [ 2 ],
@@ -9,7 +12,10 @@ module.exports = [{
   link: 'https://www.paternosterchophouse.co.uk/'
 }, {
   name: 'Curzon Sea Container',
-  address: '20 Upper Ground, South Bank, London SE1 9PD',
+  addressLine1: '20 Upper Ground',
+  addressLine2: 'South Bank',
+  addressCity: 'London',
+  addressPostCode: 'SE1 9PD',
   cost: 2,
   actType: [ 'Restaurant', 'Bar', 'Relaxing' ],
   dateNum: [ 2 ],
@@ -18,7 +24,10 @@ module.exports = [{
   link: 'http://www.curzonseacontainers.com/'
 }, {
   name: 'Boundary Rooftop',
-  address: '2-4 Boundary Street, Shoreditch, London E2 7DD',
+  addressLine1: '2-4 Boundary Street',
+  addressLine2: 'Shoreditch',
+  addressCity: 'London',
+  addressPostCode: 'E2 7DD',
   cost: 3,
   actType: ['Restaurant', 'Drinks'],
   dateNum: [ 1 ],
@@ -27,7 +36,10 @@ module.exports = [{
   link: 'https://boundary.london/rooftop/'
 }, {
   name: 'All Star Lanes Brick Lane',
-  address: '95 Brick Ln, London E1 6QL',
+  addressLine1: '95 Brick Ln',
+  addressLine2: 'Spitalfields',
+  addressCity: 'London',
+  addressPostCode: 'E1 6QL',
   cost: 2,
   actType: [ 'Restaurant', 'Drinks', 'Activity' ],
   dateNum: [ 1 ],
@@ -36,7 +48,10 @@ module.exports = [{
   link: 'https://www.allstarlanes.co.uk/locations/brick-lane/bowling'
 }, {
   name: 'Secret Cinema',
-  address: 'London',
+  addressLine1: 'Trafalgar Square',
+  addressLine2: '',
+  addressCity: 'London',
+  addressPostCode: 'WC2N 5DX',
   cost: 3,
   actType: [ 'Food', 'Drinks', 'Activity' ],
   dateNum: [ 3 ] ,
@@ -45,7 +60,10 @@ module.exports = [{
   link: 'https://www.secretcinema.org/'
 }, {
   name: 'Swingers City',
-  address: '8 Brown\'s Buildings, London EC3A 8AL',
+  addressLine1: '8 Brown\'s Buildings',
+  addressLine2: '',
+  addressCity: 'London',
+  addressPostCode: 'EC3A 8AL',
   cost: 3,
   actType: [ 'Food', 'Drinks', 'Activity' ],
   dateNum: [ 2 ],
@@ -54,7 +72,10 @@ module.exports = [{
   link: 'https://swingersldn.com/home/'
 }, {
   name: 'OXO Tower',
-  address: '8 Brown\'s Buildings, London EC3A 8AL',
+  addressLine1: 'Barge House St',
+  addressLine2: 'South Bank',
+  addressCity: 'London',
+  addressPostCode: 'SE1 9PH',
   cost: 4,
   actType: [ 'Food', 'Drinks', 'Activity' ],
   dateNum: [ 1 ],
@@ -63,7 +84,10 @@ module.exports = [{
   link: 'https://www.harveynichols.com/restaurant/the-oxo-tower/whats-on/'
 }, {
   name: 'Ronnie Scott\'s',
-  address: '47 Frith St, Soho, London W1D 4HT',
+  addressLine1: '47 Frith St',
+  addressLine2: 'Soho',
+  addressCity: 'London',
+  addressPostCode: 'W1D 4HT',
   cost: 3,
   actType: [ 'Food', 'Drinks', 'Activity' ],
   dateNum: [ 2 ],
@@ -72,7 +96,10 @@ module.exports = [{
   link: 'https://www.ronniescotts.co.uk/'
 }, {
   name: 'Broadway Market',
-  address: 'Broadway Market, London, E8 4PH',
+  addressLine1: 'Broadway Market',
+  addressLine2: '',
+  addressCity: 'London',
+  addressPostCode: 'E8 4PH',
   cost: 2,
   actType: [ 'Food', 'Drinks', 'Activity' ],
   dateNum: [ 1 ],
@@ -80,8 +107,11 @@ module.exports = [{
   contactNumber: null,
   link: 'https://broadwaymarket.co.uk/'
 }, {
-  name: 'Flower Market',
-  address: 'Columbia Rd, London E2 7RG',
+  name: 'Columbia Road Flower Market',
+  addressLine1: 'Columbia Rd',
+  addressLine2: '',
+  addressCity: 'London',
+  addressPostCode: 'E2 7RG',
   cost: 2,
   actType: [ 'Food', 'Drinks', 'Activity' ],
   dateNum: [1],
@@ -90,7 +120,10 @@ module.exports = [{
   link: 'http://www.columbiaroad.info/'
 }, {
   name: 'Colours Hoxton',
-  address: '2-4 Hoxton Square, London, N1 6NU',
+  addressLine1: '2-4 Hoxton Square',
+  addressLine2: '',
+  addressCity: 'London',
+  addressPostCode: 'N1 6NU',
   cost: 2,
   actType: [ 'Food', 'Drinks', 'Activity' ],
   dateNum: [ 2 ] ,
@@ -99,7 +132,10 @@ module.exports = [{
   link: 'https://www.colourshoxton.co.uk/'
 }, {
   name: 'Emirates Air Line Cable Car',
-  address: 'Unit 1, 2, 3 & 4, Emirates Cable Car Terminal, Edmund Halley Way, Greenwich Peninsula, London SE10 0FR',
+  addressLine1: 'Unit 1, 2, 3 & 4, Emirates Cable Car Terminal',
+  addressLine2: 'Edmund Halley Way, Greenwich Peninsula,',
+  addressCity: 'London',
+  addressPostCode: 'SE10 0FR',
   cost: 2,
   actType: [ 'Relaxing', 'Cultural', ' Misc' ],
   dateNum: [ 2 ],
@@ -108,7 +144,10 @@ module.exports = [{
   link: 'http://emiratesairline.gttix.com/'
 }, {
   name: 'Greenwich Peninsula Golf Driving Range',
-  address: 'Peninsula Square, Greenwich, Peninsula, London, SE10 0SQ',
+  addressLine1: 'Peninsula Square',
+  addressLine2: 'Greenwich, Peninsula',
+  addressCity: 'London',
+  addressPostCode: 'SE10 0SQ',
   cost: 2,
   actType: [ 'Active' ],
   dateNum: [ 2 ],
@@ -117,7 +156,10 @@ module.exports = [{
   link: 'https://greenwichpeninsulagolfrange.com/'
 }, {
   name: 'Elan Cafe',
-  address: '48 Park Ln, Mayfair, London W1K 1PR',
+  addressLine1: '48 Park Ln',
+  addressLine2: 'Mayfair',
+  addressCity: 'London',
+  addressPostCode: 'W1K 1PR',
   cost: 2,
   actType: [ 'Restaurants and Bars', 'Relaxing' ],
   dateNum: [ 1, 2 ],
@@ -126,16 +168,22 @@ module.exports = [{
   link: 'https://www.elnlondon.co.uk/'
 }, {
   name: 'Clip n Climb Chelsea',
-  address: '19 Michael Road, SW6 2ER',
+  addressLine1: '19 Michael Road',
+  addressLine2: '',
+  addressCity: 'London',
+  addressPostCode: 'SW6 2ER',
   cost: 3,
   actType: [ 'Active' ],
   dateNum: [ 4 ],
-  image: 'https://media-cdn.tripadvisor.com/media/photo-s/0f/00/25/b8/nando-s-mile-end.jpg',
+  image: 'https://media-cdn.tripadvisor.com/media/photo-s/0f/c4/cf/39/clip-n-climb-chelsea.jpg',
   contactNumber: +442036086975,
   link: 'https://www.clipnclimbchelsea.co.uk/'
 }, {
   name: 'Hackney City Farm',
-  address: '1a Goldsmiths Row, London E2 8QA',
+  addressLine1: '1a Goldsmiths Row',
+  addressLine2: '',
+  addressCity: 'London',
+  addressPostCode: 'E2 8QA',
   cost: 2,
   actType: [ 'Cultural', 'Relaxing', 'Active' ],
   dateNum: [ 3 ],
@@ -143,17 +191,11 @@ module.exports = [{
   contactNumber: +442077296381,
   link: 'https://hackneycityfarm.co.uk/'
 }, {
-  name: 'Boating on the Serpentine',
-  address: '114-118 Commercial St, Spitalfields, London E1 6NF',
-  cost: 2,
-  actType: [ 'Active', 'Relaxing' ],
-  dateNum: [ 2 ],
-  image: 'https://www.royalparks.org.uk/parks/hyde-park/things-to-see-and-do/sports-and-leisure/boating-in-hyde-park/_gallery/Boating-in-Serpentine.jpg/w_560.jpg',
-  contactNumber: +442072621330,
-  link: 'www.solarshuttle.co.uk'
-}, {
-  name: 'Las Iguanas ',
-  address: 'Southbank Centre, Festival Terrace, London SE1 8XX',
+  name: 'Las Iguanas',
+  addressLine1: 'Southbank Centre',
+  addressLine2: 'Festival Terrace',
+  addressCity: 'London',
+  addressPostCode: 'SE1 8XX',
   cost: 2,
   actType: [ 'Restaurants and Bars', 'Relaxing' ],
   dateNum: [ 1 ],
@@ -162,7 +204,10 @@ module.exports = [{
   link: 'https://www.iguanas.co.uk/'
 }, {
   name: 'Piano Bar Soho',
-  address: '16 Carlisle Street, London, W1D 3BT',
+  addressLine1: '16 Carlisle Street',
+  addressLine2: '',
+  addressCity: 'London',
+  addressPostCode: 'W1D 3BT',
   cost: 3,
   actType: [ 'Restaurants and Bars', 'Relaxing', 'Music' ],
   dateNum: [ 2 ],
@@ -171,7 +216,10 @@ module.exports = [{
   link: 'https://www.pianobarsoho.com/'
 }, {
   name: 'Ella Di Rocco',
-  address: '307 Fulham Rd, Chelsea, London, SW10 9QH, England',
+  addressLine1: '307 Fulham Rd',
+  addressLine2: 'Chelsea',
+  addressCity: 'London',
+  addressPostCode: 'SW10 9QH',
   cost: 4,
   actType: [ 'Restaurants and Bars', 'Relaxing' ],
   dateNum: [ 4 ],
@@ -180,7 +228,10 @@ module.exports = [{
   link: 'https://elladirocco.com/'
 }, {
   name: 'Prosecco House',
-  address: '1 Crown Square, One Tower Bridge, London SE1 2SE',
+  addressLine1: '1 Crown Square',
+  addressLine2: 'One Tower Bridge',
+  addressCity: 'London',
+  addressPostCode: 'SE1 2SE',
   cost: 3,
   actType: [ 'Restaurants and Bars', 'Relaxing' ],
   dateNum: [ 1 ],
@@ -189,7 +240,10 @@ module.exports = [{
   link: 'https://www.proseccohouse.com/'
 },{
   name: 'Lion King',
-  address: 'Lyceum Theatre, 21 Wellington St, Covent Garden, London WC2E 7RQ',
+  addressLine1: 'Lyceum Theatre',
+  addressLine2: '21 Wellington St, Covent Garden ',
+  addressCity: 'London',
+  addressPostCode: 'WC2E 7RQ',
   cost: 3,
   actType: [ 'Music', 'Relaxing' ],
   dateNum: [ 4 ],
@@ -198,7 +252,10 @@ module.exports = [{
   link: 'https://thelionking.co.uk/london/'
 }, {
   name: 'Bravas Tapas',
-  address: 'Saint Katherine Docks, East Smithfield, London E1W 1AT',
+  addressLine1: 'Saint Katherine Docks',
+  addressLine2: 'East Smithfield',
+  addressCity: 'London',
+  addressPostCode: 'E1W 1AT',
   cost: 3,
   actType: [ 'Music', 'Relaxing' , 'Restaurants and Bars'],
   dateNum: [ 2 ],
@@ -207,7 +264,10 @@ module.exports = [{
   link: 'http://www.bravasrestaurant.com/'
 }, {
   name: 'British Musuem',
-  address: 'Great Russell St, Bloomsbury, London WC1B 3DG',
+  addressLine1: 'Great Russell St',
+  addressLine2: 'Bloomsbury',
+  addressCity: 'London',
+  addressPostCode: 'WC1B 3DG',
   cost: 3,
   actType: [  'Relaxing' , 'Cultural'],
   dateNum: [ 2 ],
@@ -216,17 +276,22 @@ module.exports = [{
   link: 'https://www.britishmuseum.org/'
 }, {
   name: 'Junkyard Golf',
-  address: 'Old Truman Brewery, 91 Brick Ln, Spitalfields, London E1 6QL',
+  addressLine1: 'Old Truman Brewery',
+  addressLine2: '91 Brick Ln, Spitalfields',
+  addressCity: 'London',
+  addressPostCode: 'E1 6QL',
   cost: 2,
   actType: [ 'Active' ],
   dateNum: [ 2, 3 ],
   image: 'https://www.visitmanchester.com/imageresizer/?image=%2Fdmsimgs%2F171212_junkyardgolf_oxford_040_1113184556.jpg&action=ProductDetail',
   contactNumber: +442072542273,
-
   link: 'https://www.junkyardgolfclub.co.uk/london/'
 }, {
   name: 'Whistle Punks Urban Axe Throwing',
-  address: 'Arch 25, Handel Business Centre, 73 Bondway, London SW8 1SQ',
+  addressLine1: 'Arch 25, Handel Business Centre',
+  addressLine2: '73 Bondway',
+  addressCity: 'London',
+  addressPostCode: 'SW8 1SQ',
   cost: 2,
   actType: [ 'Active' ],
   dateNum: [ 1, 2 ],
@@ -235,7 +300,10 @@ module.exports = [{
   link: 'https://www.whistlepunks.com/location/london-vauxhall/'
 }, {
   name: 'Dalston Superstore',
-  address: '117 Kingsland High St, Dalston, London E8 2PB',
+  addressLine1: '117 Kingsland High St',
+  addressLine2: 'Dalston',
+  addressCity: 'London',
+  addressPostCode: 'E8 2PB',
   cost: 2,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 3 ],
@@ -244,7 +312,10 @@ module.exports = [{
   link: 'dalstonsuperstore.com'
 }, {
   name: 'St John Bread and Wine',
-  address: '94-96 Commercial St, Spitalfields, London E1 6LZ',
+  addressLine1: '94-96 Commercial St',
+  addressLine2: 'Spitalfields',
+  addressCity: 'London',
+  addressPostCode: 'E1 6LZ',
   cost: 4,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 4, 5 ],
@@ -253,7 +324,10 @@ module.exports = [{
   link: 'stjohnrestaurant.com'
 }, {
   name: 'Vagabond Battersea Power Station Urban Winery',
-  address: 'Unit 12 Circus Village West Circus Road West Phase 1 Battersea Power Station, London SW11 8EZ',
+  addressLine1: 'Unit 12 Circus Village West Circus Road,',
+  addressLine2: 'West Phase 1 Battersea Power Station',
+  addressCity: 'London',
+  addressPostCode: 'SW11 8EZ',
   cost: 3,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 2 ],
@@ -262,7 +336,10 @@ module.exports = [{
   link: 'vagabondwines.co.uk'
 }, {
   name: 'OTHERWORLD',
-  address: '336 Acton Mews, Haggerston, London E8 4EA',
+  addressLine1: '336 Acton Mews',
+  addressLine2: 'Haggerston',
+  addressCity: 'London',
+  addressPostCode: 'E8 4EA',
   cost: 3,
   actType: [ 'Active' ],
   dateNum: [ 1, 2 ],
@@ -271,7 +348,10 @@ module.exports = [{
   link: 'https://www.other.world/'
 }, {
   name: 'Draughts - Hackney',
-  address: '337 Acton Mews, Haggerston, London E8 4EA',
+  addressLine1: '337 Acton Mews',
+  addressLine2: 'Haggerston',
+  addressCity: 'London',
+  addressPostCode: 'E8 4EA',
   cost: 2,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
@@ -280,7 +360,10 @@ module.exports = [{
   link: 'draughtslondon.com'
 }, {
   name: 'All Star Lanes Westfield White City',
-  address: 'WESTFIELD LONDON SHOPPING CENTRE, Ariel Way, London W12 7FU',
+  addressLine1: 'Westfield London Shopping Centre',
+  addressLine2: 'Ariel Way',
+  addressCity: 'London',
+  addressPostCode: 'W12 7FU',
   cost: 2,
   actType: [ 'Active' ],
   dateNum: [ 1, 2 ],
@@ -289,7 +372,10 @@ module.exports = [{
   link: 'https://www.allstarlanes.co.uk/locations/westfield-white-city/bowling'
 }, {
   name: 'Shakespeare\'s Globe',
-  address: '21 New Globe Walk, London SE1 9DT',
+  addressLine1: '21 New Globe Walk',
+  addressLine2: '',
+  addressCity: 'London',
+  addressPostCode: 'SE1 9DT',
   cost: 1,
   actType: [ 'Theatre' ],
   dateNum: [ 1, 2, 5 ],
@@ -298,7 +384,10 @@ module.exports = [{
   link: 'https://www.shakespearesglobe.com/'
 }, {
   name: 'ABQ London',
-  address: '18 Bohemia Pl, London E8 1DU',
+  addressLine1: '18 Bohemia Pl',
+  addressLine2: '',
+  addressCity: 'London',
+  addressPostCode: 'E8 1DU',
   cost: 3,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
@@ -307,7 +396,10 @@ module.exports = [{
   link: 'https://abqlondon.com/abq-london'
 }, {
   name: 'Sticks and Sushi Greenwich',
-  address: '1 Nelson Rd, Greenwich Peninsula, London SE10 9JB',
+  addressLine1: '1 Nelson Rd',
+  addressLine2: 'Greenwich Peninsula',
+  addressCity: 'London',
+  addressPostCode: 'SE10 9JB',
   cost: 3,
   actType: [ 'Ethnic Restaurant' ],
   dateNum: [ 2 ],
@@ -316,7 +408,10 @@ module.exports = [{
   link: 'https://sticksnsushi.com/en'
 }, {
   name: 'The Blue Anchor',
-  address: '13 Lower Mall, Hammersmith, London W6 9DJ',
+  addressLine1: '1 Nelson Rd',
+  addressLine2: 'Hammersmith',
+  addressCity: 'London',
+  addressPostCode: 'W6 9DJ',
   cost: 2,
   actType: [ 'Relax', 'Music', 'Drinks' ],
   dateNum: [ 1 ],
@@ -325,7 +420,10 @@ module.exports = [{
   link: 'https://www.blueanchorlondon.com/'
 }, {
   name: 'Bar Douro',
-  address: '35B, Arch, 85B Southwark Bridge Rd, London SE1 0NQ',
+  addressLine1: '35B, Arch,',
+  addressLine2: '85B Southwark Bridge Rd',
+  addressCity: 'London',
+  addressPostCode: 'SE1 0NQ',
   cost: 3,
   actType: [ 'Restaurant' ],
   dateNum: [ 2 ],
@@ -334,7 +432,10 @@ module.exports = [{
   link: 'https://www.bardouro.co.uk/'
 }, {
   name: 'Arundel Castle',
-  address: 'Arundel BN18 9AB',
+  addressLine1: 'Arundel',
+  addressLine2: ' ',
+  addressCity: 'Arundel',
+  addressPostCode: 'BN18 9AB',
   cost: 2,
   actType: [ 'Relaxing', 'Cultural' ],
   dateNum: [ 3 ],
@@ -343,7 +444,10 @@ module.exports = [{
   link: ''
 }, {
   name: 'Mixed Bathing Pond',
-  address: 'Hampstead Heath, Hampstead, London NW5 1QR',
+  addressLine1: 'Hampstead Heath',
+  addressLine2: 'Hampstead',
+  addressCity: 'London',
+  addressPostCode: 'NW5 1QR',
   cost: 1,
   actType: [  'Relax', 'Nature', 'Bathing'  ],
   dateNum: [ 2 ],
@@ -352,7 +456,10 @@ module.exports = [{
   link: 'https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath/swimming/Pages/default.aspx'
 }, {
   name: 'The Boatman',
-  address: '10 Thames Side, Windsor SL4 1QN',
+  addressLine1: '10 Thames Side',
+  addressLine2: ' ',
+  addressCity: 'Windsor',
+  addressPostCode: 'SL4 1QN',
   cost: 1,
   actType: [ 'Relax', 'Music', 'Drinks' ],
   dateNum: [ 1 ],
@@ -361,7 +468,10 @@ module.exports = [{
   link: 'http://boatmanwindsor.com/'
 }, {
   name: 'Royal Observatory Greenwich',
-  address: 'Blackheath Ave, Greenwich, London SE10 8XJ',
+  addressLine1: 'Blackheath Ave',
+  addressLine2: ' Greenwich',
+  addressCity: 'London',
+  addressPostCode: 'SE10 8XJ',
   cost: 2,
   actType: [ 'Culture', 'Science', 'Leisure' ],
   dateNum: [ 5 ],
@@ -370,7 +480,10 @@ module.exports = [{
   link: 'https://www.rmg.co.uk/royal-observatory'
 }, {
   name: 'The Tempest Inn',
-  address: 'Kings Road, Brighton BN1 1NB',
+  addressLine1: 'Kings Road',
+  addressLine2: ' ',
+  addressCity: 'Brighton ',
+  addressPostCode: 'BN1 1NB',
   cost: 2,
   actType: [ 'Relax', 'Music', 'Drinks' ],
   dateNum: [ 1 ],
@@ -379,7 +492,10 @@ module.exports = [{
   link: 'https://www.tempest.pub/'
 }, {
   name: 'GOVR VR Cafe',
-  address: '114-115  London Road, Brighton, BN1 4JG',
+  addressLine1: '114-115  London Road',
+  addressLine2: ' ',
+  addressCity: 'Brighton ',
+  addressPostCode: 'BN1 4JG',
   cost: 3,
   actType: [ 'Leisure', 'Music', 'Drinks' ],
   dateNum: [ 2 ],
@@ -388,7 +504,10 @@ module.exports = [{
   link: 'https://www.govrbrighton.com/'
 }, {
   name: 'Brunswick East',
-  address: 'Stamford Works, 3D, Gillett St, London N16 8JH',
+  addressLine1: 'Stamford Works',
+  addressLine2: '3D, Gillett St',
+  addressCity: 'London',
+  addressPostCode: 'N16 8JH',
   cost: 2,
   actType: [ 'Food', 'Brunch', 'Drinks' ],
   dateNum: [ 1, 2 ],
@@ -397,7 +516,10 @@ module.exports = [{
   link: 'http://brunswickeast.london/bookings/'
 }, {
   name: 'The Dolphin',
-  address: '163 -165 Mare St, London E8 3RH',
+  addressLine1: '163-165 Mare St',
+  addressLine2: ' ',
+  addressCity: 'London',
+  addressPostCode: 'E8 3RH',
   cost: 2,
   actType: [ 'Leisure', 'Drinks' ],
   dateNum: [ 1, 2 ],
@@ -406,7 +528,10 @@ module.exports = [{
   link: 'https://www.facebook.com/dolphinhackney/'
 }, {
   name: 'The Glory',
-  address: '281 Kingsland Rd, Haggerston, London E2 8AS',
+  addressLine1: '281 Kingsland Rd',
+  addressLine2: 'Haggerston ',
+  addressCity: 'London',
+  addressPostCode: 'E2 8AS',
   cost: 2,
   actType: [ 'Leisure', 'Drinks' ],
   dateNum: [ 1, 2 ],
@@ -415,7 +540,10 @@ module.exports = [{
   link: 'http://www.theglory.co/'
 }, {
   name: 'Geffrye Museum of the Home',
-  address: '136 Kingsland Rd, London E2 8EA',
+  addressLine1: '136 Kingsland Rd',
+  addressLine2: 'Haggerston ',
+  addressCity: 'London',
+  addressPostCode: 'E2 8EA',
   cost: 2,
   actType: [ 'Leisure', 'Drinks' ],
   dateNum: [ 1, 2 ],
@@ -424,7 +552,10 @@ module.exports = [{
   link: 'https://www.geffrye-museum.org.uk/'
 }, {
   name: 'Dishoom Shoreditch',
-  address: '7 Boundary St, Hackney, London E2 7JE',
+  addressLine1: '7 Boundary St',
+  addressLine2: 'Hackney',
+  addressCity: 'London',
+  addressPostCode: 'E2 7JE',
   cost: 2,
   actType: [ 'Leisure', 'Drinks' ],
   dateNum: [ 1, 2 ],
@@ -433,7 +564,10 @@ module.exports = [{
   link: 'http://www.dishoom.com/'
 }, {
   name: 'Wilton\'s Music Hall',
-  address: 'Graces Alley, London E1 8JB',
+  addressLine1: 'Graces Alley',
+  addressLine2: ' ',
+  addressCity: 'London',
+  addressPostCode: 'E1 8JB',
   cost: 2,
   actType: [ 'Leisure', 'Drinks' ],
   dateNum: [ 1, 2 ],
@@ -442,7 +576,10 @@ module.exports = [{
   link: 'https://www.wiltons.org.uk/'
 }, {
   name: 'CRATE Brewery & Pizzeria',
-  address: 'Unit 7, Queens Yard, Hackney Wick, London, E9 5EN',
+  addressLine1: 'Unit 7, Queens Yard',
+  addressLine2: 'Hackney Wick',
+  addressCity: 'London',
+  addressPostCode: 'E9 5EN',
   cost: 2,
   actType: [ 'Leisure', 'Drinks', 'Restuarant', 'Activity' ],
   dateNum: [ 1, 2 ],
@@ -451,7 +588,10 @@ module.exports = [{
   link: 'https://cratebrewery.com/'
 }, {
   name: 'Counter Cafe',
-  address: '7 Roach Road, Hackney Wick, London, E3 2PA',
+  addressLine1: '7 Roach Road,',
+  addressLine2: 'Hackney Wick',
+  addressCity: 'London',
+  addressPostCode: 'E3 2PA',
   cost: 2,
   actType: [ 'Leisure', 'Drinks', 'Restuarant' ],
   dateNum: [ 1, 2 ],
@@ -460,7 +600,10 @@ module.exports = [{
   link: 'http://counterproductive.co.uk/cafe/'
 }, {
   name: 'Queen Elizabeth Olympic Park',
-  address: 'Queen Elizabeth Olympic Park, London, E20',
+  addressLine1: 'Queen Elizabeth Olympic Park, ',
+  addressLine2: ' ',
+  addressCity: 'London',
+  addressPostCode: 'E20 2ST',
   cost: 1,
   actType: [ 'Leisure', 'Restaurant', 'Drinks', 'Activity' ],
   dateNum: [ 1, 2 ],
@@ -469,7 +612,10 @@ module.exports = [{
   link: 'https://www.queenelizabetholympicpark.co.uk/'
 }, {
   name: 'Lee Valley Ice Centre',
-  address: 'Lee Valley Ice Centre, Lea Bridge Road, London, E10 7QL',
+  addressLine1: 'Lee Valley Ice Centre,',
+  addressLine2: ' Lea Bridge Road',
+  addressCity: 'London',
+  addressPostCode: 'E10 7QL',
   cost: 2,
   actType: [ 'Activity' ],
   dateNum: [ 2, 3 ],
@@ -478,7 +624,10 @@ module.exports = [{
   link: 'https://www.visitleevalley.org.uk/go/iceskating/'
 }, {
   name: 'Lee Valley Riding Centre',
-  address: 'Lee Valley Ice Centre, Lea Bridge Road, London, E10 7QL',
+  addressLine1: 'Lee Valley Ice Centre,',
+  addressLine2: 'Lea Bridge Road,',
+  addressCity: 'London',
+  addressPostCode: 'E10 7QL',
   cost: 2,
   actType: [ 'Activity' ],
   dateNum: [ 2, 3 ],
@@ -487,7 +636,10 @@ module.exports = [{
   link: 'https://www.visitleevalley.org.uk/en/content/cms/outdoors/lee-valley-riding-centre/'
 }, {
   name: 'Lee Valley White Water Centre',
-  address: 'Lee Valley Ice Centre, Lea Bridge Road, London, E10 7QL',
+  addressLine1: 'Lee Valley Ice Centre,',
+  addressLine2: 'Lea Bridge Road,',
+  addressCity: 'London',
+  addressPostCode: 'E10 7QL',
   cost: 2,
   actType: [ 'Activity' ],
   dateNum: [ 2, 3 ],
@@ -496,7 +648,10 @@ module.exports = [{
   link: 'https://www.gowhitewater.co.uk/'
 }, {
   name: 'The Queen Adelaide',
-  address: '483 Hackney Rd, London E2 9ED',
+  addressLine1: '483 Hackney Rd, ',
+  addressLine2: ' ',
+  addressCity: 'London',
+  addressPostCode: 'E2 9ED',
   cost: 1,
   actType: [ 'Leisure', 'Drinks' ],
   dateNum: [ 1, 2 ],
@@ -505,7 +660,10 @@ module.exports = [{
   link: 'thequeenadelaide.com'
 }, {
   name: 'Bistrotheque',
-  address: '23-27 Wadeson St, London E2 9DR',
+  addressLine1: '23-27 Wadeson St,',
+  addressLine2: ' ',
+  addressCity: 'London',
+  addressPostCode: 'E2 9DR',
   cost: 3,
   actType: [ 'Brunch', 'Drinks' ],
   dateNum: [ 2, 3 ],
@@ -514,7 +672,10 @@ module.exports = [{
   link: 'bistrotheque.com'
 }, {
   name: 'Kyoto Garden',
-  address: 'Holland Park, Holland Park Ave, Kensington, London W11 4UA',
+  addressLine1: 'Holland Park, ',
+  addressLine2: ' Holland Park Ave, Kensington, ',
+  addressCity: 'London',
+  addressPostCode: 'W11 4UA',
   cost: 1,
   actType: [ 'Relax','Nature' ],
   dateNum: [ 2 ],
@@ -523,7 +684,10 @@ module.exports = [{
   link: 'https://www.rbkc.gov.uk/leisure-and-culture/parks/holland-park'
 }, {
   name: 'Hever Castle',
-  address: 'Hever Rd, Hever, Edenbridge TN8 7NG',
+  addressLine1: 'Hever Rd, ',
+  addressLine2: ' ',
+  addressCity: 'Edenbridge, ',
+  addressPostCode: 'TN8 7NG',
   cost: 3,
   actType: [ 'Culture', 'Science' ],
   dateNum: [ 5 ],
@@ -531,35 +695,11 @@ module.exports = [{
   contactNumber: +441732865224,
   link: 'https://www.hevercastle.co.uk/'
 }, {
-  name: 'White Cliffs of Dover',
-  address: 'Dover, Kent',
-  cost: 1,
-  actType: [ 'Relax','Nature' ],
-  dateNum: [ 3 ],
-  image: 'https://cdn.thecrazytourist.com/wp-content/uploads/2019/02/ccimage-shutterstock_10809583.jpg',
-  contactNumber: +440000000000,
-  link: 'https://www.nationaltrust.org.uk/the-white-cliffs-of-dover'
-}, {
-  name: 'Whitstable Castle',
-  address: 'Whitstable CT5 2BW',
-  cost: 3,
-  actType: [ 'Relaxing', 'Cultural' ],
-  dateNum: [ 4 ],
-  image: 'http://www.whitstablecastle.co.uk/webbuilder/files/4eda4e71bd9a4f05cfe1288dbca88e6a.jpg',
-  contactNumber: +441227281726,
-  link: 'http://www.whitstablecastle.co.uk/the-castle'
-}, {
-  name: 'Botany Bay',
-  address: 'Botany Bay, Kent',
-  cost: 1,
-  actType: [ 'Relax','Nature' ],
-  dateNum: [ 0 ],
-  image: 'http://www.fraserallenphotography.co.uk/wp-content/uploads/2018/06/Fraser-Allen-2.jpg',
-  contactNumber: +440000000000,
-  link: 'https://www.visitkent.co.uk/attractions/botany-bay-1891/'
-}, {
   name: 'Scotney Castle',
-  address: 'Lamberhurst, Tunbridge Wells TN3 8JN',
+  addressLine1: 'Lamberhurst,',
+  addressLine2: ' ',
+  addressCity: 'Tunbridge Wells, ',
+  addressPostCode: 'TN3 8JN',
   cost: 3,
   actType: [ 'Relaxing', 'Cultural' ],
   dateNum: [ 4 ],
@@ -568,7 +708,10 @@ module.exports = [{
   link: 'https://www.nationaltrust.org.uk/scotney-castle'
 }, {
   name: 'The Cross Keys',
-  address: '1 Lawrence St, Chelsea, London SW3 5NB',
+  addressLine1: '1 Lawrence St, ',
+  addressLine2: 'Chelsea',
+  addressCity: 'London',
+  addressPostCode: 'SW3 5NB',
   cost: 2,
   actType: [ 'Leisure', 'Music', 'Drinks' ],
   dateNum: [ 1 ],
@@ -577,7 +720,10 @@ module.exports = [{
   link: 'https://www.thecrosskeyschelsea.co.uk/'
 }, {
   name: 'Jerusalem Tavern',
-  address: '55 Britton Street London EC1M 5UQ',
+  addressLine1: '55 Britton Street, ',
+  addressLine2: ' ',
+  addressCity: 'London',
+  addressPostCode: 'EC1M 5UQ',
   cost: 1,
   actType: [ 'Leisure', 'Music', 'Drinks' ],
   dateNum: [ 1 ],
@@ -586,7 +732,10 @@ module.exports = [{
   link: 'https://londonist.com/pubs/pubs/pubs/the-jerusalem-tavern'
 }, {
   name: 'Upside Down House',
-  address: 'Kings Road Arches, 42-43, Brighton BN1 2LN',
+  addressLine1: 'Kings Road Arches, ',
+  addressLine2: '42-43, Brighton, ',
+  addressCity: 'Brighton',
+  addressPostCode: 'BN1 2LN',
   cost: 2,
   actType: [ 'Relaxing', 'Cultural' ],
   dateNum: [ 3 ],
@@ -595,7 +744,10 @@ module.exports = [{
   link: 'https://www.upsidedownhouse.co.uk/'
 }, {
   name: 'The British Museum',
-  address: 'Great Russell St, Bloomsbury, London WC1B 3DG',
+  addressLine1: 'Great Russell St, ',
+  addressLine2: 'Bloomsbury, ',
+  addressCity: 'London',
+  addressPostCode: 'WC1B 3DG',
   cost: 1,
   actType: [ 'Relaxing', 'Cultural' ],
   dateNum: [ 2 ],
@@ -604,7 +756,10 @@ module.exports = [{
   link: 'https://www.britishmuseum.org/'
 }, {
   name: 'London Eye',
-  address: 'Lambeth, London SE1 7PB',
+  addressLine1: 'Lambeth, ',
+  addressLine2: '  ',
+  addressCity: 'London',
+  addressPostCode: 'SE1 7PB',
   cost: 4,
   actType: [ 'Active', 'Misc', 'Cultural' ],
   dateNum: [ 4 ],
@@ -613,7 +768,10 @@ module.exports = [{
   link: 'https://www.londoneye.com/'
 }, {
   name: 'Tamesis Dock',
-  address: 'Albert Embankment, Lambeth, London SE1 7TP',
+  addressLine1: 'Albert Embankment, ',
+  addressLine2: ' Lambeth ',
+  addressCity: 'London',
+  addressPostCode: 'SE1 7TP',
   cost: 3,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
@@ -622,7 +780,10 @@ module.exports = [{
   link: 'https://www.tdock.co.uk/'
 }, {
   name: 'Spiritland',
-  address: 'Southbank Centre, Belvedere Road, London, SE1 8XX',
+  addressLine1: 'Southbank Centre, ',
+  addressLine2: 'Belvedere Road,',
+  addressCity: 'London',
+  addressPostCode: 'SE1 8XX',
   cost: 3,
   actType: [ 'Restaurants and Bars'  ],
   dateNum: [ 1, 2 ],
@@ -631,7 +792,10 @@ module.exports = [{
   link: 'https://spiritland.com/'
 }, {
   name: 'Sky Garden',
-  address: '20 Fenchurch St, London EC3M 8AF',
+  addressLine1: '20 Fenchurch St ',
+  addressLine2: ' ',
+  addressCity: 'London',
+  addressPostCode: 'EC3M 8AF',
   cost: 3,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
@@ -641,7 +805,10 @@ module.exports = [{
 }, {
 
   name: 'Jujus',
-  address: 'Ely s Yard, 15 Hanbury St, London E1 6QR',
+  addressLine1: 'Ely s Yard ',
+  addressLine2: '15 Hanbury St ',
+  addressCity: 'London',
+  addressPostCode: 'E1 6QR',
   cost: 3,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
@@ -650,7 +817,10 @@ module.exports = [{
   link: 'https://jujusbarandstage.com/'
 }, {
   name: 'Kew Gardens',
-  address: 'Richmond TW9 3AB',
+  addressLine1: 'Richmond ',
+  addressLine2: ' ',
+  addressCity: 'Richmond',
+  addressPostCode: 'TW9 3AB',
   cost: 2,
   actType: [ 'Active',  'Cultural' ],
   dateNum: [ 1,2, 3 ],
@@ -659,7 +829,10 @@ module.exports = [{
   link: 'https://www.kew.org/'
 }, {
   name: 'sketch',
-  address: '9 Conduit St, Mayfair, London W1S 2XG',
+  addressLine1: '9 Conduit St ',
+  addressLine2: 'Mayfair ',
+  addressCity: 'London',
+  addressPostCode: 'W1S 2XG',
   cost: 3,
   actType: [ 'Restaurants and Bars'],
   dateNum: [ 2, 3 ],
@@ -668,7 +841,10 @@ module.exports = [{
   link: 'https://www.clipnclimbchelsea.co.uk/'
 }, {
   name: 'London Shell Co. Aboard the Prince Regent',
-  address: 'The Prince Regent Sheldon Square Central, London W2 6PY',
+  addressLine1: 'The Prince Regent Sheldon Square Central, ',
+  addressLine2: ' ',
+  addressCity: 'London',
+  addressPostCode: 'W2 6PY',
   cost: 4,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 4 ],
@@ -677,7 +853,10 @@ module.exports = [{
   link: 'https://londonshellco.com/'
 }, {
   name: 'HotPod Yoga',
-  address: 'Arch 406, Mentmore Terrace, London, E8 3PH, GB',
+  addressLine1: 'Arch 406, ',
+  addressLine2: 'Mentmore Terrace, ',
+  addressCity: 'London',
+  addressPostCode: 'E8 3PH',
   cost: 3,
   actType: [ 'Active' ],
   dateNum: [ 4 ],
@@ -687,7 +866,10 @@ module.exports = [{
 }, {
 
   name: 'The Big London Bake',
-  address: 'The Castle, 38 Tooting High St, Tooting, London SW17 0RG',
+  addressLine1: 'The Castle, 38 Tooting High St, ',
+  addressLine2: 'Tooting',
+  addressCity: 'London',
+  addressPostCode: 'SW17 0RG',
   cost: 4,
   actType: [ 'Active', 'Misc' ],
   dateNum: [ 3, 4 ],
@@ -696,7 +878,10 @@ module.exports = [{
   link: 'https://www.thebiglondonbake.com/'
 }, {
   name: 'London Shuffle Club',
-  address: '4 Ebor St, Hackney, London E1 6AW',
+  addressLine1: '4 Ebor St,  ',
+  addressLine2: 'Hackney, ',
+  addressCity: 'London',
+  addressPostCode: 'E1 6AW',
   cost: 3,
   actType: [ 'Active', 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
@@ -705,7 +890,10 @@ module.exports = [{
   link: 'londonshuffle.com'
 }, {
   name: 'The Ghost Bus Tours',
-  address: '8 Northumberland Ave, Westminster, London WC2N 5JR',
+  addressLine1: '8 Northumberland Ave, ',
+  addressLine2: 'Westminster, ',
+  addressCity: 'London',
+  addressPostCode: 'WC2N 5JR',
   cost: 3,
   actType: [ 'Relaxing', 'Misc' ],
   dateNum: [ 2, 4, 5 ],
@@ -714,7 +902,10 @@ module.exports = [{
   link: 'https://www.theghostbustours.com/'
 }, {
   name: 'Bounce Old Street',
-  address: '241 Old St, Old Street, London EC1V 9EY',
+  addressLine1: '241 Old St,  ',
+  addressLine2: 'Old Street, ',
+  addressCity: 'London',
+  addressPostCode: 'EC1V 9EY',
   cost: 2,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
@@ -723,7 +914,10 @@ module.exports = [{
   link: 'http://www.bouncepingpong.com/menus'
 }, {
   name: 'Fierce Grace Hot Yoga - City',
-  address: '53-55 East Rd, Hoxton, London N1 6AH',
+  addressLine1: '253-55 East Rd,  ',
+  addressLine2: 'Hoxton, ',
+  addressCity: 'London',
+  addressPostCode: 'N1 6AH',
   cost: 3,
   actType: [ 'Relaxing', 'Active', 'Misc' ],
   dateNum: [ 2, 5 ],
@@ -732,7 +926,10 @@ module.exports = [{
   link: 'https://www.fiercegracecity.com/'
 }, {
   name: 'Dans Le Noir',
-  address: '30-31 Clerkenwell Green, Farringdon, London EC1R 0DU',
+  addressLine1: '230-31 Clerkenwell Green, ',
+  addressLine2: 'Farringdon, ',
+  addressCity: 'London',
+  addressPostCode: 'EC1R 0DU',
   cost: 4,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 3, 4, 5 ],
@@ -741,7 +938,10 @@ module.exports = [{
   link: 'https://london.danslenoir.com/en/home/'
 }, {
   name: 'The Midnight Apothecary',
-  address: 'Railway Ave, Rotherhithe, London SE16 4LF',
+  addressLine1: 'Railway Ave, ',
+  addressLine2: 'Rotherhithe,  ',
+  addressCity: 'London',
+  addressPostCode: 'SE16 4LF',
   cost: 3,
   actType: [ 'Restaurants and Bars', 'Outdoors', 'Relaxing' ],
   dateNum: [ 1, 2 ],
@@ -750,7 +950,10 @@ module.exports = [{
   link: 'https://www.themidnightapothecary.co.uk/'
 }, {
   name: 'Coca-Cola London Eye',
-  address: 'Lambeth, London SE1 7PB',
+  addressLine1: 'Lambeth',
+  addressLine2: ' ',
+  addressCity: 'London',
+  addressPostCode: 'SE1 7PB',
   cost: 3,
   actType: [ 'Relaxing', 'Cultural' ],
   dateNum: [ 4 ],
@@ -759,7 +962,10 @@ module.exports = [{
   link: 'https://www.londoneye.com/'
 }, {
   name: 'Warner Bros. Studio Tour London',
-  address: 'Studio Tour Dr, Watford WD25 7LR',
+  addressLine1: 'Studio Tour Dr',
+  addressLine2: ' ',
+  addressCity: 'Watford',
+  addressPostCode: 'WD25 7LR',
   cost: 4,
   actType: [ 'Relaxing', 'Cultural', 'Misc' ],
   dateNum: [ 4, 5 ],

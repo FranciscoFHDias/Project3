@@ -48,7 +48,7 @@ class Login extends React.Component {
     console.log(this.state)
     return (
 
-      <section className="hero is-light is-medium">
+      <section className="hero is-light">
         <div className="hero-body">
           <div className="container has-text-centered">
             <div className="column is-4 is-offset-4">
