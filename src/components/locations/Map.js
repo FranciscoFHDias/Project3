@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from'axios'
+import { Link } from 'react-router-dom'
 import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
 import StarRatings from 'react-star-ratings'
 
@@ -17,7 +18,7 @@ class MapLocations extends React.Component {
     super()
 
     this.state = {
-      centre: [0, 0]
+      centre: [-0.127758, 51.507351]
     }
 
     this.handleMarkerClick = this.handleMarkerClick.bind(this)
@@ -52,9 +53,9 @@ class MapLocations extends React.Component {
           <Map
             style="mapbox://styles/mapbox/streets-v9"
             zoom={zoom}
-            center={[-0.127758, 51.507351]}
+            center={this.state.centre}
             containerStyle={{
-              height: '1000px',
+              height: '700px',
               width: '100%'
             }}
           >
@@ -69,7 +70,7 @@ class MapLocations extends React.Component {
               </Marker>
             )}
 
-            <Popup
+            {this.state.name && <Popup
               className="tile is-parent"
               key={this.state.id}
               coordinates={this.state.centre}
@@ -78,24 +79,28 @@ class MapLocations extends React.Component {
                 'bottom': [0, -38],
                 'bottom-right': [-12, -38]}}>
 
+
               <article className="tile is-child">
 
-                <p className="title">{this.state.name}</p>
-                <StarRatings
-                  rating={this.state.rating}
-                  starRatedColor="#FFC300"
-                  numberOfStars={5}
-                  starDimension="20px"
-                  starSpacing="2px"
-                  name="averageRating"
-                />
-                <figure className="image is-4by3">
-                  <img src={this.state.image}/>
-                </figure>
+                <Link to={`/locations/${this.state.id}`}>
+                  <p className="title is-7">{this.state.name}</p>
 
+
+                  <StarRatings
+                    rating={this.state.rating}
+                    starRatedColor="#FFC300"
+                    numberOfStars={5}
+                    starDimension="15px"
+                    starSpacing="2px"
+                    name="averageRating"
+                  />
+                  <figure className="image is-4by3">
+                    <img src={this.state.image}/>
+                  </figure>
+                </Link>
               </article>
 
-            </Popup>
+            </Popup>}
 
           </Map>
         </div>

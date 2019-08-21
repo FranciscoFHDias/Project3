@@ -11,6 +11,8 @@ const testData = {
   addressLine2: 'Paternoster Sq.',
   addressCity: 'London',
   addressPostCode: 'EC4M 7DX',
+  latitude: 51.507351,
+  longitude: -0.127758,
   cost: 3,
   actType: [
     'Restaurants',
@@ -58,7 +60,6 @@ describe('POST /locations', () => {
       .post('/api/locations')
       .set('Authorization', `Bearer ${token}`)
       .send(testData)
-    console.log(token)
       .end((err, res) => {
         expect(res.status).to.eq(201)
         done()
@@ -89,6 +90,8 @@ describe('POST /locations', () => {
           'addressLine2',
           'addressCity',
           'addressPostCode',
+          'longitude',
+          'latitude',
           'actType',
           'cost',
           'dateNum',

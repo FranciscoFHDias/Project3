@@ -1,7 +1,7 @@
 import React from 'react'
 import StarRatings from 'react-star-ratings'
 
-const Card = ({ name, address, image, dateNum, averageRating }) => {
+const Card = ({ name, addressPostCode, image, dateNum, averageRating }) => {
   return(
     <div className="card">
 
@@ -25,7 +25,7 @@ const Card = ({ name, address, image, dateNum, averageRating }) => {
               rating={averageRating}
               starDimension="15px"
               starRatedColor="#FFC300"
-              starSpacing="5px"
+              starSpacing="2px"
               numberOfStars={5}
             />
           </div>
@@ -33,7 +33,7 @@ const Card = ({ name, address, image, dateNum, averageRating }) => {
 
         <p className="text is-8">Date Number:  {dateNum}</p>
         <hr/>
-        <p className="text is-12">{address}</p>
+        <p className="text is-12">{addressPostCode}</p>
 
       </div>
 
