@@ -42,11 +42,11 @@ class Navbar extends React.Component {
 
   render(){
     return (
-      <nav className="navbar is-fixed-top is-link">
+      <nav className="navbar is-fixed-top is-transparent">
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item">
-              <img src="./img/logo.png" alt="logo"/>
+              <img src="./img/Date-a-base-logo-red.png" alt="logo"/>
             </Link>
           </div>
 
@@ -75,7 +75,7 @@ class Navbar extends React.Component {
               {Auth.isAuthenticated() && <Link to="/locations/new" className="navbar-item">Add</Link>}
               {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item">Register</Link>}
               {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Login</Link>}
-              {Auth.isAuthenticated() && <div className="navbar-item">
+              {Auth.isAuthenticated() && <div className="navbar-item avatar">
                 <div className={`dropdown is-right ${this.state.dropdownOpen ? 'is-active' : ''}`}>
                   <div className="dropdown-trigger">
                     <button className="button" aria-haspopup="true" aria-controls="dropdown-menu" onClick={this.toggleDropdown}>

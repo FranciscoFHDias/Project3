@@ -5,26 +5,24 @@ import Modal from './Modal'
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="content">
-        <div className="columns is-centered">
-          <div className="column is-two-third">
-            <nav className="breadcrumb has-bullet-separator is-fixed-bottom" aria-label="breadcrumbs">
-              <ul>
-                <span> <li><Link to="/about">About</Link> </li></span>
-                <li><Link to="/contacts">Contact Us</Link></li>
-                <span> <li><div><Modal /></div></li></span>
-              </ul>
-            </nav>
+      <nav className="navbar">
+        <div className="container">
+          <div className="navbar-item">
+            <Link to="/about">About</Link>
           </div>
-
-          <div className="column is-one-third">
-            <h5 className="has-text-grey-light">
-            © DAFRAMISO Corporate
-            </h5>
+          <div className="navbar-item">
+            <Link to="/contacts">Contact Us</Link>
           </div>
-
+          <div className="navbar-item">
+            <Modal />
+          </div>
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <span>© DAFRAMISO Corporate</span>
+            </div>
+          </div>
         </div>
-      </div>
+      </nav>
     </footer>
   )
 }

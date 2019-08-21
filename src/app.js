@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import Home from './components/pages/Home'
 
@@ -28,7 +29,6 @@ import ShowUser from './components/users/Show'
 import EditUser from './components/users/Edit'
 
 import './style.scss'
-
 
 class App extends React.Component {
 

@@ -7,6 +7,9 @@ import Comment from '../common/Comment'
 import Auth from '../../lib/Auth'
 import LikeButton from '../common/LikeButton'
 import StarRatingComponent from 'react-star-rating-component'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt, faPen, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
 
 const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoiZnJhbmNpc2NvZmhkaWFzIiwiYSI6ImNqemI5MTFiajA4NzYzbXBoZWd6NGtndTAifQ.oDArT5qLRW4i6FUT3Cut-w'
@@ -149,10 +152,10 @@ class ShowLocation extends React.Component {
                     <hr/>
 
                     <h1 className="title is-6">Tel:</h1>
-                    <p className="text is-6">{this.state.location.contactNumber}</p>
+                    <a href={`tel: ${this.state.location.contactNumber}`} data-rel="external"><p className="text is-6">{this.state.location.contactNumber}</p></a>
                     <br/>
                     <h1 className="title is-6">Link:</h1>
-                    <p className="text is-6">{this.state.location.link}</p>
+                    <a href={this.state.location.link}><p className="text is-6">{this.state.location.link}</p></a>
                     <br/>
                     <h1 className="title is-6">Address:</h1>
                     <p className="text is-6">{this.state.location.addressLine1}</p>
@@ -163,19 +166,13 @@ class ShowLocation extends React.Component {
                     <p className="text is-6">{this.state.location.desc}</p>
                     <br />
                     {Auth.isAuthenticated() && <div className="buttons">
-                      <Link
-                        className="button"
-                        to={`/locations/${this.state.location._id}/edit`}
-                      >
-                      😬
-                      </Link>
-
-                      <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
-
+                      <Link className="edit" to={`/locations/${this.state.location._id}/edit`}><FontAwesomeIcon icon={faPen} /></Link>
+                      <Link className="erase" onClick={this.handleDelete}><FontAwesomeIcon icon={faTrashAlt} /></Link>
                       <LikeButton
                         liked={this.isLiked(this.state.location.likes)}
                         handleLike={this.handleLike}
                       />
+
                       <p className="subtitle">{this.state.location.likes.length} like </p>
 
                     </div>}
@@ -193,7 +190,7 @@ class ShowLocation extends React.Component {
                   zoom={zoom}
                   center={[this.state.location.longitude, this.state.location.latitude]}
                   containerStyle={{
-                    height: '650px',
+                    height: '600px',
                     width: '100%'
                   }}
                 >
@@ -223,16 +220,6 @@ class ShowLocation extends React.Component {
               </div>}
 
               {Auth.isAuthenticated() && <form onSubmit={this.handleSubmit}>
-                <hr />
-                <div className="field">
-                  <textarea
-                    name="content"
-                    className="textarea"
-                    placeholder="Add a comment..."
-                    onChange={this.handleChangeContent}
-                    value={this.state.formData.content}
-                  />
-                </div>
                 <div className="field">
                   <StarRatings
                     name="rating"
@@ -245,7 +232,17 @@ class ShowLocation extends React.Component {
                   />
 
                 </div>
-                <button className="button is-info">Submit</button>
+                <div className="field">
+                  <textarea
+                    name="content"
+                    className="textarea"
+                    placeholder="Add a comment..."
+                    onChange={this.handleChangeContent}
+                    value={this.state.formData.content}
+                  />
+                </div>
+
+                <button className="submit"><FontAwesomeIcon icon={faEnvelope} /></button>
               </form>}
             </article>
           </div>

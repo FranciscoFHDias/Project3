@@ -1,26 +1,24 @@
-.card {
-  height: 100%;
-}
+@import "./scss/_colourScheme.scss";
+
+@import "./scss/_fonts.scss";
+
+@import "./scss/_navbar.scss";
+
+@import "./scss/_home.scss";
+
+@import "./scss/_dropdowns.scss";
+
+@import "./scss/_footer.scss";
+
+@import "./scss/buttons.scss";
 
 $modal-card-body-background-color: #ff3860;
 
-$navbar-height: 7.5rem;
-
 $modal-content-width: 640px;
-
-.hero-body{
-  margin-top: 60px;
-}
-.section {
-  margin-top: 50px;
-
-}
 
 #modal-body{
   width: 640px;
-
 }
-
 
 .flip-card {
   background-color: transparent;
@@ -60,24 +58,6 @@ $modal-content-width: 640px;
   background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
-}
-
-.vl {
-  border-left: 3px solid grey;
-  height: 280px;
-  position: absolute;
-  left: 70%;
-  margin-left: -3px;
-  top: 0;
-}
-
-.vl2 {
-  border-left: 3px solid grey;
-  height: 350px;
-  position: absolute;
-  left: 70%;
-  margin-left: -3px;
-  top: 0;
 }
 
 #showImage {
