@@ -65,6 +65,7 @@ class MapLocations extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     axios.get('/api/locations')
       .then(res => {
         console.log(res.data)
