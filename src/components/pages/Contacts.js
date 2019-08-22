@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../common/Footer'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -103,7 +102,6 @@ class Contacts extends React.Component{
         </section>
 
 
-        <Footer />
       </section>
 
 

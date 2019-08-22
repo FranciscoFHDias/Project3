@@ -85,7 +85,7 @@ module.exports = [{
   cost: 4,
   actType: [ 'Food', 'Restaurants and Bars', 'Active' ],
   dateNum: [ 1 ],
-  desc: 'The Oxo Tower is a building with a prominent tower on the south bank of the River Thames in London. The view makes it perfect for a first date with iconic building being perfect conversation starters.',
+  desc: 'The OxO Tower is a building with a prominent tower on the south bank of the River Thames in London. The view makes it perfect for a first date with iconic building being perfect conversation starters.',
   image: 'https://o.hng.io/uploads/2019/08/OXO-Restaurant-33-550x370.jpg',
   contactNumber: +442078033888,
   link: 'https://www.harveynichols.com/restaurant/the-oxo-tower/whats-on/'
@@ -137,7 +137,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Food', 'Restaurants and Bars', 'Active' ],
   dateNum: [ 2 ] ,
-  desc: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Colours is a cool multi-arts bar and club. Live music, culture events and inclusive clubnights, hot DJs, Orange Buffalo food, cocktails, daytime work-space and New Age Friday Nights!',
   image: 'https://media.timeout.com/images/101707745/image.jpg',
   contactNumber: +442076130709,
   link: 'https://www.colourshoxton.co.uk/'
@@ -202,7 +202,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Cultural', 'Relaxing', 'Active' ],
   dateNum: [ 3 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Hackney City Farm is a city farm and independent alternative school in Haggerston locale in the London Borough of Hackney, Greater London, England. It is situated on Hackney Road at the junction of Goldsmith'/'s Row',
   image: 'https://media.dayoutwiththekids.co.uk/media/15026/33094-hackney-city-farm-bethnal-green-01.jpg?anchor=center&mode=crop&quality=75&width=1680&height=940',
   contactNumber: +442077296381,
   link: 'https://hackneycityfarm.co.uk/'
@@ -215,7 +215,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Restaurants and Bars', 'Relaxing' ],
   dateNum: [ 1 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Walk through the doors of Las Iguanas and find yourself transported to Latin America, full of rich, vibrant colours, quirky features and a restaurant which prides themselves in sustainability sourcing. One win for you! One win for the planet!',
   image: 'https://images.ctfassets.net/6qprbsfbbvrl/4IEwg0IouVrgyxizoEuPU0/26b880c4f87f0481e2d6a42fc34073a2/Cocktails_SS19.jpg',
   contactNumber: +442076201328,
   link: 'https://www.iguanas.co.uk/'
@@ -228,7 +228,7 @@ module.exports = [{
   cost: 3,
   actType: [ 'Restaurants and Bars', 'Relaxing', 'Music' ],
   dateNum: [ 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'The Piano Bar Soho is a private cocktail lounge with spectacular live music, based in a townhouse, just off London'/'s vibrant Soho Square. Drinks are always a good shout!',
   image: 'https://images.squarespace-cdn.com/content/v1/5872937346c3c4c349f34059/1512475389626-KF55J8CDNCGPL3941WVC/ke17ZwdGBToddI8pDm48kPJXHKy2-mnvrsdpGQjlhod7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmihaE5rlzFBImxTetd_yW5btdZx37rH5fuWDtePBPDaHF5LxdCVHkNEqSYPsUQCdT/Artboard.jpg?format=750w ',
   contactNumber: +442036959335,
   link: 'https://www.pianobarsoho.com/'
@@ -241,7 +241,7 @@ module.exports = [{
   cost: 4,
   actType: [ 'Restaurants and Bars', 'Relaxing' ],
   dateNum: [ 4 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Ella Di Rocco boutique wellness medispa is the ideal destination to escape and treat your senses. Our dedicated team is passionate about helping you rediscover your best self, using bespoke and non-invasive health and wellbeing treatments that complement and improve how your body looks and feels. Relaxation is always a good shout!',
   image: 'https://secretldn.com/wp-content/uploads/2019/01/wine-spa-london-date-idea.jpg',
   contactNumber: +442073523575,
   link: 'https://elladirocco.com/'
@@ -280,7 +280,7 @@ module.exports = [{
   cost: 3,
   actType: [ 'Music', 'Relaxing' , 'Restaurants and Bars'],
   dateNum: [ 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Modern Basque small plates and Spanish cocktails draw diners to this dockside taperia with terrace. We would throughly recommend their Lamb chops paired well with a glass of Rose Cava.',
   image: 'https://resizer.otstatic.com/v2/photos/large/23838043.jpg',
   contactNumber: +442074811464,
   link: 'http://www.bravasrestaurant.com/'
@@ -293,7 +293,7 @@ module.exports = [{
   cost: 3,
   actType: [  'Relaxing' , 'Cultural'],
   dateNum: [ 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'The British Museum, in the Bloomsbury area of London, United Kingdom, is a public institution dedicated to human history, art and culture. Perfect opportunity to relax and educate yourself!',
   image: 'https://cdn.londonandpartners.com/asset/09fb98cc65cd024b02f0f7899678a426.jpg',
   contactNumber: +442073238299,
   link: 'https://www.britishmuseum.org/'
@@ -306,7 +306,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Active' ],
   dateNum: [ 2, 3 ],
-  desc: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'This locations is perfect for channeling your inner competitive streak and supporting (helping) your date hit all those balls!',
   image: 'https://www.visitmanchester.com/imageresizer/?image=%2Fdmsimgs%2F171212_junkyardgolf_oxford_040_1113184556.jpg&action=ProductDetail',
   contactNumber: +442072542273,
   link: 'https://www.junkyardgolfclub.co.uk/london/'
@@ -319,7 +319,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Active' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Whistle Punks Urban Axe Throwing is the most satisfying day or night out you'/'ll ever have. You'/'ll be slinging axes, hitting bullseyes and cheering on your date!',
   image: 'https://batlgrounds.com/wp-content/uploads/2018/05/BATL-London-1-1024x709.jpg',
   contactNumber: +442072542273,
   link: 'https://www.whistlepunks.com/location/london-vauxhall/'
@@ -332,7 +332,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 3 ],
-  desc: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Eclectic LGBT space with a full bar, weekend drag brunch & a calendar of art, DJ & live music shows. Music-wise, you can groove and grind to anything from Uncontrollable Urge'/'s weekly Wednesday installment of electro and mutant-pop, to Disco Brunch!',
   image: 'https://media.timeout.com/images/101813671/630/472/image.jpg',
   contactNumber: +442072542273,
   link: 'dalstonsuperstore.com'
@@ -345,7 +345,7 @@ module.exports = [{
   cost: 4,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 4, 5 ],
-  desc: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Rotating menus feature traditional British fare & a diverse wine list in upbeat, white-walled digs. Food and wine? Sounds divine',
   image: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/61337145/Eater_day2_St.John_Bread_Wine_0115.0.jpg',
   contactNumber: +442072510848,
   link: 'stjohnrestaurant.com'
@@ -358,7 +358,7 @@ module.exports = [{
   cost: 3,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 2 ],
-  desc: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Food and wine? Sounds divine!',
   image: 'https://www.vagabondwines.co.uk/wp-content/uploads/2017/08/Vag-57-1.jpg',
   contactNumber: +442039144655,
   link: 'vagabondwines.co.uk'
@@ -371,7 +371,7 @@ module.exports = [{
   cost: 3,
   actType: [ 'Active' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'The Otherworld is a unique island retreat, built within Virtual Reality. The natural beauty of its four seasons is an antidote to the chaos of urban living. And Cocktails!',
   image: 'https://secretldn.com/wp-content/uploads/2019/02/Otherworld-Dream-Corporation.jpg',
   contactNumber: +442080501550,
   link: 'https://www.other.world/'
@@ -384,7 +384,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Draughts is London’s first board game café, a haven for game lovers. They provide a social experience for all people to come together and through the enjoyment of Board Games, have a unique and fun break from the everyday.',
   image: 'https://media.timeout.com/images/102903683/630/472/image.jpg',
   contactNumber: +447930936237,
   link: 'draughtslondon.com'
@@ -423,7 +423,7 @@ module.exports = [{
   cost: 3,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'ABQ is the world'/'s first immersive molecular cocktail bar where you get to make and infuse your own drinks in an RV (Motorhome) on some chilled and deep house (weekdays) and hip-hop/street (weekends) tunes with a date.',
   image: 'https://i.ytimg.com/vi/1JD_OR0bNtI/maxresdefault.jpg',
   contactNumber: +442034881678,
   link: 'https://abqlondon.com/abq-london'
@@ -436,7 +436,7 @@ module.exports = [{
   cost: 3,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Sticks’n’Sushi serve high-quality, fresh food based on a unique combination of traditional sushi and yakitori sticks from the grill. You can even pass on the fishy kiss after!',
   image: 'https://sticks-n-sushi.imgix.net/media/1195/sticksnsushi_greenwich_restaurant-05_1620x1080.jpg?auto=compress&auto=format&dpr=2.625&fit=crop&h=258&w=352',
   contactNumber: +442031418220,
   link: 'https://sticksnsushi.com/en'
@@ -449,7 +449,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Relaxing', 'Music', 'Restaurants and Bars' ],
   dateNum: [ 1 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'The Blue Anchor is an iconic pub in West London.  In prime position on the banks of the river Thames in Hammersmith, The Blue Anchor is always warm and welcoming. It’s a home away from home whether you’re after a riverside drink in the sunshine or a warming glass of Malbec by an open fire. Perfect for first dates or even the last date..',
   image: 'https://s0.geograph.org.uk/geophotos/02/12/94/2129414_765f5b9a.jpg',
   contactNumber: +442039510580,
   link: 'https://www.blueanchorlondon.com/'
@@ -462,7 +462,7 @@ module.exports = [{
   cost: 3,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'With ties to Portugal traced back through the family, Bar Douro has matched exquisite Portuguese wines with all the tradition of local Portuguese food. Go give their Octopus with Sweet Potato a try!',
   image: 'https://cloudfront.sketchanet.com/u/423766/images/1366/1534343390ha-web.jpg',
   contactNumber: +442073780524,
   link: 'https://www.bardouro.co.uk/'
@@ -475,7 +475,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Relaxing', 'Cultural' ],
   dateNum: [ 3 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Arundel Castle is a restored and remodelled medieval castle in Arundel, West Sussex, England. Beautiful grounds for a beautiful date!',
   image: 'https://media-cdn.tripadvisor.com/media/photo-s/04/b1/46/d5/arundel-castle-gardens.jpg',
   contactNumber: +441903882173,
   link: ''
@@ -488,7 +488,7 @@ module.exports = [{
   cost: 1,
   actType: [ 'Relaxing', 'Outdoors' ],
   dateNum: [ 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'The Hampstead Heath Mixed Bathing Pond is a magical, open air swimming pond that has been around over 200 years and is surrounded with flourishing wildlife. ',
   image: 'https://media.timeout.com/images/100683781/630/472/image.jpg',
   contactNumber: +442074853873,
   link: 'https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath/swimming/Pages/default.aspx'
@@ -501,7 +501,7 @@ module.exports = [{
   cost: 1,
   actType: [ 'Relaxing', 'Music', 'Restaurants and Bars' ],
   dateNum: [ 1 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'The Boatman is Windsor’s only pub on the river and is nestled below Windsor Castle beside the River Thames and overlooking Eton Bridge. It is just a short stroll from the Queen Victoria Statue and the Changing of the Guards at Windsor Castle and is not far from the footpaths and walks around Eton. Great venue after a day of sightseeing!',
   image: 'http://boatmanwindsor.com/wp-content/uploads/2013/03/the-boatman-terrace-launch-outside-in.270515.v2-2048x1364.jpg',
   contactNumber: +441753620010,
   link: 'http://boatmanwindsor.com/'
@@ -514,7 +514,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Cultural', 'Misc' ],
   dateNum: [ 5 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'The Royal Observatory, Greenwich is an observatory situated on a hill in Greenwich Park, overlooking the River Thames. It played a major role in the history of astronomy and navigation. Remember: "Never give up because great things take time." ',
   image: 'https://media.timeout.com/images/19906/630/472/image.jpg',
   contactNumber: +442088584422,
   link: 'https://www.rmg.co.uk/royal-observatory'
@@ -527,7 +527,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Relaxing', 'Music', 'Restaurants and Bars' ],
   dateNum: [ 1 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Brighton'/'s best seafront pub and home to the crab claw. The seafront has gone through some real changes in the last few years, and anyone looking for a grown-up night could easily have come away disappointed. Put simply, the place is going to blow you away. ',
   image: 'https://images.squarespace-cdn.com/content/v1/57e1527ce6f2e1f209c1ab8e/1549361683292-XGVUUQ53NUWDFYHHHOQ6/ke17ZwdGBToddI8pDm48kNBhxsR5AixTPaSt36FQjZRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIHEpb-MmdDNvFVgjmeoENIlexef176In2EgYPtI8R2-8KMshLAGzx4R3EDFOm1kBS/image1.jpeg',
   contactNumber: +441273770505,
   link: 'https://www.tempest.pub/'
@@ -540,7 +540,7 @@ module.exports = [{
   cost: 3,
   actType: [ 'Leisure', 'Music', 'Restaurants and Bars' ],
   dateNum: [ 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Book a headset for an hour or more to play VR at GOVR cafe. They’ve got a wide mix of top-notch single and multiplayer games you can really sink your teeth into. From zombie shooters to brain teasers, there’s something for everyone.',
   image: 'https://images.squarespace-cdn.com/content/v1/594e69a9cd0f68148eb3f656/1557218295098-1BWY73PN8FKCR979X4NA/ke17ZwdGBToddI8pDm48kNItjXz7RcTqS_k3iww1ou97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USX-vnLkszRHUlKjIjwnAbVDj1jZO8k6qHOrQHQZz8p0o49ZdOtO_QXox0_W7i2zEA/VR+hire+stanmer+ballon.jpg',
   contactNumber: +447587464283,
   link: 'https://www.govrbrighton.com/'
@@ -553,7 +553,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Tucked away this designer coffee shop sources speciality coffees and serves them with snacks. Perfect date opportunity for mid-day coffee!',
   image: 'https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/25550413_1600403376693535_1395822623927671013_n.jpg?_nc_cat=102&_nc_oc=AQmHPrhsgSdesxL5mI0t9n4TV_xI3ffOh0uqPhNAQCJbGYICN0gxEaPzgaV3OdOq5nM&_nc_ht=scontent-lht6-1.xx&oh=5302f6c8d2a011e72d2b35ec223857ca&oe=5DCC6B4A',
   contactNumber: +442076863374,
   link: 'http://brunswickeast.london/bookings/'
@@ -566,7 +566,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Leisure', 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Lively local pub, open until very late, with regular karaoke sessions and a free jukebox. Free?  What a win!',
   image: 'http://static.designmynight.com/uploads/2013/11/the-dolphin-hackney-1.jpg',
   contactNumber: +442089853727,
   link: 'https://www.facebook.com/dolphinhackney/'
@@ -579,7 +579,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Leisure', 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Convivial gay super-pub offering an array of performances, plus a late-night disco scene.The Glory is an East End pub and LGBTQ+ performance venue, with a basement disco at weekends and shows throughout the week!',
   image: 'http://www.eastlondonlines.co.uk/ell_wp/wp-content/uploads/2015/11/MM-WOTW-the-glory-e1447954419610.jpg',
   contactNumber: +442076840794,
   link: 'http://www.theglory.co/'
@@ -592,7 +592,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Leisure', 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'The Geffrye Museum of the Home is located on Kingsland Road in the Hoxton area of Shoreditch, London. The Museum explores home and home life from 1600 to the present day with a series of period room displays!',
   image: 'https://cdn.londonandpartners.com/asset/the-geffrye-museum-of-the-home-the-geffrye-museum-of-the-home-d9f49aabfd12c1b968ad0377a41a8d66.jpg',
   contactNumber: +442077399893,
   link: 'https://www.geffrye-museum.org.uk/'
@@ -605,7 +605,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Leisure', 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Buzzy destination for Indian street food in Bombay-style digs with vintage decor & upscale touches. We would throughly recommend the date and banana porridge!!',
   image: 'http://www.dishoom.com/wp-content/uploads/2014/10/3.5.2.jpg',
   contactNumber: +442074209324,
   link: 'http://www.dishoom.com/'
@@ -618,7 +618,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Leisure', 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Music hall with original cast iron pillars, balcony and decor, staging an eclectic event programme. Great Idea for an musical couple',
   image: 'https://www.wiltons.org.uk/files/IMG_2458-0-597x597.jpg',
   contactNumber: +442077022789,
   link: 'https://www.wiltons.org.uk/'
@@ -631,23 +631,10 @@ module.exports = [{
   cost: 2,
   actType: [ 'Leisure', 'Restaurants and Bars', 'Active' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Bar in old factory with recycled decor and its own micro-brewery plus inventive pizzas and DJ sets. Great Idea for those who want to educate themselves about beer!',
   image: 'https://cdn.sanity.io/images/f4bld5iw/production/04b1ea76d7c71a64afe6ad82b7f40d167482a40c-2572x1655.jpg',
   contactNumber: +442085333331,
   link: 'https://cratebrewery.com/'
-}, {
-  name: 'Counter Cafe',
-  addressLine1: '7 Roach Road,',
-  addressLine2: 'Hackney Wick',
-  addressCity: 'London',
-  addressPostCode: 'E3 2PA',
-  cost: 2,
-  actType: [ 'Leisure', 'Restaurants and Bars', 'Restaurants and Bars' ],
-  dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  image: 'https://scontent-lht6-1.cdninstagram.com/vp/df13ab2320fe698fb406d8af8d6be76a/5DD6399D/t51.2885-15/e15/11849130_347399208779730_760117379_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com',
-  contactNumber: +447834275920,
-  link: 'http://counterproductive.co.uk/cafe/'
 }, {
   name: 'Queen Elizabeth Olympic Park',
   addressLine1: 'Queen Elizabeth Olympic Park, ',
@@ -657,7 +644,7 @@ module.exports = [{
   cost: 1,
   actType: [ 'Leisure', 'Restaurants and Bars', 'Active' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Former Olympic and Paralympic venues – including London Stadium, the London Aquatics Centre and the Copper Box Arena – are now surrounded by award-winning parklands, peaceful waterways, adventurous playgrounds and beautiful fountains. ',
   image: 'https://static-secure.guim.co.uk/sys-images/Travel/Pix/pictures/2014/4/7/1396887736271/A-cyclist-rides-past-the--009.jpg',
   contactNumber: +448000722110 ,
   link: 'https://www.queenelizabetholympicpark.co.uk/'
@@ -670,7 +657,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Active' ],
   dateNum: [ 2, 3 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Perfect chance to pick up your date whrn they hit the ice!',
   image: 'https://www.visitleevalley.org.uk/media/imageresize.ashx?img=/ice_skating/200x133/public%20skating.jpg&width=200',
   contactNumber: +443000030624,
   link: 'https://www.visitleevalley.org.uk/go/iceskating/'
@@ -683,7 +670,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Active' ],
   dateNum: [ 2, 3 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Perfect Idea for an horse lovers!',
   image: 'https://www.visitleevalley.org.uk/media/imageresize.ashx?img=/riding/200x133/have-a-go-group-exp-2021.jpg&width=200',
   contactNumber: +442085562629,
   link: 'https://www.visitleevalley.org.uk/en/content/cms/outdoors/lee-valley-riding-centre/'
@@ -696,7 +683,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Active' ],
   dateNum: [ 2, 3 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Lee Valley White Water Centre is a white-water slalom centre, that was constructed to host the canoe slalom events of the London 2012 Olympic Games. If your date doesn'/' mind getting wet, this could be a great date!',
   image: 'https://www.gowhitewater.co.uk/media/2817/familyrafting_web_exp2023.jpg',
   contactNumber: +443000030616,
   link: 'https://www.gowhitewater.co.uk/'
@@ -709,7 +696,7 @@ module.exports = [{
   cost: 1,
   actType: [ 'Leisure', 'Restaurants and Bars' ],
   dateNum: [ 1, 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'A former lap dancing bar and seafood grill scrubbed back to an east end boozer with a left field approach. Draught beer and cider.',
   image: 'https://images.squarespace-cdn.com/content/v1/585d837ee6f2e152e741c3aa/1510396211880-HITZ5DVU0S78XR6WUFK5/ke17ZwdGBToddI8pDm48kBUDAxm-FLUF-OJf9moK1kV7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UT_TXfTUFcrrnRvtinoH4JYxq5g0UB9t65pVePltZrd1IKYY7Qu0iTZQJ-GJ4dsqLQ/Photo+03-11-2017%2C+13+01+36.jpg?format=2500w',
   contactNumber: +442070121100,
   link: 'thequeenadelaide.com'
@@ -722,7 +709,7 @@ module.exports = [{
   cost: 3,
   actType: [ 'Restaurants and Bars' ],
   dateNum: [ 2, 3 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'The hipster count is high, but the welcome and service are friendly, and there’s a level of professionalism here that’s missing from many East End restaurants.',
   image: 'https://www.bistrotheque.com/files/_mediumImage/bt_home_gallery_1.jpg',
   contactNumber: +442089837900,
   link: 'bistrotheque.com'
@@ -735,7 +722,7 @@ module.exports = [{
   cost: 1,
   actType: [ 'Relaxing', 'Outdoors' ],
   dateNum: [ 2 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Garden with colourful plants, shrubs and water features, created by eminent Japanese designer. This is a cool cultural date idea!',
   image: 'https://secretldn.com/wp-content/uploads/2018/02/22637281_1082893518480502_4132483769749733376_n-2.jpg',
   contactNumber: +442073613003,
   link: 'https://www.rbkc.gov.uk/leisure-and-culture/parks/holland-park'
@@ -748,7 +735,7 @@ module.exports = [{
   cost: 3,
   actType: [ 'Cultural', 'Misc' ],
   dateNum: [ 5 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Hever Castle is located in the village of Hever, Kent, near Edenbridge, 30 miles south-east of London, England. It began as a country house, built in the 13th century. From 1462 to 1539, it was the seat of the Boleyn family',
   image: 'https://media-cdn.tripadvisor.com/media/photo-s/15/98/77/b4/hever-castle.jpg',
   contactNumber: +441732865224,
   link: 'https://www.hevercastle.co.uk/'
@@ -761,7 +748,7 @@ module.exports = [{
   cost: 3,
   actType: [ 'Relaxing', 'Cultural' ],
   dateNum: [ 4 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Scotney Castle is an English country house with formal gardens south-east of Lamberhurst in the valley of the River Bewl in Kent, England. The gardens, which are a Site of Special Scientific Interest and a celebrated example of the Picturesque style, are open to the public.',
   image: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Scotney_Castle_with_white_wisteria.JPG',
   contactNumber: +441892893820,
   link: 'https://www.nationaltrust.org.uk/scotney-castle'
@@ -774,7 +761,7 @@ module.exports = [{
   cost: 2,
   actType: [ 'Leisure', 'Music', 'Restaurants and Bars' ],
   dateNum: [ 1 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'Tucked away on a discreet residential street in Chelsea, the cross keys is a stone’s throw from Chelsea embankment and makes it the perfect regular haunt for guests looking to escape the hustle and bustle of the king’s road. Food is always a great shout!',
   image: 'https://media-cdn.tripadvisor.com/media/photo-s/03/32/95/39/the-cross-keys.jpg',
   contactNumber: +442073510686,
   link: 'https://www.thecrosskeyschelsea.co.uk/'
@@ -1036,7 +1023,7 @@ module.exports = [{
   cost: 4,
   actType: [ 'Relaxing', 'Cultural', 'Misc' ],
   dateNum: [ 4, 5 ],
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  desc: 'The Making of Harry Potter is a public attraction in Leavesden in southeastern England. Not to be confused with The Wizarding World of Harry Potter of Universal Studios theme parks, it is a permanent exhibit offering an authentic behind the scenes glimpse of the Harry Potter films.',
   image: 'https://cdn.getyourguide.com/img/tour_img-245971-148.jpg',
   contactNumber: +443450840900,
   link: 'https://www.wbstudiotour.co.uk/'

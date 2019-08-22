@@ -11,6 +11,7 @@ import Home from './components/pages/Home'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Navbar from './components/common/Navbar'
+import Footer from './components/common/Footer'
 import SecureRoute from './components/common/SecureRoute'
 
 import LocationsIndex from './components/locations/Index'
@@ -57,6 +58,8 @@ class App extends React.Component {
           <Route path="/termsconditions" component={TermsConditions} />
           <Route exact path="/" component={Home} />
         </Switch>
+
+        <Footer />
       </HashRouter>
 
     )

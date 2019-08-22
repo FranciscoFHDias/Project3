@@ -1,0 +1,17 @@
+h3 {
+  font-family: 'Vibur', cursive;
+  color: $danger;
+  font-size: 60px;
+  text-shadow: 0 0 5px $danger, 0 0 10px $danger, 0 0 20px black, 0 0 30px black, 0 0 40px black, 0 0 50px black;
+}
+
+.hero.is-light .subtitle {
+  color: $danger;
+  text-shadow: 0 0 5px $danger, 0 0 10px $danger, 0 0 20px black, 0 0 30px black, 0 0 40px black, 0 0 50px black;
+}
+
+form label.label {
+  color: #91dcff;
+  text-shadow: 0 0 2px black, 0 0 10px #91dcff;
+  text-align: center;
+}

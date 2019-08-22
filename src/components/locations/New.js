@@ -93,7 +93,9 @@ class New extends React.Component {
   }
 
   render() {
-    console.log(this.formData)
+    console.log(this.state.errors)
+
+
     return (
 
       <section className="hero is-light">
@@ -101,8 +103,8 @@ class New extends React.Component {
           <div className="container has-text-centered">
             <div className="column is-4 is-offset-4">
 
-              <h3 className="title is-1" > New Space </h3>
-              <p className="subtitle has-text-black">Tell us about your fav</p>
+              <h3> New Space </h3>
+              <p className="subtitle">Tell us about your fav</p>
               <div className="box is-light">
                 <form onSubmit={this.handleSubmit}>
                   <div className="field">
@@ -195,6 +197,7 @@ class New extends React.Component {
                       onChange={this.handleMultiChange}
                     />
                     {this.state.errors.dateNum && <small className="help is-danger">{this.state.errors.dateNum}</small>}
+
                   </div>
                   <div className="field">
                     <label className="label">Image</label>

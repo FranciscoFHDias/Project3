@@ -3,6 +3,10 @@
     background-color: transparent;
     background-image: none;
   }
+
+  &.is-fixed-top {
+    z-index: 35;
+  }
 }
 
 a.navbar-item {
@@ -17,4 +21,14 @@ a.navbar-item {
 button.button {
   background-color: transparent;
   border-color: transparent;
+}
+
+.navbar-main {
+  position: static;
+}
+
+.navbar.solid {
+  background-color: #000433;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
 }

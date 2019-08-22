@@ -5,10 +5,10 @@ import StarRatings from 'react-star-ratings'
 
 const Comment = ({ user, createdAt, content, _id, handleDeleteComment, rating }) => {
   return (
-    <section className="section">
-      <div className="columns">
+    <section className="section1 comment">
+      <div className="columns comment">
 
-        <div className="column is-2">
+        <div className="column comment is-2">
           <div className="media-left">
             <figure className="image is-48x48">
               <img className="is-rounded" src={user.image} alt="Placeholder image" />
@@ -16,7 +16,7 @@ const Comment = ({ user, createdAt, content, _id, handleDeleteComment, rating })
           </div>
         </div>
 
-        <div className="column is-9">
+        <div className="column comment is-9">
           <div className="content">
             <strong className="title is-4">{user.username}</strong>
             <br />
@@ -34,7 +34,7 @@ const Comment = ({ user, createdAt, content, _id, handleDeleteComment, rating })
               {' '}
               <small>{(new Date(createdAt)).toLocaleDateString()}</small>
               <br/>
-              <div className="subtitle">
+              <div className="subtitle comment">
                 {content}
               </div>
             </div>
@@ -42,10 +42,10 @@ const Comment = ({ user, createdAt, content, _id, handleDeleteComment, rating })
           </div>
         </div>
 
-        <div className="column is-2">
+        <div className="column comment is-2">
           <div className="content">
             {Auth.isAuthenticated() && <div className="media-right">
-              <button className="delete" id={_id} onClick={handleDeleteComment}></button>
+              <button className="delete commnet" id={_id} onClick={handleDeleteComment}></button>
               <br />
               <br />
             </div>}
