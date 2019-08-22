@@ -1,12 +1,11 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons'
+import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons'
 
 
 
 const LikeButton = ({ liked, handleLike }) => {
-  const text = liked ? ' ' : ' '
-  const label = liked ? 'Unlike 💔' : ' Like 💗'
+  const label = liked ? <FontAwesomeIcon className="thumbsDown" icon={faThumbsDown} /> : <FontAwesomeIcon className="thumbsUp" icon={faThumbsUp} />
 
 
   return (
@@ -16,13 +15,7 @@ const LikeButton = ({ liked, handleLike }) => {
         onClick={handleLike}
         className= "like">
         {label}
-        <span>
-          <FontAwesomeIcon icon={faThumbsUp} />
-        </span>
       </button>
-      <p>
-        {text}
-      </p>
     </div>
   )
 }
