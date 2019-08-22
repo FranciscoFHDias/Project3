@@ -61,7 +61,7 @@ class ShowUser extends React.Component {
                 <div className="box">
 
                   <div className="content">
-                    <h1 className="title">{this.state.user.username}</h1>
+                    <h2>{this.state.user.username}</h2>
 
                     <p>Age: {this.ageTranslate(this.state.user.age)}</p>
                     <p>Gender: {this.state.user.gender}</p>
@@ -74,8 +74,6 @@ class ShowUser extends React.Component {
                         className="button"
                         to={`/profiles/${this.state.user._id}/edit`}
                       >Edit</Link>
-
-                      <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
                     </div> }
                   </div>
                 </div>

@@ -5,8 +5,8 @@ const Card = ({ image, username, age, gender, smoker }) => {
     <div className="card">
 
       <div className="card-image">
-        <figure className="image is-128x128 is-4by3">
-          <img className="is-rounded" src={image} alt={username} />
+        <figure className="image is-3by3">
+          <img src={image} alt={username} />
         </figure>
       </div>
 

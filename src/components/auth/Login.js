@@ -58,8 +58,8 @@ class Login extends React.Component {
               <p className="subtitle has-text-black">Please login to proceed.</p>
 
               <div className="box">
-                <figure className="avatar">
-                  <img src="https://placehold.it/128x128" />
+                <figure className="image is-128x128 is-centered">
+                  <img src="../img/Date-a-base-logo-red.png" />
                 </figure>
 
 

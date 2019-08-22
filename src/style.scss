@@ -2,6 +2,8 @@
 
 @import "./scss/_modal.scss";
 
+@import '~bulma';
+
 @import "./scss/_colourScheme.scss";
 
 @import "./scss/_fonts.scss";
@@ -9,6 +11,14 @@
 @import "./scss/_navbar.scss";
 
 @import "./scss/_home.scss";
+
+@import "./scss/_index.scss";
+
+@import "./scss/_new.scss";
+
+@import "./scss/_edit.scss";
+
+@import "./scss/_profile.scss";
 
 @import "./scss/_dropdowns.scss";
 
@@ -23,6 +33,3 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
-
-@import '~bulma'

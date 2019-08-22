@@ -1,0 +1,101 @@
+
+.edit {
+  margin-right: 10px;
+  padding: 3px 10px;
+  font-size: 20px;
+}
+
+.erase {
+  margin-right: 10px;
+  padding: 3px 10px;
+  font-size: 20px;
+}
+
+.like {
+  margin-right: 10px;
+  padding: 3px 10px;
+  font-size: 20px;
+  border: 0;
+  background-color: inherit;
+}
+
+
+button.submit {
+background-color: $danger;
+box-shadow: 0 0 5px $danger, 0 0 10px $danger, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white;
+border: none;
+height: 40px;
+line-height: 8px;
+color: #ffffff;
+font-size: 32px;
+margin-top: 10px;
+margin-right: 10px;
+border-radius: 3px;
+}
+
+button.submit:hover {
+cursor: pointer;
+background-color: #91dcff;
+box-shadow: 0 0 5px #91dcff, 0 0 10px #91dcff, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white
+}
+
+.button {
+background-color: $danger;
+box-shadow: 0 0 5px $danger, 0 0 10px $danger, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white;
+border: none;
+height: 40px;
+line-height: 8px;
+color: #ffffff;
+font-size: 32px;
+margin-top: 10px;
+margin-right: 10px;
+}
+
+.button:hover {
+cursor: pointer;
+background-color: #91dcff;
+box-shadow: 0 0 2px #91dcff, 0 0 2px #91dcff, 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 25px white
+}
+
+button:active {
+outline: none;
+border: none;
+}
+
+button:focus {outline:3;}
+
+.thumbsUp {
+  color: green,
+}
+
+.thumbsDown {
+  color: $danger
+}
+
+.card {
+  height: 100%;
+}
+
+.map {
+  border-radius: 5px;
+  height: inherit;
+}
+
+.comments {
+  width: 100%;
+  height: 100px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: rgb(245, 245, 245);
+  padding: 0px;
+}
+
+.comment {
+  background-color: rgb(245, 245, 245);
+  padding: 0px;
+}
+
+.section1 {
+  background-color: rgb(245, 245, 245);
+  padding: 0px;
+}
