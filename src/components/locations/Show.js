@@ -120,101 +120,112 @@ class ShowLocation extends React.Component {
             </article>
           </div>
 
-          <div className="columns is-multiline">
+          <div className="container">
+            <div className="columns is-multiline">
 
-            <div className="column">
-              <div className="tile is-parent">
-                <article className="tile is-child notification">
+              <div className="column">
+                <div className="tile is-parent">
+                  <article className="tile is-child notification">
 
-                  <div className="content">
+                    <div className="content">
 
-                    <div className="columns is-multiline">
-                      <div className="column">
-                        <StarRatingComponent
-                          name="averageRating"
-                          renderStarIcon={() => <span className="title is-3">£</span>}
-                          editing={false}
-                          starCount={5}
-                          value={this.state.location.cost}
-                        />
+                      <div className="columns is-multiline">
+                        <div className="column">
+                          <StarRatingComponent
+                            name="averageRating"
+                            renderStarIcon={() => <span className="title is-3">£</span>}
+                            editing={false}
+                            starCount={5}
+                            value={this.state.location.cost}
+                          />
+                        </div>
+                        <div className="column">
+                          <StarRatings
+                            rating={this.state.location.averageRating}
+                            starRatedColor="#FFC300"
+                            numberOfStars={5}
+                            starDimension="25px"
+                            starSpacing="2px"
+                            name="averageRating"
+                          />
+                        </div>
                       </div>
-                      <div className="column">
-                        <StarRatings
-                          rating={this.state.location.averageRating}
-                          starRatedColor="#FFC300"
-                          numberOfStars={5}
-                          starDimension="25px"
-                          starSpacing="2px"
-                          name="averageRating"
+                      <hr/>
+
+                      <h1 className="title is-6">Tel:</h1>
+                      <a href={`tel: ${this.state.location.contactNumber}`} data-rel="external"><p className="text is-6">{this.state.location.contactNumber}</p></a>
+                      <br/>
+                      <h1 className="title is-6">Link:</h1>
+                      <a href={this.state.location.link}><p className="text is-6">{this.state.location.link}</p></a>
+                      <br/>
+                      <h1 className="title is-6">Address:</h1>
+                      <p className="text is-6">{this.state.location.addressLine1}</p>
+                      <p className="text is-6">{this.state.location.addressLine2}</p>
+                      <p className="text is-6">{this.state.location.addressCity}</p>
+                      <p className="text is-6">{this.state.location.addressPostCode}</p>
+                      <h2 className="title is-6">Description:</h2>
+                      <p className="text is-6">{this.state.location.desc}</p>
+                      <br />
+                      {Auth.isAuthenticated() && <div className="buttons">
+                        <Link className="edit" to={`/locations/${this.state.location._id}/edit`}><FontAwesomeIcon icon={faPen} /></Link>
+                        <Link className="erase" onClick={this.handleDelete}><FontAwesomeIcon icon={faTrashAlt} /></Link>
+                        <LikeButton
+                          liked={this.isLiked(this.state.location.likes)}
+                          handleLike={this.handleLike}
                         />
-                      </div>
+
+                        <p className="subtitle">{this.state.location.likes.length} like </p>
+
+                      </div>}
+
                     </div>
-                    <hr/>
 
-                    <h1 className="title is-6">Tel:</h1>
-                    <a href={`tel: ${this.state.location.contactNumber}`} data-rel="external"><p className="text is-6">{this.state.location.contactNumber}</p></a>
-                    <br/>
-                    <h1 className="title is-6">Link:</h1>
-                    <a href={this.state.location.link}><p className="text is-6">{this.state.location.link}</p></a>
-                    <br/>
-                    <h1 className="title is-6">Address:</h1>
-                    <p className="text is-6">{this.state.location.addressLine1}</p>
-                    <p className="text is-6">{this.state.location.addressLine2}</p>
-                    <p className="text is-6">{this.state.location.addressCity}</p>
-                    <p className="text is-6">{this.state.location.addressPostCode}</p>
-                    <h2 className="title is-6">Description:</h2>
-                    <p className="text is-6">{this.state.location.desc}</p>
-                    <br />
-                    {Auth.isAuthenticated() && <div className="buttons">
-                      <Link className="edit" to={`/locations/${this.state.location._id}/edit`}><FontAwesomeIcon icon={faPen} /></Link>
-                      <Link className="erase" onClick={this.handleDelete}><FontAwesomeIcon icon={faTrashAlt} /></Link>
-                      <LikeButton
-                        liked={this.isLiked(this.state.location.likes)}
-                        handleLike={this.handleLike}
-                      />
-
-                      <p className="subtitle">{this.state.location.likes.length} like </p>
-
-                    </div>}
-
-                  </div>
-
-                </article>
+                  </article>
+                </div>
               </div>
-            </div>
 
-            <div className="column">
-              <div className="tile is-parent">
-                <Map
-                  style="mapbox://styles/mapbox/streets-v9"
-                  zoom={zoom}
-                  center={[this.state.location.longitude, this.state.location.latitude]}
-                  containerStyle={{
-                    height: '600px',
-                    width: '100%'
-                  }}
-                >
-                  <Marker
-                    coordinates={[this.state.location.longitude, this.state.location.latitude]}
-                    anchor="bottom">
-                    <img width="30px" height="30px" src={mapMarker} />
-                  </Marker>
-                </Map>
+              <div className="column">
+                <div className="tile is-parent" style={{ width: '100%', height: '100%' }}>
+                  <Map
+                    className="map"
+                    style="mapbox://styles/mapbox/streets-v9"
+                    zoom={zoom}
+                    center={[this.state.location.longitude, this.state.location.latitude]}
+                    containerStyle={{
+                      height: '100%',
+                      width: '100%'
+                    }}
+                  >
+                    <Marker
+                      coordinates={[this.state.location.longitude, this.state.location.latitude]}
+                      anchor="bottom">
+                      <img width="30px" height="30px" src={mapMarker} />
+                    </Marker>
+                  </Map>
+                </div>
               </div>
             </div>
           </div>
 
-
+          <br />
+          <h1 className="title is-3"> Comments:   </h1>
           <div className="tile is-parent">
             <article className="tile is-child notification">
-              <h1 className="title is-3"> Comments:   </h1>
-              {this.state.location.comments.map(comment =>
-                <Comment
-                  key={comment._id}
-                  {...comment}
-                  handleDeleteComment={this.handleDeleteComment} />
 
-              )}
+              <div className="tile is-parent">
+                <article className="comments tile is-child notification">
+
+                  {this.state.location.comments.map(comment =>
+                    <Comment
+                      className="comment"
+                      key={comment._id}
+                      {...comment}
+                      handleDeleteComment={this.handleDeleteComment} />
+
+                  )}
+                </article>
+              </div>
+              <br />
               {Auth.isAuthenticated() && <div className="media-right">
 
               </div>}
@@ -242,7 +253,7 @@ class ShowLocation extends React.Component {
                   />
                 </div>
 
-                <button className="submit"><FontAwesomeIcon icon={faEnvelope} /></button>
+                <button className="submit" ><FontAwesomeIcon className="icon" icon={faEnvelope} /></button>
               </form>}
             </article>
           </div>
