@@ -83,15 +83,15 @@ class EditUser extends React.Component {
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
       .then(res => {
-        toast.success(res.data.message)
-        console.log(this.state)
+        toast.success('User suceessfully updated')
+        Auth.setUser(res.data)
         this.props.history.push('/profiles/')
       })
       .catch(err => this.setState({ errors: err.response.data.errors }))
   }
 
   render() {
-    console.log(this.state.formData.smoker)
+    console.log(this.state.formData.image)
     const smokerSelectedOption = this.booleanTranslate(this.state.formData.smoker)
     return (
       <section className="hero is-light">
@@ -120,8 +120,6 @@ class EditUser extends React.Component {
                     />
                     {this.state.formData.image && <img src={this.state.formData.image} />}
                   </div>
-
-
 
                   <div className="field">
                     <label className="label">Username</label>

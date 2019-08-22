@@ -153,6 +153,7 @@ class ShowLocation extends React.Component {
 
                     <h1 className="title is-6">Tel:</h1>
                     <a href={`tel: ${this.state.location.contactNumber}`} data-rel="external"><p className="text is-6">{this.state.location.contactNumber}</p></a>
+
                     <br/>
                     <h1 className="title is-6">Link:</h1>
                     <a href={this.state.location.link}><p className="text is-6">{this.state.location.link}</p></a>

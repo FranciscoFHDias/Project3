@@ -93,7 +93,9 @@ class New extends React.Component {
   }
 
   render() {
-    console.log(this.formData)
+    console.log(this.state.errors)
+
+
     return (
 
       <section className="hero is-light">
@@ -195,6 +197,7 @@ class New extends React.Component {
                       onChange={this.handleMultiChange}
                     />
                     {this.state.errors.dateNum && <small className="help is-danger">{this.state.errors.dateNum}</small>}
+
                   </div>
                   <div className="field">
                     <label className="label">Image</label>
