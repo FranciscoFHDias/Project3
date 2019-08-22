@@ -74,8 +74,6 @@ class ShowUser extends React.Component {
                         className="button"
                         to={`/profiles/${this.state.user._id}/edit`}
                       >Edit</Link>
-
-                      <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
                     </div> }
                   </div>
                 </div>

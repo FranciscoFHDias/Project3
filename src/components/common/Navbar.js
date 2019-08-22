@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import Auth from '../../lib/Auth'
 
+
 class Navbar extends React.Component {
 
   constructor() {
@@ -9,13 +10,16 @@ class Navbar extends React.Component {
 
     this.state = {
       navbarOpen: false,
+      formData: {},
       dropdownOpen: false
     }
 
     this.logout = this.logout.bind(this)
     this.toggleNavbar = this.toggleNavbar.bind(this)
     this.toggleDropdown = this.toggleDropdown.bind(this)
+
   }
+
 
   logout() {
     Auth.removeToken()
@@ -31,6 +35,7 @@ class Navbar extends React.Component {
     this.setState({ dropdownOpen: !this.state.dropdownOpen})
   }
 
+
   componentDidUpdate(prevProps) {
     if(prevProps.location.pathname !== this.props.location.pathname) {
       this.setState({
@@ -41,6 +46,7 @@ class Navbar extends React.Component {
   }
 
   render(){
+    console.log(Auth.getUser())
     return (
       <nav className="navbar is-fixed-top is-transparent">
         <div className="container">
@@ -80,7 +86,10 @@ class Navbar extends React.Component {
                   <div className="dropdown-trigger">
                     <button className="button" aria-haspopup="true" aria-controls="dropdown-menu" onClick={this.toggleDropdown}>
                       <span className="icon is-small">
-                        <img src={`${Auth.getUser().image}`} aria-hidden="true" />
+                        <img
+                          src={`${Auth.getUser().image}`}
+                          aria-hidden="true"
+                        />
                       </span>
                     </button>
                   </div>

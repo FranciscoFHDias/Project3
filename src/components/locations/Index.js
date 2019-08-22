@@ -93,7 +93,6 @@ class LocationsIndex extends React.Component{
   }
 
   render() {
-    console.log(this.state.locations)
     return(
       <section className="section">
         <div className="container">

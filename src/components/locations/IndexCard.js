@@ -5,7 +5,7 @@ import StarRatings from 'react-star-ratings'
 
 
 
-const Card = ({ name, addressPostCode, image, dateNum, averageRating }) => {
+const Card = ({ name, addressCity, addressPostCode, image, dateNum, averageRating }) => {
 
 
   return(
@@ -19,40 +19,30 @@ const Card = ({ name, addressPostCode, image, dateNum, averageRating }) => {
 
 
       <div className="card-content">
-
-        <div className="columns is-multiline">
-
-          <div className="column">
-            <p className="title is-5">{name}</p>
-          </div>
-
-          <div className="column">
-            <StarRatings
-              rating={averageRating}
-              starDimension="15px"
-              starRatedColor="#FFC300"
-              starSpacing="2px"
-              numberOfStars={5}
-            />
-          </div>
-        </div>
+        <p className="title is-5">{name}</p>
+        <StarRatings
+          rating={averageRating}
+          starDimension="15px"
+          starRatedColor="#FFC300"
+          starSpacing="2px"
+          numberOfStars={5}
+        />
+        <br />
+        <br />
 
         <p className="text is-8">Date Number: </p>
         {dateNum.map(date =>
-          <span key={location._id} className="text is-8">
-            {date }  {'    '}
-          </span>
+          <div key={location._id} className="text is-8">
+             💗 {date }
+          </div>
         )}
 
-
-
-
         <hr/>
-        <p className="text is-12">{addressPostCode}</p>
-
+        <p className="text is-12">{addressCity}, {addressPostCode}</p>
       </div>
-
     </div>
+
+
   )
 }
 
