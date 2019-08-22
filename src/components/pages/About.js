@@ -1,171 +1,122 @@
 import React from 'react'
 import Footer from '../common/Footer'
 
-
-
-
-
 class About extends React.Component{
-
   render() {
     return(
-      <section className="section">
-        <section className="hero is-black">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title is-1 has-text-centered">About Us</h1>
-              <div className="level">
-                <div className="level-item has-text-centered">
-                  <h1>First column</h1>
-                </div>
-                <div className="level-item has-text-centered">
-                  <h1>Second column</h1>
-                </div>
-                <div className="level-item has-text-centered">
-                  <h1>third column</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <hr/>
-        <div>
-          <h2 className="title is-2 has-text-centered">
-          The Dream Team
-          </h2>
-          <hr/>
-          <h4 className="subtitle has-text-centered">
-            <p>This document can be used as the <strong>terms and conditions of use for a website</strong>. It sets out the basis on which a user is granted <strong>access to a website</strong> and can be modified to take account of numerous factors including:</p>
-            <ul>
-              <li>whether the website conducts sales</li>
-              <li>whether the website has further policies</li>
-            </ul>
-          </h4>
-        </div>
-
-        <section className="section">
+      <section className="hero is-fullheight">
+        <div className="hero-body">
           <div className="container">
-            <div className="columns is-centered">
+            <h1 className="title has-text-centered has-text-danger"><img width="200" src="./img/Date-a-base-logo-red.png" alt="logo"/><br/>About Us</h1>
 
-              <div className="column is-one-fourth'">
-                <div className="flip-card">
-                  <div className="flip-card-inner">
-                    <div className="flip-card-front">
-                      <img src="./img/logo_red.png" alt="logo"/>
-                    </div>
-                    <div className="flip-card-back">
-                      <img src="./img/sola.png" alt="sola"/>
+            <hr/>
+            <h2 className="subtitle has-text-centered has-text-danger">The Dream Team</h2>
+
+            <h4 className="subtitle has-text-centered">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </h4>
+            <div className="container">
+              <div className="columns is-centered">
+
+                <div className="column is-one-fourth'">
+                  <div className="flip-card">
+                    <div className="flip-card-inner">
+                      <div className="flip-card-front">
+                        <img src="./img/Date-a-base-logo-small.png" alt="logo" width="80%" className="glow"/>
+                      </div>
+                      <div className="flip-card-back">
+                        <img src="./img/sola.png" alt="Sola"/>
+                      </div>
                     </div>
                   </div>
+                  <h2 className="title is-4 has-text-danger has-text-centered">ADESOLA ONI-SHOGBONYO</h2>
+                  <h4 className="subtitle has-text-centered">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </h4>
                 </div>
-                <h5 className="title is-5 has-text-centered">Adesola Oni-Shogbonyo</h5>
-                <p>This document can be used as the <strong>terms and conditions of use for a website</strong>. It sets out the basis on which a user is granted <strong>access to a website</strong> and can be modified to take account of numerous factors including:</p>
-                <ul>
-                  <li>whether the website conducts sales</li>
-                  <li>whether the website has further policies</li>
-                </ul>
-                <p>It should be noted that this document <strong>only includes the terms and conditions of use</strong>. It will refer to and incorporate into its terms other documents if applicable such as a privacy policy and terms and conditions of sale.</p>
-              </div>
 
 
-              <div className="column is-one-fourth'">
-                <div className="flip-card">
-                  <div className="flip-card-inner">
-                    <div className="flip-card-front">
-                      <img src="./img/logo_red.png" alt="logo"/>
-                    </div>
-                    <div className="flip-card-back">
-                      <img src="./img/francisco.png" alt="francisco"/>
+                <div className="column is-one-fourth'">
+                  <div className="flip-card">
+                    <div className="flip-card-inner">
+                      <div className="flip-card-front">
+                        <img src="./img/Date-a-base-logo-small.png" alt="logo" width="80%" className="glow"/>
+                      </div>
+                      <div className="flip-card-back">
+                        <img src="./img/francisco.png" alt="Francisco"/>
+                      </div>
                     </div>
                   </div>
+                  <h2 className="title is-4 has-text-danger has-text-centered">FRANCISCO F. H. DIAS</h2>
+                  <h4 className="subtitle has-text-centered">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </h4>
                 </div>
-                <h5 className="title is-5 has-text-centered">Francisco F. H. Dias</h5>
-                <p>This document can be used as the <strong>terms and conditions of use for a website</strong>. It sets out the basis on which a user is granted <strong>access to a website</strong> and can be modified to take account of numerous factors including:</p>
-                <ul>
-                  <li>whether the website conducts sales</li>
-                  <li>whether the website has further policies</li>
-                </ul>
-                <p>It should be noted that this document <strong>only includes the terms and conditions of use</strong>. It will refer to and incorporate into its terms other documents if applicable such as a privacy policy and terms and conditions of sale.</p>
-              </div>
 
-              <div className="column is-one-fourth'">
-                <div className="flip-card">
-                  <div className="flip-card-inner">
-                    <div className="flip-card-front">
-                      <img src="./img/logo_red.png" alt="logo"/>
-                    </div>
-                    <div className="flip-card-back">
-                      <img src="./img/michael.png" alt="michael"/>
+                <div className="column is-one-fourth'">
+                  <div className="flip-card">
+                    <div className="flip-card-inner">
+                      <div className="flip-card-front">
+                        <img src="./img/Date-a-base-logo-small.png" alt="logo" width="80%" className="glow"/>
+                      </div>
+                      <div className="flip-card-back">
+                        <img src="./img/michael.png" alt="Michael"/>
+                      </div>
                     </div>
                   </div>
+                  <h2 className="title is-4 has-text-danger has-text-centered">MICHAEL G. LAIRD</h2>
+                  <h4 className="subtitle has-text-centered">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </h4>
                 </div>
-                <h5 className="title is-5 has-text-centered">Michael G. Laird</h5>
-                <p>This document can be used as the <strong>terms and conditions of use for a website</strong>. It sets out the basis on which a user is granted <strong>access to a website</strong> and can be modified to take account of numerous factors including:</p>
-                <ul>
-                  <li>whether the website conducts sales</li>
-                  <li>whether the website has further policies</li>
-                </ul>
-                <p>It should be noted that this document <strong>only includes the terms and conditions of use</strong>. It will refer to and incorporate into its terms other documents if applicable such as a privacy policy and terms and conditions of sale.</p>
-              </div>
 
-              <div className="column is-one-fourth'">
-                <div className="flip-card">
-                  <div className="flip-card-inner">
-                    <div className="flip-card-front">
-                      <img src="./img/logo_red.png" alt="logo"/>
-                    </div>
-                    <div className="flip-card-back">
-                      <img src="./img/daniele.png" alt="logo"/>
+                <div className="column is-one-fourth'">
+                  <div className="flip-card">
+                    <div className="flip-card-inner">
+                      <div className="flip-card-front">
+                        <img src="./img/Date-a-base-logo-small.png" alt="logo" width="80%"  className="glow"/>
+                      </div>
+                      <div className="flip-card-back">
+                        <img src="./img/daniele.png" alt="Daniele"/>
+                      </div>
                     </div>
                   </div>
+                  <h2 className="title is-4 has-text-danger has-text-centered">DANIELE NOCITO</h2>
+                  <h4 className="subtitle has-text-centered">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </h4>
                 </div>
-                <h5 className="title is-5 has-text-centered">Daniele Nocito</h5>
-                <p>This document can be used as the <strong>terms and conditions of use for a website</strong>. It sets out the basis on which a user is granted <strong>access to a website</strong> and can be modified to take account of numerous factors including:</p>
-                <ul>
-                  <li>whether the website conducts sales</li>
-                  <li>whether the website has further policies</li>
-                </ul>
-                <p>It should be noted that this document <strong>only includes the terms and conditions of use</strong>. It will refer to and incorporate into its terms other documents if applicable such as a privacy policy and terms and conditions of sale.</p>
               </div>
-            </div>
-            <div>
-              <h2 className="title is-2 has-text-centered">
-              On the Date Night Website
-              </h2>
-              <hr/>
-              <h4 className="subtitle has-text-centered">
-                <p>This document can be used as the <strong>terms and conditions of use for a website</strong>. It sets out the basis on which a user is granted <strong>access to a website</strong> and can be modified to take account of numerous factors including:</p>
-                <ul>
-                  <li>whether the website conducts sales</li>
-                  <li>whether the website has further policies</li>
-                </ul>
-                <p>It should be noted that this document <strong>only includes the terms and conditions of use</strong>. It will refer to and incorporate into its terms other documents if applicable such as a privacy policy and terms and conditions of sale.</p>
-              </h4>
               <div>
-                <h3 className="title is-3 has-text-centered">
-                Next projects
-                </h3>
                 <hr/>
+                <h2 className="subtitle has-text-centered has-text-danger">
+                The DATE-A-BASE
+                </h2>
                 <h4 className="subtitle has-text-centered">
-                  <p>This document can be used as the <strong>terms and conditions of use for a website</strong>. It sets out the basis on which a user is granted <strong>access to a website</strong> and can be modified to take account of numerous factors including:</p>
-                  <ul>
-                    <li>whether the website conducts sales</li>
-                    <li>whether the website has further policies</li>
-                  </ul>
-                  <p>It should be noted that this document <strong>only includes the terms and conditions of use</strong>. It will refer to and incorporate into its terms other documents if applicable such as a privacy policy and terms and conditions of sale.</p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </h4>
+                <div>
+                  <hr/>
+                  <h2 className="subtitle has-text-centered has-text-danger">
+                  Next projects
+                  </h2>
+                  <h4 className="subtitle has-text-centered">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <ul>
+                      <li>whether the website conducts sales</li>
+                      <li>whether the website has further policies</li>
+                    </ul>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </h4>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
         <Footer />
       </section>
-
-
-
     )
   }
-
 }
 
 export default About
