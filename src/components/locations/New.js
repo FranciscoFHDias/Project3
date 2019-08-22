@@ -123,7 +123,7 @@ class New extends React.Component {
                     <input
                       className="input"
                       name="addressLine1"
-                      placeholder="eg: LoveExp Cafe, love cafe street, se16 6yy"
+                      placeholder="eg: LoveExp Cafe"
                       onChange={this.handleChangeNormal}
                     />
                     {this.state.errors.addressLine1 && <small className="help is-danger">{this.state.errors.addressLine1}</small>}
@@ -133,7 +133,7 @@ class New extends React.Component {
                     <input
                       className="input"
                       name="addressLine2"
-                      placeholder="eg: LoveExp Cafe, love cafe street, se16 6yy"
+                      placeholder="eg: Love cafe street"
                       onChange={this.handleChangeNormal}
                     />
                     {this.state.errors.addressLine2 && <small className="help is-danger">{this.state.errors.addressLine2}</small>}
@@ -143,7 +143,7 @@ class New extends React.Component {
                     <input
                       className="input"
                       name="addressCity"
-                      placeholder="eg: LoveExp Cafe, love cafe street, se16 6yy"
+                      placeholder="eg: London"
                       onChange={this.handleChangeNormal}
                     />
                     {this.state.errors.addressCity && <small className="help is-danger">{this.state.errors.addressCity}</small>}
@@ -153,7 +153,7 @@ class New extends React.Component {
                     <input
                       className="input"
                       name="addressPostCode"
-                      placeholder="eg: LoveExp Cafe, love cafe street, se16 6yy"
+                      placeholder="SE16 6YY"
                       onChange={this.handleChangeNormal}
                     />
                     {this.state.errors.addressPostCode && <small className="help is-danger">{this.state.errors.addressPostCode}</small>}

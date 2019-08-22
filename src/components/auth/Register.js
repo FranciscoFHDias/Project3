@@ -48,11 +48,6 @@ class Register extends React.Component {
               <p className="subtitle has-text-black">Register here to get exclusives!</p>
 
               <div className="box is-light">
-                <figure className="image is-128x128 is-centered">
-                  <img src="../img/Date-a-base-logo-red.png" />
-                </figure>
-
-
                 <form onSubmit={this.handleSubmit}>
                   <div className="column">
                     <div className="field">
