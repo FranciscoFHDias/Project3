@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Card from './IndexCard'
-import Footer from '../common/Footer'
 import Select from 'react-select'
 import axios from 'axios'
 import _ from 'lodash'
@@ -74,35 +73,30 @@ class LocationsIndex extends React.Component{
   }
 
   filterLocations() {
-    return _.filter(this.state.locations, location => {
+    const [field, order] = this.state.sortTerm.split('|')
+    const filtered = _.filter(this.state.locations, location => {
       return (this.state.dateNum ? location.dateNum.includes(this.state.dateNum) : true) &&
         (this.state.actType ? location.actType.includes(this.state.actType) : true) &&
         (this.state.cost ? location.cost === this.state.cost : true )
     })
+    return _.orderBy(filtered, [field], [order])
   }
 
   handleChange(selected) {
     this.setState({ sortTerm: selected.value })
-    this.applySort(this.state.locations)
-  }
-
-  applySort(locations) {
-    const [field, order] = this.state.sortTerm.split('|')
-    const sortedLocations = _.orderBy(locations, [field], [order])
-    this.setState({locations: sortedLocations})
   }
 
   render() {
-    console.log(this.state.locations)
     return(
       <section className="section">
         <div className="container">
           <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
             <div className="navbar-item">
               <div className="field">
-                <label className="label">Date No.</label>
+                <label className="label has-text-left">Date No.</label>
                 <Select
                   name="dateNum"
+                  className="filter"
                   options={dateNumOptions}
                   defaultValue={dateNumOptions[0]}
                   onChange={selected => this.handleFilter(selected, 'dateNum')}
@@ -112,9 +106,10 @@ class LocationsIndex extends React.Component{
             </div>
             <div className="navbar-item">
               <div className="field">
-                <label className="label">Activity Type</label>
+                <label className="label has-text-left">Activity Type</label>
                 <Select
                   name="actType"
+                  className="filter"
                   options={actTypeOptions}
                   defaultValue={actTypeOptions[0]}
                   onChange={selected => this.handleFilter(selected, 'actType')}
@@ -124,9 +119,10 @@ class LocationsIndex extends React.Component{
             </div>
             <div className="navbar-item">
               <div className="field">
-                <label className="label">Budget</label>
+                <label className="label has-text-left">Budget</label>
                 <Select
                   name="cost"
+                  className="filter"
                   options={budgetOptions}
                   defaultValue={budgetOptions[0]}
                   onChange={selected => this.handleFilter(selected, 'cost')}
@@ -136,13 +132,14 @@ class LocationsIndex extends React.Component{
             </div>
             <div className="navbar-item">
               <div className="field">
-                <label className="label">Sort By</label>
+                <label className="label has-text-left">Sort By</label>
                 <Select
                   name="sortBy"
+                  className="filter"
                   options={sortOptions}
                   defaultValue={sortOptions[0]}
                   onChange={this.handleChange}
-                  value={sortOptions[0]}
+                  value={sortOptions.find(option => option.value === this.state.sortTerm)}
                 />
               </div>
             </div>
@@ -159,7 +156,6 @@ class LocationsIndex extends React.Component{
 
           </div>
         </div>
-        <Footer />
       </section>
 
     )

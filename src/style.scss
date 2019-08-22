@@ -1,3 +1,9 @@
+$modal-card-body-background-color: #ff3860;
+
+$modal-content-width: 640px;
+
+@import '~bulma';
+
 @import "./scss/_colourScheme.scss";
 
 @import "./scss/_fonts.scss";
@@ -6,18 +12,17 @@
 
 @import "./scss/_home.scss";
 
+@import "./scss/_index.scss";
+
 @import "./scss/_dropdowns.scss";
 
 @import "./scss/_footer.scss";
 
 @import "./scss/buttons.scss";
 
-$modal-card-body-background-color: #ff3860;
-
-$modal-content-width: 640px;
-
 #modal-body{
   width: 640px;
+  height: 525px;
 }
 
 .flip-card {
@@ -64,6 +69,3 @@ $modal-content-width: 640px;
   background-repeat: no-repeat;
   background-position: center;
 }
-
-
-@import '~bulma'

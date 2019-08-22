@@ -42,7 +42,7 @@ class Navbar extends React.Component {
 
   render(){
     return (
-      <nav className="navbar is-fixed-top is-transparent">
+      <nav className="navbar navbar-main is-fixed-top is-transparent">
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item">
