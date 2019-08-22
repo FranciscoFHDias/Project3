@@ -2,7 +2,6 @@
   &.is-transparent {
     background-color: transparent;
     background-image: none;
-    padding-bottom: 50px;
   }
 
   &.is-fixed-top {
@@ -26,4 +25,10 @@ button.button {
 
 .navbar-main {
   position: static;
+}
+
+.navbar.solid {
+  background-color: #000433;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
 }

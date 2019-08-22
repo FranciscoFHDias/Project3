@@ -86,11 +86,22 @@ class LocationsIndex extends React.Component{
     this.setState({ sortTerm: selected.value })
   }
 
+
+
   render() {
+    window.addEventListener('scroll', function () {
+      var scroll = this.scrollY
+      console.log(scroll)
+      if(scroll > 100){
+        document.querySelector('.navbar').classList.add('solid')
+      } else {
+        document.querySelector('.navbar').classList.remove('solid')
+      }
+    })
     return(
       <section className="section">
         <div className="container">
-          <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
+          <nav className="navbar navbar-index is-transparent" role="navigation" aria-label="main navigation">
             <div className="navbar-item">
               <div className="field">
                 <label className="label has-text-left">Date No.</label>
