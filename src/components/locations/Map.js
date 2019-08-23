@@ -9,7 +9,7 @@ import _ from 'lodash'
 
 
 const Map = ReactMapboxGl({
-  accessToken: 'pk.eyJ1IjoiZnJhbmNpc2NvZmhkaWFzIiwiYSI6ImNqemI5MTFiajA4NzYzbXBoZWd6NGtndTAifQ.oDArT5qLRW4i6FUT3Cut-w'
+  accessToken: process.env.MAPKEY
 })
 
 const zoom = [12, 16]
@@ -149,10 +149,9 @@ class MapLocations extends React.Component {
             containerStyle={{
               height: '600px',
               width: '100%'
-            }}
-          >
-            {this.filterLocations().map(location =>
+            }}>
 
+            {this.filterLocations().map(location =>
               <Marker
                 key={location._id}
                 coordinates={[location.longitude, location.latitude]}
@@ -170,7 +169,6 @@ class MapLocations extends React.Component {
                 'bottom-left': [12, -38],
                 'bottom': [0, -38],
                 'bottom-right': [-12, -38]}}>
-
 
               <article className="tile is-child">
 
@@ -191,7 +189,6 @@ class MapLocations extends React.Component {
                   </figure>
                 </Link>
               </article>
-
             </Popup>}
 
           </Map>

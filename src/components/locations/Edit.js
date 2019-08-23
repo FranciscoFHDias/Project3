@@ -3,7 +3,6 @@ import axios from 'axios'
 import Auth from '../../lib/Auth'
 import Select from 'react-select'
 import ReactFilestack from 'filestack-react'
-import { fileloaderKey } from '../../../config/environment'
 
 const dateNumOptions = [
   { value: 1, label: 'First Date' },
@@ -214,7 +213,7 @@ class EditLocation extends React.Component {
                     <div className="field">
                       <label className="label">Image</label>
                       <ReactFilestack
-                        apikey={fileloaderKey}
+                        apikey= {process.env.FILELOADERKEY}
                         buttonText="Upload Photo"
                         buttonClass="button"
                         className="upload-image"

@@ -88,7 +88,7 @@ class Contacts extends React.Component{
                       ></textarea>
                     </div>
                   </div>
-                  <button className="submit"><FontAwesomeIcon icon={faEnvelope} /></button>
+                  <button className="submiticon"><FontAwesomeIcon icon={faEnvelope} /></button>
                 </form>
               </div>
 
