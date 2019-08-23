@@ -1,7 +1,15 @@
 import React from 'react'
-import Footer from '../common/Footer'
+
+
+
+
 
 class About extends React.Component{
+
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     return(
       <section className="hero is-fullheight">
@@ -113,7 +121,6 @@ class About extends React.Component{
             </div>
           </div>
         </div>
-        <Footer />
       </section>
     )
   }
