@@ -1,6 +1,7 @@
 import React from 'react'
 import Select from 'react-select'
 import { Link } from 'react-router-dom'
+import logo from '../../img/Date-a-base-logo-red.png'
 
 const dateNumOptions = [
   { value: 0, label: 'All' },
@@ -52,7 +53,7 @@ class Home extends React.Component {
       <section className="hero is-fullheight">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title has-text-centered has-text-danger"><img width="200" src="./img/Date-a-base-logo-red.png" alt="logo"/><br/>DATE-A-BASE</h1>
+            <h1 className="title has-text-centered has-text-danger"><img width="200" src={logo} alt="logo"/><br/>DATE-A-BASE</h1>
             <div className="level">
               <div className="level-item has-text-centered">
                 <div className="field">
