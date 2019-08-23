@@ -6,12 +6,12 @@ const userData = require('../../db/data/userData')
 
 describe('GET /profiles/:id',() => {
 
-  let profile = null
+  let user = null
 
   beforeEach(done => {
     User.create(userData)
       .then(profiles => {
-        profile = profiles[0]
+        user = profiles
         done()
       })
   })
@@ -22,7 +22,7 @@ describe('GET /profiles/:id',() => {
   })
 
   it('should send a 200 response', done => {
-    api.get(`/profiles/${profile._id}`)
+    api.get(`/api/profiles/${user._id}`)
       .end((err, res) => {
         expect(res.status).to.eq(200)
         done()
@@ -30,7 +30,7 @@ describe('GET /profiles/:id',() => {
   })
 
   it('should return an object', done => {
-    api.get(`/profiles/${profile._id}`)
+    api.get(`/api/profiles/${user._id}`)
       .end((err, res) => {
         expect(res.body).to.be.an('object')
         done()
@@ -38,7 +38,7 @@ describe('GET /profiles/:id',() => {
   })
 
   it('should return the correct fields', done => {
-    api.get(`/profiles/${profile._id}`)
+    api.get(`/api/profiles/${user._id}`)
       .end((err, res) => {
         expect(res.body).to.contains.keys([
           '_id',
@@ -54,8 +54,9 @@ describe('GET /profiles/:id',() => {
   })
 
   it('should return the correct data types', done => {
-    api.get(`/profiles/${profile._id}`)
+    api.get(`/api/profiles/${user._id}`)
       .end((err, res) => {
+        expect(res.body._id).to.be.a('string')
         expect(res.body.username).to.be.a('string')
         expect(res.body.email).to.be.a('string')
         expect(res.body.image).to.be.a('string')
