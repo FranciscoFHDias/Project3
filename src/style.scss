@@ -13,17 +13,7 @@
 @import "./scss/_dropdowns.scss";
 @import "./scss/_footer.scss";
 @import "./scss/buttons.scss";
-#modal-body{
-  width: 640px;
-  height: 525px;
-}
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-  margin-bottom: 30px;
-}
+
 #showImage {
   background-repeat: no-repeat;
   background-position: center;
