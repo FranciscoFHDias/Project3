@@ -136,7 +136,7 @@ class Preferences extends React.Component {
                       onChange={this.handleChange}
                     />
                   </div>
-                  <button className="button">Submit</button>
+                  <button className="submit">Submit</button>
                 </form>
               </div>
             </div>

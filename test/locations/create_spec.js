@@ -6,21 +6,19 @@ const { secret } = require('../../config/environment')
 const testUser = require('../../db/data/userData')
 
 const testData = {
-  name: 'Paternoster',
+  name: 'Paternoster Chop House',
   addressLine1: '1, Warwick Court',
   addressLine2: 'Paternoster Sq.',
   addressCity: 'London',
   addressPostCode: 'EC4M 7DX',
-  latitude: 51.507351,
-  longitude: -0.127758,
   cost: 3,
   actType: [
-    'Restaurants',
-    'Relaxing'
+    'Restaurants and Bars', 'Relaxing'
   ],
   dateNum: [
     2
   ],
+  desc: 'There is an unrivalled charm about St Pauls that continually draws in the hoards of people visiting the area. Perfect place to share their Grilled Tiger Prawns.',
   image: 'https://www.paternosterchophouse.co.uk/wp-content/uploads/sites/23/2018/09/Paternoster_153_7547-1400x933.jpg',
   contactNumber: +442070299400,
   link: 'https://www.paternosterchophouse.co.uk/'
@@ -95,6 +93,7 @@ describe('POST /locations', () => {
           'actType',
           'cost',
           'dateNum',
+          'desc',
           'image',
           'contactNumber',
           'link'
