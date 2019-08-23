@@ -211,52 +211,63 @@ class ShowLocation extends React.Component {
 
           <br />
           <h1 className="title is-3"> Comments:   </h1>
+
+
           <div className="tile is-parent">
             <article className="tile is-child notification">
 
-              <div className="tile is-parent">
-                <article className="comments tile is-child notification">
+              <div className="columns is-multiline">
 
-                  {this.state.location.comments.map(comment =>
-                    <Comment
-                      className="comment"
-                      key={comment._id}
-                      {...comment}
-                      handleDeleteComment={this.handleDeleteComment} />
+                <div className="column">
 
-                  )}
-                </article>
+                  <div className="tile is-parent">
+                    <article className="comments tile is-child notification">
+
+                      {this.state.location.comments.map(comment =>
+                        <Comment
+                          className="comment"
+                          key={comment._id}
+                          {...comment}
+                          handleDeleteComment={this.handleDeleteComment} />
+
+                      )}
+                    </article>
+                  </div>
+                  <br />
+                  {Auth.isAuthenticated() && <div className="media-right">
+
+                  </div>}
+                </div>
+
+                <div className="column">
+
+                  {Auth.isAuthenticated() && <form onSubmit={this.handleSubmit}>
+                    <div className="field">
+                      <StarRatings
+                        name="rating"
+                        starRatedColor="#FFC300"
+                        numberOfStars={5}
+                        starDimension="15px"
+                        starSpacing="5px"
+                        changeRating={this.handleChangeRating}
+                        rating={this.state.formData.rating}
+                      />
+
+                    </div>
+                    <div className="field">
+                      <textarea
+                        name="content"
+                        className="textarea"
+                        placeholder="Add a comment..."
+                        onChange={this.handleChangeContent}
+                        value={this.state.formData.content}
+                      />
+                    </div>
+
+                    <button className="submiticon" ><FontAwesomeIcon className="icon" icon={faEnvelope} /></button>
+                  </form>}
+                </div>
               </div>
-              <br />
-              {Auth.isAuthenticated() && <div className="media-right">
-
-              </div>}
-
-              {Auth.isAuthenticated() && <form onSubmit={this.handleSubmit}>
-                <div className="field">
-                  <StarRatings
-                    name="rating"
-                    starRatedColor="#FFC300"
-                    numberOfStars={5}
-                    starDimension="15px"
-                    starSpacing="5px"
-                    changeRating={this.handleChangeRating}
-                    rating={this.state.formData.rating}
-                  />
-
-                </div>
-                <div className="field">
-                  <textarea
-                    name="content"
-                    className="textarea"
-                    placeholder="Add a comment..."
-                    onChange={this.handleChangeContent}
-                    value={this.state.formData.content}
-                  />
-                </div>
-
-                <button className="submit" ><FontAwesomeIcon className="icon" icon={faEnvelope} /></button>
-              </form>}
             </article>
           </div>
 

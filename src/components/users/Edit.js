@@ -204,7 +204,7 @@ class EditUser extends React.Component {
                   <br />
 
                   <div className="has-text-centered">
-                    <button className="button">Submit</button>
+                    <button className="submit">Submit</button>
                   </div>
 
 
