@@ -84,7 +84,7 @@ class Navbar extends React.Component {
               {Auth.isAuthenticated() && <div className="navbar-item avatar">
                 <div className={`dropdown is-right ${this.state.dropdownOpen ? 'is-active' : ''}`}>
                   <div className="dropdown-trigger">
-                    <button className="button" aria-haspopup="true" aria-controls="dropdown-menu" onClick={this.toggleDropdown}>
+                    <button className="navIcon" aria-haspopup="true" aria-controls="dropdown-menu" onClick={this.toggleDropdown}>
                       <span className="icon is-small">
                         <img
                           src={`${Auth.getUser().image}`}

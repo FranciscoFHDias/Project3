@@ -247,7 +247,7 @@ class EditLocation extends React.Component {
                       />
                       {this.state.errors.link && <small className="help is-danger">{this.state.errors.link}</small>}
                     </div>
-                    <button className="button">Submit</button>
+                    <button className="submit">Submit</button>
                   </form>
                 </div>
               </div>
