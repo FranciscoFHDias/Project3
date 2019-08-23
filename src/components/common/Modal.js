@@ -33,7 +33,7 @@ class Modal extends React.Component {
               <p className="modal-card-title">Terms and Conditions</p>
               <button className="delete" aria-label="close" onClick={() => this.setState({ modalOpen: false })}></button>
             </header>
-            <section id="modal-body" className="modal-card-body">
+            <div id="modal-body" className="modal-card-body">
               <div id="description">
 
                 <p>This document can be used as the <strong>terms and conditions of use for a website</strong>. It <br/> sets out the basis on which a user is granted <strong>access to a website</strong> and can be modified to take account of numerous factors including:</p>
@@ -68,7 +68,7 @@ class Modal extends React.Component {
                 <p>The lawyer can answer your questions or help you through the process. You will be offered this option when you complete the document.</p>
 
               </div>
-            </section>
+            </div>
             <footer className="modal-card-foot">
             </footer>
           </div>

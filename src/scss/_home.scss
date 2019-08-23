@@ -13,11 +13,38 @@ h1.title {
   text-align: center;
 }
 
+h2.subtitle {
+  font-family: 'Vibur', cursive;
+  color: $danger;
+  font-size: 60px;
+  text-shadow: 0 0 5px $danger, 0 0 10px $danger, 0 0 20px black, 0 0 30px black, 0 0 40px black, 0 0 50px black;
+  text-align: center;
+}
+
 label.label {
   color: #91dcff;
   font-size: 25px;
   font-family: 'Vibur', cursive;
   color: #91dcff;
   text-shadow: 0 0 5px #91dcff, 0 0 10px #91dcff, 0 0 20px black, 0 0 30px black, 0 0 40px black, 0 0 50px black;
+  text-align: center;
+}
+
+h4.subtitle {
+ color: #91dcff;
+ text-align: center;
+}
+
+
+h5.subtitle {
+ color: #91dcff;
+ text-align: center;
+}
+
+h2.title {
+  font-family: 'Vibur', cursive;
+  color: $danger;
+  font-size: 300px;
+  text-shadow: 0 0 5px $danger, 0 0 10px $danger, 0 0 20px black, 0 0 30px black, 0 0 40px black, 0 0 50px black;
   text-align: center;
 }

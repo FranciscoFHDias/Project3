@@ -18,14 +18,14 @@ const Comment = ({ user, createdAt, content, _id, handleDeleteComment, rating })
 
         <div className="column comment is-9">
           <div className="content">
-            <strong className="title is-4">{user.username}</strong>
+            <strong className="subtitle is-10">{user.username}</strong>
             <br />
 
             <StarRatings
               rating={rating}
               starRatedColor="#FFC300"
               numberOfStars={5}
-              starDimension="10px"
+              starDimension="9px"
               starSpacing="2px"
               name="commentRating"
             />
@@ -42,10 +42,10 @@ const Comment = ({ user, createdAt, content, _id, handleDeleteComment, rating })
           </div>
         </div>
 
-        <div className="column comment is-2">
+        <div className="column comment">
           <div className="content">
             {Auth.isAuthenticated() && <div className="media-right">
-              <button className="delete commnet" id={_id} onClick={handleDeleteComment}></button>
+              <button className="delete" id={_id} onClick={handleDeleteComment}></button>
               <br />
               <br />
             </div>}
@@ -55,7 +55,6 @@ const Comment = ({ user, createdAt, content, _id, handleDeleteComment, rating })
           </div>
         </div>
       </div>
-
 
     </section>
   )

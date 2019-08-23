@@ -15,7 +15,7 @@ const Map = ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoiZnJhbmNpc2NvZmhkaWFzIiwiYSI6ImNqemI5MTFiajA4NzYzbXBoZWd6NGtndTAifQ.oDArT5qLRW4i6FUT3Cut-w'
 })
 
-let number
+
 const zoom = [16]
 const mapMarker = '../../img/http___pluspng.com_img-png_heart-png-hd-transparent-background-3d-red-heart-transparent-background-1920.png'
 
@@ -42,7 +42,7 @@ class ShowLocation extends React.Component {
     this.handleDelete = this.handleDelete.bind(this)
     this.handleDeleteComment = this.handleDeleteComment.bind(this)
     this.handleLike = this.handleLike.bind(this)
-    this.handleContactNumber = this.handleContactNumber.bind(this)
+
 
   }
 
@@ -104,14 +104,7 @@ class ShowLocation extends React.Component {
     return likes.includes(Auth.getPayload().sub)
   }
 
-  handleContactNumber(){
-    
-    number = this.state.location.contactNumber
 
-    return number.replace('+44', '0')
-
-
-  }
 
   render() {
 
@@ -162,17 +155,6 @@ class ShowLocation extends React.Component {
                         </div>
                       </div>
                       <h1 className="title is-6">Tel:</h1>
-
-                      {this.handleContactNumber().map(number =>
-
-                        <a href={`tel: ${number}`}
-                          data-rel="external"
-                          key={number._id}>
-                          <p className="text is-6">{number}</p></a>
-
-                      )}
-
-
                       <a href={`tel: ${this.state.location.contactNumber}`} data-rel="external"><p className="text is-6">{this.state.location.contactNumber}</p></a>
 
                       <h1 className="title is-6">Link:</h1>
@@ -229,52 +211,63 @@ class ShowLocation extends React.Component {
 
           <br />
           <h1 className="title is-3"> Comments:   </h1>
+
+
           <div className="tile is-parent">
             <article className="tile is-child notification">
 
-              <div className="tile is-parent">
-                <article className="comments tile is-child notification">
+              <div className="columns is-multiline">
 
-                  {this.state.location.comments.map(comment =>
-                    <Comment
-                      className="comment"
-                      key={comment._id}
-                      {...comment}
-                      handleDeleteComment={this.handleDeleteComment} />
+                <div className="column">
 
-                  )}
-                </article>
+                  <div className="tile is-parent">
+                    <article className="comments tile is-child notification">
+
+                      {this.state.location.comments.map(comment =>
+                        <Comment
+                          className="comment"
+                          key={comment._id}
+                          {...comment}
+                          handleDeleteComment={this.handleDeleteComment} />
+
+                      )}
+                    </article>
+                  </div>
+                  <br />
+                  {Auth.isAuthenticated() && <div className="media-right">
+
+                  </div>}
+                </div>
+
+                <div className="column">
+
+                  {Auth.isAuthenticated() && <form onSubmit={this.handleSubmit}>
+                    <div className="field">
+                      <StarRatings
+                        name="rating"
+                        starRatedColor="#FFC300"
+                        numberOfStars={5}
+                        starDimension="15px"
+                        starSpacing="5px"
+                        changeRating={this.handleChangeRating}
+                        rating={this.state.formData.rating}
+                      />
+
+                    </div>
+                    <div className="field">
+                      <textarea
+                        name="content"
+                        className="textarea"
+                        placeholder="Add a comment..."
+                        onChange={this.handleChangeContent}
+                        value={this.state.formData.content}
+                      />
+                    </div>
+
+                    <button className="submiticon" ><FontAwesomeIcon className="icon" icon={faEnvelope} /></button>
+                  </form>}
+                </div>
               </div>
-              <br />
-              {Auth.isAuthenticated() && <div className="media-right">
-
-              </div>}
-
-              {Auth.isAuthenticated() && <form onSubmit={this.handleSubmit}>
-                <div className="field">
-                  <StarRatings
-                    name="rating"
-                    starRatedColor="#FFC300"
-                    numberOfStars={5}
-                    starDimension="15px"
-                    starSpacing="5px"
-                    changeRating={this.handleChangeRating}
-                    rating={this.state.formData.rating}
-                  />
-
-                </div>
-                <div className="field">
-                  <textarea
-                    name="content"
-                    className="textarea"
-                    placeholder="Add a comment..."
-                    onChange={this.handleChangeContent}
-                    value={this.state.formData.content}
-                  />
-                </div>
-
-                <button className="submit" ><FontAwesomeIcon className="icon" icon={faEnvelope} /></button>
-              </form>}
             </article>
           </div>
 

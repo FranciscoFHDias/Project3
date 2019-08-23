@@ -90,7 +90,7 @@ class Home extends React.Component {
             </div>
             <h2 className="subtitle has-text-centered">
               <Link
-                className="button is-large is-danger is-rounded"
+                className="button is-large is-rounded"
                 to={{
                   pathname: '/locations',
                   state: this.state
@@ -100,7 +100,7 @@ class Home extends React.Component {
             <hr/>
             <h2 className="subtitle has-text-centered">
               <Link
-                className="button is-large is-danger is-rounded"
+                className="button is-large is-rounded"
                 to={'/locations'}>Show me everything!</Link>
             </h2>
           </div>

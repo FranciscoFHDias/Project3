@@ -3,12 +3,14 @@
   margin-right: 10px;
   padding: 3px 10px;
   font-size: 20px;
+  outline:0;
 }
 
 .erase {
   margin-right: 10px;
   padding: 3px 10px;
   font-size: 20px;
+  outline:0;
 }
 
 .like {
@@ -17,31 +19,38 @@
   font-size: 20px;
   border: 0;
   background-color: inherit;
+  outline:0;
 }
 
 
 button.submit {
 background-color: $danger;
-box-shadow: 0 0 5px $danger, 0 0 10px $danger, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white;
+box-shadow: 0 0 2px $danger, 0 0 5px $danger, 0 0 5px white, 0 0 7px white, 0 0 10px white, 0 0 12px white;
 border: none;
 height: 40px;
 line-height: 8px;
 color: #ffffff;
-font-size: 32px;
+font-size: 20px;
 margin-top: 10px;
 margin-right: 10px;
-border-radius: 3px;
+border-radius: 20px;
 }
 
 button.submit:hover {
 cursor: pointer;
 background-color: #91dcff;
-box-shadow: 0 0 5px #91dcff, 0 0 10px #91dcff, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white
+box-shadow: 0 0 2px #91dcff, 0 0 5px #91dcff, 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 25px white;
 }
 
+button.submit:active {
+outline: none;
+border: none;
+}
+
+button.submit:focus {outline:0;}
+
 .button {
-background-color: $danger;
-box-shadow: 0 0 5px $danger, 0 0 10px $danger, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white;
+background-color: rgb(234, 81, 51);
 border: none;
 height: 40px;
 line-height: 8px;
@@ -53,16 +62,93 @@ margin-right: 10px;
 
 .button:hover {
 cursor: pointer;
-background-color: #91dcff;
-box-shadow: 0 0 2px #91dcff, 0 0 2px #91dcff, 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 25px white
+color: #ffffff;
+box-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white;
 }
 
-button:active {
+.button:active {
 outline: none;
 border: none;
 }
 
-button:focus {outline:3;}
+.button:focus {outline:0;}
+
+button.submiticon {
+background-color: $danger;
+box-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white;
+border: none;
+height: 40px;
+line-height: 8px;
+color: #ffffff;
+font-size: 25px;
+margin-top: 10px;
+margin-right: 10px;
+border-radius: 5px;
+}
+
+button.submiticon:hover {
+cursor: pointer;
+background-color: #91dcff;
+box-shadow: 0 0 5px #91dcff, 0 0 10px #91dcff, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white
+}
+
+button.submiticon:active {
+outline: none;
+border: none;
+}
+
+button.submiticon:focus {outline:0;}
+
+
+
+.buttonEdit {
+background-color: rgb(234, 81, 51);
+border: none;
+height: 40px;
+width: 60px;
+color: #ffffff;
+font-size: 20px;
+margin-top: 10px;
+margin-right: 10px;
+border-radius: 20px;
+line-height: 40px;
+}
+
+.buttonEdit:hover {
+cursor: pointer;
+color: #ffffff;
+background-color: #91dcff;
+box-shadow: 0 0 5px #91dcff, 0 0 10px #91dcff, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white
+}
+
+.buttonEdit:active {
+outline: none;
+border: none;
+}
+
+.buttonEdit:focus {outline:0;}
+
+button.navIcon {
+border: none;
+height: 40px;
+width: 40px;
+font-size: 20px;
+border-radius: 2px;
+}
+
+button.navIcon:hover {
+cursor: pointer;
+color: #ffffff;
+box-shadow: 0 0 5px white, 0 0 7px white, 0 0 10px white, 0 0 12px white;
+}
+
+button.navIcon:active {
+outline: none;
+border: none;
+}
+
+button.navIcon:focus {outline:0;}
+
 
 .thumbsUp {
   color: green,
@@ -83,16 +169,17 @@ button:focus {outline:3;}
 
 .comments {
   width: 100%;
-  height: 100px;
+  height: 170px;
   overflow-y: scroll;
   overflow-x: hidden;
   background-color: rgb(245, 245, 245);
-  padding: 0px;
+  padding: 10px 0 0 10px;
 }
 
 .comment {
   background-color: rgb(245, 245, 245);
-  padding: 0px;
+  font-size: 12px;
+  width: 100%;
 }
 
 .section1 {
