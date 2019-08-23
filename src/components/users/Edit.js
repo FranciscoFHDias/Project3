@@ -3,7 +3,6 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 import Select from 'react-select'
 import ReactFilestack from 'filestack-react'
-import { fileloaderKey } from '../../../config/environment'
 import Auth from '../../lib/Auth'
 
 const ageOptions = [
@@ -110,7 +109,7 @@ class EditUser extends React.Component {
                     <label className="label">Image</label>
                     <ReactFilestack
                       mode="transform"
-                      apikey={fileloaderKey}
+                      apikey={process.env.FILELOADERKEY}
                       buttonText="Upload Photo"
                       buttonClass="button"
                       className="upload-image"

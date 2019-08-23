@@ -41,20 +41,17 @@ class Contacts extends React.Component{
 
   render() {
     return(
-      <section className="section">
-        <section className="hero is-black">
-          <div className="hero-body">
-            <div className="container">
-              <h2 className="title is-2 has-text-centered">Contact Us</h2>
-              <div className="level">
-              </div>
-            </div>
-          </div>
-        </section>
-        <hr/>
 
-        <section className="section">
+      <section className="hero is-black">
+        <div className="hero-body">
           <div className="container">
+            <h1 className="title has-text-centered has-text-danger">Contact Us</h1>
+            <h2 className="subtitle has-text-centered has-text-danger">We will reply yesterday!</h2>
+
+            <hr/>
+
+
+
             <div className="columns is-centered">
 
 
@@ -88,7 +85,7 @@ class Contacts extends React.Component{
                       ></textarea>
                     </div>
                   </div>
-                  <button className="submit"><FontAwesomeIcon icon={faEnvelope} /></button>
+                  <button className="submiticon"><FontAwesomeIcon icon={faEnvelope} /></button>
                 </form>
               </div>
 
@@ -99,10 +96,13 @@ class Contacts extends React.Component{
 
             </div>
           </div>
-        </section>
-
-
+        </div>
       </section>
+
+
+
+
+
 
 
 

@@ -12,7 +12,7 @@ import { faTrashAlt, faPen, faEnvelope } from '@fortawesome/free-solid-svg-icons
 
 
 const Map = ReactMapboxGl({
-  accessToken: 'pk.eyJ1IjoiZnJhbmNpc2NvZmhkaWFzIiwiYSI6ImNqemI5MTFiajA4NzYzbXBoZWd6NGtndTAifQ.oDArT5qLRW4i6FUT3Cut-w'
+  accessToken: process.env.MAPKEY
 })
 
 
