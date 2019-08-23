@@ -99,10 +99,10 @@ class EditUser extends React.Component {
           <div className="container has-text-centered">
             <div className="column is-4 is-offset-4">
 
-              <div className="box">
-                <h3 className="title is-1 is-italic" > Edit </h3>
-                <p className="subtitle has-text-black">You`ve changed!</p>
+              <h3 className="title is-1 is-italic" > Edit </h3>
+              <p className="subtitle has-text-black">You`ve changed!</p>
 
+              <div className="box">
 
                 <form onSubmit={this.handleSubmit}>
 
@@ -204,7 +204,7 @@ class EditUser extends React.Component {
                   <br />
 
                   <div className="has-text-centered">
-                    <button className="button">Submit</button>
+                    <button className="submit">Submit</button>
                   </div>
 
 

@@ -58,11 +58,6 @@ class Login extends React.Component {
               <p className="subtitle has-text-black">Please login to proceed.</p>
 
               <div className="box">
-                <figure className="image is-128x128 is-centered">
-                  <img src="../img/Date-a-base-logo-red.png" />
-                </figure>
-
-
                 <form onSubmit={this.handleSubmit}>
 
                   <div className="field">
@@ -103,7 +98,7 @@ class Login extends React.Component {
                   <br />
 
                   <div className="column has-text-centered">
-                    <button className="button">Submit</button>
+                    <button className="submit">Submit</button>
                   </div>
 
 

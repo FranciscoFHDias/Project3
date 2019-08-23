@@ -14,6 +14,8 @@
 
 @import "./scss/_index.scss";
 
+@import "./scss/_map.scss";
+
 @import "./scss/_new.scss";
 
 @import "./scss/_edit.scss";
@@ -25,6 +27,23 @@
 @import "./scss/_footer.scss";
 
 @import "./scss/buttons.scss";
+
+
+
+
+
+#modal-body{
+  width: 640px;
+  height: 525px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
 
 
 

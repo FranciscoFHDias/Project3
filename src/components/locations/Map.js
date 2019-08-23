@@ -103,9 +103,9 @@ class MapLocations extends React.Component {
       <section className="section">
         <div className="container">
 
-          <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
+          <nav className="navbar navbar-map is-transparent" role="navigation" aria-label="main navigation">
             <div className="navbar-item">
-              <div className="field">
+              <div className="field filter">
                 <label className="label">Date No.</label>
                 <Select
                   name="dateNum"
@@ -117,7 +117,7 @@ class MapLocations extends React.Component {
               </div>
             </div>
             <div className="navbar-item">
-              <div className="field">
+              <div className="field filter">
                 <label className="label">Activity Type</label>
                 <Select
                   name="actType"
@@ -129,7 +129,7 @@ class MapLocations extends React.Component {
               </div>
             </div>
             <div className="navbar-item">
-              <div className="field">
+              <div className="field filter">
                 <label className="label">Budget</label>
                 <Select
                   name="cost"
