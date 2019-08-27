@@ -104,7 +104,7 @@ class LocationsIndex extends React.Component{
           <nav className="navbar navbar-index is-transparent" role="navigation" aria-label="main navigation">
             <div className="navbar-item">
               <div className="field">
-                <label className="label has-text-left">Date No.</label>
+                <label className="label has-text-left">Date Number</label>
                 <Select
                   name="dateNum"
                   className="filter"
