@@ -1,19 +1,28 @@
-# Project3
-![ga_cog_large_red_rgb](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png)
+![ga_cog_large_red_rgb](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) x <img width="106" alt="Screenshot 2019-09-16 at 18 43 20" src="https://user-images.githubusercontent.com/43203736/64980637-20591c80-d8b2-11e9-9ba3-bda6511b8ed2.png">
+
 # Project 3: Date-a-base
-## Dating Experience Website
+
+### Installation
+
+* Clone or download the repo
+* Run `yarn init` in the CLI
+* Run `mongod`, `yarn seed`, `yarn serve:backend` and `yarn serve:frontend` in the CLI
+
 # Team
-- Daniele Nocito
-- Adesola Oni-Shogbonyo
-- Michael G. Laird
-- Francisco Dias
+- Daniele Nocito -  [GitHub](https://github.com/danielito76)
+- Adesola Oni-Shogbonyo - [GitHub](https://github.com/Iamshola)
+- Michael G. Laird - [GitHub](https://github.com/MGL1994)
+- Francisco Dias - [GitHub](https://github.com/FranciscoFHDias)
+
+https://docs.google.com/presentation/d/1G5LT_msA3wBcIPmo3hW2InK_VVFWx5oaCoR0kxNsa4Y/edit#slide=id.p
+
 ## Overview
-Date-a-Base is a virtual community where everyone can find and share advices about beautiful and funny locations in London and surroundings, suitable for a dating. The type of locations meet a wide range of preferences which can be filtered depending on the expectetions.
+Date-a-Base is a virtual community where everyone can find and share advices about beautiful and funny locations in London and surroundings, suitable for a dating. The type of locations meet a wide range of preferences which can be filtered depending on the expectations.
 Launch on GitHub Pages. Check out the GitHub Repo.
-==============Home page screenshot===============
+
 ## Project Brief
 ​
-### The following requirements were a must:
+### The brief requirements were:
 ​
 * **Build a full-stack application** by making your own backend and your own front-end
 * **Use an Express API** to serve your data from a Mongo database
@@ -23,71 +32,72 @@ Launch on GitHub Pages. Check out the GitHub Repo.
 * **Have a visually impressive design** to kick your portfolio up a notch and have something to wow future clients & employers. **ALLOW** time for this.
 * **Be deployed online** so it's publicly accessible.
 * **Have automated tests** for _at least_ one RESTful resource on the back-end. Improve your employability by demonstrating a good understanding of testing principals.
-​
----
-​
-### The following deliverables were required:
-​
 * A **working app** hosted on the internet
-* A **link to your hosted working app** in the URL section of your Github repo
-* A **git repository hosted on Github**, with a link to your hosted project, and frequent commits dating back to the _very beginning_ of the project
-* **A `readme.md` file** with:
-    * An embedded screenshot of the app
-    * Explanations of the **technologies** used
-    * A couple paragraphs about the **general approach you took**
-    * **Installation instructions** for any dependencies
-    * Link to your **user stories/wireframes** – sketches of major views / interfaces in your application
-    * Link to your **pitch deck/presentation** – documentation of your wireframes, user stories, and proposed architecture
-    * Descriptions of any **unsolved problems** or **major hurdles** you had to overcome
 ​
 ## Project Execution
 ​
 We spend the first day exploring ideas and throughly planning our project. This included:
-* Wireframes
-============Wireframe photos===========================
-* Trello board
-====================Trello photo======================
-* Allocation of responsibilities
-* Decide back and frontend approach
+
+#### Wireframes
+![image](https://user-images.githubusercontent.com/43203736/63586388-1a189e80-c599-11e9-8e85-1b00d1e72e14.png)
+
+![image](https://user-images.githubusercontent.com/43203736/63586416-2bfa4180-c599-11e9-96f4-07920abf58d6.png)
+
+#### Trello board
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/43203736/64982277-b2aeef80-d8b5-11e9-8934-8f65b83db216.gif)
+
+
+### Allocation of responsibilities
 ​
 Our daily routine involved a morning brief and an end of day summary.
 ​
-​
-### Technologies Used
+### Languages and Technologies Used:
 * HTML5
 * CSS3
 * SASS
 * JavaScript (ES6)
 * Git
 * GitHub
-* External API
-* React
-  * React-mapbox-gl
-  * React-select
-  * React star-rating-component
-  * React star-ratings
-  * React- Toastify
+* React and React extensions
 * Webpack
 * Bulma
 * Node JS
 * Babel
 * Insomnia
-* REACT
-* Filestack-react
+* External API
 * Monogdb
-* Nodemailer
 * Express
 * Heroku
 * Google Fonts
-​
+
+### Timeframe:
+7 days
+
+### Features
+
+> **All Features:**
+
+  - View all locations
+  - Filter through an index of locations based on date number, type of dating exp and budget.
+  - Filter locations in map view
+
+
+> **Registered Users can:**
+
+  - Add more workspaces
+  - Create a user profile and update their profile
+
+
 ​
 ## Approach Taken
 ### Navbar
 Wanted logged in user avatar to display, involved storing the information in local storage, then retrieving the image url.
 FileStack
 Wanted a smooth, easy way for users to upload images, rather than having to post any pictures online manually before able to do so. Found filestack online and used the documentation + other examples on github to implement. Makes it much easier as our site relies heavily on use input.
+
 ### FIlters
 As our site is about helping users make decisions, we wanted to make filters a big component - hence their placement on the landing page. Aside from using React-Select to format the filter dropdowns, the logic involved getting the data from the dropdowns, storing it in state, then passing this over to the locations index page so that it shows a pre-filtered list of locations. Else the user can go straight to the index page.
+
 ### Users
 We wanted to create an index of user profiles, perhaps more useful in future iterations, but for the purpose of searching other like minded users. On this page we didn’t want the logged in user to see their own profile. This involved using a filter function before mapping over the users to display them.
 As part of this, in order to find out more information about the user, we created a page asking for user details after the initial register. We did not make the extra questions required so that we could post the initial register, carry over the form details in state and then combine both form details to update the user.
@@ -97,15 +107,75 @@ Based the style off of an old movie theatre style with neon effects. Used text s
 Wanted a transparent fixed top navbar, but also had wanted to use the fade in method on scroll for better UX. Found some guidance online and adapted to our needs.
 Win
 Enjoyed learning more about react, particularly storing things in state/local storage.
-Implementing new technologies - filestack loder + react-select.
+Implementing new technologies - filestack loader + react-select.
 Blocker
 Getting the navbar to stay at the bottom of the screen with no content, without hard coding viewport height as this caused problems on the locations index
+
 ### Contact format
 We enabled the Contact Form to send email to a our specific gmail address from the backend.
+
 ### About Us
 In the About Us page we used a 3d effect CSS to make the page more interesting
+
 ### Terms and Conditions
 The same as About Us and Contacts, Terms and Conditions are in the footer so that accessible everywhere in the website. We decided to display the documentation using a Bulma modal overlay effect implemented with Javascript code.
-### Future content
-* Address lookup funtion consuming a public API
-* Enhancing funtions and layout according to a User Experience research
+
+### Future Features
+* Address lookup function consuming a public API
+* Improving User Experience based on user critic
+
+### Course Curriculum
+  Details of my training and links to more projects whilst at General Assembly -  12 Week Immersive.
+
+> **Week 1-3 | Module One - Fundamentals**
+
+  - HTML5
+  - CSS3
+  - Sass
+  - JavaScript
+
+
+> **Week 4**
+
+  Project 1 : Frogger  | [GitHub](https://github.com/Iamshola/project-01) | [GH-Pages](https://iamshola.github.io/project-01/)
+
+>**Week 5 | Module Two - React**
+
+  - React.js
+  - Routing
+  - RESTFUL API
+  - Third-party APIs
+
+>**Week 6**
+
+  Project 2 : CocktailBored  | [GitHub](https://github.com/Iamshola/Project3) | [GH-Pages](https://iamshola.github.io/Project-2/#/)
+
+>**Week 7-8 | Module Three - Node and Express**
+
+  - RESTFUL Routing
+  - Node.js
+  - Express
+  - Token Authentication & Session Authentication
+  - API Creation
+  - Mocha and Chai
+
+>**Week 9**
+
+  Project 3 : Date-a-base | [GitHub](https://github.com/Iamshola/Project3) | [Herouku](https://datingexp.herokuapp.com/#/)
+
+>**Week 10-11 | Module Four - Python and Django**
+
+  - Python
+  - SQL
+  - Django
+  - Token Authentication
+
+>**Week 12**
+
+  Project 4 : Space | [GitHub](https://github.com/Iamshola/project-04) | [Herouku](https://date-a-base-aos.herokuapp.com/#/)
+
+
+  ### Contact
+  Adesola Oni-Shogbonyo\
+  Email : s.oni-shogbonyo@hotmail.co.uk\
+  [Portfolio](https://iamshola.github.io/) | [Linkedin](https://www.linkedin.com/in/adesola-oni-shogbonyo/) | [GitHub](https://github.com/Iamshola)
