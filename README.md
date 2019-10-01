@@ -62,55 +62,40 @@ Date-a-Base is a virtual community where everyone can find and share advices abo
 #### Planning 
 
 * **Team communication and ways of working** - We spend the first day exploring ideas and throughly planning our project. This included:
+  * Our daily routine involved a morning stand-up/brief and an end of day de-brief.
+  * ![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/43203736/64982277-b2aeef80-d8b5-11e9-8934-8f65b83db216.gif)
 
-##### Wireframes
+* **Wireframes** - We complated wireframes for:
+* Home
+* All venues list with filter
+* Single venue detail page
+* Contacts us
+* Map with filter
+* Add venue
+* Login
+* Register
+* User profile
+* User profile Edit
+  
+Examples:
 ![image](https://user-images.githubusercontent.com/43203736/63586388-1a189e80-c599-11e9-8e85-1b00d1e72e14.png)
 
 ![image](https://user-images.githubusercontent.com/43203736/63586416-2bfa4180-c599-11e9-96f4-07920abf58d6.png)
 
-##### Trello board
-![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/43203736/64982277-b2aeef80-d8b5-11e9-8934-8f65b83db216.gif)
 
-#### Allocation of responsibilities
-
-Our daily routine involved a morning stand-up/brief and an end of day de-brief.
-
-### Languages and Technologies Used:
-* HTML5
-* CSS3
-* SASS
-* JavaScript (ES6)
-* Git
-* GitHub
-* React and React extensions
-* Webpack
-* Bulma
-* Node JS
-* Babel
-* Insomnia
-* External API
-* Monogdb
-* Express
-* Heroku
-* Google Fonts
-
-### Features
+**Features**
 
 > **All Features:**
-
   - View all locations
   - Filter through an index of locations based on date number, type of dating exp and budget.
   - Filter locations in map view
 
-
 > **Registered Users can:**
-
   - Add more workspaces
   - Create a user profile and update their profile
+  
+#### Execution
 
-
-​
-## Approach Taken
 ### Navbar
 Wanted logged in user avatar to display, involved storing the information in local storage, then retrieving the image url.
 FileStack
