@@ -12,49 +12,69 @@
 * Run `yarn init` in the CLI
 * Run `mongod`, `yarn seed`, `yarn serve:backend` and `yarn serve:frontend` in the CLI
 
-# Team
-- Daniele Nocito -  [GitHub](https://github.com/danielito76)
-- Adesola Oni-Shogbonyo - [GitHub](https://github.com/Iamshola)
-- Michael G. Laird - [GitHub](https://github.com/MGL1994)
-- Francisco Dias - [GitHub](https://github.com/FranciscoFHDias)
+## Team
+
+* **Daniele Nocito** -  [GitHub](https://github.com/danielito76)
+* **Adesola Oni-Shogbonyo** - [GitHub](https://github.com/Iamshola)
+* **Michael G. Laird** - [GitHub](https://github.com/MGL1994)
+* **Francisco Dias** - [GitHub](https://github.com/FranciscoFHDias)
 
 https://docs.google.com/presentation/d/1G5LT_msA3wBcIPmo3hW2InK_VVFWx5oaCoR0kxNsa4Y/edit#slide=id.p
 
 ## Overview
 Date-a-Base is a virtual community where everyone can find and share advices about beautiful and funny locations in London and surroundings, suitable for a dating. The type of locations meet a wide range of preferences which can be filtered depending on the expectations.
-Launch on GitHub Pages. Check out the GitHub Repo.
 
-## Project Brief
-​
-### The brief requirements were:
-​
+## Project Brief and Technical Requirements
+
 * **Build a full-stack application** by making your own backend and your own front-end
-* **Use an Express API** to serve your data from a Mongo database
+* **Use an Express API** to serve your data from a MongoDB
 * **Consume your API with a separate front-end** built with React
 * **Be a complete product** which most likely means multiple relationships and CRUD functionality for at least a couple of models
 * **Implement thoughtful user stories/wireframes** that are significant enough to help you know which features are core MVP and which you can cut
-* **Have a visually impressive design** to kick your portfolio up a notch and have something to wow future clients & employers. **ALLOW** time for this.
 * **Be deployed online** so it's publicly accessible.
 * **Have automated tests** for _at least_ one RESTful resource on the back-end. Improve your employability by demonstrating a good understanding of testing principals.
-* A **working app** hosted on the internet
-​
-## Project Execution
-​
-We spend the first day exploring ideas and throughly planning our project. This included:
+* **A working app in 5 days** hosted on the internet
 
-#### Wireframes
+## Project Execution
+
+### Technologies Used
+* HTML5
+* SCSS
+* JavaScript (ES6)
+* Git
+* GitHub
+* React and React extensions
+* Webpack
+* Bulma
+* Node.js
+* Babel
+* Insomnia
+* External API
+* MongoDB
+* Express
+* Heroku
+* Google Fonts
+* Mongoose
+* Trello
+
+### Approach Taken
+
+#### Planning 
+
+* **Team communication and ways of working** - We spend the first day exploring ideas and throughly planning our project. This included:
+
+##### Wireframes
 ![image](https://user-images.githubusercontent.com/43203736/63586388-1a189e80-c599-11e9-8e85-1b00d1e72e14.png)
 
 ![image](https://user-images.githubusercontent.com/43203736/63586416-2bfa4180-c599-11e9-96f4-07920abf58d6.png)
 
-#### Trello board
+##### Trello board
 ![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/43203736/64982277-b2aeef80-d8b5-11e9-8934-8f65b83db216.gif)
 
+#### Allocation of responsibilities
 
-### Allocation of responsibilities
-​
-Our daily routine involved a morning brief and an end of day summary.
-​
+Our daily routine involved a morning stand-up/brief and an end of day de-brief.
+
 ### Languages and Technologies Used:
 * HTML5
 * CSS3
@@ -73,9 +93,6 @@ Our daily routine involved a morning brief and an end of day summary.
 * Express
 * Heroku
 * Google Fonts
-
-### Timeframe:
-7 days
 
 ### Features
 
