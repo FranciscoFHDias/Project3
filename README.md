@@ -1,6 +1,9 @@
-![ga_cog_large_red_rgb](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) x <img width="106" alt="Screenshot 2019-09-16 at 18 43 20" src="https://user-images.githubusercontent.com/43203736/64980637-20591c80-d8b2-11e9-9ba3-bda6511b8ed2.png">
+![ga_cog_large_red_rgb](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) 
 
-# Project 3: Date-a-base
+# Project Three: Date-a-base
+
+[<img width="106" alt="Screenshot 2019-09-16 at 18 43 20" src="https://user-images.githubusercontent.com/43203736/64980637-20591c80-d8b2-11e9-9ba3-bda6511b8ed2.png">](https://datingexp.herokuapp.com)
+
 
 ### Installation
 
