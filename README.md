@@ -66,16 +66,16 @@ Date-a-Base is a virtual community where everyone can find and share advices abo
   * ![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/43203736/64982277-b2aeef80-d8b5-11e9-8934-8f65b83db216.gif)
 
 * **Wireframes** - We complated wireframes for:
-* Home
-* All venues list with filter
-* Single venue detail page
-* Contacts us
-* Map with filter
-* Add venue
-* Login
-* Register
-* User profile
-* User profile Edit
+  * Home
+  * All venues list with filter
+  * Single venue detail page
+  * Contacts us
+  * Map with filter
+  * Add venue
+  * Login
+  * Register
+  * User profile
+  * User profile Edit
   
 Examples:
 ![image](https://user-images.githubusercontent.com/43203736/63586388-1a189e80-c599-11e9-8e85-1b00d1e72e14.png)
