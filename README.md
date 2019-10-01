@@ -4,7 +4,7 @@
 
 [Launch Date-a-base](https://datingexp.herokuapp.com)
 
-<img width="1391" alt="Date-a-base screenshot" src="https://i.imgur.com/zm6ldiU.png">
+<img width="1391" alt="Date-a-base screenshot" src="https://i.imgur.com/5muBDBm.png">
 
 ### Installation
 
