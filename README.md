@@ -98,9 +98,10 @@ Examples:
 
 ##### Backend
 
-> **Technology used -** MongoDB, Express and Mongoose
+**Technology used** - MongoDB, Express and Mongoose
 
-> **Models** - Started by creating the models for both location and user.
+**Models**
+Started by creating the models for both location and user.
 
 ```js
 onst commentSchema = new mongoose.Schema({
@@ -143,7 +144,8 @@ locationSchema.virtual('averageRating')
   })
 ```
 
-> **Controllers** - The focus then moved to the different controllers.
+**Controllers**
+The focus then moved to the different controllers.
 
 Example:
 ```js
@@ -170,7 +172,7 @@ function showRoute(req, res, next) {
     .catch(next)
 }
 ```
-> **RESTFul API Routes**
+**RESTFul API Routes**
 
 ```js
 router.get('/', (req, res) => {
@@ -202,10 +204,10 @@ router.post('/login', authController.login)
 router.post('/send', contactController.email)
 ```
 
-> **Navbar**
+**Navbar**
 Wanted logged in user avatar to display, involved storing the information in local storage, then retrieving the image url.
 
-> **Image uploader**
+**Image uploader**
 Wanted a smooth, easy way for users to upload images, rather than having to post any pictures online manually before able to do so. Found filestack online and used the documentation + other examples on github to implement. Makes it much easier as our site relies heavily on use input.
 
 ```js
@@ -222,7 +224,7 @@ Wanted a smooth, easy way for users to upload images, rather than having to post
   />
 ```
 
-> **Filters**
+**Filters**
 As our site is about helping users make decisions, we wanted to make filters a big component - hence their placement on the landing page. Aside from using React-Select to format the filter dropdowns, the logic involved getting the data from the dropdowns, storing it in state, then passing this over to the locations index page so that it shows a pre-filtered list of locations. Else the user can go straight to the index page.
 
 Example:
@@ -238,13 +240,13 @@ filterLocations() {
   }
 ```
 
-> **Users**
+**Users**
 We wanted to create an index of user profiles, perhaps more useful in future iterations, but for the purpose of searching other like minded users. On this page we didn’t want the logged in user to see their own profile. This involved using a filter function before mapping over the users to display them.
 
 As part of this, in order to find out more information about the user, we created a page asking for user details after the initial register. We did not make the extra questions required so that we could post the initial register, carry over the form details in state and then combine both form details to update the user.
 We also wanted the user to be able to edit their own profile, which we allowed using a function to only show the edit button on a user own profile.
 
-> **Maps**
+**Maps**
 Enabling the user to locate the locations on a map was an important feature for the user experience. We used MapBox and the external API PostCodes.io to achieve this.
 
 ```js
@@ -285,17 +287,17 @@ locationSchema.pre('validate', function getGeolocation(done) {
 })
 ```
 
-> **Styling**
+**Styling**
 Based the style off of an old movie theatre style with neon effects. Used text shadow/box shadow to get a neon effect.
 Wanted a transparent fixed top navbar, but also had wanted to use the fade in method on scroll for better UX. Found some guidance online and adapted to our needs.
 
-> **Contact format**
+**Contact format**
 We enabled the Contact Form to send email to a our specific gmail address from the backend.
 
-> **About Us**
+**About Us**
 In the About Us page we used a 3d effect CSS to make the page more interesting
 
-> **Terms and Conditions**
+**Terms and Conditions**
 The same as About Us and Contacts, Terms and Conditions are in the footer so that accessible everywhere in the website. We decided to display the documentation using a Bulma modal overlay effect implemented with Javascript code.
 
 ## Wins and Blockers
