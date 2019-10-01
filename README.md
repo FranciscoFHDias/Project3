@@ -96,40 +96,161 @@ Examples:
   
 #### Execution
 
-### Navbar
+##### Backend
+
+> **Technology used -** MongoDB, Express and Mongoose
+
+> **Models** - Started by creating the models for both location and user.
+
+```js
+onst commentSchema = new mongoose.Schema({
+  content: { type: String, required: true, maxlength: 380 },
+  rating: { type: Number, required: true, min: 1, max: 5 },
+  user: { type: mongoose.Schema.ObjectId, ref: 'User' }
+},{
+  timestamps: true
+})
+const locationSchema = new mongoose.Schema({
+  name: { type: String, required: 'Please provide a Name!', unique: true },
+  addressLine1: { type: String, required: 'Please provide a Address Line 1!' },
+  addressLine2: { type: String },
+  addressCity: { type: String, required: 'Please provide a City!' },
+  addressPostCode: { type: String, required: 'Please provide a Post Code!' },
+  latitude: { type: Number, required: 'Please provide a {PATH}' },
+  longitude: { type: Number, required: 'Please provide a {PATH}' },
+  cost: { type: Number, required: 'Please provide a Cost!', min: 1, max: 5  },
+  actType: { type: [ String ], required: 'Please provide a Activity Type!', validate: [notEmpty, notEmptyMsg] },
+  dateNum: { type: [ Number ], required: 'Please provide a Date Number!', min: 1, max: 5,  validate: [notEmptyActType, notEmptyMsg] },
+  desc: { type: String, required: 'Please provide a Description!', maxlength: 480 } ,
+  image: { type: String },
+  contactNumber: { type: Number },
+  link: { type: String },
+  comments: [ commentSchema ],
+  likes: [{ type: mongoose.Schema.ObjectId, ref: 'User' }],
+  user: { type: mongoose.Schema.ObjectId, ref: 'User' }
+}, {
+  toJSON: { virtuals: true }
+})
+```
+
+We also used virtuals to calculate average ratings:
+
+```js
+locationSchema.virtual('averageRating')
+  .get(function getAverageRating() {
+    if(this.comments.length === 0) return 0
+    return this.comments.reduce((total, comment) => comment.rating + total, 0) / this.comments.length
+  })
+```
+
+> **Controllers** - The focus then moved to the different controllers.
+
+Example:
+```js
+function createRoute(req, res, next) {
+  req.body.user = req.currentUser._id
+
+  const location = new Location(req.body)
+
+  location.save()
+    .then(location => res.status(201).json(location))
+    .catch(next)
+}
+
+
+function showRoute(req, res, next) {
+  Location.findById(req.params.id)
+    .populate({ path: 'user', select: '-email' })
+    .populate({ path: 'comments.user', select: '-email' })
+    .then(location => {
+      if(!location) return res.sendStatus(404)
+
+      return res.json(location)
+    })
+    .catch(next)
+}
+```
+> **RESTFul API Routes**
+
+```js
+router.get('/', (req, res) => {
+  res.json({ message: 'Hello World!' })
+})
+
+router.route('/locations')
+  .get(locationsController.index)
+  .post(secureRoute, locationsController.create)
+
+router.route('/locations/:id')
+  .get(locationsController.show)
+  .put(secureRoute, locationsController.update)
+  .delete(secureRoute, locationsController.delete)
+
+router.post('/locations/:id/comments', secureRoute, locationsController.commentCreate)
+router.delete('/locations/:id/comments/:commentId', secureRoute, locationsController.commentDelete)
+router.post('/locations/:id/like', secureRoute, locationsController.like)
+
+router.get('/profiles', usersController.usersIndex)
+
+router.route('/profiles/:id')
+  .get(usersController.userShow)
+  .put(usersController.userUpdate)
+
+router.post('/register', authController.register)
+router.post('/login', authController.login)
+
+router.post('/send', contactController.email)
+```
+
+> **Navbar**
 Wanted logged in user avatar to display, involved storing the information in local storage, then retrieving the image url.
-FileStack
+
+> **Image uploader**
 Wanted a smooth, easy way for users to upload images, rather than having to post any pictures online manually before able to do so. Found filestack online and used the documentation + other examples on github to implement. Makes it much easier as our site relies heavily on use input.
 
-### Filters
+> **Filters**
 As our site is about helping users make decisions, we wanted to make filters a big component - hence their placement on the landing page. Aside from using React-Select to format the filter dropdowns, the logic involved getting the data from the dropdowns, storing it in state, then passing this over to the locations index page so that it shows a pre-filtered list of locations. Else the user can go straight to the index page.
 
-### Users
+Example:
+```js
+filterLocations() {
+    const [field, order] = this.state.sortTerm.split('|')
+    const filtered = _.filter(this.state.locations, location => {
+      return (this.state.dateNum ? location.dateNum.includes(this.state.dateNum) : true) &&
+        (this.state.actType ? location.actType.includes(this.state.actType) : true) &&
+        (this.state.cost ? location.cost === this.state.cost : true )
+    })
+    return _.orderBy(filtered, [field], [order])
+  }
+```
+
+> **Users**
 We wanted to create an index of user profiles, perhaps more useful in future iterations, but for the purpose of searching other like minded users. On this page we didn’t want the logged in user to see their own profile. This involved using a filter function before mapping over the users to display them.
+
 As part of this, in order to find out more information about the user, we created a page asking for user details after the initial register. We did not make the extra questions required so that we could post the initial register, carry over the form details in state and then combine both form details to update the user.
 We also wanted the user to be able to edit their own profile, which we allowed using a function to only show the edit button on a user own profile.
-Styling
+
+> **Styling**
 Based the style off of an old movie theatre style with neon effects. Used text shadow/box shadow to get a neon effect.
 Wanted a transparent fixed top navbar, but also had wanted to use the fade in method on scroll for better UX. Found some guidance online and adapted to our needs.
-Win
-Enjoyed learning more about react, particularly storing things in state/local storage.
-Implementing new technologies - filestack loader + react-select.
-Blocker
-Getting the navbar to stay at the bottom of the screen with no content, without hard coding viewport height as this caused problems on the locations index
 
-### Contact format
+
+> **Contact format**
 We enabled the Contact Form to send email to a our specific gmail address from the backend.
 
-### About Us
+> **About Us**
 In the About Us page we used a 3d effect CSS to make the page more interesting
 
-### Terms and Conditions
+> **Terms and Conditions**
 The same as About Us and Contacts, Terms and Conditions are in the footer so that accessible everywhere in the website. We decided to display the documentation using a Bulma modal overlay effect implemented with Javascript code.
 
 ## Wins and Blockers
 > **Wins**
+* Enjoyed learning more about react, particularly storing things in state/local storage.
+* Implementing new technologies - filestack loader + react-select.
 
 > **Blockers**
+* Getting the navbar to stay at the bottom of the screen with no content, without hard coding viewport height as this caused problems on the locations index
 
 ## Future Content/Features
 * Address lookup function consuming a public API
