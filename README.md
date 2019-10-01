@@ -2,8 +2,9 @@
 
 # Project Three: Date-a-base
 
-[<img width="106" alt="Screenshot 2019-09-16 at 18 43 20" src="https://user-images.githubusercontent.com/43203736/64980637-20591c80-d8b2-11e9-9ba3-bda6511b8ed2.png">](https://datingexp.herokuapp.com)
+[Launch Date-a-base](https://datingexp.herokuapp.com)
 
+<img width="1391" alt="Date-a-base screenshot" src="https://i.imgur.com/zm6ldiU.png">
 
 ### Installation
 
