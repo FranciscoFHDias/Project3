@@ -208,6 +208,20 @@ Wanted logged in user avatar to display, involved storing the information in loc
 > **Image uploader**
 Wanted a smooth, easy way for users to upload images, rather than having to post any pictures online manually before able to do so. Found filestack online and used the documentation + other examples on github to implement. Makes it much easier as our site relies heavily on use input.
 
+```js
+<label className="label">Image</label>
+  <ReactFilestack
+    mode="transform"
+    apikey={fileloaderKey}
+    buttonText="Upload Photo"
+    buttonClass="button"
+    className="upload-image"
+    options={options}
+    onSuccess={(result) => this.handleUploadImages(result)}
+    preload={true}
+  />
+```
+
 > **Filters**
 As our site is about helping users make decisions, we wanted to make filters a big component - hence their placement on the landing page. Aside from using React-Select to format the filter dropdowns, the logic involved getting the data from the dropdowns, storing it in state, then passing this over to the locations index page so that it shows a pre-filtered list of locations. Else the user can go straight to the index page.
 
@@ -230,10 +244,50 @@ We wanted to create an index of user profiles, perhaps more useful in future ite
 As part of this, in order to find out more information about the user, we created a page asking for user details after the initial register. We did not make the extra questions required so that we could post the initial register, carry over the form details in state and then combine both form details to update the user.
 We also wanted the user to be able to edit their own profile, which we allowed using a function to only show the edit button on a user own profile.
 
+> **Maps**
+Enabling the user to locate the locations on a map was an important feature for the user experience. We used MapBox and the external API PostCodes.io to achieve this.
+
+```js
+<Map
+ style="mapbox://styles/mapbox/streets-v9"
+ zoom={zoom}
+ center={this.state.centre}
+ containerStyle={{
+   height: '600px',
+   width: '100%'
+ }}>
+
+ {this.filterLocations().map(location =>
+   <Marker
+     key={location._id}
+     coordinates={[location.longitude, location.latitude]}
+     anchor="bottom"
+     onClick={() => this.handleMarkerClick(location)}>
+     <img width="30px" height="30px" src={mapMarker} />
+   </Marker>
+ )}
+```
+
+```js
+locationSchema.pre('validate', function getGeolocation(done) {
+  if(!this.isModified('addressPostCode')) return done()
+  axios.post('https://postcodes.io/postcodes?filter=longitude,latitude', { postcodes: [this.addressPostCode] })
+    .then(res => {
+
+      if(!res.data.result[0].result) return done()
+
+      const { latitude, longitude } = res.data.result[0].result
+      this.latitude = latitude
+      this.longitude = longitude
+
+      done()
+    })
+})
+```
+
 > **Styling**
 Based the style off of an old movie theatre style with neon effects. Used text shadow/box shadow to get a neon effect.
 Wanted a transparent fixed top navbar, but also had wanted to use the fade in method on scroll for better UX. Found some guidance online and adapted to our needs.
-
 
 > **Contact format**
 We enabled the Contact Form to send email to a our specific gmail address from the backend.
