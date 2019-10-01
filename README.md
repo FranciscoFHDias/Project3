@@ -301,7 +301,7 @@ The same as About Us and Contacts, Terms and Conditions are in the footer so tha
 ## Wins and Blockers
 > **Wins**
 * Enjoyed learning more about react, particularly storing things in state/local storage.
-* Implementing new technologies - filestack loader + react-select.
+* Implementing new technologies - filestack loader, react-select, mapbox.
 
 > **Blockers**
 * Getting the navbar to stay at the bottom of the screen with no content, without hard coding viewport height as this caused problems on the locations index
@@ -311,3 +311,7 @@ The same as About Us and Contacts, Terms and Conditions are in the footer so tha
 * Improving User Experience based on user critic
 
 ## What we learnt
+* The benefits of using a NoSQL database,
+* Understanding the functionality of Express, Mongoose, CRUD functionality and different between embedded and referenced data,
+* Embedded JS, single page app with React and the use of Bulma,
+* Team planning and communication.
