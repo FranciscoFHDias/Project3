@@ -101,7 +101,7 @@ Wanted logged in user avatar to display, involved storing the information in loc
 FileStack
 Wanted a smooth, easy way for users to upload images, rather than having to post any pictures online manually before able to do so. Found filestack online and used the documentation + other examples on github to implement. Makes it much easier as our site relies heavily on use input.
 
-### FIlters
+### Filters
 As our site is about helping users make decisions, we wanted to make filters a big component - hence their placement on the landing page. Aside from using React-Select to format the filter dropdowns, the logic involved getting the data from the dropdowns, storing it in state, then passing this over to the locations index page so that it shows a pre-filtered list of locations. Else the user can go straight to the index page.
 
 ### Users
@@ -126,7 +126,13 @@ In the About Us page we used a 3d effect CSS to make the page more interesting
 ### Terms and Conditions
 The same as About Us and Contacts, Terms and Conditions are in the footer so that accessible everywhere in the website. We decided to display the documentation using a Bulma modal overlay effect implemented with Javascript code.
 
-### Future Features
+## Wins and Blockers
+> **Wins**
+
+> **Blockers**
+
+## Future Content/Features
 * Address lookup function consuming a public API
 * Improving User Experience based on user critic
 
+## What we learnt
