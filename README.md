@@ -10,7 +10,7 @@
 
 * Clone or download the repo
 * Run `yarn init` in the CLI
-* Run `mongod`, `yarn seed`, `yarn serve:backend` and `yarn serve:frontend` in the CLI
+* Run `mongo`, `yarn seed`, `yarn serve:backend` and `yarn serve:frontend` in the CLI
 
 ## Team
 
@@ -310,7 +310,7 @@ The same as About Us and Contacts, Terms and Conditions are in the footer so tha
 
 ## Future Content/Features
 * Address lookup function consuming a public API
-* Improving User Experience based on user critic
+* Improving user experience based on user critic
 
 ## What we learnt
 * The benefits of using a NoSQL database,
