@@ -1,10 +1,10 @@
-![ga_cog_large_red_rgb](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) 
+[<img alt="General Assembly logo" src="https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png">](https://generalassemb.ly/?&where=london&topic=&mkt_account_id=1056949875&mkt_campaign_id=691843434&mkt_ad_group_id=34960362879&mkt_device_type=c&mkt_keyword=general%20assembly&mkt_matchtype=e&mkt_placement=&mkt_ad_id=155682399044&mkt_network=g&mkt_target_id=kwd-459322816&mkt_feed_item_id=&utm_source=google&utm_medium=paid-search-bra&utm_campaign=TS:TX:BRA:LON:BR:GeneralAssembly&utm_content=campus-lead-lander&utm_term=general%20assembly&gclid=CjwKCAjw0vTtBRBREiwA3URt7lOmVVqqHJWL-eOckmt-HPJE8V3JE6HCSEG9vMjXjAr0fjSdcfyETxoCCe8QAvD_BwE)
 
 # Project Three: Date-a-base
 
 [Launch Date-a-base](https://datingexp.herokuapp.com)
 
-<img width="1391" alt="Date-a-base screenshot" src="https://i.imgur.com/5muBDBm.png">
+[<img width="1391" alt="Date-a-base screenshot" src="https://i.imgur.com/5muBDBm.png">](https://datingexp.herokuapp.com)
 
 ### Installation
 
